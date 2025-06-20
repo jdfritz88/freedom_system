@@ -1,6 +1,7 @@
 import subprocess
 import datetime
 import os
+import ctypes
 
 log_path = "F:/Apps/freedom_system/autosave_log.txt"
 
@@ -9,6 +10,12 @@ def log(msg):
     os.makedirs(os.path.dirname(log_path), exist_ok=True)
     with open(log_path, "a") as f:
         f.write(f"[{timestamp}] {msg}\n")
+
+def notify(title, text):
+    try:
+        ctypes.windll.user32.MessageBoxW(0, text, title, 0x40)
+    except Exception as e:
+        log(f"❌ Notify failed: {e}")
 
 try:
     os.chdir("F:/Apps/freedom_system")
@@ -24,7 +31,11 @@ try:
     subprocess.run(["git", "push"], check=True)
     log("Pushed to GitHub.")
 
+    notify("Autosave Complete", "Your files have been saved and pushed to GitHub.")
+
 except subprocess.CalledProcessError as e:
     log(f"❌ Git command failed: {e}")
+    notify("Autosave Error", str(e))
 except Exception as e:
     log(f"❌ Unexpected error: {e}")
+    notify("Autosave Error", str(e))

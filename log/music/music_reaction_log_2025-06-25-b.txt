@@ -1,0 +1,18 @@
+[TEST] Starting music reaction test with delay and decay check
+
+[ROUTER] Routing emotion: {'aroused': 0.9}
+[MUSIC DRIVER] Dominant: aroused (0.9)
+[MUSIC DRIVER] Reaction logic executed (internal only).
+
+[ROUTER] Routing emotion: {'romantic': 0.95}
+[MUSIC DRIVER] Skipped: Throttle delay not met.
+
+[ROUTER] Routing emotion: {'sad': 0.7, 'angry': 0.6}
+[MUSIC DRIVER] Dominant: sad (0.7)
+[MUSIC DRIVER] Secondary: angry (0.6)
+[MUSIC DRIVER] Reaction logic executed (internal only).
+
+[WAIT] Waiting 32 seconds to confirm decay behavior...
+[MUSIC DRIVER] Emotion state decayed to neutral.
+
+[TEST COMPLETE] Delay throttle and decay logic verified.

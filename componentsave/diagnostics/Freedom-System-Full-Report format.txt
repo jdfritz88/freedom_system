@@ -1,0 +1,18 @@
+Create an report that a high schooler can understand in pdf, markdown, GitHub README, and summary dashboard format with three sections: architecture, mapping, and manifest. 
+Call it Freedom-System-Full-Report-2025-06-21.
+
+For outlines and lists, format sub levels with an additional "-" at the beginning of each level.
+Include emojis at the top level of each section in the report.
+
+You have my permission to analyze the freedom_system folder on my F: drive and on my GitHub. Based on your analysis create the following sections:
+For the mapping, create a collapsed list of the next level folders in the componentsave folder, then the expanded list down to last subfolder and files.
+For the architecture, create a collapsed list, then the expanded list, down to last subfolder and files.
+For the manifest, create a collapsed list, then the expanded list, down to last subfolder and files.
+Include a visual tree diagram of the structure.
+For each category, include a description of what I want to accomplish.
+Include optional tasks from your todo list.
+
+Review the entire Freedom Project and include in the report where all components should go in their respective categories within the componentsave folder. Current categories are attached. 
+
+Include percentage done by project and categories.
+

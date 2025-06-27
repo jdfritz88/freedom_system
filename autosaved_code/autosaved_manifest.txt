@@ -1,4 +1,0 @@
-# Autosaved Code Manifest — Last updated 2025-06-20 16:21:15
-
-- debug_gitpython_import.py
-- git_autosave_background_task.py

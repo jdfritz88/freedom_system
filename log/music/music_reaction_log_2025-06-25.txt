@@ -1,0 +1,42 @@
+[TEST] Starting music reaction test
+
+[TEST 1] Sending: {'aroused': 0.9}
+[ROUTER] Routing emotion: {'aroused': 0.9}
+[MUSIC DRIVER] Dominant: aroused (0.9)
+[MUSIC DRIVER] Reaction logic executed (internal only).
+
+---
+
+[TEST 2] Sending: {'sad': 0.5, 'angry': 0.4}
+[ROUTER] Routing emotion: {'sad': 0.5, 'angry': 0.4}
+[MUSIC DRIVER] Dominant: sad (0.5)
+[MUSIC DRIVER] Secondary: angry (0.4)
+[MUSIC DRIVER] Reaction logic executed (internal only).
+
+---
+
+[TEST 3] Sending: {'romantic': 0.95, 'jealous': 0.6}
+[ROUTER] Routing emotion: {'romantic': 0.95, 'jealous': 0.6}
+[MUSIC DRIVER] Dominant: romantic (0.95)
+[MUSIC DRIVER] Secondary: jealous (0.6)
+[MUSIC DRIVER] Reaction logic executed (internal only).
+
+---
+
+[TEST 4] Sending: {'angry': 0.7, 'happy': 0.3}
+[ROUTER] Routing emotion: {'angry': 0.7, 'happy': 0.3}
+[MUSIC DRIVER] Dominant: angry (0.7)
+[MUSIC DRIVER] Secondary: happy (0.3)
+[MUSIC DRIVER] Reaction logic executed (internal only).
+
+---
+
+[TEST 5] Sending: {'physically hyper-aroused': 1.0, 'curious': 0.8}
+[ROUTER] Routing emotion: {'physically hyper-aroused': 1.0, 'curious': 0.8}
+[MUSIC DRIVER] Dominant: physically hyper-aroused (1.0)
+[MUSIC DRIVER] Secondary: curious (0.8)
+[MUSIC DRIVER] Reaction logic executed (internal only).
+
+---
+
+[TEST COMPLETE] Music reaction diagnostics finished.

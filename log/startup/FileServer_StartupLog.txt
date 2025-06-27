@@ -1,2 +1,5 @@
 [INFO] Serving C:/ at http://127.0.0.1:8753
 [INFO] Serving C:/ at http://127.0.0.1:8753
+[INFO] Serving C:/ at http://127.0.0.1:8753
+[ERROR] Could not serve C:/: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+[ERROR] Could not serve F:/: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted

@@ -1,2 +1,0 @@
-[REMOVED] systems_animation folder successfully deleted.
-Patch execution complete.

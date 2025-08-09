@@ -1,0 +1,42 @@
+[21:47:51.678] [AllTalk TTS] [update_character_voice] [INFO] Character voice selected: female_01.wav
+[21:47:51.680] [AllTalk TTS] [test_and_save_voice] [INFO] Testing voice: female_01.wav for character
+[21:47:51.697] [AllTalk TTS] [test_voice] [INFO] Testing voice: female_01.wav
+[21:47:51.702] [AllTalk TTS] [test_voice] [ERROR] Voice test failed with status: 404
+[21:47:51.702] [AllTalk TTS] [test_and_save_voice] [ERROR] Voice test failed: female_01.wav
+[21:47:51.702] [AllTalk TTS] [update_character_voice] [ERROR] Character voice failed test, not saved: female_01.wav
+[22:03:30.697] [AllTalk TTS] [update_character_voice] [INFO] Character voice selected: female_01.wav
+[22:03:30.698] [AllTalk TTS] [test_and_save_voice] [INFO] Testing voice: female_01.wav for character
+[22:03:30.700] [AllTalk TTS] [test_voice] [INFO] Testing voice: female_01.wav
+[22:03:30.712] [AllTalk TTS] [test_voice] [ERROR] Voice test failed with status: 404
+[22:03:30.713] [AllTalk TTS] [test_and_save_voice] [ERROR] Voice test failed: female_01.wav
+[22:03:30.713] [AllTalk TTS] [update_character_voice] [ERROR] Character voice failed test, not saved: female_01.wav
+[00:39:10.415] [AllTalk TTS] [update_character_voice] [INFO] Character voice selected: female_02.wav
+[00:39:10.417] [AllTalk TTS] [test_and_save_voice] [INFO] Testing voice: female_02.wav for character
+[00:39:10.417] [AllTalk TTS] [test_voice] [INFO] Testing voice: female_02.wav
+[00:39:16.539] [AllTalk TTS] [test_voice] [SUCCESS] Voice test successful: female_02.wav
+[00:39:16.539] [AllTalk TTS] [test_and_save_voice] [SUCCESS] Voice test successful: female_02.wav
+[00:39:16.540] [AllTalk TTS] [update_character_voice] [SUCCESS] Character voice saved: female_02.wav
+[00:56:56.283] [AllTalk TTS] [update_character_voice] [INFO] Character voice selected: female_01.wav
+[00:56:56.284] [AllTalk TTS] [test_and_save_voice] [INFO] Testing voice: female_01.wav for character
+[00:56:56.284] [AllTalk TTS] [test_voice] [INFO] Testing voice: female_01.wav
+[00:56:58.458] [AllTalk TTS] [test_voice] [SUCCESS] Voice test successful: female_01.wav
+[00:56:58.458] [AllTalk TTS] [test_and_save_voice] [SUCCESS] Voice test successful: female_01.wav
+[00:56:58.459] [AllTalk TTS] [update_character_voice] [SUCCESS] Character voice saved: female_01.wav
+[15:06:13.335] [AllTalk TTS] [update_character_voice] [INFO] Character voice selected: female_01.wav
+[15:06:13.336] [AllTalk TTS] [test_and_save_voice] [INFO] Testing voice: female_01.wav for character
+[15:06:13.336] [AllTalk TTS] [test_voice] [INFO] Testing voice: female_01.wav
+[15:06:16.032] [AllTalk TTS] [test_voice] [SUCCESS] Voice test successful: female_01.wav
+[15:06:16.032] [AllTalk TTS] [test_and_save_voice] [SUCCESS] Voice test successful: female_01.wav
+[15:06:16.033] [AllTalk TTS] [update_character_voice] [SUCCESS] Character voice saved: female_01.wav
+[15:09:40.568] [AllTalk TTS] [update_character_voice] [INFO] Character voice selected: female_02.wav
+[15:09:40.569] [AllTalk TTS] [test_and_save_voice] [INFO] Testing voice: female_02.wav for character
+[15:09:40.570] [AllTalk TTS] [test_voice] [INFO] Testing voice: female_02.wav
+[15:09:45.545] [AllTalk TTS] [test_voice] [SUCCESS] Voice test successful: female_02.wav
+[15:09:45.546] [AllTalk TTS] [test_and_save_voice] [SUCCESS] Voice test successful: female_02.wav
+[15:09:45.546] [AllTalk TTS] [update_character_voice] [SUCCESS] Character voice saved: female_02.wav
+[15:10:18.222] [AllTalk TTS] [update_character_voice] [INFO] Character voice selected: Sophie_Anderson CC3.wav
+[15:10:18.223] [AllTalk TTS] [test_and_save_voice] [INFO] Testing voice: Sophie_Anderson CC3.wav for character
+[15:10:18.223] [AllTalk TTS] [test_voice] [INFO] Testing voice: Sophie_Anderson CC3.wav
+[15:10:19.761] [AllTalk TTS] [test_voice] [SUCCESS] Voice test successful: Sophie_Anderson CC3.wav
+[15:10:19.762] [AllTalk TTS] [test_and_save_voice] [SUCCESS] Voice test successful: Sophie_Anderson CC3.wav
+[15:10:19.762] [AllTalk TTS] [update_character_voice] [SUCCESS] Character voice saved: Sophie_Anderson CC3.wav

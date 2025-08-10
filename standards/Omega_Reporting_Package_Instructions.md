@@ -39,7 +39,7 @@ Key Report Sections:
 - Break up each component by paragraph
 
 
-3. MAPPING
+4. MAPPING
 - Must generate a full recursive folder and file listing, not just folder names.
 - Every subfolder and file in F:\Apps\freedom_system must be shown, respecting the same exclusions (.git, __pycache__, *.pyc, __init__.py).
 - Use an indented tree format like this:

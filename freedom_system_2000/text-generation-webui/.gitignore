@@ -1,33 +1,106 @@
-/css
-/extensions
-/installer_files
-/repositories
-/user_data
 
+
+# Python environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+.envrc
+.direnv
+virtualenv/
+*.virtualenv
+
+# Conda environments
+conda-meta/
+conda_env/
+miniconda/
+anaconda/
+
+# IDE and editor files
 .chroma
 .DS_Store
 .eslintrc.js
 .idea
-.installer_state.json
-.venv
-venv
-.envrc
-.direnv
 .vs
 .vscode
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+
+# System and temporary files
 *.bak
-*.ipynb
 *.log
-*pycache*
+*.tmp
+*.temp
+Thumbs.db
+.installer_state.json
+
+# Jupyter notebooks
+*.ipynb
+.ipynb_checkpoints/
+
+# Security files
 cert.pem
 key.pem
+*.pem
+*.key
+*.crt
+
+# Node.js
 package.json
 package-lock.json
-Thumbs.db
-wandb
+node_modules/
 
-# ignore user docker config and top level links to docker files
+# Monitoring and logging
+wandb/
+logs/
+*.log.*
+
+# Docker files (top level only)
 /docker-compose.yaml
 /docker-compose.yml
 /Dockerfile
 .env
+
+# Model and data files
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+
+# Cache directories
+.cache/
+cache/
+__pycache__/
+*pycache*

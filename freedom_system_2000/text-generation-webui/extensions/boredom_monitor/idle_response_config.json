@@ -1,0 +1,10 @@
+{
+  "idle_minutes": 7,
+  "horny_cooldown_minutes": 60,
+  "category_weights": {
+    "bored": 0.4,
+    "lonely": 0.4,
+    "horny": 0.2
+  },
+  "enable_logging": true
+}

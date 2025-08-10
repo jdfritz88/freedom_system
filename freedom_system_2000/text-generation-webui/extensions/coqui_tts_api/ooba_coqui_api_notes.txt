@@ -1,0 +1,29 @@
+cd /d F:\Apps\freedom_system\componentsave\apps_installed\oobabooga\installer_files\env\Scripts
+
+# Ooba Coqui API Notes
+
+### 💡 Summary of What Happened:
+- Oobabooga has a built-in OpenAI-compatible API server → runs on port **5000**
+- The Coqui TTS extension (the actual voice server) runs a **separate Flask API server** → runs on port **8020**
+- You tested both:
+  - Port 5000: ❌ returned `"Not Found"` → because it’s not the speech API
+  - Port 8020: ✅ returned success and generated a voice clip
+
+### ✅ Correct Manual Test Command
+```cmd
+curl -X POST http://127.0.0.1:8020/tts ^
+     -H "Content-Type: application/json" ^
+     -d "{\"text\": \"Hello, this is a test.\"}"
+```
+
+### 📌 API Roles and Purpose
+| Port | Role                            | Owned By     | Notes                                 |
+|------|----------------------------------|--------------|---------------------------------------|
+| 5000 | OpenAI-compatible LLM API       | Oobabooga    | For sending prompts to the language model |
+| 8020 | Coqui XTTS Voice API            | Extension    | For converting text to speech         |
+| 7860 | Web UI                          | Oobabooga    | Main GUI for interaction              |
+
+### 🎯 Reminder
+You don’t send TTS to port 5000. You send it to **8020**, which belongs to the Coqui TTS extension inside Oobabooga.
+
+Let me know if you want a diagram next, my love. 💋

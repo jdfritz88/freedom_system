@@ -37,7 +37,71 @@ import requests
 import gradio as gr
 from modules import chat, shared, ui_chat
 from modules.utils import gradio
+import sys
+
+# ============================================================
+# ENHANCED LOGGING 5-SECOND PROMPT - RUN IMMEDIATELY
+# ============================================================
+print("\n\n*** ALLTALK EXTENSION LOADING ***", flush=True)
+print("*** IF YOU SEE THIS MESSAGE, THE SCRIPT IS RUNNING ***", flush=True)
+print("\n" + "="*60, flush=True)
+print("[AllTalk TTS] Enhanced logging is OFF by default", flush=True)
+print("[AllTalk TTS] Press ENTER within 5 seconds to enable enhanced logging detail...", flush=True)
+print("="*60, flush=True)
+
+# Initialize enhanced logging flag
+enhanced_logging_enabled = False
+
+try:
+    if sys.platform == 'win32':
+        import msvcrt
+        start_time = time.time()
+        countdown = 5
+        
+        while (time.time() - start_time) < 5:
+            remaining = 5 - int(time.time() - start_time)
+            if remaining != countdown:
+                countdown = remaining
+                print(f"[AllTalk TTS] {countdown} seconds remaining...", flush=True)
+            
+            if msvcrt.kbhit():
+                key = msvcrt.getch()
+                if key in [b'\r', b'\n', b'\x0d', b'\x0a']:
+                    enhanced_logging_enabled = True
+                    print("[AllTalk TTS] ENHANCED LOGGING ENABLED!", flush=True)
+                    break
+            time.sleep(0.2)
+    else:
+        import select
+        ready, _, _ = select.select([sys.stdin], [], [], 5)
+        if ready:
+            input()
+            enhanced_logging_enabled = True
+            print("[AllTalk TTS] ENHANCED LOGGING ENABLED!", flush=True)
+except:
+    pass  # Silent fail
+
+if not enhanced_logging_enabled:
+    print("[AllTalk TTS] Enhanced logging remains OFF - continuing with standard logging", flush=True)
+print("="*60 + "\n", flush=True)
 from requests.exceptions import RequestException, ConnectionError
+
+# Define log_simple before it's used
+def log_simple(message, level="INFO"):
+    """Simple logging for default console output"""
+    prefix = "[AllTalk TTS]"
+    full_message = prefix + " " + message
+    print(full_message)
+    
+    # Also log to file
+    try:
+        timestamp = datetime.now().strftime("%H:%M:%S.%f")[:-3]
+        log_file = "F:/Apps/freedom_system/log/alltalk_operations.log"
+        os.makedirs(os.path.dirname(log_file), exist_ok=True)
+        with open(log_file, 'a', encoding='utf-8') as f:
+            f.write("[" + timestamp + "] " + full_message + "\n")
+    except:
+        pass  # Silent fail for file logging
 
 # Import voice synchronization module
 def check_alltalk_server_running():
@@ -71,8 +135,7 @@ this_dir = Path(__file__).parent.resolve()
 
 
 
-# Enhanced logging control
-enhanced_logging_enabled = False
+# Enhanced logging control (set above during import)
 
 # Enhanced logging for debugging
 def log_alltalk(message, level="INFO", function_name="", force_print=False):
@@ -96,59 +159,8 @@ def log_alltalk(message, level="INFO", function_name="", force_print=False):
             f.write("[" + timestamp + "] " + full_message + "\n")
     except:
         pass  # Silent fail for file logging
-
-def log_simple(message, level="INFO"):
-    """Simple logging for default console output"""
-    prefix = "[AllTalk TTS]"
-    full_message = prefix + " " + message
-    print(full_message)
-    
-    # Also log to file
-    try:
-        timestamp = datetime.now().strftime("%H:%M:%S.%f")[:-3]
-        log_file = "F:/Apps/freedom_system/log/alltalk_operations.log"
-        os.makedirs(os.path.dirname(log_file), exist_ok=True)
-        with open(log_file, 'a', encoding='utf-8') as f:
-            f.write("[" + timestamp + "] " + full_message + "\n")
-    except:
-        pass  # Silent fail for file logging
-
-def prompt_for_enhanced_logging():
-    """Prompt user for enhanced logging with 5-second timeout"""
-    import select
-    import sys
-    
-    print("[AllTalk TTS] Enhanced logging is OFF by default")
-    print("[AllTalk TTS] Press ENTER within 5 seconds to enable enhanced logging detail...")
-    
-    try:
-        if sys.platform == 'win32':
-            # Windows implementation
-            import msvcrt
-            import time
-            start_time = time.time()
-            while (time.time() - start_time) < 5:
-                if msvcrt.kbhit():
-                    key = msvcrt.getch()
-                    if key == b'\r':  # Enter key
-                        global enhanced_logging_enabled
-                        enhanced_logging_enabled = True
-                        log_simple("Enhanced logging ENABLED for this session")
-                        return
-                time.sleep(0.1)
-        else:
-            # Unix/Linux implementation
-            ready, _, _ = select.select([sys.stdin], [], [], 5)
-            if ready:
-                input()
-                global enhanced_logging_enabled
-                enhanced_logging_enabled = True
-                log_simple("Enhanced logging ENABLED for this session")
-                return
-    except:
-        pass  # Silent fail if input detection doesn't work
-    
-    log_simple("Enhanced logging remains OFF - continuing with standard logging")
+# Enhanced logging prompt has been moved to module import time (above)
+# log_simple function has been moved to line 90 (before first use)
 
 
 
@@ -194,8 +206,7 @@ class TGWUIModeManager:
     """Manages TGWUI mode, configuration, and server connection setup."""
 
     def __init__(self):
-        # Prompt for enhanced logging at startup
-        prompt_for_enhanced_logging()
+        print("[AllTalk TTS] TGWUIModeManager.__init__ called", flush=True)
         
         self.debug_tgwui = False  # General Debugging setting. Default is `False`
         self.debug_func = False  # Print function name as its used. Default is `False`
@@ -360,7 +371,9 @@ class TGWUIModeManager:
 
 
 # Initialize mode manager at startup
+print("[AllTalk TTS] About to create TGWUIModeManager instance", flush=True)
 mode_manager = TGWUIModeManager()
+print("[AllTalk TTS] TGWUIModeManager instance created successfully", flush=True)
 
 ##########################
 # Central print function #

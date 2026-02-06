@@ -1,0 +1,183 @@
+VS Code + Claude Code: Watching Console Logs
+==============================================
+Last updated: 2026-02-02
+
+PURPOSE
+-------
+This guide explains how to monitor your application logs in real-time
+using VS Code, and how to feed that output to Claude Code so it can
+help you debug errors and understand what your applications are doing.
+
+
+SETUP (ALREADY DONE)
+--------------------
+- VS Code installed at: F:\Apps\VSCode\Code.exe (portable mode)
+- Claude Code extension installed inside VS Code
+- VS Code Tasks configured in: F:\Apps\freedom_system\.vscode\tasks.json
+- Log files stored in: F:\Apps\freedom_system\log\
+
+
+HOW TO OPEN VS CODE
+-------------------
+1. Double-click F:\Apps\VSCode\Code.exe
+2. If your project doesn't open automatically:
+   - File > Open Folder > navigate to F:\Apps\freedom_system
+3. Your project files appear in the left sidebar (Explorer panel)
+
+
+HOW TO OPEN THE TERMINAL PANEL
+------------------------------
+1. Press Ctrl + `  (backtick key, next to the 1 key on your keyboard)
+   - This toggles the terminal panel at the bottom of VS Code
+2. You can have multiple terminal tabs open at once
+3. To create a new terminal tab, click the + button in the terminal panel
+4. To rename a terminal tab, right-click its name and select "Rename"
+
+
+HOW TO START CLAUDE CODE
+------------------------
+1. Open a terminal (Ctrl + `)
+2. Type: claude
+3. Press Enter
+4. Claude Code is now running inside VS Code
+5. Rename this terminal tab to "Claude" (right-click the tab > Rename)
+
+NOTE: If you get a PowerShell execution policy error, run this once:
+   Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+   Type Y and press Enter to confirm.
+
+
+HOW TO WATCH A LOG FILE (THE EASY WAY - VS CODE TASKS)
+-------------------------------------------------------
+Pre-configured tasks exist for all major log files. To use them:
+
+1. Press Ctrl + Shift + P  (opens the Command Palette)
+2. Type: Run Task
+3. Select "Tasks: Run Task"
+4. Pick from the list:
+   - Watch Log: boredom_monitor
+   - Watch Log: boredom_monitor_extension
+   - Watch Log: boredom_detector_extension
+   - Watch Log: boredom_config_sync_extension
+   - Watch Log: boredom_api_client_extension
+   - Watch Log: alltalk_operations
+   - Watch Log: injection_test
+   - Watch Log: textgen_troubleshooting
+5. A new terminal tab opens showing the last 50 lines of that log
+6. New lines appear in real-time as your application writes to the log
+7. You can run multiple log watchers at the same time
+
+To stop watching: Click the terminal tab running the watcher, then press Ctrl + C
+
+
+HOW TO WATCH A LOG FILE (MANUAL WAY)
+-------------------------------------
+If you want to watch a log that doesn't have a pre-configured task:
+
+1. Open a new terminal tab (click + in the terminal panel)
+2. Type this command, replacing the filename with your log:
+
+   Get-Content -Path "F:\Apps\freedom_system\log\YOUR_LOG_NAME.log" -Tail 50 -Wait
+
+   Example:
+   Get-Content -Path "F:\Apps\freedom_system\log\boredom_monitor.log" -Tail 50 -Wait
+
+3. The -Tail 50 means "start by showing the last 50 lines"
+4. The -Wait means "keep watching for new lines"
+5. Rename the terminal tab so you remember what it's watching
+
+
+HOW TO LET CLAUDE SEE YOUR LOG OUTPUT
+--------------------------------------
+This is the whole point -- getting Claude to read your running logs.
+
+1. Make sure you have at least two terminals open:
+   - One running Claude Code (your "Claude" terminal)
+   - One or more watching logs (from the tasks above)
+
+2. In your Claude terminal, when typing a prompt, type the @ symbol
+
+3. A dropdown appears listing your named terminal tabs
+   - Select the log terminal you want Claude to read
+
+4. Claude now sees whatever output is currently showing in that terminal
+
+5. Ask your question, for example:
+   - "Are there any errors in this output?"
+   - "What is the boredom monitor doing right now?"
+   - "Why did the server throw that exception?"
+
+6. You can reference multiple terminals in a single prompt by using
+   @ multiple times
+
+
+LOG FILE LOCATIONS
+------------------
+All logs are saved to: F:\Apps\freedom_system\log\
+
+Current log files:
+  boredom_monitor.log              - Main boredom monitor log
+  boredom_monitor_extension.log    - Boredom monitor extension log
+  boredom_detector_extension.log   - Boredom detector extension log
+  boredom_config_sync_extension.log - Config sync extension log
+  boredom_api_client_extension.log - API client extension log
+  alltalk_operations.log           - AllTalk TTS operations log
+  injection_test.log               - Injection test log
+  textgen_troubleshooting.log      - Text-gen troubleshooting log
+  claude_code_voice_mode.log       - Voice mode log
+  startup_scanning_log.txt         - Startup scanning log
+
+
+ADDING A NEW LOG WATCHER TASK
+-----------------------------
+If a new log file gets created and you want a one-click task for it:
+
+1. Open the file: F:\Apps\freedom_system\.vscode\tasks.json
+2. Copy one of the existing task blocks (everything between { and })
+3. Paste it at the end of the tasks list (before the final ] bracket)
+4. Change the "label" to your new log name
+5. Change the filename in the "command" line to match your new log file
+6. Save the file
+
+Example task block to copy:
+
+        {
+            "label": "Watch Log: your_new_log",
+            "type": "shell",
+            "command": "Get-Content -Path '${workspaceFolder}/log/your_new_log.log' -Tail 50 -Wait",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "logs"
+            },
+            "isBackground": true,
+            "problemMatcher": []
+        }
+
+
+KEYBOARD SHORTCUTS QUICK REFERENCE
+-----------------------------------
+Ctrl + `              Open/close the terminal panel
+Ctrl + Shift + P      Open the Command Palette (search for any command)
+Ctrl + Shift + `      Create a new terminal tab
+Ctrl + C              Stop a running command (like a log watcher)
+@                     (Inside Claude prompt) Reference a terminal's output
+
+
+TROUBLESHOOTING
+---------------
+Problem: "claude" command not found or script error
+Fix: Run this in the terminal:
+   Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+Problem: Log file not found when running a task
+Fix: Check that the log file exists in F:\Apps\freedom_system\log\
+     The file must exist before you can watch it.
+
+Problem: No output appearing in log watcher
+Fix: The application that writes to that log might not be running.
+     Start your server or extension first, then watch the log.
+
+Problem: @ doesn't show terminal list in Claude
+Fix: Make sure you renamed your terminal tabs. Claude lists them by name.
+     Right-click the terminal tab > Rename.

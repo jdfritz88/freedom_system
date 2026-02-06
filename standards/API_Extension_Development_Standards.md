@@ -1125,4 +1125,120 @@ When creating a new API extension, ensure:
 
 ---
 
+## 11. Official OpenAI Extension Pattern Reference
+The text-generation-webui OpenAI extension provides the official template:
+- Location: `extensions/openai/script.py`
+- Pattern: FastAPI server with threading - `Thread(target=run_server, daemon=True).start()`
+- Port management with conflict resolution
+- Proper integration with extension lifecycle
+
+## 12. Message Injection Best Practices
+**STANDARD**: Use API endpoints for message injection rather than internal hooks
+
+**Rationale**: 
+- API calls provide clean integration boundaries
+- Easier to debug and monitor
+- No risk of interfering with internal text-generation-webui logic
+- Professional architecture following established patterns
+
+**Implementation Requirements**:
+- Always check OpenAI API availability before injection
+- Implement comprehensive logging of all injection attempts
+- Handle connection failures gracefully with retry logic
+- Use consistent timeout values (30 seconds recommended)
+- Log successful injections with context (emotion, timing, etc.)
+
+## 13. Fixed Retry Pattern with Comprehensive Logging
+**STANDARD**: Use fixed retry attempts (3 retries, 1-second delays) with detailed logging for localhost API calls
+
+**Rationale**: 
+- Localhost connections should be reliable and fast
+- Fixed delays are predictable for user experience
+- Follows AllTalk TTS proven pattern
+- Comprehensive logging enables debugging retry scenarios
+
+**Implementation Pattern**:
+```python
+async def api_call_with_retries(endpoint, payload, operation_name, max_retries=3, delay=1):
+    """Standard retry pattern with comprehensive logging"""
+    
+    log_enhanced(f"Starting {operation_name}", "INFO", "api_call_with_retries", {
+        "endpoint": endpoint,
+        "max_retries": max_retries,
+        "timeout": 30,
+        "payload_size": len(str(payload))
+    })
+    
+    for attempt in range(max_retries):
+        try:
+            attempt_start = time.time()
+            
+            log_enhanced(f"Attempt {attempt + 1}/{max_retries} for {operation_name}", "DEBUG", "api_call_with_retries", {
+                "endpoint": endpoint,
+                "attempt": attempt + 1
+            })
+            
+            response = await requests.post(endpoint, json=payload, timeout=30)
+            response_time = time.time() - attempt_start
+            
+            if response.status_code == 200:
+                log_enhanced(f"{operation_name} succeeded on attempt {attempt + 1}", "INFO", "api_call_with_retries", {
+                    "status_code": response.status_code,
+                    "response_time_ms": round(response_time * 1000, 2),
+                    "attempts_used": attempt + 1,
+                    "response_length": len(response.text)
+                })
+                return True, response
+            else:
+                log_enhanced(f"{operation_name} HTTP error on attempt {attempt + 1}", "WARNING", "api_call_with_retries", {
+                    "status_code": response.status_code,
+                    "error_body": response.text[:200],
+                    "response_time_ms": round(response_time * 1000, 2)
+                })
+                
+        except requests.exceptions.Timeout:
+            log_enhanced(f"{operation_name} timeout on attempt {attempt + 1}", "WARNING", "api_call_with_retries", {
+                "timeout_seconds": 30,
+                "endpoint": endpoint
+            })
+        except requests.exceptions.ConnectionError:
+            log_enhanced(f"{operation_name} connection error on attempt {attempt + 1}", "WARNING", "api_call_with_retries", {
+                "error_type": "ConnectionError",
+                "endpoint": endpoint,
+                "likely_cause": "Service not running"
+            })
+        except Exception as e:
+            log_enhanced(f"{operation_name} unexpected error on attempt {attempt + 1}", "WARNING", "api_call_with_retries", {
+                "error_type": type(e).__name__,
+                "error_message": str(e),
+                "endpoint": endpoint
+            })
+        
+        # Delay before retry (except on last attempt)
+        if attempt < max_retries - 1:
+            log_enhanced(f"Retrying {operation_name} in {delay} seconds...", "INFO", "api_call_with_retries", {
+                "delay_seconds": delay,
+                "remaining_attempts": max_retries - attempt - 1
+            })
+            await asyncio.sleep(delay)
+    
+    # All attempts failed
+    log_enhanced(f"{operation_name} failed after {max_retries} attempts", "ERROR", "api_call_with_retries", {
+        "endpoint": endpoint,
+        "total_attempts": max_retries,
+        "total_time_spent": max_retries * delay
+    })
+    
+    return False, None
+```
+
+**Logging Requirements for Retry Operations**:
+- Log each attempt with attempt number and timing
+- Log specific error types (timeout, connection, HTTP error)
+- Log successful attempts with response time and attempt count
+- Log final failure with total time spent
+- Include endpoint and operation context in all logs
+
+---
+
 *These standards ensure robust, maintainable extensions that handle errors gracefully, maintain configuration consistency, and provide excellent debugging capabilities for the Freedom System.*

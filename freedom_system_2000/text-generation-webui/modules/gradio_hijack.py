@@ -74,7 +74,9 @@ def repair(grclass):
     grclass.update = gr.update
 
 
-for component in set(gr.components.__all__ + gr.layouts.__all__):
+components_list = gr.components.__all__ if hasattr(gr.components, '__all__') else []
+layouts_list = gr.layouts.__all__ if hasattr(gr.layouts, '__all__') else []
+for component in set(components_list + layouts_list):
     repair(getattr(gr, component, None))
 
 

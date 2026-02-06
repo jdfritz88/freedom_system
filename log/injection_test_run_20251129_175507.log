@@ -1,0 +1,68 @@
+17:55:07.189 [INFO] TestRunner: ==============================================================================
+17:55:07.189 [INFO] TestRunner: COMPREHENSIVE INJECTION TEST RUNNER
+17:55:07.190 [INFO] TestRunner: ==============================================================================
+17:55:07.190 [INFO] TestRunner: Checking prerequisites...
+17:55:07.877 [DEBUG] httpcore.connection: connect_tcp.started host='api.gradio.app' port=443 local_address=None timeout=3 socket_options=None
+17:55:08.050 [DEBUG] PIL.Image: Importing BlpImagePlugin
+17:55:08.051 [DEBUG] PIL.Image: Importing BmpImagePlugin
+17:55:08.052 [DEBUG] PIL.Image: Importing BufrStubImagePlugin
+17:55:08.053 [DEBUG] PIL.Image: Importing CurImagePlugin
+17:55:08.053 [DEBUG] PIL.Image: Importing DcxImagePlugin
+17:55:08.054 [DEBUG] PIL.Image: Importing DdsImagePlugin
+17:55:08.056 [DEBUG] PIL.Image: Importing EpsImagePlugin
+17:55:08.056 [DEBUG] PIL.Image: Importing FitsImagePlugin
+17:55:08.057 [DEBUG] PIL.Image: Importing FliImagePlugin
+17:55:08.057 [DEBUG] PIL.Image: Importing FpxImagePlugin
+17:55:08.057 [DEBUG] PIL.Image: Image: failed to import FpxImagePlugin: No module named 'olefile'
+17:55:08.057 [DEBUG] PIL.Image: Importing FtexImagePlugin
+17:55:08.058 [DEBUG] PIL.Image: Importing GbrImagePlugin
+17:55:08.058 [DEBUG] PIL.Image: Importing GifImagePlugin
+17:55:08.059 [DEBUG] PIL.Image: Importing GribStubImagePlugin
+17:55:08.060 [DEBUG] PIL.Image: Importing Hdf5StubImagePlugin
+17:55:08.060 [DEBUG] PIL.Image: Importing IcnsImagePlugin
+17:55:08.062 [DEBUG] PIL.Image: Importing IcoImagePlugin
+17:55:08.062 [DEBUG] PIL.Image: Importing ImImagePlugin
+17:55:08.063 [DEBUG] PIL.Image: Importing ImtImagePlugin
+17:55:08.063 [DEBUG] PIL.Image: Importing IptcImagePlugin
+17:55:08.063 [DEBUG] PIL.Image: Importing JpegImagePlugin
+17:55:08.064 [DEBUG] PIL.Image: Importing Jpeg2KImagePlugin
+17:55:08.064 [DEBUG] PIL.Image: Importing McIdasImagePlugin
+17:55:08.064 [DEBUG] PIL.Image: Importing MicImagePlugin
+17:55:08.065 [DEBUG] PIL.Image: Image: failed to import MicImagePlugin: No module named 'olefile'
+17:55:08.065 [DEBUG] PIL.Image: Importing MpegImagePlugin
+17:55:08.065 [DEBUG] PIL.Image: Importing MpoImagePlugin
+17:55:08.066 [DEBUG] PIL.Image: Importing MspImagePlugin
+17:55:08.067 [DEBUG] PIL.Image: Importing PalmImagePlugin
+17:55:08.067 [DEBUG] PIL.Image: Importing PcdImagePlugin
+17:55:08.067 [DEBUG] PIL.Image: Importing PcxImagePlugin
+17:55:08.067 [DEBUG] PIL.Image: Importing PdfImagePlugin
+17:55:08.070 [DEBUG] PIL.Image: Importing PixarImagePlugin
+17:55:08.071 [DEBUG] PIL.Image: Importing PngImagePlugin
+17:55:08.071 [DEBUG] PIL.Image: Importing PpmImagePlugin
+17:55:08.071 [DEBUG] PIL.Image: Importing PsdImagePlugin
+17:55:08.071 [DEBUG] PIL.Image: Importing QoiImagePlugin
+17:55:08.072 [DEBUG] PIL.Image: Importing SgiImagePlugin
+17:55:08.072 [DEBUG] PIL.Image: Importing SpiderImagePlugin
+17:55:08.072 [DEBUG] PIL.Image: Importing SunImagePlugin
+17:55:08.073 [DEBUG] PIL.Image: Importing TgaImagePlugin
+17:55:08.073 [DEBUG] PIL.Image: Importing TiffImagePlugin
+17:55:08.073 [DEBUG] PIL.Image: Importing WebPImagePlugin
+17:55:08.074 [DEBUG] PIL.Image: Importing WmfImagePlugin
+17:55:08.074 [DEBUG] PIL.Image: Importing XbmImagePlugin
+17:55:08.074 [DEBUG] PIL.Image: Importing XpmImagePlugin
+17:55:08.075 [DEBUG] PIL.Image: Importing XVThumbImagePlugin
+17:55:08.132 [DEBUG] httpcore.connection: connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001EABD0CCE10>
+17:55:08.132 [DEBUG] httpcore.connection: start_tls.started ssl_context=<ssl.SSLContext object at 0x000001EABCF7FDA0> server_hostname='api.gradio.app' timeout=3
+17:55:08.228 [DEBUG] httpcore.connection: start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001EABCFAD4D0>
+17:55:08.228 [DEBUG] httpcore.http11: send_request_headers.started request=<Request [b'GET']>
+17:55:08.240 [DEBUG] httpcore.http11: send_request_headers.complete
+17:55:08.240 [DEBUG] httpcore.http11: send_request_body.started request=<Request [b'GET']>
+17:55:08.240 [DEBUG] httpcore.http11: send_request_body.complete
+17:55:08.240 [DEBUG] httpcore.http11: receive_response_headers.started request=<Request [b'GET']>
+17:55:08.286 [DEBUG] httpcore.http11: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 30 Nov 2025 01:55:09 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'3'), (b'Connection', b'keep-alive'), (b'Server', b'nginx/1.18.0'), (b'Access-Control-Allow-Origin', b'*')])
+17:55:08.287 [DEBUG] httpcore.http11: receive_response_body.started request=<Request [b'GET']>
+17:55:08.287 [DEBUG] httpcore.http11: receive_response_body.complete
+17:55:08.287 [DEBUG] httpcore.http11: response_closed.started
+17:55:08.287 [DEBUG] httpcore.http11: response_closed.complete
+17:55:08.287 [DEBUG] httpcore.connection: close.started
+17:55:08.287 [DEBUG] httpcore.connection: close.complete

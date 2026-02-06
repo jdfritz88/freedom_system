@@ -1,0 +1,11 @@
+21:48:25.581 [INFO] TestRunner: ==============================================================================
+21:48:25.581 [INFO] TestRunner: COMPREHENSIVE INJECTION TEST RUNNER
+21:48:25.581 [INFO] TestRunner: ==============================================================================
+21:48:25.682 [DEBUG] urllib3.connectionpool: Starting new HTTP connection (1): 127.0.0.1:7860
+21:48:27.734 [WARNING] TestRunner: WebUI is NOT running - showing alarm dialog
+21:48:27.839 [DEBUG] urllib3.connectionpool: Starting new HTTP connection (1): 127.0.0.1:7860
+21:48:31.877 [DEBUG] urllib3.connectionpool: Starting new HTTP connection (1): 127.0.0.1:7860
+21:48:35.922 [DEBUG] urllib3.connectionpool: Starting new HTTP connection (1): 127.0.0.1:7860
+21:48:39.975 [DEBUG] urllib3.connectionpool: Starting new HTTP connection (1): 127.0.0.1:7860
+21:48:44.019 [DEBUG] urllib3.connectionpool: Starting new HTTP connection (1): 127.0.0.1:7860
+21:48:48.063 [DEBUG] urllib3.connectionpool: Starting new HTTP connection (1): 127.0.0.1:7860

@@ -1,0 +1,32 @@
+{
+  "timestamp": "2025-11-29T17:58:04.905110",
+  "prerequisites": {
+    "webui_modules": true,
+    "requests": true,
+    "selenium": false,
+    "webui_running": true,
+    "openai_api_running": true
+  },
+  "results": {
+    "quick": [
+      {
+        "name": "Direct History",
+        "success": false,
+        "injection_success": false,
+        "confirmations": 0
+      },
+      {
+        "name": "send_dummy_reply",
+        "success": false,
+        "injection_success": false,
+        "confirmations": 0
+      },
+      {
+        "name": "OpenAI API",
+        "success": false,
+        "injection_success": false,
+        "confirmations": 0
+      }
+    ]
+  }
+}

@@ -9,6 +9,23 @@ from typing import Callable, MutableSequence
 
 from pydantic import BaseModel, ConfigDict, AliasGenerator, AliasChoices, Field
 
+def get_dynamic_default_voice():
+    """Dynamically discover the first available voice file for defaults"""
+    voices_dir = Path(__file__).parent / "voices"
+    
+    if not voices_dir.exists():
+        return "female_01.wav"  # Ultimate fallback
+    
+    # Get all .wav files in voices directory
+    voice_files = list(voices_dir.glob("*.wav"))
+    
+    if not voice_files:
+        return "female_01.wav"  # Ultimate fallback
+    
+    # Sort for consistent ordering and return first
+    voice_files.sort()
+    return voice_files[0].name
+
 class AlltalkConfigTheme(BaseModel):
     # Map 'class' to 'clazz' and vice versa
     model_config = ConfigDict(
@@ -24,6 +41,8 @@ class AlltalkConfigTheme(BaseModel):
     clazz: str = "gradio/base"
 
 class AlltalkConfigRvcSettings(BaseModel):
+    model_config = ConfigDict(protected_namespaces=())
+    
     rvc_enabled: bool = False
     rvc_char_model_file: str = "Disabled"
     rvc_narr_model_file: str = "Disabled"
@@ -52,9 +71,9 @@ class AlltalkConfigTgwUi(BaseModel):
     tgwui_temperature_set: float = 0.75
     tgwui_repetitionpenalty_set: int = 10
     tgwui_generationspeed_set: int = 1
-    tgwui_narrator_voice: str = "female_01.wav"
+    tgwui_narrator_voice: str = Field(default_factory=get_dynamic_default_voice)
     tgwui_show_text: bool = True
-    tgwui_character_voice: str = "female_01.wav"
+    tgwui_character_voice: str = Field(default_factory=get_dynamic_default_voice)
     tgwui_rvc_char_voice: str = "Disabled"
     tgwui_rvc_char_pitch: int = 0
     tgwui_rvc_narr_voice: str = "Disabled"

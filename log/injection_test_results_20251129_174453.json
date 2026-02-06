@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-11-29T17:44:53.479169",
+  "prerequisites": {
+    "webui_modules": false,
+    "requests": true,
+    "selenium": false,
+    "webui_running": false,
+    "openai_api_running": false
+  },
+  "results": {
+    "quick": []
+  }
+}

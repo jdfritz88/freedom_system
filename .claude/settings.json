@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"F:\\Apps\\freedom_system\\REPO_vs_claude_code_voice_mode\\venv\\Scripts\\python.exe\" \"F:\\Apps\\freedom_system\\REPO_vs_claude_code_voice_mode\\tts_hook.py\"",
+            "timeout": 30000
+          }
+        ]
+      }
+    ]
+  }
+}

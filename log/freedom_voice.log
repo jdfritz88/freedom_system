@@ -1,0 +1,45 @@
+[FREEDOM_VOICE] [INFO] Freedom Voice MCP server starting...
+[FREEDOM_VOICE] [INFO] AllTalk TTS: http://127.0.0.1:7851
+[FREEDOM_VOICE] [INFO] Whisper STT: http://127.0.0.1:8787
+[FREEDOM_VOICE] [INFO] Default voice: Freya.wav
+[FREEDOM_VOICE] [INFO] Processing request of type ListToolsRequest
+[FREEDOM_VOICE] [INFO] Freedom Voice MCP server starting...
+[FREEDOM_VOICE] [INFO] AllTalk TTS: http://127.0.0.1:7851
+[FREEDOM_VOICE] [INFO] Whisper STT: http://127.0.0.1:8787
+[FREEDOM_VOICE] [INFO] Default voice: Freya.wav
+[FREEDOM_VOICE] [INFO] Processing request of type ListToolsRequest
+[FREEDOM_VOICE] [INFO] Processing request of type CallToolRequest
+[FREEDOM_VOICE] [INFO] Speaking: 'Hello, testing voice output...' with voice=Freya.wav
+[FREEDOM_VOICE] [ERROR] Audio playback failed: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\jespe\\AppData\\Local\\Temp\\tmpayyjvb4d.wav'
+[FREEDOM_VOICE] [INFO] Processing request of type CallToolRequest
+[FREEDOM_VOICE] [INFO] Speaking: 'Hello, testing voice output...' with voice=Freya.wav
+[FREEDOM_VOICE] [ERROR] Audio playback failed: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\jespe\\AppData\\Local\\Temp\\tmpwn5acjoa.wav'
+[FREEDOM_VOICE] [INFO] Processing request of type CallToolRequest
+[FREEDOM_VOICE] [INFO] Speaking: 'Hello, testing voice output...' with voice=Freya.wav
+[FREEDOM_VOICE] [ERROR] Audio playback failed: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\jespe\\AppData\\Local\\Temp\\tmpo_ruwopi.wav'
+[FREEDOM_VOICE] [INFO] Freedom Voice MCP server starting...
+[FREEDOM_VOICE] [INFO] AllTalk TTS: http://127.0.0.1:7851
+[FREEDOM_VOICE] [INFO] Whisper STT: http://127.0.0.1:8787
+[FREEDOM_VOICE] [INFO] Default voice: Freya.wav
+[FREEDOM_VOICE] [INFO] Processing request of type ListToolsRequest
+[FREEDOM_VOICE] [INFO] Processing request of type CallToolRequest
+[FREEDOM_VOICE] [INFO] Processing request of type CallToolRequest
+[FREEDOM_VOICE] [INFO] Recording... (max 10s, silence timeout 3s)
+[FREEDOM_VOICE] [INFO] Recorded 11.0s of audio
+[FREEDOM_VOICE] [INFO] Sending 353324 bytes to Whisper STT...
+[FREEDOM_VOICE] [INFO] Transcribed: ''
+[FREEDOM_VOICE] [INFO] Processing request of type CallToolRequest
+[FREEDOM_VOICE] [INFO] Recording... (max 10s, silence timeout 3s)
+[FREEDOM_VOICE] [INFO] Recorded 11.2s of audio
+[FREEDOM_VOICE] [INFO] Sending 360044 bytes to Whisper STT...
+[FREEDOM_VOICE] [INFO] Transcribed: ''
+[FREEDOM_VOICE] [INFO] Processing request of type CallToolRequest
+[FREEDOM_VOICE] [INFO] Speaking: 'Hello! Can you hear me? If you can, try speaking into your microphone....' with voice=Freya.wav
+[FREEDOM_VOICE] [ERROR] Audio playback failed: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\jespe\\AppData\\Local\\Temp\\tmpehh2s95w.wav'
+[FREEDOM_VOICE] [INFO] Processing request of type CallToolRequest
+[FREEDOM_VOICE] [INFO] Speaking: 'Sounds good! I'll speak my responses to you from now on. Just type your messages...' with voice=Freya.wav
+[FREEDOM_VOICE] [INFO] Request 6 cancelled - duplicate response suppressed
+[FREEDOM_VOICE] [INFO] Processing request of type CallToolRequest
+[FREEDOM_VOICE] [INFO] Speaking: 'Got it! I'll speak my responses to you and you just type to me. What would you l...' with voice=Freya.wav
+[FREEDOM_VOICE] [ERROR] Audio playback failed: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\jespe\\AppData\\Local\\Temp\\tmpqp5l25a6.wav'
+[FREEDOM_VOICE] [ERROR] Audio playback failed: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\jespe\\AppData\\Local\\Temp\\tmp85f9vaja.wav'

@@ -18,13 +18,34 @@ def backup_file(file_path):
         return True
     return False
 
+def get_first_available_voice():
+    """Dynamically discover the first available voice file"""
+    voices_dir = Path(__file__).parent / "voices"
+    
+    if not voices_dir.exists():
+        print(f"[WARNING] Voices directory not found: {voices_dir}")
+        return "female_01.wav"  # Ultimate fallback
+    
+    # Get all .wav files in voices directory
+    voice_files = list(voices_dir.glob("*.wav"))
+    
+    if not voice_files:
+        print(f"[WARNING] No voice files found in {voices_dir}")
+        return "female_01.wav"  # Ultimate fallback
+    
+    # Sort for consistent ordering
+    voice_files.sort()
+    first_voice = voice_files[0].name
+    
+    print(f"[DYNAMIC] First available voice discovered: {first_voice}")
+    return first_voice
+
 def fix_placeholder_values(config_data, config_name):
     """Replace all placeholder values with valid defaults"""
     changes_made = 0
     
-    # Define valid defaults
-    valid_voices = ["female_01.wav", "male_01.wav", "Arnold.wav"]
-    default_voice = "female_01.wav"
+    # Get dynamic default voice
+    default_voice = get_first_available_voice()
     
     # Placeholder values to replace
     placeholders = ["Please Refresh Settings", "Select...", "Choose...", "", None]
@@ -123,23 +144,8 @@ def verify_voice_files():
     if len(voice_files) > 10:
         print(f"  ... and {len(voice_files) - 10} more")
     
-    # Check for essential voices
-    essential_voices = ["female_01.wav", "male_01.wav"]
-    missing = []
-    
-    for voice in essential_voices:
-        if not (voices_dir / voice).exists():
-            missing.append(voice)
-    
-    if missing:
-        print(f"[WARNING] Missing essential voices: {', '.join(missing)}")
-        
-        # Try to use first available voice as default
-        if voice_files:
-            print(f"[INFO] Will use {voice_files[0].name} as default")
-            return voice_files[0].name
-    
-    return "female_01.wav"
+    # Use dynamic voice discovery instead of hard-coded defaults
+    return get_first_available_voice()
 
 def synchronize_voice_settings(default_voice):
     """Ensure all configs use the same voice settings"""

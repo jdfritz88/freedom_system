@@ -1,0 +1,84 @@
+17:56:02.937 [INFO] TestRunner: ==============================================================================
+17:56:02.938 [INFO] TestRunner: COMPREHENSIVE INJECTION TEST RUNNER
+17:56:02.938 [INFO] TestRunner: ==============================================================================
+17:56:02.938 [INFO] TestRunner: Checking prerequisites...
+17:56:04.216 [DEBUG] httpcore.connection: connect_tcp.started host='api.gradio.app' port=443 local_address=None timeout=3 socket_options=None
+17:56:04.285 [DEBUG] httpcore.connection: connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000026D5EDF88D0>
+17:56:04.285 [DEBUG] httpcore.connection: start_tls.started ssl_context=<ssl.SSLContext object at 0x0000026D5EDC7DA0> server_hostname='api.gradio.app' timeout=3
+17:56:04.395 [DEBUG] httpcore.connection: start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000026D5EE06350>
+17:56:04.396 [DEBUG] httpcore.http11: send_request_headers.started request=<Request [b'GET']>
+17:56:04.396 [DEBUG] httpcore.http11: send_request_headers.complete
+17:56:04.396 [DEBUG] httpcore.http11: send_request_body.started request=<Request [b'GET']>
+17:56:04.396 [DEBUG] httpcore.http11: send_request_body.complete
+17:56:04.396 [DEBUG] httpcore.http11: receive_response_headers.started request=<Request [b'GET']>
+17:56:04.441 [DEBUG] httpcore.http11: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 30 Nov 2025 01:56:05 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'3'), (b'Connection', b'keep-alive'), (b'Server', b'nginx/1.18.0'), (b'Access-Control-Allow-Origin', b'*')])
+17:56:04.442 [DEBUG] httpcore.http11: receive_response_body.started request=<Request [b'GET']>
+17:56:04.442 [DEBUG] httpcore.http11: receive_response_body.complete
+17:56:04.442 [DEBUG] httpcore.http11: response_closed.started
+17:56:04.443 [DEBUG] httpcore.http11: response_closed.complete
+17:56:04.443 [DEBUG] httpcore.connection: close.started
+17:56:04.443 [DEBUG] httpcore.connection: close.complete
+17:56:04.557 [DEBUG] PIL.Image: Importing BlpImagePlugin
+17:56:04.558 [DEBUG] PIL.Image: Importing BmpImagePlugin
+17:56:04.559 [DEBUG] PIL.Image: Importing BufrStubImagePlugin
+17:56:04.560 [DEBUG] PIL.Image: Importing CurImagePlugin
+17:56:04.561 [DEBUG] PIL.Image: Importing DcxImagePlugin
+17:56:04.562 [DEBUG] PIL.Image: Importing DdsImagePlugin
+17:56:04.570 [DEBUG] PIL.Image: Importing EpsImagePlugin
+17:56:04.571 [DEBUG] PIL.Image: Importing FitsImagePlugin
+17:56:04.572 [DEBUG] PIL.Image: Importing FliImagePlugin
+17:56:04.573 [DEBUG] PIL.Image: Importing FpxImagePlugin
+17:56:04.574 [DEBUG] PIL.Image: Image: failed to import FpxImagePlugin: No module named 'olefile'
+17:56:04.574 [DEBUG] PIL.Image: Importing FtexImagePlugin
+17:56:04.575 [DEBUG] PIL.Image: Importing GbrImagePlugin
+17:56:04.575 [DEBUG] PIL.Image: Importing GifImagePlugin
+17:56:04.577 [DEBUG] PIL.Image: Importing GribStubImagePlugin
+17:56:04.578 [DEBUG] PIL.Image: Importing Hdf5StubImagePlugin
+17:56:04.578 [DEBUG] PIL.Image: Importing IcnsImagePlugin
+17:56:04.581 [DEBUG] PIL.Image: Importing IcoImagePlugin
+17:56:04.582 [DEBUG] PIL.Image: Importing ImImagePlugin
+17:56:04.583 [DEBUG] PIL.Image: Importing ImtImagePlugin
+17:56:04.583 [DEBUG] PIL.Image: Importing IptcImagePlugin
+17:56:04.584 [DEBUG] PIL.Image: Importing JpegImagePlugin
+17:56:04.585 [DEBUG] PIL.Image: Importing Jpeg2KImagePlugin
+17:56:04.585 [DEBUG] PIL.Image: Importing McIdasImagePlugin
+17:56:04.586 [DEBUG] PIL.Image: Importing MicImagePlugin
+17:56:04.586 [DEBUG] PIL.Image: Image: failed to import MicImagePlugin: No module named 'olefile'
+17:56:04.587 [DEBUG] PIL.Image: Importing MpegImagePlugin
+17:56:04.587 [DEBUG] PIL.Image: Importing MpoImagePlugin
+17:56:04.589 [DEBUG] PIL.Image: Importing MspImagePlugin
+17:56:04.590 [DEBUG] PIL.Image: Importing PalmImagePlugin
+17:56:04.591 [DEBUG] PIL.Image: Importing PcdImagePlugin
+17:56:04.591 [DEBUG] PIL.Image: Importing PcxImagePlugin
+17:56:04.591 [DEBUG] PIL.Image: Importing PdfImagePlugin
+17:56:04.598 [DEBUG] PIL.Image: Importing PixarImagePlugin
+17:56:04.599 [DEBUG] PIL.Image: Importing PngImagePlugin
+17:56:04.599 [DEBUG] PIL.Image: Importing PpmImagePlugin
+17:56:04.600 [DEBUG] PIL.Image: Importing PsdImagePlugin
+17:56:04.600 [DEBUG] PIL.Image: Importing QoiImagePlugin
+17:56:04.601 [DEBUG] PIL.Image: Importing SgiImagePlugin
+17:56:04.601 [DEBUG] PIL.Image: Importing SpiderImagePlugin
+17:56:04.602 [DEBUG] PIL.Image: Importing SunImagePlugin
+17:56:04.602 [DEBUG] PIL.Image: Importing TgaImagePlugin
+17:56:04.603 [DEBUG] PIL.Image: Importing TiffImagePlugin
+17:56:04.603 [DEBUG] PIL.Image: Importing WebPImagePlugin
+17:56:04.604 [DEBUG] PIL.Image: Importing WmfImagePlugin
+17:56:04.605 [DEBUG] PIL.Image: Importing XbmImagePlugin
+17:56:04.606 [DEBUG] PIL.Image: Importing XpmImagePlugin
+17:56:04.607 [DEBUG] PIL.Image: Importing XVThumbImagePlugin
+17:56:05.621 [INFO] TestRunner:   [OK] text-generation-webui modules available
+17:56:05.622 [INFO] TestRunner:   [OK] requests library available
+17:56:05.622 [WARNING] TestRunner:   [NO] selenium not installed (optional)
+17:56:05.733 [INFO] TestRunner:   [OK] text-generation-webui running on port 7860
+17:56:05.740 [INFO] TestRunner:   [OK] OpenAI API running on port 5000
+17:56:05.740 [INFO] TestRunner: 
+============================================================
+17:56:05.740 [INFO] TestRunner: RUNNING QUICK TESTS (Most Reliable Methods)
+17:56:05.740 [INFO] TestRunner: ============================================================
+17:56:05.755 [INFO] InjectionTester: Connected to text-generation-webui
+17:56:05.755 [INFO] TestRunner: 
+--- Test 1: Direct History Manipulation ---
+17:56:05.755 [INFO] InjectionTester: ============================================================
+17:56:05.755 [INFO] InjectionTester: TESTING: direct_history_manipulation
+17:56:05.755 [INFO] InjectionTester: Message: 'QUICK-TEST-1: Direct history at 17:56:05'
+17:56:05.755 [INFO] InjectionTester: ============================================================

@@ -25,65 +25,32 @@ Dependencies:
 """
 import re
 import json
-import time
 import inspect
 import random
 import logging
 import threading
 import os
+import time
+import sys
 from datetime import datetime
 from pathlib import Path
 import requests
-import gradio as gr
-from modules import chat, shared, ui_chat
-from modules.utils import gradio
-import sys
 
-# ============================================================
-# ENHANCED LOGGING 5-SECOND PROMPT - RUN IMMEDIATELY
-# ============================================================
-print("\n\n*** ALLTALK EXTENSION LOADING ***", flush=True)
-print("*** IF YOU SEE THIS MESSAGE, THE SCRIPT IS RUNNING ***", flush=True)
-print("\n" + "="*60, flush=True)
-print("[AllTalk TTS] Enhanced logging is OFF by default", flush=True)
-print("[AllTalk TTS] Press ENTER within 5 seconds to enable enhanced logging detail...", flush=True)
-print("="*60, flush=True)
-
-# Initialize enhanced logging flag
-enhanced_logging_enabled = False
-
+# Import text-generation-webui modules (may fail in standalone mode)
 try:
-    if sys.platform == 'win32':
-        import msvcrt
-        start_time = time.time()
-        countdown = 5
-        
-        while (time.time() - start_time) < 5:
-            remaining = 5 - int(time.time() - start_time)
-            if remaining != countdown:
-                countdown = remaining
-                print(f"[AllTalk TTS] {countdown} seconds remaining...", flush=True)
-            
-            if msvcrt.kbhit():
-                key = msvcrt.getch()
-                if key in [b'\r', b'\n', b'\x0d', b'\x0a']:
-                    enhanced_logging_enabled = True
-                    print("[AllTalk TTS] ENHANCED LOGGING ENABLED!", flush=True)
-                    break
-            time.sleep(0.2)
-    else:
-        import select
-        ready, _, _ = select.select([sys.stdin], [], [], 5)
-        if ready:
-            input()
-            enhanced_logging_enabled = True
-            print("[AllTalk TTS] ENHANCED LOGGING ENABLED!", flush=True)
-except:
-    pass  # Silent fail
-
-if not enhanced_logging_enabled:
-    print("[AllTalk TTS] Enhanced logging remains OFF - continuing with standard logging", flush=True)
-print("="*60 + "\n", flush=True)
+    import gradio as gr
+    from modules import chat, shared, ui_chat
+    from modules.utils import gradio as gradio_utils
+    TGWUI_MODULES_AVAILABLE = True
+except ImportError:
+    print("[AllTalk TTS] Text-generation-webui modules not available - continuing with standard logging")
+    TGWUI_MODULES_AVAILABLE = False
+    # Create dummy objects if needed later
+    gr = None
+    chat = None
+    shared = None
+    ui_chat = None
+    gradio_utils = None
 from requests.exceptions import RequestException, ConnectionError
 
 # Define log_simple before it's used
@@ -135,11 +102,8 @@ this_dir = Path(__file__).parent.resolve()
 
 
 
-# Enhanced logging control (set above during import)
-
-# Enhanced logging for debugging
 def log_alltalk(message, level="INFO", function_name="", force_print=False):
-    """Enhanced logging with timestamp and function tracking"""
+    """Standard logging with timestamp and function tracking"""
     timestamp = datetime.now().strftime("%H:%M:%S.%f")[:-3]
     prefix = "[AllTalk TTS]"
     if function_name:
@@ -147,9 +111,8 @@ def log_alltalk(message, level="INFO", function_name="", force_print=False):
     
     full_message = prefix + " [" + level + "] " + message
     
-    # Print to console based on enhanced logging setting or force_print flag
-    if enhanced_logging_enabled or force_print:
-        print(full_message)
+    # Always print to console (removing enhanced logging condition)
+    print(full_message)
     
     # Always log to file
     try:
@@ -159,8 +122,6 @@ def log_alltalk(message, level="INFO", function_name="", force_print=False):
             f.write("[" + timestamp + "] " + full_message + "\n")
     except:
         pass  # Silent fail for file logging
-# Enhanced logging prompt has been moved to module import time (above)
-# log_simple function has been moved to line 90 (before first use)
 
 
 
@@ -175,31 +136,50 @@ def test_and_save_voice(voice_name, voice_type="character"):
         log_alltalk("Voice test failed: " + voice_name, "ERROR", "test_and_save_voice")
         return False
 
-def test_voice_selection(voice_name):
-    """Test if a voice actually works by trying a small sample"""
-    log_alltalk("Testing voice: " + voice_name, "INFO", "test_voice")
+def test_voice_loading(voice_name):
+    """Test if a voice can be loaded into TTS engine and generate audio"""
+    log_alltalk(f"🔄 LOADING VOICE INTO TTS ENGINE: {voice_name}", "INFO", "test_voice_loading")
     
     # Use correct AllTalk API format - Form data with proper field names
     test_params = {
-        "text_input": "Testing voice selection.",
+        "text_input": "Voice loading verification test.",
         "character_voice_gen": voice_name,
-        "text_filtering": "standard"
+        "text_filtering": "standard",
+        "output_file_name": "voice_load_test",
+        "output_file_timestamp": "false"
     }
     
     try:
         api_url = mode_manager.get_api_url("tts-generate")
-        # Send as Form data, not JSON
-        response = requests.post(api_url, data=test_params, timeout=8)
+        log_alltalk(f"Sending voice load test to: {api_url}", "INFO", "test_voice_loading")
+        log_alltalk(f"Test parameters: voice='{voice_name}', text='Voice loading verification test.'", "INFO", "test_voice_loading")
+        
+        # Send as Form data, not JSON - this forces AllTalk to load the voice
+        response = requests.post(api_url, data=test_params, timeout=15)  # Longer timeout for loading
         
         if response.status_code == 200:
-            log_alltalk("Voice test successful: " + voice_name, "SUCCESS", "test_voice")
-            return True
+            log_alltalk(f"✅ VOICE SUCCESSFULLY LOADED INTO TTS ENGINE: {voice_name}", "SUCCESS", "test_voice_loading")
+            log_alltalk(f"Server response indicates voice is cached and ready for use", "SUCCESS", "test_voice_loading")
+            return True, f"Voice '{voice_name}' loaded and ready"
         else:
-            log_alltalk("Voice test failed with status: " + str(response.status_code), "ERROR", "test_voice")
-            return False
+            try:
+                error_data = response.json() if response.headers.get('content-type', '').startswith('application/json') else response.text
+                log_alltalk(f"❌ VOICE LOADING FAILED: {voice_name} - Status: {response.status_code}", "ERROR", "test_voice_loading")
+                log_alltalk(f"Server error response: {error_data}", "ERROR", "test_voice_loading")
+                return False, f"Voice '{voice_name}' failed to load: {error_data}"
+            except:
+                return False, f"Voice '{voice_name}' failed to load: HTTP {response.status_code}"
+    except requests.exceptions.Timeout:
+        log_alltalk(f"❌ VOICE LOADING TIMEOUT: {voice_name} (TTS engine may be busy)", "ERROR", "test_voice_loading")
+        return False, f"Voice '{voice_name}' loading timeout - TTS engine may be busy"
     except Exception as e:
-        log_alltalk("Voice test error: " + str(e), "ERROR", "test_voice")
-        return False
+        log_alltalk(f"❌ VOICE LOADING ERROR: {voice_name} - {str(e)}", "ERROR", "test_voice_loading")
+        return False, f"Voice '{voice_name}' loading error: {str(e)}"
+
+def test_voice_selection(voice_name):
+    """Backward compatibility wrapper - calls enhanced voice loading test"""
+    success, message = test_voice_loading(voice_name)
+    return success
 
 
 class TGWUIModeManager:
@@ -218,9 +198,9 @@ class TGWUIModeManager:
         if sync_all_voices:
             try:
                 log_simple("Synchronizing voice files...")
-                voices, added, removed = sync_all_voices(enhanced_logging_enabled)
-                if enhanced_logging_enabled:
-                    log_alltalk("Voice sync completed successfully", "SUCCESS", "voice_sync")
+                voices, added, removed = sync_all_voices()
+                # Voice count is already displayed by sync_all_voices()
+                log_alltalk("Voice sync completed successfully", "SUCCESS", "voice_sync")
             except Exception as e:
                 log_alltalk("Voice sync failed: " + str(e), "ERROR", "voice_sync")
                 log_simple("Warning: Voice sync failed: " + str(e))
@@ -256,43 +236,102 @@ class TGWUIModeManager:
     def _setup_config(self):
         """Loads configuration based on the detected mode (local or remote)."""
         if self.is_local:
-            # We're in TGWUI mode, use default settings
+            # We're in local AllTalk mode, load from confignew.json
             self.branding = "AllTalk "
             self.server = {
                 "protocol": "http://",
                 "address": "127.0.0.1:7851",  # Default port
                 "timeout": 5,
             }
-            # Set complete default config structure
-            self.config = {
-                "api_def": {"api_port_number": 7851, "api_use_legacy_api": False},
-                "tgwui": {
-                    "tgwui_activate_tts": True,
-                    "tgwui_autoplay_tts": True,
-                    "tgwui_narrator_enabled": "false",
-                    "tgwui_non_quoted_text_is": "narrator",
-                    "tgwui_deepspeed_enabled": False,
-                    "tgwui_language": "English",
-                    "tgwui_lowvram_enabled": False,
-                    "tgwui_pitch_set": 0,
-                    "tgwui_temperature_set": 0.75,
-                    "tgwui_repetitionpenalty_set": 10,
-                    "tgwui_generationspeed_set": 1,
-                    "tgwui_narrator_voice": "female_01.wav",
-                    "tgwui_show_text": True,
-                    "tgwui_character_voice": "female_01.wav",
-                    "tgwui_rvc_char_voice": "Disabled",
-                    "tgwui_rvc_char_pitch": 0,
-                    "tgwui_rvc_narr_voice": "Disabled",
-                    "tgwui_rvc_narr_pitch": 0,
-                },
-                "remote_connection": {  # Add this section for local mode too
-                    "use_legacy_api": False,
-                    "server_protocol": "http://",
-                    "server_address": "127.0.0.1:7851",
-                    "connection_timeout": 5,
-                },
-            }
+            
+            # Try to load from the main AllTalk config file
+            try:
+                alltalk_root = Path(__file__).parent.parent.parent
+                config_path = alltalk_root / "confignew.json"
+                
+                if config_path.exists():
+                    with open(config_path, "r", encoding="utf8") as config_f:
+                        loaded_config = json.load(config_f)
+                        
+                    # Extract the tgwui section and other needed parts
+                    self.config = {
+                        "api_def": {
+                            "api_port_number": loaded_config.get("api_def", {}).get("api_port_number", 7851),
+                            "api_use_legacy_api": loaded_config.get("api_def", {}).get("api_use_legacy_api", False)
+                        },
+                        "tgwui": loaded_config.get("tgwui", {}),
+                        "remote_connection": {
+                            "use_legacy_api": False,
+                            "server_protocol": "http://",
+                            "server_address": "127.0.0.1:7851",
+                            "connection_timeout": 5,
+                        },
+                    }
+                    
+                    # Ensure all required keys exist with defaults
+                    tgwui_defaults = {
+                        "tgwui_activate_tts": True,
+                        "tgwui_autoplay_tts": True,
+                        "tgwui_narrator_enabled": "false",
+                        "tgwui_non_quoted_text_is": "narrator",
+                        "tgwui_deepspeed_enabled": False,
+                        "tgwui_language": "English",
+                        "tgwui_lowvram_enabled": False,
+                        "tgwui_pitch_set": 0,
+                        "tgwui_temperature_set": 0.75,
+                        "tgwui_repetitionpenalty_set": 10,
+                        "tgwui_generationspeed_set": 1,
+                        "tgwui_narrator_voice": "",
+                        "tgwui_show_text": True,
+                        "tgwui_character_voice": "",
+                        "tgwui_rvc_char_voice": "Disabled",
+                        "tgwui_rvc_char_pitch": 0,
+                        "tgwui_rvc_narr_voice": "Disabled",
+                        "tgwui_rvc_narr_pitch": 0,
+                    }
+                    
+                    for key, default in tgwui_defaults.items():
+                        if key not in self.config["tgwui"]:
+                            self.config["tgwui"][key] = default
+                    
+                    log_alltalk(f"Loaded config from {config_path}", "SUCCESS", "config_loader")
+                    log_alltalk(f"Character voice from config: {self.config['tgwui'].get('tgwui_character_voice', 'not set')}", "INFO", "config_loader")
+                    log_alltalk(f"Narrator voice from config: {self.config['tgwui'].get('tgwui_narrator_voice', 'not set')}", "INFO", "config_loader")
+                else:
+                    raise FileNotFoundError(f"Config file not found at {config_path}")
+                    
+            except (FileNotFoundError, json.JSONDecodeError) as e:
+                print(f"[AllTalk TTS] Error loading local config ({str(e)}), using defaults")
+                # Fallback to defaults if config can't be loaded
+                self.config = {
+                    "api_def": {"api_port_number": 7851, "api_use_legacy_api": False},
+                    "tgwui": {
+                        "tgwui_activate_tts": True,
+                        "tgwui_autoplay_tts": True,
+                        "tgwui_narrator_enabled": "false",
+                        "tgwui_non_quoted_text_is": "narrator",
+                        "tgwui_deepspeed_enabled": False,
+                        "tgwui_language": "English",
+                        "tgwui_lowvram_enabled": False,
+                        "tgwui_pitch_set": 0,
+                        "tgwui_temperature_set": 0.75,
+                        "tgwui_repetitionpenalty_set": 10,
+                        "tgwui_generationspeed_set": 1,
+                        "tgwui_narrator_voice": "",
+                        "tgwui_show_text": True,
+                        "tgwui_character_voice": "",
+                        "tgwui_rvc_char_voice": "Disabled",
+                        "tgwui_rvc_char_pitch": 0,
+                        "tgwui_rvc_narr_voice": "Disabled",
+                        "tgwui_rvc_narr_pitch": 0,
+                    },
+                    "remote_connection": {
+                        "use_legacy_api": False,
+                        "server_protocol": "http://",
+                        "server_address": "127.0.0.1:7851",
+                        "connection_timeout": 5,
+                    },
+                }
         else:
             config_path = Path(__file__).parent / "tgwui_remote_config.json"
             try:
@@ -315,8 +354,8 @@ class TGWUIModeManager:
                         "tgwui_temperature_set": 0.75,
                         "tgwui_repetitionpenalty_set": 10,
                         "tgwui_generationspeed_set": 1.0,
-                        "tgwui_narrator_voice": "female_01.wav",
-                        "tgwui_character_voice": "female_01.wav",
+                        "tgwui_narrator_voice": "",  # Will be populated from API or saved settings
+                        "tgwui_character_voice": "",  # Will be populated from API or saved settings
                         "tgwui_rvc_char_voice": "Disabled",
                         "tgwui_rvc_char_pitch": 0,
                         "tgwui_rvc_narr_voice": "Disabled",
@@ -345,12 +384,57 @@ class TGWUIModeManager:
         """Returns the full API URL for the given endpoint."""
         return f"{self.server_url}/api/{endpoint}"
 
+    def refresh_config(self):
+        """Refresh configuration from disk to ensure in-memory config is current"""
+        log_alltalk("Refreshing configuration from disk", "INFO", "refresh_config")
+        try:
+            old_char_voice = self.config["tgwui"].get("tgwui_character_voice", "")
+            old_narr_voice = self.config["tgwui"].get("tgwui_narrator_voice", "")
+            
+            # Reload config from disk
+            self._setup_config()
+            
+            new_char_voice = self.config["tgwui"].get("tgwui_character_voice", "")
+            new_narr_voice = self.config["tgwui"].get("tgwui_narrator_voice", "")
+            
+            log_alltalk(f"Config refresh - Character voice: {old_char_voice} -> {new_char_voice}", "INFO", "refresh_config")
+            log_alltalk(f"Config refresh - Narrator voice: {old_narr_voice} -> {new_narr_voice}", "INFO", "refresh_config")
+            
+            return True
+        except Exception as e:
+            log_alltalk(f"Error refreshing config: {str(e)}", "ERROR", "refresh_config")
+            return False
+
     def save_settings(self):
         """Save current settings to appropriate location"""
         if self.is_local:
-            # We're in TGWUI mode, we don't need to save to AllTalk's config
-            # The settings are maintained by TGWUI
-            pass
+            # We're in local AllTalk mode, save to confignew.json
+            try:
+                alltalk_root = Path(__file__).parent.parent.parent
+                config_path = alltalk_root / "confignew.json"
+                
+                # Load the full config file
+                with open(config_path, "r", encoding="utf8") as config_f:
+                    full_config = json.load(config_f)
+                
+                # Update only the tgwui section
+                full_config["tgwui"] = self.config["tgwui"]
+                
+                # Write back the updated config
+                with open(config_path, "w", encoding="utf8") as config_f:
+                    json.dump(full_config, config_f, indent=4, ensure_ascii=False)
+                
+                log_alltalk(f"Settings saved to {config_path}", "SUCCESS", "save_settings")
+                log_alltalk(f"Saved character voice: {self.config['tgwui'].get('tgwui_character_voice', 'not set')}", "INFO", "save_settings")
+                log_alltalk(f"Saved narrator voice: {self.config['tgwui'].get('tgwui_narrator_voice', 'not set')}", "INFO", "save_settings")
+                
+                # Force immediate config refresh to sync in-memory config
+                log_alltalk("Performing immediate config refresh after save", "INFO", "save_settings")
+                self.refresh_config()
+                
+            except Exception as e:
+                log_alltalk(f"Error saving settings: {str(e)}", "ERROR", "save_settings")
+                print(f"[AllTalk TTS] Error saving settings: {str(e)}")
         else:
             # In remote mode, save to local config file
             settings = {
@@ -366,14 +450,40 @@ class TGWUIModeManager:
                 },
             }
             config_path = Path(__file__).parent / "tgwui_remote_config.json"
-            with open(config_path, "w", encoding="utf8") as save_f:
-                json.dump(settings, save_f, indent=4)
+            
+            # Log before saving for debugging
+            log_alltalk(f"Saving remote config with character voice: {settings['tgwui'].get('tgwui_character_voice', 'not set')}", "INFO", "save_settings")
+            log_alltalk(f"Saving remote config with narrator voice: {settings['tgwui'].get('tgwui_narrator_voice', 'not set')}", "INFO", "save_settings")
+            
+            try:
+                with open(config_path, "w", encoding="utf8") as save_f:
+                    json.dump(settings, save_f, indent=4)
+                    save_f.flush()  # Force write to disk
+                    os.fsync(save_f.fileno())  # Ensure it's written to disk
+                
+                # Verify the file was written correctly
+                with open(config_path, 'r', encoding='utf-8') as f:
+                    saved_config = json.load(f)
+                    saved_char_voice = saved_config.get('tgwui', {}).get('tgwui_character_voice', '')
+                    saved_narr_voice = saved_config.get('tgwui', {}).get('tgwui_narrator_voice', '')
+                
+                log_alltalk(f"Remote settings saved to {config_path}", "SUCCESS", "save_settings")
+                log_alltalk(f"Verified saved character voice: {saved_char_voice}", "INFO", "save_settings")
+                log_alltalk(f"Verified saved narrator voice: {saved_narr_voice}", "INFO", "save_settings")
+                
+                # Force immediate config refresh to sync in-memory config
+                log_alltalk("Performing immediate config refresh after save", "INFO", "save_settings")
+                self.refresh_config()
+                
+            except Exception as e:
+                log_alltalk(f"Error saving remote settings: {str(e)}", "ERROR", "save_settings")
+                print(f"[AllTalk TTS] Error saving remote settings: {str(e)}")
 
 
 # Initialize mode manager at startup
 print("[AllTalk TTS] About to create TGWUIModeManager instance", flush=True)
 mode_manager = TGWUIModeManager()
-print("[AllTalk TTS] TGWUIModeManager instance created successfully", flush=True)
+log_simple("TGWUIModeManager instance created successfully")
 
 ##########################
 # Central print function #
@@ -473,32 +583,53 @@ def get_alltalk_settings():
                 ]
                 current_model_loaded = settings_data["current_model_loaded"]
 
-                # Update our local config with received values
-                if mode_manager.is_local:
-                    mode_manager.config["tgwui"].update(
-                        {
-                            "tgwui_character_voice": (
-                                voices_data["voices"][0]
-                                if voices_data["voices"]
-                                else "Please Refresh Settings"
-                            ),
-                            "tgwui_narrator_voice": (
-                                voices_data["voices"][0]
-                                if voices_data["voices"]
-                                else "Please Refresh Settings"
-                            ),
-                            "tgwui_rvc_char_voice": (
-                                rvcvoices_data["rvcvoices"][0]
-                                if rvcvoices_data["rvcvoices"]
-                                else "Disabled"
-                            ),
-                            "tgwui_rvc_narr_voice": (
-                                rvcvoices_data["rvcvoices"][0]
-                                if rvcvoices_data["rvcvoices"]
-                                else "Disabled"
-                            ),
-                        }
+                # Update config ONLY if voices are empty or invalid (no hardcoded defaults)
+                # This preserves user selections while ensuring we have valid voices
+                log_alltalk(f"Checking voice config - Local mode: {mode_manager.is_local}", "INFO", "get_alltalk_settings")
+                
+                current_char_voice = mode_manager.config["tgwui"]["tgwui_character_voice"]
+                current_narr_voice = mode_manager.config["tgwui"]["tgwui_narrator_voice"]
+                
+                # Clear invalid voices instead of replacing them with fallbacks
+                settings_changed = False
+                
+                if current_char_voice and current_char_voice not in voices_data["voices"]:
+                    # Invalid voice found - clear it so user can select a new one
+                    mode_manager.config["tgwui"]["tgwui_character_voice"] = ""
+                    log_alltalk(f"Character voice '{current_char_voice}' not found, cleared for user selection", "WARNING", "get_alltalk_settings")
+                    settings_changed = True
+                elif current_char_voice:
+                    log_alltalk(f"Character voice already set and valid: {current_char_voice}", "INFO", "get_alltalk_settings")
+                elif not current_char_voice:
+                    log_alltalk("Character voice empty - user needs to select", "INFO", "get_alltalk_settings")
+                
+                if current_narr_voice and current_narr_voice not in voices_data["voices"]:
+                    # Invalid voice found - clear it so user can select a new one
+                    mode_manager.config["tgwui"]["tgwui_narrator_voice"] = ""
+                    log_alltalk(f"Narrator voice '{current_narr_voice}' not found, cleared for user selection", "WARNING", "get_alltalk_settings")
+                    settings_changed = True
+                elif current_narr_voice:
+                    log_alltalk(f"Narrator voice already set and valid: {current_narr_voice}", "INFO", "get_alltalk_settings")
+                elif not current_narr_voice:
+                    log_alltalk("Narrator voice empty - user needs to select", "INFO", "get_alltalk_settings")
+                
+                # Handle RVC voices similarly
+                current_rvc_char = mode_manager.config["tgwui"].get("tgwui_rvc_char_voice", "Disabled")
+                if current_rvc_char == "" or (current_rvc_char != "Disabled" and current_rvc_char not in rvcvoices_data["rvcvoices"]):
+                    mode_manager.config["tgwui"]["tgwui_rvc_char_voice"] = (
+                        rvcvoices_data["rvcvoices"][0] if rvcvoices_data["rvcvoices"] else "Disabled"
                     )
+                
+                current_rvc_narr = mode_manager.config["tgwui"].get("tgwui_rvc_narr_voice", "Disabled")
+                if current_rvc_narr == "" or (current_rvc_narr != "Disabled" and current_rvc_narr not in rvcvoices_data["rvcvoices"]):
+                    mode_manager.config["tgwui"]["tgwui_rvc_narr_voice"] = (
+                        rvcvoices_data["rvcvoices"][0] if rvcvoices_data["rvcvoices"] else "Disabled"
+                    )
+                
+                # Only save when we cleared invalid voices
+                if settings_changed:
+                    mode_manager.save_settings()
+                    log_alltalk("Invalid voices cleared and settings saved", "INFO", "get_alltalk_settings")
 
                 return AllTalkServerSettings.from_api_response(
                     voices_data, rvcvoices_data, settings_data
@@ -526,7 +657,7 @@ class AllTalkServerSettings:
 
     def __init__(self):
         """Initializes the TGWUIModeManager with default settings and server connection."""
-        self.voices = ["female_01.wav"]  # Use actual voice instead of placeholder
+        self.voices = []  # Will be populated from API, no hardcoded defaults
         self.rvcvoices = ["Disabled"]
         self.models_available = ["xtts"]
         self.current_model_loaded = "xtts"
@@ -820,7 +951,7 @@ def send_and_generate(
     if gen_stopcurrentgen:
         stop_generate_tts()
 
-    mode_manager.save_settings()
+    # Removed unnecessary save_settings() here - settings should only be saved when explicitly changed by user
 
     if gen_stream == "true":
         api_url = mode_manager.get_api_url("tts-generate-streaming")
@@ -828,19 +959,43 @@ def send_and_generate(
         streaming_url = f"{api_url}?text={encoded_text}&voice={gen_character_voice}&language={gen_language}&output_file={gen_file_name}"
         return streaming_url, str("TTS Streaming Audio Generated")
 
+    # Parameter validation and sanitization
+    safe_filename = str(gen_file_name)
+    if not safe_filename or safe_filename in ["None", "null", ""]:
+        safe_filename = "TTSOUT_"
+        log_alltalk(f"Invalid filename '{gen_file_name}', using fallback: {safe_filename}", "WARNING", "send_and_generate")
+    
+    # Ensure narrator_enabled is a valid boolean string
+    narrator_enabled_str = str(gen_narrator_activated).lower()
+    if narrator_enabled_str not in ["true", "false"]:
+        narrator_enabled_str = "false"
+        log_alltalk(f"Invalid narrator_enabled value '{gen_narrator_activated}', using fallback: false", "WARNING", "send_and_generate")
+    
+    # Ensure text_not_inside has a valid value
+    valid_text_not_inside = ["character", "narrator", "silent"]
+    if gen_textnotinisde not in valid_text_not_inside:
+        gen_textnotinisde = "character"  # fallback to character
+        log_alltalk(f"Invalid text_not_inside value, using fallback: character", "WARNING", "send_and_generate")
+    
+    # Validate and clean text input
+    clean_text_input = gen_text[0] if isinstance(gen_text, tuple) else gen_text
+    if not clean_text_input or len(str(clean_text_input).strip()) == 0:
+        log_alltalk("Empty text input provided", "ERROR", "send_and_generate")
+        return None, "Error: Empty text input"
+    
     data = {
-        "text_input": gen_text[0] if isinstance(gen_text, tuple) else gen_text, 
+        "text_input": clean_text_input,
         "text_filtering": gen_filter,
         "character_voice_gen": gen_character_voice,
         "rvccharacter_voice_gen": gen_rvccharacter_voice,
         "rvccharacter_pitch": gen_rvccharacter_pitch,
-        "narrator_enabled": str(gen_narrator_activated).lower(),
+        "narrator_enabled": narrator_enabled_str,
         "narrator_voice_gen": gen_narrator_voice,
         "rvcnarrator_voice_gen": gen_rvcnarrator_voice,
         "rvcnarrator_pitch": gen_rvcnarrator_pitch,
         "text_not_inside": gen_textnotinisde,
         "language": gen_language,
-        "output_file_name": str(gen_file_name),
+        "output_file_name": safe_filename,
         "output_file_timestamp": str(gen_filetimestamp).lower(),
         "autoplay": str(gen_autoplay).lower(),
         "autoplay_volume": str(gen_autoplay_vol),
@@ -850,6 +1005,16 @@ def send_and_generate(
         "repetition_penalty": str(gen_repetition),
     }
 
+    # Always log parameters for troubleshooting (not just in debug mode)
+    log_alltalk("=== TTS Generation Request Parameters ===", "INFO", "send_and_generate")
+    for key, value in data.items():
+        # Truncate long text but show other parameters fully
+        if key == "text_input" and len(str(value)) > 100:
+            log_alltalk(f"{key}: {str(value)[:100]}...", "INFO", "send_and_generate")
+        else:
+            log_alltalk(f"{key}: {value}", "INFO", "send_and_generate")
+    log_alltalk(f"API URL: {api_url}", "INFO", "send_and_generate")
+    
     if mode_manager.debug_tgwui:
         print_func(
             "Generation request parameters:",
@@ -862,9 +1027,62 @@ def send_and_generate(
             )
 
     try:
+        log_alltalk("Sending TTS request to AllTalk API...", "INFO", "send_and_generate")
         response = requests.post(api_url, data=data)
-        response.raise_for_status()
+        
+        # Log response details for troubleshooting
+        log_alltalk(f"API Response Status: {response.status_code}", "INFO", "send_and_generate")
+        
+        if response.status_code == 422:
+            log_alltalk("422 Error - Parameter validation failed", "ERROR", "send_and_generate")
+            log_alltalk(f"Response body: {response.text}", "ERROR", "send_and_generate")
+            
+            # Try to identify specific parameter issues
+            try:
+                error_details = response.json()
+                log_alltalk(f"Error details: {error_details}", "ERROR", "send_and_generate")
+            except:
+                log_alltalk("Could not parse error response as JSON", "ERROR", "send_and_generate")
+            
+            # Try with simplified parameters (similar to preview function)
+            log_alltalk("Attempting fallback with simplified parameters...", "INFO", "send_and_generate")
+            fallback_data = {
+                "text_input": clean_text_input,
+                "text_filtering": "standard",
+                "character_voice_gen": gen_character_voice,
+                "narrator_enabled": "false", 
+                "text_not_inside": "character",
+                "language": gen_language or "en",
+                "output_file_name": "TTSOUT_fallback",
+                "output_file_timestamp": "false",
+                "autoplay": "false",
+                "autoplay_volume": "0.8",
+                "speed": str(gen_speed),
+                "pitch": str(gen_pitch),
+                "temperature": str(gen_temperature),
+                "repetition_penalty": str(gen_repetition),
+            }
+            
+            log_alltalk("=== Fallback Parameters ===", "INFO", "send_and_generate")
+            for key, value in fallback_data.items():
+                log_alltalk(f"{key}: {value}", "INFO", "send_and_generate")
+            
+            try:
+                fallback_response = requests.post(api_url, data=fallback_data)
+                if fallback_response.status_code == 200:
+                    log_alltalk("Fallback request successful!", "SUCCESS", "send_and_generate")
+                    result = fallback_response.json()
+                    # Continue with normal processing
+                else:
+                    log_alltalk(f"Fallback also failed with status: {fallback_response.status_code}", "ERROR", "send_and_generate")
+                    response.raise_for_status()  # Raise the original error
+            except Exception as fallback_error:
+                log_alltalk(f"Fallback request failed: {str(fallback_error)}", "ERROR", "send_and_generate")
+                response.raise_for_status()  # Raise the original error
+        else:
+            response.raise_for_status()
         result = response.json()
+        log_alltalk("TTS request successful", "SUCCESS", "send_and_generate")
 
         if gen_autoplay == "true":
             return None, str("TTS Audio Generated (Played remotely)")
@@ -914,9 +1132,22 @@ def output_modifier(string, state):
     if cleaned_text is None:
         print_func("Error: Image processing resulted in no text to generate TTS", message_type="error")
         print_func(f"Input text first 100 char's: {cleaned_text[:100]}...", message_type="error")
-        return string    
+        return string
+    
+    # Enforce AllTalk API 2000 character limit to prevent 400 errors
+    MAX_TTS_LENGTH = 1900  # Leave buffer for safety
+    if len(cleaned_text) > MAX_TTS_LENGTH:
+        original_length = len(cleaned_text)
+        cleaned_text = cleaned_text[:MAX_TTS_LENGTH] + "..."
+        log_alltalk(f"Text truncated from {original_length} to {len(cleaned_text)} characters (API limit: 2000)", "WARNING", "output_modifier")
+    else:
+        log_alltalk(f"Text length: {len(cleaned_text)} characters (within API limit)", "INFO", "output_modifier")    
 
-    # Get current settings
+    # FORCE config refresh before reading voice to ensure we have latest settings
+    log_alltalk("Forcing config refresh before reading voice settings", "INFO", "output_modifier")
+    mode_manager.refresh_config()
+    
+    # Get current settings with logging to debug voice selection issue
     language_code = languages.get(mode_manager.config["tgwui"]["tgwui_language"])
     character_voice = mode_manager.config["tgwui"]["tgwui_character_voice"]
     rvc_character_voice = mode_manager.config["tgwui"]["tgwui_rvc_char_voice"]
@@ -930,6 +1161,47 @@ def output_modifier(string, state):
     speed = mode_manager.config["tgwui"]["tgwui_generationspeed_set"]
     pitch = mode_manager.config["tgwui"]["tgwui_pitch_set"]
     temperature = mode_manager.config["tgwui"]["tgwui_temperature_set"]
+    
+    # Use temporary fallback if voices are empty (don't save these fallbacks)
+    temp_character_voice = character_voice
+    temp_narrator_voice = narrator_voice
+    
+    if not character_voice:
+        # Get available voices for temporary fallback
+        try:
+            settings = get_alltalk_settings()
+            if settings and settings.voices and len(settings.voices) > 0:
+                temp_character_voice = settings.voices[0]
+                log_alltalk(f"Using temporary character voice fallback: {temp_character_voice}", "INFO", "output_modifier")
+            else:
+                log_alltalk("No voices available for character fallback", "WARNING", "output_modifier")
+        except Exception as e:
+            log_alltalk(f"Error getting fallback voices: {str(e)}", "ERROR", "output_modifier")
+    
+    if not narrator_voice:
+        try:
+            settings = get_alltalk_settings()
+            if settings and settings.voices and len(settings.voices) > 0:
+                temp_narrator_voice = settings.voices[0]
+                log_alltalk(f"Using temporary narrator voice fallback: {temp_narrator_voice}", "INFO", "output_modifier")
+            else:
+                log_alltalk("No voices available for narrator fallback", "WARNING", "output_modifier")
+        except Exception as e:
+            log_alltalk(f"Error getting fallback voices: {str(e)}", "ERROR", "output_modifier")
+    
+    # Enhanced voice tracking logging - show config source vs actual usage
+    log_alltalk(f"=== CHAT VOICE TRACKING ===", "INFO", "output_modifier")
+    log_alltalk(f"Config character_voice: {character_voice}", "INFO", "output_modifier")
+    log_alltalk(f"Config narrator_voice: {narrator_voice}", "INFO", "output_modifier")
+    log_alltalk(f"Actual character_voice used: {temp_character_voice}", "INFO", "output_modifier")
+    log_alltalk(f"Actual narrator_voice used: {temp_narrator_voice}", "INFO", "output_modifier")
+    
+    # Check if voice was overridden due to fallback
+    if temp_character_voice != character_voice:
+        log_alltalk(f"CHARACTER VOICE FALLBACK: '{character_voice}' -> '{temp_character_voice}'", "WARNING", "output_modifier")
+    if temp_narrator_voice != narrator_voice:
+        log_alltalk(f"NARRATOR VOICE FALLBACK: '{narrator_voice}' -> '{temp_narrator_voice}'", "WARNING", "output_modifier")
+    log_alltalk(f"=== END VOICE TRACKING ===", "INFO", "output_modifier")
 
     if mode_manager.debug_tgwui:
         print_func(
@@ -952,10 +1224,10 @@ def output_modifier(string, state):
 
             generate_response, status_message = send_and_generate(
                 cleaned_text,
-                character_voice,
+                temp_character_voice,  # Use temporary fallback if needed
                 rvc_character_voice,
                 rvc_character_pitch,
-                narrator_voice,
+                temp_narrator_voice,   # Use temporary fallback if needed
                 rvc_narrator_voice,
                 rvc_narrator_pitch,
                 narrator_enabled,
@@ -1047,6 +1319,20 @@ def sanitize_windows_filename(original_name):
     
     return filename
 
+def apply_voice_to_chat():
+    """Force immediate voice synchronization for chat TTS"""
+    log_alltalk("Manual voice application to chat triggered", "INFO", "apply_voice_to_chat")
+    
+    # Force config refresh
+    if mode_manager.refresh_config():
+        current_char = mode_manager.config["tgwui"]["tgwui_character_voice"]
+        current_narr = mode_manager.config["tgwui"]["tgwui_narrator_voice"]
+        log_alltalk(f"Voice application successful - Character: {current_char}, Narrator: {current_narr}", "SUCCESS", "apply_voice_to_chat")
+        return f"✅ Voice applied: {current_char}"
+    else:
+        log_alltalk("Voice application failed - config refresh error", "ERROR", "apply_voice_to_chat")
+        return "❌ Failed to apply voice changes"
+
 def voice_preview(string):
     """Generates a preview of the selected voice settings"""
     # debug_func_entry()
@@ -1062,6 +1348,14 @@ def voice_preview(string):
     language_code = languages.get(mode_manager.config["tgwui"]["tgwui_language"])
     if not string:
         string = random_sentence()
+
+    # Enhanced voice tracking for preview comparison with chat
+    preview_char_voice = mode_manager.config["tgwui"]["tgwui_character_voice"]
+    preview_narr_voice = mode_manager.config["tgwui"]["tgwui_narrator_voice"]
+    log_alltalk(f"=== PREVIEW VOICE TRACKING ===", "INFO", "voice_preview")
+    log_alltalk(f"Preview character_voice: {preview_char_voice}", "INFO", "voice_preview")
+    log_alltalk(f"Preview narrator_voice: {preview_narr_voice}", "INFO", "voice_preview")
+    log_alltalk(f"=== END PREVIEW TRACKING ===", "INFO", "voice_preview")
 
     if mode_manager.debug_tgwui:
         print_func(
@@ -1259,6 +1553,9 @@ def tgwui_update_dropdowns():
             debug_type="update_dropdowns",
         )
 
+    # Show loading status
+    status_html = "<div style='color: blue; font-size: 12px;'>🔄 Refreshing voice lists...</div>"
+    
     at_settings = get_alltalk_settings()
 
     if mode_manager.debug_tgwui:
@@ -1362,6 +1659,14 @@ def tgwui_update_dropdowns():
     # Prevent model reload during update
     tgwui_handle_ttsmodel_dropdown_change.skip_reload = True
 
+    # Determine status message
+    if current_voices and len(current_voices) > 0:
+        status_html = f"<div style='color: green; font-size: 12px;'>✅ Successfully loaded {len(current_voices)} voices</div>"
+        log_alltalk(f"Refresh successful: {len(current_voices)} voices available", "SUCCESS", "tgwui_update_dropdowns")
+    else:
+        status_html = "<div style='color: orange; font-size: 12px;'>⚠️ No voices found - check AllTalk server connection</div>"
+        log_alltalk("No voices found during refresh", "WARNING", "tgwui_update_dropdowns")
+    
     # Return updated Gradio components
     return_values = [
         gr.Checkbox(interactive=current_lowvram_capable, value=current_lowvram_enabled),
@@ -1387,6 +1692,7 @@ def tgwui_update_dropdowns():
         gr.Dropdown(interactive=current_generationspeed_capable),
         gr.Dropdown(interactive=current_pitch_capable),
         gr.Dropdown(value=current_non_quoted_text_is),
+        gr.HTML(value=status_html),  # Add status indicator update
     ]
 
     def reset_skip_reload():
@@ -1496,12 +1802,19 @@ def ui():
                     tgwui_available_voices_gr[0] if tgwui_available_voices_gr else ""
                 )
 
-            tgwui_character_voice_gr = gr.Dropdown(
-                choices=tgwui_available_voices_gr,
-                label="Character Voice",
-                value=tgwui_default_voice_gr,
-                allow_custom_value=True,
-            )
+            with gr.Row():
+                tgwui_character_voice_gr = gr.Dropdown(
+                    choices=tgwui_available_voices_gr,
+                    label="Character Voice",
+                    value=tgwui_default_voice_gr,
+                    allow_custom_value=True,
+                    scale=3
+                )
+                tgwui_character_voice_status_gr = gr.HTML(
+                    value="<div style='color: gray; font-size: 12px; padding: 8px;'>Select a voice</div>",
+                    show_label=False,
+                    scale=1
+                )
 
             tgwui_narr_voice_gr = mode_manager.config["tgwui"]["tgwui_narrator_voice"]
             if tgwui_narr_voice_gr not in tgwui_available_voices_gr:
@@ -1625,6 +1938,7 @@ def ui():
                 scale=2,
             )
             tgwui_preview_play_gr = gr.Button("Generate Preview", scale=1)
+            tgwui_apply_voice_gr = gr.Button("Apply Voice to Chat", scale=1, variant="secondary")
             tgwui_preview_audio_gr = gr.HTML(visible=False)
 
         # Server connection settings (only shown in remote mode)
@@ -1639,10 +1953,14 @@ def ui():
                     label="AllTalk Server IP:Port", value=mode_manager.server["address"]
                 )
                 tgwui_refresh_settings_gr = gr.Button("Refresh settings & voices")
+                # Add status indicator for voice loading (remote mode)
+                tgwui_status_indicator_gr = gr.HTML(value="<div style='color: gray; font-size: 12px;'>Initializing voice lists...</div>", visible=True)
 
         # Refresh settings button (only shown in local mode)
         if mode_manager.is_local:
             tgwui_refresh_settings_gr = gr.Button("Refresh settings & voices")
+            # Add status indicator for voice loading (local mode)
+            tgwui_status_indicator_gr = gr.HTML(value="<div style='color: gray; font-size: 12px;'>Initializing voice lists...</div>", visible=True)
 
         # Control buttons
         with gr.Row():
@@ -1680,12 +1998,12 @@ def ui():
             ],
             None,
             convert_arr,
-        ).then(remove_tts_from_history, gradio("history"), gradio("history")).then(
+        ).then(remove_tts_from_history, gradio_utils("history"), gradio_utils("history")).then(
             chat.save_history,
-            gradio("history", "unique_id", "character_menu", "mode"),
+            gradio_utils("history", "unique_id", "character_menu", "mode"),
             None,
         ).then(
-            chat.redraw_html, gradio(ui_chat.reload_arr), gradio("display")
+            chat.redraw_html, gradio_utils(ui_chat.reload_arr), gradio_utils("display")
         )
 
         tgwui_convert_cancel_gr.click(
@@ -1703,12 +2021,12 @@ def ui():
             lambda x: mode_manager.config["tgwui"].update({"tgwui_show_text": x}),
             tgwui_show_text_gr,
             None,
-        ).then(toggle_text_in_history, gradio("history"), gradio("history")).then(
+        ).then(toggle_text_in_history, gradio_utils("history"), gradio_utils("history")).then(
             chat.save_history,
-            gradio("history", "unique_id", "character_menu", "mode"),
+            gradio_utils("history", "unique_id", "character_menu", "mode"),
             None,
         ).then(
-            chat.redraw_html, gradio(ui_chat.reload_arr), gradio("display")
+            chat.redraw_html, gradio_utils(ui_chat.reload_arr), gradio_utils("display")
         )
 
         # Event functions to update the parameters in the backend
@@ -1724,17 +2042,15 @@ def ui():
             None,
         )
 
+        # Combined lowvram handler - updates config AND sends request
+        def handle_lowvram_change(x):
+            mode_manager.config["tgwui"].update({"tgwui_lowvram_enabled": x})
+            return send_lowvram_request(x)
+        
         tgwui_lowvram_enabled_gr.change(
-            lambda x: mode_manager.config["tgwui"].update({"tgwui_lowvram_enabled": x}),
-            tgwui_lowvram_enabled_gr,
-            None,
-        )
-
-        tgwui_lowvram_enabled_gr.change(
-            lambda x: send_lowvram_request(x),
+            handle_lowvram_change,
             tgwui_lowvram_enabled_gr,
             tgwui_lowvram_enabled_play_gr,
-            None,
         )
 
         # Model change handling
@@ -1742,39 +2058,82 @@ def ui():
             tgwui_handle_ttsmodel_dropdown_change, tgwui_tts_dropdown_gr, None
         )
 
-        # DeepSpeed settings
+        # Combined DeepSpeed handler - updates config AND sends request
+        def handle_deepspeed_change(x):
+            mode_manager.config["tgwui"].update({"tgwui_deepspeed_enabled": x})
+            return send_deepspeed_request(x)
+        
         tgwui_deepspeed_enabled_gr.change(
-            lambda x: mode_manager.config["tgwui"].update(
-                {"tgwui_deepspeed_enabled": x}
-            ),
-            tgwui_deepspeed_enabled_gr,
-            None,
-        )
-
-        tgwui_deepspeed_enabled_gr.change(
-            send_deepspeed_request,
+            handle_deepspeed_change,
             tgwui_deepspeed_enabled_gr,
             tgwui_deepspeed_enabled_play_gr,
-            None,
         )
 
         # Voice and language settings
         def update_character_voice(x):
             log_alltalk("Character voice selected: " + str(x), "INFO", "update_character_voice")
             
-            # Test the voice and save if it works
-            if test_and_save_voice(x, "character"):
-                mode_manager.config["tgwui"].update({"tgwui_character_voice": x})
+            # Show loading status immediately
+            yield f"<div style='color: blue; font-size: 12px; padding: 8px;'>🔄 Loading {x}...</div>"
+            
+            # ALWAYS test voice loading - don't skip for any voice
+            log_alltalk("🔄 FORCING VOICE LOADING TEST FOR ALL SELECTIONS", "INFO", "update_character_voice")
+            
+            # Test if voice can be loaded into TTS engine
+            success, message = test_voice_loading(x)
+            
+            if success:
+                # Voice loaded successfully - save it
+                log_alltalk(f"Voice loading test PASSED - saving voice: {x}", "SUCCESS", "update_character_voice")
+                mode_manager.config["tgwui"]["tgwui_character_voice"] = x
                 mode_manager.save_settings()
-                log_alltalk("Character voice saved: " + str(x), "SUCCESS", "update_character_voice")
+                
+                # Verify the save worked
+                saved_voice = mode_manager.config["tgwui"].get("tgwui_character_voice", "")
+                if saved_voice == x:
+                    log_alltalk(f"✅ Character voice '{x}' LOADED AND SAVED successfully", "SUCCESS", "update_character_voice")
+                    
+                    # Force config reload to ensure persistence
+                    if mode_manager.refresh_config():
+                        verify_voice = mode_manager.config["tgwui"].get("tgwui_character_voice", "")
+                        if verify_voice == x:
+                            log_alltalk(f"Voice persistence verified after reload: {verify_voice}", "SUCCESS", "update_character_voice")
+                            status_html = f"<div style='color: green; font-size: 12px; padding: 8px;'>✅ {x} loaded</div>"
+                        else:
+                            log_alltalk(f"Voice persistence FAILED after reload: expected '{x}', got '{verify_voice}'", "ERROR", "update_character_voice")
+                            status_html = f"<div style='color: red; font-size: 12px; padding: 8px;'>❌ Save failed</div>"
+                    else:
+                        log_alltalk("Failed to refresh config for verification", "ERROR", "update_character_voice")
+                        status_html = f"<div style='color: orange; font-size: 12px; padding: 8px;'>⚠️ Config issue</div>"
+                else:
+                    log_alltalk(f"Voice save FAILED: expected '{x}', got '{saved_voice}'", "ERROR", "update_character_voice")
+                    status_html = f"<div style='color: red; font-size: 12px; padding: 8px;'>❌ Save failed</div>"
             else:
-                log_alltalk("Character voice failed test, not saved: " + str(x), "ERROR", "update_character_voice")
-            return None
+                # Voice loading failed - don't save, keep previous voice
+                log_alltalk(f"❌ Voice loading test FAILED - NOT saving voice: {x}", "ERROR", "update_character_voice")
+                log_alltalk(f"Loading failure reason: {message}", "ERROR", "update_character_voice")
+                status_html = f"<div style='color: red; font-size: 12px; padding: 8px;'>❌ Load failed</div>"
+                
+            # Final comprehensive log summary
+            log_alltalk("=" * 60, "INFO", "update_character_voice")
+            log_alltalk("VOICE LOADING PROCESS COMPLETE", "INFO", "update_character_voice") 
+            log_alltalk(f"Selected Voice: {x}", "INFO", "update_character_voice")
+            log_alltalk(f"Loading Success: {success}", "INFO", "update_character_voice")
+            if success:
+                current_voice = mode_manager.config["tgwui"].get("tgwui_character_voice", "")
+                log_alltalk(f"Voice Saved to Config: {current_voice}", "SUCCESS", "update_character_voice")
+                log_alltalk("✅ VOICE IS READY FOR TTS GENERATION", "SUCCESS", "update_character_voice")
+            else:
+                log_alltalk(f"Loading Failed: {message}", "ERROR", "update_character_voice")
+                log_alltalk("❌ VOICE NOT AVAILABLE - PREVIOUS VOICE RETAINED", "ERROR", "update_character_voice")
+            log_alltalk("=" * 60, "INFO", "update_character_voice")
+            
+            yield status_html
             
         tgwui_character_voice_gr.change(
             update_character_voice,
             tgwui_character_voice_gr,
-            None,
+            tgwui_character_voice_status_gr,
         )
 
         tgwui_language_gr.change(
@@ -1832,13 +2191,39 @@ def ui():
         def update_narrator_voice(x):
             log_alltalk("Narrator voice selected: " + str(x), "INFO", "update_narrator_voice")
             
-            # Test the voice and save if it works
-            if test_and_save_voice(x, "narrator"):
-                mode_manager.config["tgwui"].update({"tgwui_narrator_voice": x})
+            # Skip testing if voice is in the available list (it should work)
+            available_voices = get_alltalk_settings().voices if get_alltalk_settings() else []
+            
+            if x in available_voices:
+                log_alltalk(f"Voice '{x}' is in available voices list, saving directly", "INFO", "update_narrator_voice")
+                mode_manager.config["tgwui"]["tgwui_narrator_voice"] = x
                 mode_manager.save_settings()
-                log_alltalk("Narrator voice saved: " + str(x), "SUCCESS", "update_narrator_voice")
+                
+                # Verify the save worked
+                saved_voice = mode_manager.config["tgwui"].get("tgwui_narrator_voice", "")
+                if saved_voice == x:
+                    log_alltalk(f"Narrator voice '{x}' successfully saved and verified", "SUCCESS", "update_narrator_voice")
+                    
+                    # Force config reload to ensure persistence
+                    if mode_manager.refresh_config():
+                        verify_voice = mode_manager.config["tgwui"].get("tgwui_narrator_voice", "")
+                        if verify_voice == x:
+                            log_alltalk(f"Voice persistence verified after reload: {verify_voice}", "SUCCESS", "update_narrator_voice")
+                        else:
+                            log_alltalk(f"Voice persistence FAILED after reload: expected '{x}', got '{verify_voice}'", "ERROR", "update_narrator_voice")
+                    else:
+                        log_alltalk("Failed to refresh config for verification", "ERROR", "update_narrator_voice")
+                else:
+                    log_alltalk(f"Voice save FAILED: expected '{x}', got '{saved_voice}'", "ERROR", "update_narrator_voice")
             else:
-                log_alltalk("Narrator voice failed test, not saved: " + str(x), "ERROR", "update_narrator_voice")
+                # Test unknown voices before saving
+                log_alltalk(f"Voice '{x}' not in available list, testing before save", "WARNING", "update_narrator_voice")
+                if test_and_save_voice(x, "narrator"):
+                    mode_manager.config["tgwui"]["tgwui_narrator_voice"] = x
+                    mode_manager.save_settings()
+                    log_alltalk("Narrator voice saved after test: " + str(x), "SUCCESS", "update_narrator_voice")
+                else:
+                    log_alltalk("Narrator voice failed test, not saved: " + str(x), "ERROR", "update_narrator_voice")
             return None
             
         tgwui_narrator_voice_gr.change(
@@ -1877,6 +2262,13 @@ def ui():
             tgwui_preview_text_gr,
             tgwui_preview_audio_gr,
         )
+        
+        # Apply voice to chat functionality
+        tgwui_apply_voice_gr.click(
+            apply_voice_to_chat,
+            None,
+            tgwui_preview_audio_gr,  # Show result in the preview area
+        )
 
         # Stop generation button
         tgwui_stop_generation_gr.click(stop_generate_tts, None, None)
@@ -1910,6 +2302,7 @@ def ui():
                 tgwui_generationspeed_set_gr,
                 tgwui_pitch_set_gr,
                 tgwui_non_quoted_text_is_gr,
+                tgwui_status_indicator_gr,
             ],
         )
 
@@ -1932,12 +2325,12 @@ def ui():
         ],
         None,
         convert_arr,
-    ).then(remove_tts_from_history, gradio("history"), gradio("history")).then(
+    ).then(remove_tts_from_history, gradio_utils("history"), gradio_utils("history")).then(
         chat.save_history,
-        gradio("history", "unique_id", "character_menu", "mode"),
+        gradio_utils("history", "unique_id", "character_menu", "mode"),
         None,
     ).then(
-        chat.redraw_html, gradio(ui_chat.reload_arr), gradio("display")
+        chat.redraw_html, gradio_utils(ui_chat.reload_arr), gradio_utils("display")
     )
     tgwui_convert_cancel_gr.click(
         lambda: [
@@ -1954,12 +2347,12 @@ def ui():
         lambda x: mode_manager.config["tgwui"].update({"tgwui_show_text": x}),
         tgwui_show_text_gr,
         None,
-    ).then(toggle_text_in_history, gradio("history"), gradio("history")).then(
+    ).then(toggle_text_in_history, gradio_utils("history"), gradio_utils("history")).then(
         chat.save_history,
-        gradio("history", "unique_id", "character_menu", "mode"),
+        gradio_utils("history", "unique_id", "character_menu", "mode"),
         None,
     ).then(
-        chat.redraw_html, gradio(ui_chat.reload_arr), gradio("display")
+        chat.redraw_html, gradio_utils(ui_chat.reload_arr), gradio_utils("display")
     )
 
     # Event functions to update the parameters in the backend
@@ -2074,3 +2467,45 @@ def ui():
         tgwui_rvc_narr_pitch_gr,
         None,
     )
+    
+    # Auto-refresh voices after UI loads to ensure voice lists are populated
+    def auto_refresh_voices():
+        """Automatically refresh voice lists after a delay"""
+        log_alltalk("Auto-refreshing voice lists after UI load", "INFO", "auto_refresh_voices")
+        try:
+            # Wait for server to be fully ready
+            time.sleep(2.0)
+            
+            # Get updated settings from server
+            updated_settings = get_alltalk_settings()
+            
+            if updated_settings and updated_settings.voices and len(updated_settings.voices) > 0:
+                log_alltalk(f"Auto-refresh successful: {len(updated_settings.voices)} voices loaded", "SUCCESS", "auto_refresh_voices")
+                # Update the global settings
+                global alltalk_settings
+                alltalk_settings = updated_settings
+                
+                # Force configuration reload to ensure chat TTS uses correct voices
+                # Note: get_alltalk_settings() already updated the config, but let's verify
+                current_char_voice = mode_manager.config["tgwui"]["tgwui_character_voice"]
+                current_narr_voice = mode_manager.config["tgwui"]["tgwui_narrator_voice"]
+                log_alltalk(f"Config after auto-refresh - Character: {current_char_voice}, Narrator: {current_narr_voice}", "INFO", "auto_refresh_voices")
+                
+                # Log voice list for verification
+                log_alltalk(f"Voice list updated: {', '.join(updated_settings.voices[:5])}{'...' if len(updated_settings.voices) > 5 else ''}", "INFO", "auto_refresh_voices")
+                
+                # Force save settings to ensure persistence
+                mode_manager.save_settings()
+            else:
+                log_alltalk("Auto-refresh: No voices retrieved, will rely on manual refresh", "WARNING", "auto_refresh_voices")
+                
+        except Exception as e:
+            log_alltalk(f"Auto-refresh failed: {str(e)}", "ERROR", "auto_refresh_voices")
+    
+    # Start auto-refresh in a separate thread
+    refresh_thread = threading.Thread(target=auto_refresh_voices, daemon=True)
+    refresh_thread.start()
+    log_alltalk("Started auto-refresh thread for voice lists", "INFO", "ui")
+
+# Module loading completion message
+log_simple("TGWUI_Extension loaded successfully")

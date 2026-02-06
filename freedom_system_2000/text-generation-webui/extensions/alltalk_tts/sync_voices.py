@@ -8,14 +8,19 @@ import json
 import os
 from pathlib import Path
 
-def scan_voice_folder(voices_dir, previous_voices=None, enhanced_logging=False):
+def get_dynamic_fallback_voice(voices_list):
+    """Get first available voice or safe fallback"""
+    if voices_list:
+        return voices_list[0]
+    return "female_01.wav"  # Ultimate fallback only if no voices exist
+
+def scan_voice_folder(voices_dir, previous_voices=None):
     """
     Scan the voices directory for available voice files
     
     Args:
         voices_dir: Path to the voices directory
         previous_voices: List of previously found voices to detect changes
-        enhanced_logging: Whether to show detailed voice list
         
     Returns:
         Tuple of (voice_files, added_voices, removed_voices)
@@ -41,14 +46,13 @@ def scan_voice_folder(voices_dir, previous_voices=None, enhanced_logging=False):
         added_voices = [v for v in voice_files if v not in previous_voices]
         removed_voices = [v for v in previous_voices if v not in voice_files]
     
-    # Enhanced logging shows full voice list
-    if enhanced_logging:
-        print(f"[AllTalk] Found {len(voice_files)} voice files: {voice_files}")
-    else:
-        # Default logging shows summary with explicit counts
+    # Show basic voice scanning information
+    print(f"[AllTalk] Found {len(voice_files)} voice files")
+    if previous_voices is not None:
         added_count = len(added_voices)
         removed_count = len(removed_voices)
-        print(f"[AllTalk] Found {len(voice_files)} voice files, {added_count} voice files added, {removed_count} voice files removed")
+        if added_count > 0 or removed_count > 0:
+            print(f"[AllTalk] Voice changes: {added_count} added, {removed_count} removed")
         
         if added_voices:
             print(f"[AllTalk] New voices: {added_voices}")
@@ -73,11 +77,11 @@ def update_main_config(config_path, voices):
             
             # Check if current voices are valid or placeholders
             if current_char_voice not in voices or current_char_voice == "Please Refresh Settings":
-                config['tgwui']['tgwui_character_voice'] = voices[0] if voices else "female_01.wav"
+                config['tgwui']['tgwui_character_voice'] = get_dynamic_fallback_voice(voices)
                 print(f"[AllTalk] Updated character voice to: {config['tgwui']['tgwui_character_voice']}")
             
             if current_narr_voice not in voices or current_narr_voice == "Please Refresh Settings":
-                config['tgwui']['tgwui_narrator_voice'] = voices[1] if len(voices) > 1 else voices[0] if voices else "male_01.wav"
+                config['tgwui']['tgwui_narrator_voice'] = voices[1] if len(voices) > 1 else get_dynamic_fallback_voice(voices)
                 print(f"[AllTalk] Updated narrator voice to: {config['tgwui']['tgwui_narrator_voice']}")
         
         # Save updated config
@@ -106,11 +110,11 @@ def update_tgwui_remote_config(config_path, voices):
             invalid_values = ["Please Refresh Settings", "en_US-ljspeech-high.onnx", ""]
             
             if current_char_voice in invalid_values or current_char_voice not in voices:
-                config['tgwui']['tgwui_character_voice'] = voices[0] if voices else "female_01.wav"
+                config['tgwui']['tgwui_character_voice'] = get_dynamic_fallback_voice(voices)
                 print(f"[AllTalk] Updated TGWUI character voice to: {config['tgwui']['tgwui_character_voice']}")
             
             if current_narr_voice in invalid_values or current_narr_voice not in voices:
-                config['tgwui']['tgwui_narrator_voice'] = voices[1] if len(voices) > 1 else voices[0] if voices else "male_01.wav"
+                config['tgwui']['tgwui_narrator_voice'] = voices[1] if len(voices) > 1 else get_dynamic_fallback_voice(voices)
                 print(f"[AllTalk] Updated TGWUI narrator voice to: {config['tgwui']['tgwui_narrator_voice']}")
         
         # Save updated config
@@ -137,11 +141,11 @@ def update_model_settings(settings_path, voices):
             
             # Check if current voices are valid
             if current_char_voice not in voices or current_char_voice == "Please Refresh Settings":
-                settings['settings']['def_character_voice'] = voices[0] if voices else "female_01.wav"
+                settings['settings']['def_character_voice'] = get_dynamic_fallback_voice(voices)
                 print(f"[AllTalk] Updated model character voice to: {settings['settings']['def_character_voice']}")
             
             if current_narr_voice not in voices or current_narr_voice == "Please Refresh Settings":
-                settings['settings']['def_narrator_voice'] = voices[1] if len(voices) > 1 else voices[0] if voices else "male_01.wav"
+                settings['settings']['def_narrator_voice'] = voices[1] if len(voices) > 1 else get_dynamic_fallback_voice(voices)
                 print(f"[AllTalk] Updated model narrator voice to: {settings['settings']['def_narrator_voice']}")
         
         # Save updated settings
@@ -153,12 +157,11 @@ def update_model_settings(settings_path, voices):
     except Exception as e:
         print(f"[AllTalk] Error updating model settings: {e}")
 
-def sync_all_voices(enhanced_logging=False, previous_voices=None):
+def sync_all_voices(previous_voices=None):
     """
     Main function to synchronize voices across all configuration files
     
     Args:
-        enhanced_logging: Whether to show detailed logging
         previous_voices: List of previously found voices to detect changes
     """
     print("[AllTalk] Starting voice synchronization...")
@@ -168,14 +171,15 @@ def sync_all_voices(enhanced_logging=False, previous_voices=None):
     voices_dir = base_dir / "voices"
     
     # Scan for available voices with change detection
-    voices, added_voices, removed_voices = scan_voice_folder(voices_dir, previous_voices, enhanced_logging)
+    voices, added_voices, removed_voices = scan_voice_folder(voices_dir, previous_voices)
     
     if not voices:
         print("[AllTalk] Warning: No voice files found!")
         return voices, added_voices, removed_voices
     
     # Update all configuration files
-    print("[AllTalk] This prevents broken configurations when voice files change.")
+    print("[AllTalk] Updating configuration files to prevent broken configurations when voice files change.")
+    
     config_files = [
         (base_dir / "confignew.json", update_main_config),
         (base_dir / "system" / "TGWUI_Extension" / "tgwui_remote_config.json", update_tgwui_remote_config),
@@ -186,10 +190,10 @@ def sync_all_voices(enhanced_logging=False, previous_voices=None):
         if config_path.exists():
             update_func(config_path, voices)
         else:
-            if enhanced_logging:
-                print(f"[AllTalk] Config file not found: {config_path}")
+            print(f"[AllTalk] Config file not found: {config_path}")
     
     print(f"[AllTalk] Voice synchronization complete. {len(voices)} voices available.")
+    
     return voices, added_voices, removed_voices
 
 if __name__ == "__main__":

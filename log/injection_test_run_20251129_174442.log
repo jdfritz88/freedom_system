@@ -1,0 +1,20 @@
+17:44:42.374 [INFO] TestRunner: ==============================================================================
+17:44:42.374 [INFO] TestRunner: COMPREHENSIVE INJECTION TEST RUNNER
+17:44:42.374 [INFO] TestRunner: ==============================================================================
+17:44:42.374 [INFO] TestRunner: Checking prerequisites...
+17:44:48.447 [DEBUG] matplotlib: matplotlib data path: C:\Users\jespe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\matplotlib\mpl-data
+17:44:48.457 [DEBUG] matplotlib: CONFIGDIR=C:\Users\jespe\.matplotlib
+17:44:48.458 [DEBUG] matplotlib: interactive is False
+17:44:48.460 [DEBUG] matplotlib: platform is win32
+17:44:49.392 [WARNING] TestRunner:   [NO] text-generation-webui modules: cannot import name 'Undefined' from 'pydantic.fields' (C:\Users\jespe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pydantic\fields.py)
+17:44:49.392 [INFO] TestRunner:   [OK] requests library available
+17:44:49.393 [WARNING] TestRunner:   [NO] selenium not installed (optional)
+17:44:51.433 [WARNING] TestRunner:   [NO] text-generation-webui not running on port 7860
+17:44:53.478 [WARNING] TestRunner:   [NO] OpenAI API not running on port 5000
+17:44:53.479 [INFO] TestRunner: 
+============================================================
+17:44:53.479 [INFO] TestRunner: RUNNING QUICK TESTS (Most Reliable Methods)
+17:44:53.479 [INFO] TestRunner: ============================================================
+17:44:53.479 [INFO] TestRunner: 
+Results saved to: F:\Apps\freedom_system\log\injection_test_results_20251129_174453.json
+17:44:53.479 [INFO] TestRunner: Log saved to: F:\Apps\freedom_system\log\injection_test_run_20251129_174442.log

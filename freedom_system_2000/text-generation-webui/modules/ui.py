@@ -99,7 +99,6 @@ if not shared.args.old_colors:
         checkbox_label_background_fill_hover_dark='var(--selected-item-color-dark, #282930)',
         table_even_background_fill_dark='var(--darker-gray, #1C1C1D)',
         table_odd_background_fill_dark='var(--selected-item-color-dark, #282930)',
-        code_background_fill_dark='var(--darker-gray, #1C1C1D)',
 
         # Shadows and Radius
         checkbox_label_shadow='none',
@@ -142,7 +141,6 @@ def list_model_elements():
         'num_experts_per_token',
         'load_in_8bit',
         'load_in_4bit',
-        'flash_attn',
         'attn_implementation',
         'cpu',
         'disk',
@@ -155,6 +153,7 @@ def list_model_elements():
         'bf16',
         'autosplit',
         'enable_tp',
+        'tp_backend',
         'no_flash_attn',
         'no_xformers',
         'no_sdpa',
@@ -167,6 +166,7 @@ def list_model_elements():
         'gpu_layers_draft',
         'device_draft',
         'ctx_size_draft',
+        'mmproj',
     ]
 
     return elements
@@ -215,6 +215,7 @@ def list_interface_input_elements():
         'ban_eos_token',
         'add_bos_token',
         'enable_thinking',
+        'reasoning_effort',
         'skip_special_tokens',
         'stream',
         'static_cache',
@@ -482,6 +483,7 @@ def setup_auto_save():
         'ban_eos_token',
         'add_bos_token',
         'enable_thinking',
+        'reasoning_effort',
         'skip_special_tokens',
         'stream',
         'static_cache',

@@ -1,0 +1,68 @@
+00:22:42.393 [INFO] Method 1: CHARACTER_GREETING - Starting
+00:22:42.394 [INFO] Method 1: Added to history - internal count: 1
+00:22:45.326 [INFO] Method 2: HISTORY_MODIFIER - Starting
+00:22:48.289 [INFO] Method 3: STATE_MODIFIER - Starting
+00:22:51.235 [INFO] Method 4: CHAT_INPUT_MODIFIER - Starting
+00:22:54.180 [INFO] Method 5: INPUT_MODIFIER - Starting
+00:22:57.102 [INFO] Method 6: BOT_PREFIX_MODIFIER - Starting
+00:23:00.075 [INFO] Method 7: OUTPUT_MODIFIER - Starting
+00:23:03.022 [INFO] Method 8: CUSTOM_GENERATE_PROMPT - Starting
+00:23:05.976 [INFO] Method 9: CUSTOM_GENERATE_REPLY - Starting
+00:23:08.924 [INFO] Method 10: LOGITS_PROCESSOR - Starting
+00:23:11.858 [INFO] Method 11: TOKENIZER_MODIFIER - Starting
+00:23:14.783 [INFO] Method 12: SEND_DUMMY_MESSAGE - Starting
+00:23:14.783 [ERROR] Method 12: FAILED - string indices must be integers, not 'str'
+00:23:17.710 [INFO] Method 13: SEND_DUMMY_REPLY - Starting
+00:23:17.710 [ERROR] Method 13: FAILED - string indices must be integers, not 'str'
+00:23:20.646 [INFO] Method 14: REDRAW_HTML - Starting
+00:23:20.646 [ERROR] Method 14: FAILED - redraw_html() missing 2 required positional arguments: 'style' and 'character'
+00:23:23.576 [INFO] Method 15: DIRECT_HISTORY - Starting
+00:23:23.576 [INFO] Method 15: SUCCESS - history count: 1
+00:23:26.533 [INFO] Method 16: GENERATE_WRAPPER - Starting
+00:23:29.475 [INFO] Method 17: OPENAI_CHAT_API - Starting
+00:23:32.470 [INFO] Method 18: OPENAI_COMPLETIONS_API - Starting
+00:23:37.543 [INFO] Method 18: SUCCESS - got response
+00:23:40.494 [INFO] Method 19: CUSTOM_API - Starting
+00:23:43.440 [INFO] Method 20: MORPHDOM_UPDATE - Starting
+00:23:46.396 [INFO] Method 21: DIRECT_DOM - Starting
+00:23:49.328 [INFO] Method 22: MESSAGE_EDIT - Starting
+00:23:52.251 [INFO] Method 23: GRADIO_COMPONENTS - Starting
+00:23:52.252 [ERROR] Method 23: FAILED - unsupported operand type(s) for +: 'JsonData' and 'str'
+00:23:55.202 [INFO] Method 24: INPUT_HIJACK - Starting
+00:23:55.202 [INFO] Method 24: Input hijack set
+00:23:58.130 [INFO] Method 25: INJECTION_BRIDGE - Starting
+00:24:01.065 [INFO] Method 26: APSCHEDULER - Starting
+22:15:46.609 [INFO] Method 1: CHARACTER_GREETING - Starting
+22:15:46.610 [INFO] Method 1: Added to history - internal count: 1
+22:15:49.445 [INFO] Method 2: HISTORY_MODIFIER - Starting
+22:15:52.269 [INFO] Method 3: STATE_MODIFIER - Starting
+22:15:55.114 [INFO] Method 4: CHAT_INPUT_MODIFIER - Starting
+22:15:57.960 [INFO] Method 5: INPUT_MODIFIER - Starting
+22:16:00.793 [INFO] Method 6: BOT_PREFIX_MODIFIER - Starting
+22:16:03.643 [INFO] Method 7: OUTPUT_MODIFIER - Starting
+22:16:06.467 [INFO] Method 8: CUSTOM_GENERATE_PROMPT - Starting
+22:16:09.311 [INFO] Method 9: CUSTOM_GENERATE_REPLY - Starting
+22:16:12.152 [INFO] Method 10: LOGITS_PROCESSOR - Starting
+22:16:14.983 [INFO] Method 11: TOKENIZER_MODIFIER - Starting
+22:16:17.803 [INFO] Method 12: SEND_DUMMY_MESSAGE - Starting
+22:16:17.803 [ERROR] Method 12: FAILED - argument of type 'NoneType' is not iterable
+22:16:20.623 [INFO] Method 13: SEND_DUMMY_REPLY - Starting
+22:16:20.623 [ERROR] Method 13: FAILED - argument of type 'NoneType' is not iterable
+22:16:23.465 [INFO] Method 14: REDRAW_HTML - Starting
+22:16:23.465 [ERROR] Method 14: FAILED - redraw_html() missing 2 required positional arguments: 'style' and 'character'
+22:16:26.282 [INFO] Method 15: DIRECT_HISTORY - Starting
+22:16:26.282 [INFO] Method 15: SUCCESS - history count: 4
+22:16:29.100 [INFO] Method 16: GENERATE_WRAPPER - Starting
+22:16:31.922 [INFO] Method 17: OPENAI_CHAT_API - Starting
+22:16:34.792 [INFO] Method 18: OPENAI_COMPLETIONS_API - Starting
+22:16:46.118 [INFO] Method 18: SUCCESS - got response
+22:16:48.958 [INFO] Method 19: CUSTOM_API - Starting
+22:16:51.785 [INFO] Method 20: MORPHDOM_UPDATE - Starting
+22:16:54.615 [INFO] Method 21: DIRECT_DOM - Starting
+22:16:57.463 [INFO] Method 22: MESSAGE_EDIT - Starting
+22:17:00.296 [INFO] Method 23: GRADIO_COMPONENTS - Starting
+22:17:00.296 [ERROR] Method 23: FAILED - unsupported operand type(s) for +: 'dict' and 'str'
+22:17:03.153 [INFO] Method 24: INPUT_HIJACK - Starting
+22:17:03.153 [INFO] Method 24: Input hijack set
+22:17:05.976 [INFO] Method 25: INJECTION_BRIDGE - Starting
+22:17:08.802 [INFO] Method 26: APSCHEDULER - Starting

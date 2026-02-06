@@ -1,5 +1,3 @@
-set PYTHONWARNINGS=ignore::UserWarning:pydantic._internal._fields
-
 @echo off
 setlocal enabledelayedexpansion
 

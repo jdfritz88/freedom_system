@@ -57,8 +57,22 @@ def tts_generate():
         # Check for placeholder values
         if voice == "Please Refresh Settings":
             log_api_diagnostic("ERROR: Placeholder voice value detected!", "ERROR")
-            log_api_diagnostic("Replacing with default: female_01.wav", "WARNING")
-            voice = "female_01.wav"
+            # Use dynamic voice discovery instead of hard-coded default
+            import os
+            from pathlib import Path
+            voices_dir = Path("voices")
+            if voices_dir.exists():
+                voice_files = sorted(list(voices_dir.glob("*.wav")))
+                if voice_files:
+                    default_voice = voice_files[0].name
+                    log_api_diagnostic(f"Replacing with dynamically discovered default: {default_voice}", "WARNING")
+                    voice = default_voice
+                else:
+                    log_api_diagnostic("No voice files found, using ultimate fallback: female_01.wav", "WARNING")
+                    voice = "female_01.wav"
+            else:
+                log_api_diagnostic("Voices directory not found, using ultimate fallback: female_01.wav", "WARNING")
+                voice = "female_01.wav"
         
         # Check if voice file exists
         import os

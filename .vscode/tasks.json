@@ -1,0 +1,101 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Watch Log: boredom_monitor",
+            "type": "shell",
+            "command": "Get-Content -Path '${workspaceFolder}/log/boredom_monitor.log' -Tail 50 -Wait",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "logs"
+            },
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
+            "label": "Watch Log: boredom_monitor_extension",
+            "type": "shell",
+            "command": "Get-Content -Path '${workspaceFolder}/log/boredom_monitor_extension.log' -Tail 50 -Wait",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "logs"
+            },
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
+            "label": "Watch Log: boredom_detector_extension",
+            "type": "shell",
+            "command": "Get-Content -Path '${workspaceFolder}/log/boredom_detector_extension.log' -Tail 50 -Wait",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "logs"
+            },
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
+            "label": "Watch Log: boredom_config_sync_extension",
+            "type": "shell",
+            "command": "Get-Content -Path '${workspaceFolder}/log/boredom_config_sync_extension.log' -Tail 50 -Wait",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "logs"
+            },
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
+            "label": "Watch Log: boredom_api_client_extension",
+            "type": "shell",
+            "command": "Get-Content -Path '${workspaceFolder}/log/boredom_api_client_extension.log' -Tail 50 -Wait",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "logs"
+            },
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
+            "label": "Watch Log: alltalk_operations",
+            "type": "shell",
+            "command": "Get-Content -Path '${workspaceFolder}/log/alltalk_operations.log' -Tail 50 -Wait",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "logs"
+            },
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
+            "label": "Watch Log: injection_test",
+            "type": "shell",
+            "command": "Get-Content -Path '${workspaceFolder}/log/injection_test.log' -Tail 50 -Wait",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "logs"
+            },
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
+            "label": "Watch Log: textgen_troubleshooting",
+            "type": "shell",
+            "command": "Get-Content -Path '${workspaceFolder}/log/textgen_troubleshooting.log' -Tail 50 -Wait",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "logs"
+            },
+            "isBackground": true,
+            "problemMatcher": []
+        }
+    ]
+}

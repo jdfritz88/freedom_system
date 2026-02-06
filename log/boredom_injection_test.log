@@ -1,0 +1,27 @@
+19:34:02.157 [INJECTION-TEST] [main] [INFO] === BOREDOM INJECTION FIX TEST ===
+19:34:02.158 [INJECTION-TEST] [main] [INFO] Testing Plan B corrected input hijack implementation
+19:34:02.158 [INJECTION-TEST] [main] [INFO] Test 1: Import Requirements
+19:34:02.158 [INJECTION-TEST] [test_import_requirements] [INFO] Testing import requirements
+19:43:35.511 [INJECTION-TEST] [main] [INFO] === BOREDOM INJECTION FIX TEST ===
+19:43:35.512 [INJECTION-TEST] [main] [INFO] Testing Plan B corrected input hijack implementation
+19:43:35.512 [INJECTION-TEST] [main] [INFO] Test 1: Import Requirements
+19:43:35.512 [INJECTION-TEST] [test_import_requirements] [INFO] Testing import requirements
+19:43:37.348 [INJECTION-TEST] [test_import_requirements] [SUCCESS] SUCCESS: modules.shared imported successfully
+19:43:37.512 [INJECTION-TEST] [test_import_requirements] [ERROR] ERROR: Failed to import generate_chat_reply: cannot import name 'load_history' from partially initialized module 'modules.chat' (most likely due to a circular import) (F:\Apps\freedom_system\freedom_system_2000\text-generation-webui\modules\chat.py)
+19:43:37.512 [INJECTION-TEST] [main] [INFO] Test 2: Extension Import
+19:43:37.512 [INJECTION-TEST] [test_boredom_extension_import] [INFO] Testing boredom monitor extension import
+19:43:37.518 [INJECTION-TEST] [test_boredom_extension_import] [SUCCESS] SUCCESS: Boredom monitor script imported successfully
+19:43:37.518 [INJECTION-TEST] [test_boredom_extension_import] [SUCCESS] SUCCESS: trigger_emotional_response function found
+19:43:37.519 [INJECTION-TEST] [main] [INFO] Test 3: Injection Components
+19:43:37.519 [INJECTION-TEST] [test_injection_components] [INFO] Testing injection components
+19:43:37.519 [INJECTION-TEST] [test_boredom_extension_import] [INFO] Testing boredom monitor extension import
+19:43:37.519 [INJECTION-TEST] [test_boredom_extension_import] [SUCCESS] SUCCESS: Boredom monitor script imported successfully
+19:43:37.519 [INJECTION-TEST] [test_boredom_extension_import] [SUCCESS] SUCCESS: trigger_emotional_response function found
+19:43:37.519 [INJECTION-TEST] [test_injection_components] [SUCCESS] SUCCESS: Input hijack found: {'state': False, 'value': ['', '']}
+19:43:37.519 [INJECTION-TEST] [test_injection_components] [SUCCESS] SUCCESS: Input hijack modification works
+19:43:37.519 [INJECTION-TEST] [main] [WARNING] Test 4: Manual Trigger - SKIPPED (prerequisites failed)
+19:43:37.519 [INJECTION-TEST] [main] [INFO] === TEST SUMMARY ===
+19:43:37.519 [INJECTION-TEST] [main] [INFO] Imports: FAIL
+19:43:37.519 [INJECTION-TEST] [main] [INFO] Extension: PASS
+19:43:37.520 [INJECTION-TEST] [main] [INFO] Manual Trigger: FAIL
+19:43:37.520 [INJECTION-TEST] [main] [WARNING] WARNING: Some tests failed - check logs for details

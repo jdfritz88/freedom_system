@@ -263,6 +263,18 @@ class IdleEmotionManager:
             self.log("Emotion selection failed: " + str(e), "[ERROR]")
             return "bored"  # Safe fallback
     
+    def get_current_emotion(self):
+        """Get the current emotion state"""
+        return self.current_emotion
+    
+    def get_horny_stage(self):
+        """Get the current horny progression stage (alias for compatibility)"""
+        return self.get_current_horny_stage()
+    
+    def is_cooldown_active(self):
+        """Check if any cooldown is currently active"""
+        return self.is_horny_on_cooldown()
+    
     def get_current_horny_stage(self):
         """Get the current horny progression stage"""
         return self.cooldown_data.get("horny_stage", 1)

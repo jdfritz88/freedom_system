@@ -1,0 +1,158 @@
+17:57:25.890 [INFO] TestRunner: ==============================================================================
+17:57:25.890 [INFO] TestRunner: COMPREHENSIVE INJECTION TEST RUNNER
+17:57:25.890 [INFO] TestRunner: ==============================================================================
+17:57:25.890 [INFO] TestRunner: Checking prerequisites...
+17:57:27.189 [DEBUG] httpcore.connection: connect_tcp.started host='api.gradio.app' port=443 local_address=None timeout=3 socket_options=None
+17:57:27.357 [DEBUG] httpcore.connection: connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001C1FFE2CF10>
+17:57:27.357 [DEBUG] httpcore.connection: start_tls.started ssl_context=<ssl.SSLContext object at 0x000001C1FFCD7DA0> server_hostname='api.gradio.app' timeout=3
+17:57:27.462 [DEBUG] httpcore.connection: start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001C1FFB6E750>
+17:57:27.462 [DEBUG] httpcore.http11: send_request_headers.started request=<Request [b'GET']>
+17:57:27.463 [DEBUG] httpcore.http11: send_request_headers.complete
+17:57:27.463 [DEBUG] httpcore.http11: send_request_body.started request=<Request [b'GET']>
+17:57:27.463 [DEBUG] httpcore.http11: send_request_body.complete
+17:57:27.463 [DEBUG] httpcore.http11: receive_response_headers.started request=<Request [b'GET']>
+17:57:27.495 [DEBUG] PIL.Image: Importing BlpImagePlugin
+17:57:27.496 [DEBUG] PIL.Image: Importing BmpImagePlugin
+17:57:27.496 [DEBUG] PIL.Image: Importing BufrStubImagePlugin
+17:57:27.497 [DEBUG] PIL.Image: Importing CurImagePlugin
+17:57:27.497 [DEBUG] PIL.Image: Importing DcxImagePlugin
+17:57:27.497 [DEBUG] PIL.Image: Importing DdsImagePlugin
+17:57:27.500 [DEBUG] PIL.Image: Importing EpsImagePlugin
+17:57:27.500 [DEBUG] PIL.Image: Importing FitsImagePlugin
+17:57:27.501 [DEBUG] PIL.Image: Importing FliImagePlugin
+17:57:27.501 [DEBUG] PIL.Image: Importing FpxImagePlugin
+17:57:27.501 [DEBUG] PIL.Image: Image: failed to import FpxImagePlugin: No module named 'olefile'
+17:57:27.502 [DEBUG] PIL.Image: Importing FtexImagePlugin
+17:57:27.502 [DEBUG] PIL.Image: Importing GbrImagePlugin
+17:57:27.502 [DEBUG] PIL.Image: Importing GifImagePlugin
+17:57:27.504 [DEBUG] PIL.Image: Importing GribStubImagePlugin
+17:57:27.504 [DEBUG] PIL.Image: Importing Hdf5StubImagePlugin
+17:57:27.505 [DEBUG] PIL.Image: Importing IcnsImagePlugin
+17:57:27.506 [DEBUG] PIL.Image: Importing IcoImagePlugin
+17:57:27.507 [DEBUG] PIL.Image: Importing ImImagePlugin
+17:57:27.508 [DEBUG] PIL.Image: Importing ImtImagePlugin
+17:57:27.509 [DEBUG] PIL.Image: Importing IptcImagePlugin
+17:57:27.510 [DEBUG] PIL.Image: Importing JpegImagePlugin
+17:57:27.511 [DEBUG] PIL.Image: Importing Jpeg2KImagePlugin
+17:57:27.511 [DEBUG] PIL.Image: Importing McIdasImagePlugin
+17:57:27.512 [DEBUG] PIL.Image: Importing MicImagePlugin
+17:57:27.512 [DEBUG] httpcore.http11: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 30 Nov 2025 01:57:29 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'3'), (b'Connection', b'keep-alive'), (b'Server', b'nginx/1.18.0'), (b'Access-Control-Allow-Origin', b'*')])
+17:57:27.513 [DEBUG] httpcore.http11: receive_response_body.started request=<Request [b'GET']>
+17:57:27.513 [DEBUG] httpcore.http11: receive_response_body.complete
+17:57:27.513 [DEBUG] httpcore.http11: response_closed.started
+17:57:27.513 [DEBUG] httpcore.http11: response_closed.complete
+17:57:27.514 [DEBUG] httpcore.connection: close.started
+17:57:27.514 [DEBUG] httpcore.connection: close.complete
+17:57:27.515 [DEBUG] PIL.Image: Image: failed to import MicImagePlugin: No module named 'olefile'
+17:57:27.515 [DEBUG] PIL.Image: Importing MpegImagePlugin
+17:57:27.516 [DEBUG] PIL.Image: Importing MpoImagePlugin
+17:57:27.519 [DEBUG] PIL.Image: Importing MspImagePlugin
+17:57:27.520 [DEBUG] PIL.Image: Importing PalmImagePlugin
+17:57:27.521 [DEBUG] PIL.Image: Importing PcdImagePlugin
+17:57:27.522 [DEBUG] PIL.Image: Importing PcxImagePlugin
+17:57:27.522 [DEBUG] PIL.Image: Importing PdfImagePlugin
+17:57:27.527 [DEBUG] PIL.Image: Importing PixarImagePlugin
+17:57:27.528 [DEBUG] PIL.Image: Importing PngImagePlugin
+17:57:27.528 [DEBUG] PIL.Image: Importing PpmImagePlugin
+17:57:27.528 [DEBUG] PIL.Image: Importing PsdImagePlugin
+17:57:27.529 [DEBUG] PIL.Image: Importing QoiImagePlugin
+17:57:27.529 [DEBUG] PIL.Image: Importing SgiImagePlugin
+17:57:27.530 [DEBUG] PIL.Image: Importing SpiderImagePlugin
+17:57:27.531 [DEBUG] PIL.Image: Importing SunImagePlugin
+17:57:27.531 [DEBUG] PIL.Image: Importing TgaImagePlugin
+17:57:27.532 [DEBUG] PIL.Image: Importing TiffImagePlugin
+17:57:27.532 [DEBUG] PIL.Image: Importing WebPImagePlugin
+17:57:27.533 [DEBUG] PIL.Image: Importing WmfImagePlugin
+17:57:27.533 [DEBUG] PIL.Image: Importing XbmImagePlugin
+17:57:27.535 [DEBUG] PIL.Image: Importing XpmImagePlugin
+17:57:27.535 [DEBUG] PIL.Image: Importing XVThumbImagePlugin
+17:57:28.672 [INFO] TestRunner:   [OK] text-generation-webui modules available
+17:57:28.672 [INFO] TestRunner:   [OK] requests library available
+17:57:28.673 [WARNING] TestRunner:   [NO] selenium not installed (optional)
+17:57:28.790 [INFO] TestRunner:   [OK] text-generation-webui running on port 7860
+17:57:28.809 [INFO] TestRunner:   [OK] OpenAI API running on port 5000
+17:57:28.809 [INFO] TestRunner: 
+============================================================
+17:57:28.809 [INFO] TestRunner: RUNNING QUICK TESTS (Most Reliable Methods)
+17:57:28.810 [INFO] TestRunner: ============================================================
+17:57:28.821 [INFO] InjectionTester: Connected to text-generation-webui
+17:57:28.822 [INFO] TestRunner: 
+--- Test 1: Direct History Manipulation ---
+17:57:28.822 [INFO] InjectionTester: ============================================================
+17:57:28.822 [INFO] InjectionTester: TESTING: direct_history_manipulation
+17:57:28.822 [INFO] InjectionTester: Message: 'QUICK-TEST-1: Direct history at 17:57:28'
+17:57:28.822 [INFO] InjectionTester: ============================================================
+17:57:28.822 [INFO] InjectionTester: [INJECT] direct_history: 'QUICK-TEST-1: Direct history at 17:57:28...'
+17:57:28.822 [ERROR] InjectionTester: [INJECT] direct_history: FAILED - 'internal'
+17:57:29.324 [INFO] InjectionTester: [VERIFY] history_state: Looking for 'QUICK-TEST-1: Direct history a...'
+17:57:32.408 [WARNING] InjectionTester: [VERIFY] history_state: NOT FOUND after 3061.6ms
+17:57:32.410 [DEBUG] InjectionTester: [VERIFY] history_state: Found 0 messages total
+17:57:32.410 [INFO] InjectionTester: [VERIFY] message_count: Expecting 0 + 1
+17:57:35.437 [WARNING] InjectionTester: [VERIFY] message_count: FAILED - 0 -> 0
+17:57:35.437 [INFO] InjectionTester: [VERIFY] display_html: Looking for 'QUICK-TEST-1: Direct history a...'
+17:57:38.530 [WARNING] InjectionTester: [VERIFY] display_html: NOT FOUND after 3092.4ms
+17:57:38.530 [INFO] InjectionTester: [VERIFY] api: Looking for 'QUICK-TEST-1: Direct history a...'
+17:57:40.542 [WARNING] InjectionTester: [VERIFY] api: NOT FOUND via any endpoint
+17:57:40.542 [INFO] InjectionTester: ----------------------------------------
+17:57:40.542 [INFO] InjectionTester: INJECTION: FAILED
+17:57:40.542 [INFO] InjectionTester:   history_state_check: NOT VERIFIED
+17:57:40.542 [INFO] InjectionTester:   message_count_change: NOT VERIFIED
+17:57:40.542 [INFO] InjectionTester:   display_html_check: NOT VERIFIED
+17:57:40.542 [INFO] InjectionTester:   api_state_query: NOT VERIFIED
+17:57:40.542 [INFO] InjectionTester: OVERALL: FAILED (0/4 confirmations)
+17:57:40.542 [INFO] InjectionTester: ----------------------------------------
+17:57:41.543 [INFO] TestRunner: 
+--- Test 2: send_dummy_reply ---
+17:57:41.545 [INFO] InjectionTester: ============================================================
+17:57:41.545 [INFO] InjectionTester: TESTING: send_dummy_reply
+17:57:41.545 [INFO] InjectionTester: Message: 'QUICK-TEST-2: send_dummy_reply at 17:57:41'
+17:57:41.545 [INFO] InjectionTester: ============================================================
+17:57:41.545 [INFO] InjectionTester: [INJECT] send_dummy_reply: 'QUICK-TEST-2: send_dummy_reply at 17:57:41...'
+17:57:41.576 [ERROR] InjectionTester: [INJECT] send_dummy_reply: FAILED - cannot import name 'load_history' from partially initialized module 'modules.chat' (most likely due to a circular import) (F:\Apps\freedom_system\freedom_system_2000\text-generation-webui\modules\chat.py)
+17:57:42.078 [INFO] InjectionTester: [VERIFY] history_state: Looking for 'QUICK-TEST-2: send_dummy_reply...'
+17:57:45.131 [WARNING] InjectionTester: [VERIFY] history_state: NOT FOUND after 3053.7ms
+17:57:45.131 [DEBUG] InjectionTester: [VERIFY] history_state: Found 0 messages total
+17:57:45.131 [INFO] InjectionTester: [VERIFY] message_count: Expecting 0 + 1
+17:57:48.218 [WARNING] InjectionTester: [VERIFY] message_count: FAILED - 0 -> 0
+17:57:48.219 [INFO] InjectionTester: [VERIFY] display_html: Looking for 'QUICK-TEST-2: send_dummy_reply...'
+17:57:51.240 [WARNING] InjectionTester: [VERIFY] display_html: NOT FOUND after 3021.0ms
+17:57:51.240 [INFO] InjectionTester: [VERIFY] api: Looking for 'QUICK-TEST-2: send_dummy_reply...'
+17:57:53.247 [WARNING] InjectionTester: [VERIFY] api: NOT FOUND via any endpoint
+17:57:53.247 [INFO] InjectionTester: ----------------------------------------
+17:57:53.247 [INFO] InjectionTester: INJECTION: FAILED
+17:57:53.247 [INFO] InjectionTester:   history_state_check: NOT VERIFIED
+17:57:53.248 [INFO] InjectionTester:   message_count_change: NOT VERIFIED
+17:57:53.248 [INFO] InjectionTester:   display_html_check: NOT VERIFIED
+17:57:53.248 [INFO] InjectionTester:   api_state_query: NOT VERIFIED
+17:57:53.248 [INFO] InjectionTester: OVERALL: FAILED (0/4 confirmations)
+17:57:53.248 [INFO] InjectionTester: ----------------------------------------
+17:57:53.248 [INFO] InjectionTester: Connected to text-generation-webui
+17:57:53.248 [INFO] TestRunner: 
+--- Test 3: OpenAI API ---
+17:57:53.248 [INFO] InjectionTester: ============================================================
+17:57:53.248 [INFO] InjectionTester: TESTING: openai_chat_completions
+17:57:53.248 [INFO] InjectionTester: Message: 'QUICK-TEST-3: What time is it?'
+17:57:53.248 [INFO] InjectionTester: ============================================================
+17:57:53.248 [INFO] InjectionTester: [INJECT] openai_api: 'QUICK-TEST-3: What time is it?...'
+17:57:53.248 [DEBUG] InjectionTester: [INJECT] openai_api: POST to http://127.0.0.1:5000/v1/chat/completions
+17:57:53.299 [ERROR] InjectionTester: [INJECT] openai_api: HTTP 500
+17:57:53.799 [INFO] InjectionTester: [VERIFY] history_state: Looking for 'QUICK-TEST-3: What time is it?...'
+17:57:56.816 [WARNING] InjectionTester: [VERIFY] history_state: NOT FOUND after 3017.1ms
+17:57:56.820 [DEBUG] InjectionTester: [VERIFY] history_state: Found 0 messages total
+17:57:56.820 [INFO] InjectionTester: [VERIFY] message_count: Expecting 0 + 1
+17:57:59.856 [WARNING] InjectionTester: [VERIFY] message_count: FAILED - 0 -> 0
+17:57:59.856 [INFO] InjectionTester: [VERIFY] display_html: Looking for 'QUICK-TEST-3: What time is it?...'
+17:58:02.886 [WARNING] InjectionTester: [VERIFY] display_html: NOT FOUND after 3030.1ms
+17:58:02.886 [INFO] InjectionTester: [VERIFY] api: Looking for 'QUICK-TEST-3: What time is it?...'
+17:58:04.904 [WARNING] InjectionTester: [VERIFY] api: NOT FOUND via any endpoint
+17:58:04.904 [INFO] InjectionTester: ----------------------------------------
+17:58:04.905 [INFO] InjectionTester: INJECTION: FAILED
+17:58:04.905 [INFO] InjectionTester:   history_state_check: NOT VERIFIED
+17:58:04.905 [INFO] InjectionTester:   message_count_change: NOT VERIFIED
+17:58:04.905 [INFO] InjectionTester:   display_html_check: NOT VERIFIED
+17:58:04.905 [INFO] InjectionTester:   api_state_query: NOT VERIFIED
+17:58:04.905 [INFO] InjectionTester: OVERALL: FAILED (0/4 confirmations)
+17:58:04.905 [INFO] InjectionTester: ----------------------------------------
+17:58:04.906 [INFO] TestRunner: 
+Results saved to: F:\Apps\freedom_system\log\injection_test_results_20251129_175804.json
+17:58:04.906 [INFO] TestRunner: Log saved to: F:\Apps\freedom_system\log\injection_test_run_20251129_175725.log

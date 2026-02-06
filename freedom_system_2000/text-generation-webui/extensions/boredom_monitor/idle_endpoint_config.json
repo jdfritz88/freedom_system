@@ -1,52 +1,19 @@
 {
-  "discovered_endpoints": {
-    "scan_timestamp": "2025-07-24 00:45:21",
-    "api_base_url": "http://127.0.0.1:5000",
-    "primary_monitoring_endpoint": "v1/chat/completions",
-    "primary_sending_endpoint": "v1/chat/completions",
-    "health_check_endpoint": "v1/models",
-    "connection_timeout": 5,
-    "retry_attempts": 3,
-    "endpoint_scan_successful": true,
-    "fallback_endpoints": [
-      {
-        "endpoint": "v1/models",
-        "method": "GET",
-        "status_code": 200,
-        "purpose": "health check"
-      }
-    ],
-    "monitoring_endpoint_details": {
-      "method": "POST",
-      "purpose": "Monitor real chat activity",
-      "test_status": true,
-      "response_size": 200
-    },
-    "sending_endpoint_details": {
-      "method": "POST",
-      "purpose": "Send chat completions",
-      "test_status": true,
-      "response_size": 200,
-      "request_format": {
-        "content_type": "application/json",
-        "required_fields": [
-          "messages"
-        ],
-        "example_payload": {
-          "messages": [
-            {
-              "role": "user",
-              "content": "{meta_prompt_text}"
-            }
-          ],
-          "max_tokens": 150,
-          "temperature": 0.8,
-          "stream": false
-        }
-      }
-    },
-    "favored_sending_endpoints": [
-      "v1/chat/completions"
-    ]
+  "endpoints": {
+    "webui_base": "http://127.0.0.1:7860",
+    "openai_chat": "http://127.0.0.1:5000/v1/chat/completions",
+    "alltalk_tts": "http://127.0.0.1:7851/api/tts-generate",
+    "alltalk_ready": "http://127.0.0.1:7851/api/ready",
+    "boredom_self": "http://127.0.0.1:7852"
+  },
+  "connection_settings": {
+    "max_retries": 3,
+    "retry_delay_seconds": 1,
+    "timeout_seconds": 30,
+    "log_all_attempts": true
+  },
+  "api_discovery": {
+    "auto_detect_ports": true,
+    "port_scan_range": [5000, 7860]
   }
 }

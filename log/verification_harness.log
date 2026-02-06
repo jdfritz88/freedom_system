@@ -1,0 +1,1768 @@
+00:22:42.694 [INFO] Method 1: HISTORY_STATE - Checking
+00:22:42.695 [INFO] Method 1: found=True, internal=1, visible=1
+00:22:42.695 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:22:42.695 [INFO] Method 2: internal=1, visible=1
+00:22:42.695 [INFO] Method 3: DISPLAY_HTML - Checking
+00:22:42.696 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:22:42.696 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:22:42.696 [INFO] Method 4: found=False, has_metadata=False
+00:22:42.696 [INFO] Method 5: API_STATE - Checking
+00:22:42.700 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+00:22:42.703 [INFO] Method 7: DOM_CONTENT - Checking
+00:22:42.703 [INFO] Method 8: MUTATION_OBSERVER - Checking
+00:22:42.705 [INFO] Method 9: DATA_RAW - Checking
+00:22:42.705 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:22:42.706 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+00:22:42.706 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'JsonData'
+00:22:42.706 [INFO] Method 11: SSE_EVENTS - Checking
+00:22:42.707 [INFO] Method 12: REQUEST_MONITOR - Checking
+00:22:42.707 [INFO] Method 13: SELENIUM - Checking
+00:22:42.708 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+00:22:42.708 [INFO] Method 1: HISTORY_STATE - Checking
+00:22:42.708 [INFO] Method 1: found=True, internal=1, visible=1
+00:22:42.708 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:22:42.709 [INFO] Method 2: internal=1, visible=1
+00:22:42.709 [INFO] Method 3: DISPLAY_HTML - Checking
+00:22:42.709 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:22:42.710 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:22:42.710 [INFO] Method 4: found=False, has_metadata=False
+00:22:42.710 [INFO] Method 9: DATA_RAW - Checking
+00:22:42.711 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:22:42.711 [INFO] Method 14: found=True, confidence=2/5
+00:22:42.711 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+00:22:44.712 [INFO] Method 15: No browser report found (total reports: 0)
+00:22:44.713 [INFO] Method 16: BROWSER_API_QUERY - Checking
+00:22:45.627 [INFO] Method 1: HISTORY_STATE - Checking
+00:22:45.627 [INFO] Method 1: found=True, internal=1, visible=1
+00:22:45.628 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:22:45.628 [INFO] Method 2: internal=1, visible=1
+00:22:45.628 [INFO] Method 3: DISPLAY_HTML - Checking
+00:22:45.628 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:22:45.629 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:22:45.629 [INFO] Method 4: found=False, has_metadata=False
+00:22:45.629 [INFO] Method 5: API_STATE - Checking
+00:22:45.653 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+00:22:45.671 [INFO] Method 7: DOM_CONTENT - Checking
+00:22:45.672 [INFO] Method 8: MUTATION_OBSERVER - Checking
+00:22:45.673 [INFO] Method 9: DATA_RAW - Checking
+00:22:45.673 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:22:45.674 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+00:22:45.674 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'JsonData'
+00:22:45.675 [INFO] Method 11: SSE_EVENTS - Checking
+00:22:45.675 [INFO] Method 12: REQUEST_MONITOR - Checking
+00:22:45.676 [INFO] Method 13: SELENIUM - Checking
+00:22:45.677 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+00:22:45.678 [INFO] Method 1: HISTORY_STATE - Checking
+00:22:45.678 [INFO] Method 1: found=True, internal=1, visible=1
+00:22:45.678 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:22:45.679 [INFO] Method 2: internal=1, visible=1
+00:22:45.679 [INFO] Method 3: DISPLAY_HTML - Checking
+00:22:45.680 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:22:45.680 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:22:45.681 [INFO] Method 4: found=False, has_metadata=False
+00:22:45.681 [INFO] Method 9: DATA_RAW - Checking
+00:22:45.682 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:22:45.682 [INFO] Method 14: found=True, confidence=2/5
+00:22:45.683 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+00:22:47.684 [INFO] Method 15: No browser report found (total reports: 0)
+00:22:47.684 [INFO] Method 16: BROWSER_API_QUERY - Checking
+00:22:48.590 [INFO] Method 1: HISTORY_STATE - Checking
+00:22:48.591 [INFO] Method 1: found=False, internal=0, visible=0
+00:22:48.591 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:22:48.591 [INFO] Method 2: internal=0, visible=0
+00:22:48.592 [INFO] Method 3: DISPLAY_HTML - Checking
+00:22:48.592 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:22:48.592 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:22:48.593 [INFO] Method 4: found=False, has_metadata=False
+00:22:48.593 [INFO] Method 5: API_STATE - Checking
+00:22:48.597 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+00:22:48.599 [INFO] Method 7: DOM_CONTENT - Checking
+00:22:48.600 [INFO] Method 8: MUTATION_OBSERVER - Checking
+00:22:48.600 [INFO] Method 9: DATA_RAW - Checking
+00:22:48.600 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:22:48.601 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+00:22:48.601 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'JsonData'
+00:22:48.601 [INFO] Method 11: SSE_EVENTS - Checking
+00:22:48.602 [INFO] Method 12: REQUEST_MONITOR - Checking
+00:22:48.602 [INFO] Method 13: SELENIUM - Checking
+00:22:48.602 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+00:22:48.603 [INFO] Method 1: HISTORY_STATE - Checking
+00:22:48.603 [INFO] Method 1: found=False, internal=0, visible=0
+00:22:48.603 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:22:48.603 [INFO] Method 2: internal=0, visible=0
+00:22:48.603 [INFO] Method 3: DISPLAY_HTML - Checking
+00:22:48.603 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:22:48.604 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:22:48.604 [INFO] Method 4: found=False, has_metadata=False
+00:22:48.604 [INFO] Method 9: DATA_RAW - Checking
+00:22:48.604 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:22:48.604 [INFO] Method 14: found=False, confidence=0/5
+00:22:48.604 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+00:22:50.606 [INFO] Method 15: No browser report found (total reports: 0)
+00:22:50.606 [INFO] Method 16: BROWSER_API_QUERY - Checking
+00:22:51.538 [INFO] Method 1: HISTORY_STATE - Checking
+00:22:51.538 [INFO] Method 1: found=False, internal=0, visible=0
+00:22:51.539 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:22:51.539 [INFO] Method 2: internal=0, visible=0
+00:22:51.539 [INFO] Method 3: DISPLAY_HTML - Checking
+00:22:51.539 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:22:51.540 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:22:51.540 [INFO] Method 4: found=False, has_metadata=False
+00:22:51.541 [INFO] Method 5: API_STATE - Checking
+00:22:51.544 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+00:22:51.555 [INFO] Method 7: DOM_CONTENT - Checking
+00:22:51.562 [INFO] Method 8: MUTATION_OBSERVER - Checking
+00:22:51.563 [INFO] Method 9: DATA_RAW - Checking
+00:22:51.563 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:22:51.564 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+00:22:51.564 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'JsonData'
+00:22:51.565 [INFO] Method 11: SSE_EVENTS - Checking
+00:22:51.565 [INFO] Method 12: REQUEST_MONITOR - Checking
+00:22:51.566 [INFO] Method 13: SELENIUM - Checking
+00:22:51.567 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+00:22:51.567 [INFO] Method 1: HISTORY_STATE - Checking
+00:22:51.569 [INFO] Method 1: found=False, internal=0, visible=0
+00:22:51.570 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:22:51.570 [INFO] Method 2: internal=0, visible=0
+00:22:51.570 [INFO] Method 3: DISPLAY_HTML - Checking
+00:22:51.571 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:22:51.571 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:22:51.572 [INFO] Method 4: found=False, has_metadata=False
+00:22:51.572 [INFO] Method 9: DATA_RAW - Checking
+00:22:51.573 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:22:51.573 [INFO] Method 14: found=False, confidence=0/5
+00:22:51.574 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+00:22:53.575 [INFO] Method 15: No browser report found (total reports: 0)
+00:22:53.576 [INFO] Method 16: BROWSER_API_QUERY - Checking
+00:22:54.481 [INFO] Method 1: HISTORY_STATE - Checking
+00:22:54.481 [INFO] Method 1: found=False, internal=0, visible=0
+00:22:54.481 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:22:54.481 [INFO] Method 2: internal=0, visible=0
+00:22:54.482 [INFO] Method 3: DISPLAY_HTML - Checking
+00:22:54.482 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:22:54.482 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:22:54.482 [INFO] Method 4: found=False, has_metadata=False
+00:22:54.483 [INFO] Method 5: API_STATE - Checking
+00:22:54.487 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+00:22:54.490 [INFO] Method 7: DOM_CONTENT - Checking
+00:22:54.490 [INFO] Method 8: MUTATION_OBSERVER - Checking
+00:22:54.491 [INFO] Method 9: DATA_RAW - Checking
+00:22:54.491 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:22:54.491 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+00:22:54.491 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'JsonData'
+00:22:54.492 [INFO] Method 11: SSE_EVENTS - Checking
+00:22:54.492 [INFO] Method 12: REQUEST_MONITOR - Checking
+00:22:54.492 [INFO] Method 13: SELENIUM - Checking
+00:22:54.493 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+00:22:54.493 [INFO] Method 1: HISTORY_STATE - Checking
+00:22:54.493 [INFO] Method 1: found=False, internal=0, visible=0
+00:22:54.494 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:22:54.494 [INFO] Method 2: internal=0, visible=0
+00:22:54.494 [INFO] Method 3: DISPLAY_HTML - Checking
+00:22:54.495 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:22:54.495 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:22:54.496 [INFO] Method 4: found=False, has_metadata=False
+00:22:54.496 [INFO] Method 9: DATA_RAW - Checking
+00:22:54.496 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:22:54.497 [INFO] Method 14: found=False, confidence=0/5
+00:22:54.497 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+00:22:56.498 [INFO] Method 15: No browser report found (total reports: 0)
+00:22:56.498 [INFO] Method 16: BROWSER_API_QUERY - Checking
+00:22:57.404 [INFO] Method 1: HISTORY_STATE - Checking
+00:22:57.404 [INFO] Method 1: found=False, internal=0, visible=0
+00:22:57.405 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:22:57.405 [INFO] Method 2: internal=0, visible=0
+00:22:57.406 [INFO] Method 3: DISPLAY_HTML - Checking
+00:22:57.407 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:22:57.407 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:22:57.407 [INFO] Method 4: found=False, has_metadata=False
+00:22:57.407 [INFO] Method 5: API_STATE - Checking
+00:22:57.410 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+00:22:57.436 [INFO] Method 7: DOM_CONTENT - Checking
+00:22:57.437 [INFO] Method 8: MUTATION_OBSERVER - Checking
+00:22:57.438 [INFO] Method 9: DATA_RAW - Checking
+00:22:57.438 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:22:57.439 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+00:22:57.439 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'JsonData'
+00:22:57.440 [INFO] Method 11: SSE_EVENTS - Checking
+00:22:57.440 [INFO] Method 12: REQUEST_MONITOR - Checking
+00:22:57.441 [INFO] Method 13: SELENIUM - Checking
+00:22:57.442 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+00:22:57.443 [INFO] Method 1: HISTORY_STATE - Checking
+00:22:57.443 [INFO] Method 1: found=False, internal=0, visible=0
+00:22:57.444 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:22:57.444 [INFO] Method 2: internal=0, visible=0
+00:22:57.444 [INFO] Method 3: DISPLAY_HTML - Checking
+00:22:57.444 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:22:57.445 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:22:57.445 [INFO] Method 4: found=False, has_metadata=False
+00:22:57.446 [INFO] Method 9: DATA_RAW - Checking
+00:22:57.446 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:22:57.446 [INFO] Method 14: found=False, confidence=0/5
+00:22:57.447 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+00:22:59.448 [INFO] Method 15: No browser report found (total reports: 0)
+00:22:59.449 [INFO] Method 16: BROWSER_API_QUERY - Checking
+00:23:00.377 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:00.378 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:00.378 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:00.378 [INFO] Method 2: internal=0, visible=0
+00:23:00.379 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:00.379 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:00.379 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:00.379 [INFO] Method 4: found=False, has_metadata=False
+00:23:00.380 [INFO] Method 5: API_STATE - Checking
+00:23:00.383 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+00:23:00.385 [INFO] Method 7: DOM_CONTENT - Checking
+00:23:00.385 [INFO] Method 8: MUTATION_OBSERVER - Checking
+00:23:00.385 [INFO] Method 9: DATA_RAW - Checking
+00:23:00.386 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:00.387 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+00:23:00.387 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:00.387 [INFO] Method 11: SSE_EVENTS - Checking
+00:23:00.388 [INFO] Method 12: REQUEST_MONITOR - Checking
+00:23:00.388 [INFO] Method 13: SELENIUM - Checking
+00:23:00.388 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+00:23:00.389 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:00.389 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:00.389 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:00.389 [INFO] Method 2: internal=0, visible=0
+00:23:00.389 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:00.389 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:00.389 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:00.391 [INFO] Method 4: found=False, has_metadata=False
+00:23:00.391 [INFO] Method 9: DATA_RAW - Checking
+00:23:00.391 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:00.391 [INFO] Method 14: found=False, confidence=0/5
+00:23:00.391 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+00:23:02.392 [INFO] Method 15: No browser report found (total reports: 0)
+00:23:02.393 [INFO] Method 16: BROWSER_API_QUERY - Checking
+00:23:03.323 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:03.323 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:03.323 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:03.323 [INFO] Method 2: internal=0, visible=0
+00:23:03.323 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:03.323 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:03.326 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:03.327 [INFO] Method 4: found=False, has_metadata=False
+00:23:03.327 [INFO] Method 5: API_STATE - Checking
+00:23:03.332 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+00:23:03.359 [INFO] Method 7: DOM_CONTENT - Checking
+00:23:03.360 [INFO] Method 8: MUTATION_OBSERVER - Checking
+00:23:03.360 [INFO] Method 9: DATA_RAW - Checking
+00:23:03.361 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:03.362 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+00:23:03.362 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:03.363 [INFO] Method 11: SSE_EVENTS - Checking
+00:23:03.363 [INFO] Method 12: REQUEST_MONITOR - Checking
+00:23:03.364 [INFO] Method 13: SELENIUM - Checking
+00:23:03.365 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+00:23:03.365 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:03.366 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:03.366 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:03.366 [INFO] Method 2: internal=0, visible=0
+00:23:03.367 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:03.367 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:03.368 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:03.368 [INFO] Method 4: found=False, has_metadata=False
+00:23:03.368 [INFO] Method 9: DATA_RAW - Checking
+00:23:03.369 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:03.369 [INFO] Method 14: found=False, confidence=0/5
+00:23:03.370 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+00:23:05.372 [INFO] Method 15: No browser report found (total reports: 0)
+00:23:05.372 [INFO] Method 16: BROWSER_API_QUERY - Checking
+00:23:06.278 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:06.278 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:06.278 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:06.278 [INFO] Method 2: internal=0, visible=0
+00:23:06.279 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:06.279 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:06.279 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:06.279 [INFO] Method 4: found=False, has_metadata=False
+00:23:06.280 [INFO] Method 5: API_STATE - Checking
+00:23:06.301 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+00:23:06.306 [INFO] Method 7: DOM_CONTENT - Checking
+00:23:06.307 [INFO] Method 8: MUTATION_OBSERVER - Checking
+00:23:06.308 [INFO] Method 9: DATA_RAW - Checking
+00:23:06.308 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:06.309 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+00:23:06.309 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:06.310 [INFO] Method 11: SSE_EVENTS - Checking
+00:23:06.310 [INFO] Method 12: REQUEST_MONITOR - Checking
+00:23:06.311 [INFO] Method 13: SELENIUM - Checking
+00:23:06.312 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+00:23:06.313 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:06.313 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:06.314 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:06.314 [INFO] Method 2: internal=0, visible=0
+00:23:06.314 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:06.314 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:06.315 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:06.316 [INFO] Method 4: found=False, has_metadata=False
+00:23:06.316 [INFO] Method 9: DATA_RAW - Checking
+00:23:06.317 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:06.317 [INFO] Method 14: found=False, confidence=0/5
+00:23:06.318 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+00:23:08.319 [INFO] Method 15: No browser report found (total reports: 0)
+00:23:08.320 [INFO] Method 16: BROWSER_API_QUERY - Checking
+00:23:09.227 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:09.227 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:09.228 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:09.228 [INFO] Method 2: internal=0, visible=0
+00:23:09.229 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:09.230 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:09.230 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:09.231 [INFO] Method 4: found=False, has_metadata=False
+00:23:09.231 [INFO] Method 5: API_STATE - Checking
+00:23:09.236 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+00:23:09.240 [INFO] Method 7: DOM_CONTENT - Checking
+00:23:09.241 [INFO] Method 8: MUTATION_OBSERVER - Checking
+00:23:09.241 [INFO] Method 9: DATA_RAW - Checking
+00:23:09.242 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:09.242 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+00:23:09.242 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:09.243 [INFO] Method 11: SSE_EVENTS - Checking
+00:23:09.244 [INFO] Method 12: REQUEST_MONITOR - Checking
+00:23:09.244 [INFO] Method 13: SELENIUM - Checking
+00:23:09.246 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+00:23:09.246 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:09.247 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:09.247 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:09.248 [INFO] Method 2: internal=0, visible=0
+00:23:09.248 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:09.249 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:09.249 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:09.249 [INFO] Method 4: found=False, has_metadata=False
+00:23:09.250 [INFO] Method 9: DATA_RAW - Checking
+00:23:09.250 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:09.251 [INFO] Method 14: found=False, confidence=0/5
+00:23:09.252 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+00:23:11.253 [INFO] Method 15: No browser report found (total reports: 0)
+00:23:11.253 [INFO] Method 16: BROWSER_API_QUERY - Checking
+00:23:12.161 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:12.161 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:12.163 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:12.164 [INFO] Method 2: internal=0, visible=0
+00:23:12.164 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:12.164 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:12.165 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:12.165 [INFO] Method 4: found=False, has_metadata=False
+00:23:12.165 [INFO] Method 5: API_STATE - Checking
+00:23:12.168 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+00:23:12.170 [INFO] Method 7: DOM_CONTENT - Checking
+00:23:12.170 [INFO] Method 8: MUTATION_OBSERVER - Checking
+00:23:12.171 [INFO] Method 9: DATA_RAW - Checking
+00:23:12.171 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:12.171 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+00:23:12.171 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:12.172 [INFO] Method 11: SSE_EVENTS - Checking
+00:23:12.173 [INFO] Method 12: REQUEST_MONITOR - Checking
+00:23:12.173 [INFO] Method 13: SELENIUM - Checking
+00:23:12.173 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+00:23:12.175 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:12.175 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:12.175 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:12.175 [INFO] Method 2: internal=0, visible=0
+00:23:12.175 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:12.176 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:12.176 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:12.176 [INFO] Method 4: found=False, has_metadata=False
+00:23:12.176 [INFO] Method 9: DATA_RAW - Checking
+00:23:12.176 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:12.176 [INFO] Method 14: found=False, confidence=0/5
+00:23:12.177 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+00:23:14.178 [INFO] Method 15: No browser report found (total reports: 0)
+00:23:14.179 [INFO] Method 16: BROWSER_API_QUERY - Checking
+00:23:15.086 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:15.087 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:15.087 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:15.088 [INFO] Method 2: internal=0, visible=0
+00:23:15.088 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:15.088 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:15.089 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:15.090 [INFO] Method 4: found=False, has_metadata=False
+00:23:15.090 [INFO] Method 5: API_STATE - Checking
+00:23:15.093 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+00:23:15.096 [INFO] Method 7: DOM_CONTENT - Checking
+00:23:15.097 [INFO] Method 8: MUTATION_OBSERVER - Checking
+00:23:15.097 [INFO] Method 9: DATA_RAW - Checking
+00:23:15.097 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:15.098 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+00:23:15.098 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:15.098 [INFO] Method 11: SSE_EVENTS - Checking
+00:23:15.098 [INFO] Method 12: REQUEST_MONITOR - Checking
+00:23:15.098 [INFO] Method 13: SELENIUM - Checking
+00:23:15.099 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+00:23:15.100 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:15.101 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:15.101 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:15.102 [INFO] Method 2: internal=0, visible=0
+00:23:15.102 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:15.102 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:15.102 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:15.102 [INFO] Method 4: found=False, has_metadata=False
+00:23:15.103 [INFO] Method 9: DATA_RAW - Checking
+00:23:15.103 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:15.103 [INFO] Method 14: found=False, confidence=0/5
+00:23:15.103 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+00:23:17.105 [INFO] Method 15: No browser report found (total reports: 0)
+00:23:17.105 [INFO] Method 16: BROWSER_API_QUERY - Checking
+00:23:18.013 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:18.013 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:18.013 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:18.014 [INFO] Method 2: internal=0, visible=0
+00:23:18.014 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:18.014 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:18.014 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:18.015 [INFO] Method 4: found=False, has_metadata=False
+00:23:18.015 [INFO] Method 5: API_STATE - Checking
+00:23:18.028 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+00:23:18.032 [INFO] Method 7: DOM_CONTENT - Checking
+00:23:18.033 [INFO] Method 8: MUTATION_OBSERVER - Checking
+00:23:18.033 [INFO] Method 9: DATA_RAW - Checking
+00:23:18.034 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:18.034 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+00:23:18.034 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:18.034 [INFO] Method 11: SSE_EVENTS - Checking
+00:23:18.034 [INFO] Method 12: REQUEST_MONITOR - Checking
+00:23:18.035 [INFO] Method 13: SELENIUM - Checking
+00:23:18.035 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+00:23:18.036 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:18.036 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:18.036 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:18.036 [INFO] Method 2: internal=0, visible=0
+00:23:18.036 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:18.036 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:18.036 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:18.036 [INFO] Method 4: found=False, has_metadata=False
+00:23:18.038 [INFO] Method 9: DATA_RAW - Checking
+00:23:18.038 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:18.038 [INFO] Method 14: found=False, confidence=0/5
+00:23:18.038 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+00:23:20.039 [INFO] Method 15: No browser report found (total reports: 0)
+00:23:20.040 [INFO] Method 16: BROWSER_API_QUERY - Checking
+00:23:20.947 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:20.948 [INFO] Method 1: found=True, internal=1, visible=1
+00:23:20.948 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:20.949 [INFO] Method 2: internal=1, visible=1
+00:23:20.949 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:20.949 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:20.949 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:20.950 [INFO] Method 4: found=False, has_metadata=False
+00:23:20.950 [INFO] Method 5: API_STATE - Checking
+00:23:20.953 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+00:23:20.955 [INFO] Method 7: DOM_CONTENT - Checking
+00:23:20.955 [INFO] Method 8: MUTATION_OBSERVER - Checking
+00:23:20.956 [INFO] Method 9: DATA_RAW - Checking
+00:23:20.956 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:20.956 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+00:23:20.956 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:20.957 [INFO] Method 11: SSE_EVENTS - Checking
+00:23:20.957 [INFO] Method 12: REQUEST_MONITOR - Checking
+00:23:20.957 [INFO] Method 13: SELENIUM - Checking
+00:23:20.958 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+00:23:20.959 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:20.960 [INFO] Method 1: found=True, internal=1, visible=1
+00:23:20.960 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:20.960 [INFO] Method 2: internal=1, visible=1
+00:23:20.963 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:20.965 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:20.966 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:20.966 [INFO] Method 4: found=False, has_metadata=False
+00:23:20.967 [INFO] Method 9: DATA_RAW - Checking
+00:23:20.967 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:20.967 [INFO] Method 14: found=True, confidence=2/5
+00:23:20.970 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+00:23:22.971 [INFO] Method 15: No browser report found (total reports: 0)
+00:23:22.972 [INFO] Method 16: BROWSER_API_QUERY - Checking
+00:23:23.877 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:23.877 [INFO] Method 1: found=True, internal=1, visible=1
+00:23:23.877 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:23.877 [INFO] Method 2: internal=1, visible=1
+00:23:23.878 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:23.878 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:23.879 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:23.879 [INFO] Method 4: found=False, has_metadata=False
+00:23:23.880 [INFO] Method 5: API_STATE - Checking
+00:23:23.897 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+00:23:23.900 [INFO] Method 7: DOM_CONTENT - Checking
+00:23:23.901 [INFO] Method 8: MUTATION_OBSERVER - Checking
+00:23:23.901 [INFO] Method 9: DATA_RAW - Checking
+00:23:23.901 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:23.901 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+00:23:23.901 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:23.902 [INFO] Method 11: SSE_EVENTS - Checking
+00:23:23.902 [INFO] Method 12: REQUEST_MONITOR - Checking
+00:23:23.902 [INFO] Method 13: SELENIUM - Checking
+00:23:23.903 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+00:23:23.903 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:23.903 [INFO] Method 1: found=True, internal=1, visible=1
+00:23:23.903 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:23.903 [INFO] Method 2: internal=1, visible=1
+00:23:23.903 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:23.904 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:23.904 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:23.904 [INFO] Method 4: found=False, has_metadata=False
+00:23:23.904 [INFO] Method 9: DATA_RAW - Checking
+00:23:23.904 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:23.904 [INFO] Method 14: found=True, confidence=2/5
+00:23:23.905 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+00:23:25.906 [INFO] Method 15: No browser report found (total reports: 0)
+00:23:25.906 [INFO] Method 16: BROWSER_API_QUERY - Checking
+00:23:26.834 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:26.835 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:26.835 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:26.835 [INFO] Method 2: internal=0, visible=0
+00:23:26.836 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:26.836 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:26.836 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:26.836 [INFO] Method 4: found=False, has_metadata=False
+00:23:26.837 [INFO] Method 5: API_STATE - Checking
+00:23:26.840 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+00:23:26.863 [INFO] Method 7: DOM_CONTENT - Checking
+00:23:26.863 [INFO] Method 8: MUTATION_OBSERVER - Checking
+00:23:26.863 [INFO] Method 9: DATA_RAW - Checking
+00:23:26.865 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:26.865 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+00:23:26.865 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:26.865 [INFO] Method 11: SSE_EVENTS - Checking
+00:23:26.866 [INFO] Method 12: REQUEST_MONITOR - Checking
+00:23:26.866 [INFO] Method 13: SELENIUM - Checking
+00:23:26.867 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+00:23:26.867 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:26.867 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:26.867 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:26.867 [INFO] Method 2: internal=0, visible=0
+00:23:26.868 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:26.868 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:26.868 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:26.868 [INFO] Method 4: found=False, has_metadata=False
+00:23:26.868 [INFO] Method 9: DATA_RAW - Checking
+00:23:26.869 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:26.869 [INFO] Method 14: found=False, confidence=0/5
+00:23:26.869 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+00:23:28.870 [INFO] Method 15: No browser report found (total reports: 0)
+00:23:28.871 [INFO] Method 16: BROWSER_API_QUERY - Checking
+00:23:29.807 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:29.808 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:29.808 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:29.808 [INFO] Method 2: internal=0, visible=0
+00:23:29.809 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:29.810 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:29.810 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:29.810 [INFO] Method 4: found=False, has_metadata=False
+00:23:29.810 [INFO] Method 5: API_STATE - Checking
+00:23:29.835 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+00:23:29.851 [INFO] Method 7: DOM_CONTENT - Checking
+00:23:29.852 [INFO] Method 8: MUTATION_OBSERVER - Checking
+00:23:29.852 [INFO] Method 9: DATA_RAW - Checking
+00:23:29.852 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:29.853 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+00:23:29.853 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:29.853 [INFO] Method 11: SSE_EVENTS - Checking
+00:23:29.853 [INFO] Method 12: REQUEST_MONITOR - Checking
+00:23:29.854 [INFO] Method 13: SELENIUM - Checking
+00:23:29.854 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+00:23:29.854 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:29.855 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:29.855 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:29.855 [INFO] Method 2: internal=0, visible=0
+00:23:29.855 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:29.855 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:29.857 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:29.857 [INFO] Method 4: found=False, has_metadata=False
+00:23:29.857 [INFO] Method 9: DATA_RAW - Checking
+00:23:29.857 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:29.857 [INFO] Method 14: found=False, confidence=0/5
+00:23:29.858 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+00:23:31.858 [INFO] Method 15: No browser report found (total reports: 0)
+00:23:31.864 [INFO] Method 16: BROWSER_API_QUERY - Checking
+00:23:37.844 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:37.845 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:37.845 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:37.845 [INFO] Method 2: internal=0, visible=0
+00:23:37.845 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:37.846 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:37.846 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:37.847 [INFO] Method 4: found=False, has_metadata=False
+00:23:37.847 [INFO] Method 5: API_STATE - Checking
+00:23:37.870 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+00:23:37.873 [INFO] Method 7: DOM_CONTENT - Checking
+00:23:37.882 [INFO] Method 8: MUTATION_OBSERVER - Checking
+00:23:37.883 [INFO] Method 9: DATA_RAW - Checking
+00:23:37.883 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:37.884 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+00:23:37.884 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:37.884 [INFO] Method 11: SSE_EVENTS - Checking
+00:23:37.884 [INFO] Method 12: REQUEST_MONITOR - Checking
+00:23:37.884 [INFO] Method 13: SELENIUM - Checking
+00:23:37.885 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+00:23:37.885 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:37.886 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:37.886 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:37.886 [INFO] Method 2: internal=0, visible=0
+00:23:37.887 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:37.887 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:37.887 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:37.887 [INFO] Method 4: found=False, has_metadata=False
+00:23:37.887 [INFO] Method 9: DATA_RAW - Checking
+00:23:37.888 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:37.888 [INFO] Method 14: found=False, confidence=0/5
+00:23:37.888 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+00:23:39.889 [INFO] Method 15: No browser report found (total reports: 0)
+00:23:39.890 [INFO] Method 16: BROWSER_API_QUERY - Checking
+00:23:40.798 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:40.799 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:40.799 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:40.800 [INFO] Method 2: internal=0, visible=0
+00:23:40.801 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:40.802 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:40.802 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:40.802 [INFO] Method 4: found=False, has_metadata=False
+00:23:40.803 [INFO] Method 5: API_STATE - Checking
+00:23:40.805 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+00:23:40.807 [INFO] Method 7: DOM_CONTENT - Checking
+00:23:40.808 [INFO] Method 8: MUTATION_OBSERVER - Checking
+00:23:40.808 [INFO] Method 9: DATA_RAW - Checking
+00:23:40.808 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:40.808 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+00:23:40.809 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:40.809 [INFO] Method 11: SSE_EVENTS - Checking
+00:23:40.809 [INFO] Method 12: REQUEST_MONITOR - Checking
+00:23:40.810 [INFO] Method 13: SELENIUM - Checking
+00:23:40.810 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+00:23:40.811 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:40.813 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:40.814 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:40.814 [INFO] Method 2: internal=0, visible=0
+00:23:40.814 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:40.814 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:40.814 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:40.815 [INFO] Method 4: found=False, has_metadata=False
+00:23:40.816 [INFO] Method 9: DATA_RAW - Checking
+00:23:40.816 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:40.816 [INFO] Method 14: found=False, confidence=0/5
+00:23:40.816 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+00:23:42.817 [INFO] Method 15: No browser report found (total reports: 0)
+00:23:42.818 [INFO] Method 16: BROWSER_API_QUERY - Checking
+00:23:43.742 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:43.743 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:43.744 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:43.744 [INFO] Method 2: internal=0, visible=0
+00:23:43.744 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:43.744 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:43.745 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:43.745 [INFO] Method 4: found=False, has_metadata=False
+00:23:43.746 [INFO] Method 5: API_STATE - Checking
+00:23:43.775 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+00:23:43.778 [INFO] Method 7: DOM_CONTENT - Checking
+00:23:43.778 [INFO] Method 8: MUTATION_OBSERVER - Checking
+00:23:43.779 [INFO] Method 9: DATA_RAW - Checking
+00:23:43.779 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:43.779 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+00:23:43.779 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:43.780 [INFO] Method 11: SSE_EVENTS - Checking
+00:23:43.780 [INFO] Method 12: REQUEST_MONITOR - Checking
+00:23:43.782 [INFO] Method 13: SELENIUM - Checking
+00:23:43.783 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+00:23:43.784 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:43.784 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:43.784 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:43.784 [INFO] Method 2: internal=0, visible=0
+00:23:43.784 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:43.785 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:43.785 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:43.785 [INFO] Method 4: found=False, has_metadata=False
+00:23:43.785 [INFO] Method 9: DATA_RAW - Checking
+00:23:43.785 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:43.785 [INFO] Method 14: found=False, confidence=0/5
+00:23:43.786 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+00:23:45.788 [INFO] Method 15: No browser report found (total reports: 0)
+00:23:45.790 [INFO] Method 16: BROWSER_API_QUERY - Checking
+00:23:46.698 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:46.699 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:46.700 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:46.700 [INFO] Method 2: internal=0, visible=0
+00:23:46.702 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:46.703 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:46.704 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:46.704 [INFO] Method 4: found=False, has_metadata=False
+00:23:46.708 [INFO] Method 5: API_STATE - Checking
+00:23:46.711 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+00:23:46.713 [INFO] Method 7: DOM_CONTENT - Checking
+00:23:46.714 [INFO] Method 8: MUTATION_OBSERVER - Checking
+00:23:46.714 [INFO] Method 9: DATA_RAW - Checking
+00:23:46.714 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:46.715 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+00:23:46.715 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:46.716 [INFO] Method 11: SSE_EVENTS - Checking
+00:23:46.716 [INFO] Method 12: REQUEST_MONITOR - Checking
+00:23:46.717 [INFO] Method 13: SELENIUM - Checking
+00:23:46.717 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+00:23:46.718 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:46.718 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:46.718 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:46.719 [INFO] Method 2: internal=0, visible=0
+00:23:46.719 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:46.720 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:46.720 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:46.720 [INFO] Method 4: found=False, has_metadata=False
+00:23:46.720 [INFO] Method 9: DATA_RAW - Checking
+00:23:46.721 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:46.721 [INFO] Method 14: found=False, confidence=0/5
+00:23:46.722 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+00:23:48.723 [INFO] Method 15: No browser report found (total reports: 0)
+00:23:48.723 [INFO] Method 16: BROWSER_API_QUERY - Checking
+00:23:49.630 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:49.630 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:49.631 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:49.631 [INFO] Method 2: internal=0, visible=0
+00:23:49.632 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:49.632 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:49.632 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:49.632 [INFO] Method 4: found=False, has_metadata=False
+00:23:49.633 [INFO] Method 5: API_STATE - Checking
+00:23:49.635 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+00:23:49.638 [INFO] Method 7: DOM_CONTENT - Checking
+00:23:49.638 [INFO] Method 8: MUTATION_OBSERVER - Checking
+00:23:49.639 [INFO] Method 9: DATA_RAW - Checking
+00:23:49.639 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:49.639 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+00:23:49.640 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:49.640 [INFO] Method 11: SSE_EVENTS - Checking
+00:23:49.640 [INFO] Method 12: REQUEST_MONITOR - Checking
+00:23:49.641 [INFO] Method 13: SELENIUM - Checking
+00:23:49.641 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+00:23:49.642 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:49.642 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:49.642 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:49.642 [INFO] Method 2: internal=0, visible=0
+00:23:49.643 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:49.643 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:49.643 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:49.644 [INFO] Method 4: found=False, has_metadata=False
+00:23:49.644 [INFO] Method 9: DATA_RAW - Checking
+00:23:49.644 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:49.644 [INFO] Method 14: found=False, confidence=0/5
+00:23:49.644 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+00:23:51.645 [INFO] Method 15: No browser report found (total reports: 0)
+00:23:51.646 [INFO] Method 16: BROWSER_API_QUERY - Checking
+00:23:52.552 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:52.553 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:52.553 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:52.553 [INFO] Method 2: internal=0, visible=0
+00:23:52.554 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:52.554 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:52.554 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:52.555 [INFO] Method 4: found=False, has_metadata=False
+00:23:52.555 [INFO] Method 5: API_STATE - Checking
+00:23:52.580 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+00:23:52.584 [INFO] Method 7: DOM_CONTENT - Checking
+00:23:52.585 [INFO] Method 8: MUTATION_OBSERVER - Checking
+00:23:52.586 [INFO] Method 9: DATA_RAW - Checking
+00:23:52.586 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:52.587 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+00:23:52.587 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:52.588 [INFO] Method 11: SSE_EVENTS - Checking
+00:23:52.589 [INFO] Method 12: REQUEST_MONITOR - Checking
+00:23:52.589 [INFO] Method 13: SELENIUM - Checking
+00:23:52.591 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+00:23:52.591 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:52.591 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:52.592 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:52.592 [INFO] Method 2: internal=0, visible=0
+00:23:52.593 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:52.593 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:52.594 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:52.594 [INFO] Method 4: found=False, has_metadata=False
+00:23:52.594 [INFO] Method 9: DATA_RAW - Checking
+00:23:52.595 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:52.595 [INFO] Method 14: found=False, confidence=0/5
+00:23:52.596 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+00:23:54.597 [INFO] Method 15: No browser report found (total reports: 0)
+00:23:54.597 [INFO] Method 16: BROWSER_API_QUERY - Checking
+00:23:55.503 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:55.503 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:55.504 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:55.504 [INFO] Method 2: internal=0, visible=0
+00:23:55.504 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:55.504 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:55.505 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:55.505 [INFO] Method 4: found=False, has_metadata=False
+00:23:55.505 [INFO] Method 5: API_STATE - Checking
+00:23:55.508 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+00:23:55.512 [INFO] Method 7: DOM_CONTENT - Checking
+00:23:55.512 [INFO] Method 8: MUTATION_OBSERVER - Checking
+00:23:55.513 [INFO] Method 9: DATA_RAW - Checking
+00:23:55.513 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:55.513 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+00:23:55.515 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:55.515 [INFO] Method 11: SSE_EVENTS - Checking
+00:23:55.516 [INFO] Method 12: REQUEST_MONITOR - Checking
+00:23:55.516 [INFO] Method 13: SELENIUM - Checking
+00:23:55.518 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+00:23:55.518 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:55.518 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:55.519 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:55.519 [INFO] Method 2: internal=0, visible=0
+00:23:55.519 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:55.520 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:55.520 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:55.521 [INFO] Method 4: found=False, has_metadata=False
+00:23:55.521 [INFO] Method 9: DATA_RAW - Checking
+00:23:55.521 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:55.522 [INFO] Method 14: found=False, confidence=0/5
+00:23:55.522 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+00:23:57.524 [INFO] Method 15: No browser report found (total reports: 0)
+00:23:57.525 [INFO] Method 16: BROWSER_API_QUERY - Checking
+00:23:58.431 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:58.431 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:58.432 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:58.432 [INFO] Method 2: internal=0, visible=0
+00:23:58.432 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:58.433 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:58.433 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:58.433 [INFO] Method 4: found=False, has_metadata=False
+00:23:58.433 [INFO] Method 5: API_STATE - Checking
+00:23:58.440 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+00:23:58.445 [INFO] Method 7: DOM_CONTENT - Checking
+00:23:58.446 [INFO] Method 8: MUTATION_OBSERVER - Checking
+00:23:58.447 [INFO] Method 9: DATA_RAW - Checking
+00:23:58.447 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:58.448 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+00:23:58.448 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:58.449 [INFO] Method 11: SSE_EVENTS - Checking
+00:23:58.449 [INFO] Method 12: REQUEST_MONITOR - Checking
+00:23:58.450 [INFO] Method 13: SELENIUM - Checking
+00:23:58.452 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+00:23:58.453 [INFO] Method 1: HISTORY_STATE - Checking
+00:23:58.453 [INFO] Method 1: found=False, internal=0, visible=0
+00:23:58.453 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:23:58.453 [INFO] Method 2: internal=0, visible=0
+00:23:58.455 [INFO] Method 3: DISPLAY_HTML - Checking
+00:23:58.455 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:23:58.456 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:23:58.456 [INFO] Method 4: found=False, has_metadata=False
+00:23:58.456 [INFO] Method 9: DATA_RAW - Checking
+00:23:58.457 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:23:58.458 [INFO] Method 14: found=False, confidence=0/5
+00:23:58.458 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+00:24:00.460 [INFO] Method 15: No browser report found (total reports: 0)
+00:24:00.460 [INFO] Method 16: BROWSER_API_QUERY - Checking
+00:24:01.367 [INFO] Method 1: HISTORY_STATE - Checking
+00:24:01.367 [INFO] Method 1: found=False, internal=0, visible=0
+00:24:01.368 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:24:01.368 [INFO] Method 2: internal=0, visible=0
+00:24:01.369 [INFO] Method 3: DISPLAY_HTML - Checking
+00:24:01.370 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:24:01.370 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:24:01.370 [INFO] Method 4: found=False, has_metadata=False
+00:24:01.371 [INFO] Method 5: API_STATE - Checking
+00:24:01.394 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+00:24:01.398 [INFO] Method 7: DOM_CONTENT - Checking
+00:24:01.399 [INFO] Method 8: MUTATION_OBSERVER - Checking
+00:24:01.399 [INFO] Method 9: DATA_RAW - Checking
+00:24:01.400 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:24:01.400 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+00:24:01.401 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'JsonData'
+00:24:01.401 [INFO] Method 11: SSE_EVENTS - Checking
+00:24:01.403 [INFO] Method 12: REQUEST_MONITOR - Checking
+00:24:01.403 [INFO] Method 13: SELENIUM - Checking
+00:24:01.404 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+00:24:01.405 [INFO] Method 1: HISTORY_STATE - Checking
+00:24:01.406 [INFO] Method 1: found=False, internal=0, visible=0
+00:24:01.418 [INFO] Method 2: MESSAGE_COUNT - Checking
+00:24:01.419 [INFO] Method 2: internal=0, visible=0
+00:24:01.420 [INFO] Method 3: DISPLAY_HTML - Checking
+00:24:01.420 [ERROR] Method 3: FAILED - object of type 'JsonData' has no len()
+00:24:01.420 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+00:24:01.421 [INFO] Method 4: found=False, has_metadata=False
+00:24:01.422 [INFO] Method 9: DATA_RAW - Checking
+00:24:01.422 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'JsonData'
+00:24:01.423 [INFO] Method 14: found=False, confidence=0/5
+00:24:01.423 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+00:24:03.425 [INFO] Method 15: No browser report found (total reports: 0)
+00:24:03.425 [INFO] Method 16: BROWSER_API_QUERY - Checking
+22:15:46.913 [INFO] Method 1: HISTORY_STATE - Checking
+22:15:46.914 [INFO] Method 1: found=True, internal=1, visible=1
+22:15:46.915 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:15:46.915 [INFO] Method 2: internal=1, visible=1
+22:15:46.916 [INFO] Method 3: DISPLAY_HTML - Checking
+22:15:46.916 [INFO] Method 3: found=False, html_length=2
+22:15:46.917 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:15:46.917 [INFO] Method 4: found=False, has_metadata=False
+22:15:46.918 [INFO] Method 5: API_STATE - Checking
+22:15:46.923 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+22:15:46.926 [INFO] Method 7: DOM_CONTENT - Checking
+22:15:46.926 [INFO] Method 8: MUTATION_OBSERVER - Checking
+22:15:46.927 [INFO] Method 9: DATA_RAW - Checking
+22:15:46.927 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:15:46.929 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+22:15:46.929 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'dict'
+22:15:46.930 [INFO] Method 11: SSE_EVENTS - Checking
+22:15:46.930 [INFO] Method 12: REQUEST_MONITOR - Checking
+22:15:46.931 [INFO] Method 13: SELENIUM - Checking
+22:15:46.933 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+22:15:46.933 [INFO] Method 1: HISTORY_STATE - Checking
+22:15:46.934 [INFO] Method 1: found=True, internal=1, visible=1
+22:15:46.934 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:15:46.935 [INFO] Method 2: internal=1, visible=1
+22:15:46.935 [INFO] Method 3: DISPLAY_HTML - Checking
+22:15:46.936 [INFO] Method 3: found=False, html_length=2
+22:15:46.936 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:15:46.937 [INFO] Method 4: found=False, has_metadata=False
+22:15:46.937 [INFO] Method 9: DATA_RAW - Checking
+22:15:46.937 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:15:46.938 [INFO] Method 14: found=True, confidence=2/5
+22:15:46.938 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+22:15:48.939 [INFO] Method 15: No browser report found (total reports: 0)
+22:15:48.941 [INFO] Method 16: BROWSER_API_QUERY - Checking
+22:15:49.747 [INFO] Method 1: HISTORY_STATE - Checking
+22:15:49.747 [INFO] Method 1: found=True, internal=2, visible=2
+22:15:49.748 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:15:49.748 [INFO] Method 2: internal=2, visible=2
+22:15:49.748 [INFO] Method 3: DISPLAY_HTML - Checking
+22:15:49.748 [INFO] Method 3: found=False, html_length=2
+22:15:49.748 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:15:49.749 [INFO] Method 4: found=False, has_metadata=False
+22:15:49.749 [INFO] Method 5: API_STATE - Checking
+22:15:49.752 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+22:15:49.754 [INFO] Method 7: DOM_CONTENT - Checking
+22:15:49.754 [INFO] Method 8: MUTATION_OBSERVER - Checking
+22:15:49.756 [INFO] Method 9: DATA_RAW - Checking
+22:15:49.756 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:15:49.757 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+22:15:49.757 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'dict'
+22:15:49.757 [INFO] Method 11: SSE_EVENTS - Checking
+22:15:49.758 [INFO] Method 12: REQUEST_MONITOR - Checking
+22:15:49.758 [INFO] Method 13: SELENIUM - Checking
+22:15:49.759 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+22:15:49.759 [INFO] Method 1: HISTORY_STATE - Checking
+22:15:49.759 [INFO] Method 1: found=True, internal=2, visible=2
+22:15:49.759 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:15:49.759 [INFO] Method 2: internal=2, visible=2
+22:15:49.760 [INFO] Method 3: DISPLAY_HTML - Checking
+22:15:49.760 [INFO] Method 3: found=False, html_length=2
+22:15:49.760 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:15:49.760 [INFO] Method 4: found=False, has_metadata=False
+22:15:49.760 [INFO] Method 9: DATA_RAW - Checking
+22:15:49.761 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:15:49.761 [INFO] Method 14: found=True, confidence=2/5
+22:15:49.761 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+22:15:51.762 [INFO] Method 15: No browser report found (total reports: 0)
+22:15:51.763 [INFO] Method 16: BROWSER_API_QUERY - Checking
+22:15:52.571 [INFO] Method 1: HISTORY_STATE - Checking
+22:15:52.571 [INFO] Method 1: found=False, internal=2, visible=2
+22:15:52.572 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:15:52.573 [INFO] Method 2: internal=2, visible=2
+22:15:52.573 [INFO] Method 3: DISPLAY_HTML - Checking
+22:15:52.573 [INFO] Method 3: found=False, html_length=2
+22:15:52.573 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:15:52.574 [INFO] Method 4: found=False, has_metadata=False
+22:15:52.575 [INFO] Method 5: API_STATE - Checking
+22:15:52.591 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+22:15:52.595 [INFO] Method 7: DOM_CONTENT - Checking
+22:15:52.595 [INFO] Method 8: MUTATION_OBSERVER - Checking
+22:15:52.596 [INFO] Method 9: DATA_RAW - Checking
+22:15:52.597 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:15:52.598 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+22:15:52.598 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'dict'
+22:15:52.599 [INFO] Method 11: SSE_EVENTS - Checking
+22:15:52.600 [INFO] Method 12: REQUEST_MONITOR - Checking
+22:15:52.600 [INFO] Method 13: SELENIUM - Checking
+22:15:52.601 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+22:15:52.602 [INFO] Method 1: HISTORY_STATE - Checking
+22:15:52.602 [INFO] Method 1: found=False, internal=2, visible=2
+22:15:52.603 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:15:52.603 [INFO] Method 2: internal=2, visible=2
+22:15:52.604 [INFO] Method 3: DISPLAY_HTML - Checking
+22:15:52.606 [INFO] Method 3: found=False, html_length=2
+22:15:52.606 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:15:52.607 [INFO] Method 4: found=False, has_metadata=False
+22:15:52.607 [INFO] Method 9: DATA_RAW - Checking
+22:15:52.607 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:15:52.608 [INFO] Method 14: found=True, confidence=1/5
+22:15:52.609 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+22:15:54.610 [INFO] Method 15: No browser report found (total reports: 0)
+22:15:54.610 [INFO] Method 16: BROWSER_API_QUERY - Checking
+22:15:55.416 [INFO] Method 1: HISTORY_STATE - Checking
+22:15:55.416 [INFO] Method 1: found=False, internal=2, visible=2
+22:15:55.417 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:15:55.417 [INFO] Method 2: internal=2, visible=2
+22:15:55.417 [INFO] Method 3: DISPLAY_HTML - Checking
+22:15:55.417 [INFO] Method 3: found=False, html_length=2
+22:15:55.418 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:15:55.418 [INFO] Method 4: found=False, has_metadata=False
+22:15:55.418 [INFO] Method 5: API_STATE - Checking
+22:15:55.421 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+22:15:55.443 [INFO] Method 7: DOM_CONTENT - Checking
+22:15:55.444 [INFO] Method 8: MUTATION_OBSERVER - Checking
+22:15:55.445 [INFO] Method 9: DATA_RAW - Checking
+22:15:55.445 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:15:55.446 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+22:15:55.447 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'dict'
+22:15:55.448 [INFO] Method 11: SSE_EVENTS - Checking
+22:15:55.448 [INFO] Method 12: REQUEST_MONITOR - Checking
+22:15:55.449 [INFO] Method 13: SELENIUM - Checking
+22:15:55.450 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+22:15:55.450 [INFO] Method 1: HISTORY_STATE - Checking
+22:15:55.451 [INFO] Method 1: found=False, internal=2, visible=2
+22:15:55.451 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:15:55.451 [INFO] Method 2: internal=2, visible=2
+22:15:55.452 [INFO] Method 3: DISPLAY_HTML - Checking
+22:15:55.452 [INFO] Method 3: found=False, html_length=2
+22:15:55.452 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:15:55.453 [INFO] Method 4: found=False, has_metadata=False
+22:15:55.453 [INFO] Method 9: DATA_RAW - Checking
+22:15:55.454 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:15:55.454 [INFO] Method 14: found=True, confidence=1/5
+22:15:55.455 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+22:15:57.456 [INFO] Method 15: No browser report found (total reports: 0)
+22:15:57.456 [INFO] Method 16: BROWSER_API_QUERY - Checking
+22:15:58.263 [INFO] Method 1: HISTORY_STATE - Checking
+22:15:58.264 [INFO] Method 1: found=False, internal=2, visible=2
+22:15:58.264 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:15:58.265 [INFO] Method 2: internal=2, visible=2
+22:15:58.265 [INFO] Method 3: DISPLAY_HTML - Checking
+22:15:58.265 [INFO] Method 3: found=False, html_length=2
+22:15:58.265 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:15:58.267 [INFO] Method 4: found=False, has_metadata=False
+22:15:58.268 [INFO] Method 5: API_STATE - Checking
+22:15:58.272 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+22:15:58.275 [INFO] Method 7: DOM_CONTENT - Checking
+22:15:58.276 [INFO] Method 8: MUTATION_OBSERVER - Checking
+22:15:58.276 [INFO] Method 9: DATA_RAW - Checking
+22:15:58.277 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:15:58.277 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+22:15:58.278 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'dict'
+22:15:58.278 [INFO] Method 11: SSE_EVENTS - Checking
+22:15:58.279 [INFO] Method 12: REQUEST_MONITOR - Checking
+22:15:58.279 [INFO] Method 13: SELENIUM - Checking
+22:15:58.283 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+22:15:58.283 [INFO] Method 1: HISTORY_STATE - Checking
+22:15:58.284 [INFO] Method 1: found=False, internal=2, visible=2
+22:15:58.284 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:15:58.284 [INFO] Method 2: internal=2, visible=2
+22:15:58.285 [INFO] Method 3: DISPLAY_HTML - Checking
+22:15:58.285 [INFO] Method 3: found=False, html_length=2
+22:15:58.286 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:15:58.286 [INFO] Method 4: found=False, has_metadata=False
+22:15:58.286 [INFO] Method 9: DATA_RAW - Checking
+22:15:58.287 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:15:58.287 [INFO] Method 14: found=True, confidence=1/5
+22:15:58.288 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+22:16:00.289 [INFO] Method 15: No browser report found (total reports: 0)
+22:16:00.289 [INFO] Method 16: BROWSER_API_QUERY - Checking
+22:16:01.096 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:01.096 [INFO] Method 1: found=False, internal=2, visible=2
+22:16:01.097 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:01.097 [INFO] Method 2: internal=2, visible=2
+22:16:01.097 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:01.098 [INFO] Method 3: found=False, html_length=2
+22:16:01.098 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:01.098 [INFO] Method 4: found=False, has_metadata=False
+22:16:01.098 [INFO] Method 5: API_STATE - Checking
+22:16:01.122 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+22:16:01.126 [INFO] Method 7: DOM_CONTENT - Checking
+22:16:01.127 [INFO] Method 8: MUTATION_OBSERVER - Checking
+22:16:01.128 [INFO] Method 9: DATA_RAW - Checking
+22:16:01.128 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:01.129 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+22:16:01.129 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'dict'
+22:16:01.130 [INFO] Method 11: SSE_EVENTS - Checking
+22:16:01.131 [INFO] Method 12: REQUEST_MONITOR - Checking
+22:16:01.132 [INFO] Method 13: SELENIUM - Checking
+22:16:01.132 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+22:16:01.133 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:01.133 [INFO] Method 1: found=False, internal=2, visible=2
+22:16:01.133 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:01.134 [INFO] Method 2: internal=2, visible=2
+22:16:01.134 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:01.135 [INFO] Method 3: found=False, html_length=2
+22:16:01.135 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:01.136 [INFO] Method 4: found=False, has_metadata=False
+22:16:01.136 [INFO] Method 9: DATA_RAW - Checking
+22:16:01.136 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:01.137 [INFO] Method 14: found=True, confidence=1/5
+22:16:01.138 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+22:16:03.139 [INFO] Method 15: No browser report found (total reports: 0)
+22:16:03.139 [INFO] Method 16: BROWSER_API_QUERY - Checking
+22:16:03.946 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:03.947 [INFO] Method 1: found=False, internal=2, visible=2
+22:16:03.947 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:03.947 [INFO] Method 2: internal=2, visible=2
+22:16:03.947 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:03.948 [INFO] Method 3: found=False, html_length=2
+22:16:03.948 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:03.948 [INFO] Method 4: found=False, has_metadata=False
+22:16:03.949 [INFO] Method 5: API_STATE - Checking
+22:16:03.951 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+22:16:03.953 [INFO] Method 7: DOM_CONTENT - Checking
+22:16:03.953 [INFO] Method 8: MUTATION_OBSERVER - Checking
+22:16:03.953 [INFO] Method 9: DATA_RAW - Checking
+22:16:03.953 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:03.954 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+22:16:03.954 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'dict'
+22:16:03.954 [INFO] Method 11: SSE_EVENTS - Checking
+22:16:03.954 [INFO] Method 12: REQUEST_MONITOR - Checking
+22:16:03.955 [INFO] Method 13: SELENIUM - Checking
+22:16:03.955 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+22:16:03.955 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:03.956 [INFO] Method 1: found=False, internal=2, visible=2
+22:16:03.956 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:03.956 [INFO] Method 2: internal=2, visible=2
+22:16:03.956 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:03.956 [INFO] Method 3: found=False, html_length=2
+22:16:03.957 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:03.957 [INFO] Method 4: found=False, has_metadata=False
+22:16:03.957 [INFO] Method 9: DATA_RAW - Checking
+22:16:03.957 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:03.957 [INFO] Method 14: found=True, confidence=1/5
+22:16:03.957 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+22:16:05.960 [INFO] Method 15: No browser report found (total reports: 0)
+22:16:05.962 [INFO] Method 16: BROWSER_API_QUERY - Checking
+22:16:06.769 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:06.769 [INFO] Method 1: found=False, internal=2, visible=2
+22:16:06.770 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:06.770 [INFO] Method 2: internal=2, visible=2
+22:16:06.770 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:06.770 [INFO] Method 3: found=False, html_length=2
+22:16:06.771 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:06.771 [INFO] Method 4: found=False, has_metadata=False
+22:16:06.771 [INFO] Method 5: API_STATE - Checking
+22:16:06.775 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+22:16:06.794 [INFO] Method 7: DOM_CONTENT - Checking
+22:16:06.794 [INFO] Method 8: MUTATION_OBSERVER - Checking
+22:16:06.795 [INFO] Method 9: DATA_RAW - Checking
+22:16:06.795 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:06.796 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+22:16:06.796 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'dict'
+22:16:06.797 [INFO] Method 11: SSE_EVENTS - Checking
+22:16:06.798 [INFO] Method 12: REQUEST_MONITOR - Checking
+22:16:06.798 [INFO] Method 13: SELENIUM - Checking
+22:16:06.800 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+22:16:06.800 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:06.800 [INFO] Method 1: found=False, internal=2, visible=2
+22:16:06.801 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:06.801 [INFO] Method 2: internal=2, visible=2
+22:16:06.801 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:06.802 [INFO] Method 3: found=False, html_length=2
+22:16:06.802 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:06.802 [INFO] Method 4: found=False, has_metadata=False
+22:16:06.803 [INFO] Method 9: DATA_RAW - Checking
+22:16:06.803 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:06.804 [INFO] Method 14: found=True, confidence=1/5
+22:16:06.804 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+22:16:08.805 [INFO] Method 15: No browser report found (total reports: 0)
+22:16:08.806 [INFO] Method 16: BROWSER_API_QUERY - Checking
+22:16:09.614 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:09.614 [INFO] Method 1: found=False, internal=2, visible=2
+22:16:09.614 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:09.615 [INFO] Method 2: internal=2, visible=2
+22:16:09.615 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:09.615 [INFO] Method 3: found=False, html_length=2
+22:16:09.616 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:09.616 [INFO] Method 4: found=False, has_metadata=False
+22:16:09.616 [INFO] Method 5: API_STATE - Checking
+22:16:09.619 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+22:16:09.641 [INFO] Method 7: DOM_CONTENT - Checking
+22:16:09.641 [INFO] Method 8: MUTATION_OBSERVER - Checking
+22:16:09.642 [INFO] Method 9: DATA_RAW - Checking
+22:16:09.642 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:09.642 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+22:16:09.642 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'dict'
+22:16:09.642 [INFO] Method 11: SSE_EVENTS - Checking
+22:16:09.643 [INFO] Method 12: REQUEST_MONITOR - Checking
+22:16:09.643 [INFO] Method 13: SELENIUM - Checking
+22:16:09.643 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+22:16:09.643 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:09.644 [INFO] Method 1: found=False, internal=2, visible=2
+22:16:09.644 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:09.644 [INFO] Method 2: internal=2, visible=2
+22:16:09.644 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:09.645 [INFO] Method 3: found=False, html_length=2
+22:16:09.645 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:09.646 [INFO] Method 4: found=False, has_metadata=False
+22:16:09.646 [INFO] Method 9: DATA_RAW - Checking
+22:16:09.646 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:09.646 [INFO] Method 14: found=True, confidence=1/5
+22:16:09.647 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+22:16:11.648 [INFO] Method 15: No browser report found (total reports: 0)
+22:16:11.648 [INFO] Method 16: BROWSER_API_QUERY - Checking
+22:16:12.455 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:12.455 [INFO] Method 1: found=False, internal=2, visible=2
+22:16:12.456 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:12.456 [INFO] Method 2: internal=2, visible=2
+22:16:12.456 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:12.456 [INFO] Method 3: found=False, html_length=2
+22:16:12.457 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:12.457 [INFO] Method 4: found=False, has_metadata=False
+22:16:12.457 [INFO] Method 5: API_STATE - Checking
+22:16:12.459 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+22:16:12.472 [INFO] Method 7: DOM_CONTENT - Checking
+22:16:12.472 [INFO] Method 8: MUTATION_OBSERVER - Checking
+22:16:12.472 [INFO] Method 9: DATA_RAW - Checking
+22:16:12.472 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:12.473 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+22:16:12.473 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'dict'
+22:16:12.473 [INFO] Method 11: SSE_EVENTS - Checking
+22:16:12.473 [INFO] Method 12: REQUEST_MONITOR - Checking
+22:16:12.474 [INFO] Method 13: SELENIUM - Checking
+22:16:12.474 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+22:16:12.474 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:12.474 [INFO] Method 1: found=False, internal=2, visible=2
+22:16:12.475 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:12.475 [INFO] Method 2: internal=2, visible=2
+22:16:12.475 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:12.475 [INFO] Method 3: found=False, html_length=2
+22:16:12.475 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:12.476 [INFO] Method 4: found=False, has_metadata=False
+22:16:12.476 [INFO] Method 9: DATA_RAW - Checking
+22:16:12.476 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:12.476 [INFO] Method 14: found=True, confidence=1/5
+22:16:12.477 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+22:16:14.477 [INFO] Method 15: No browser report found (total reports: 0)
+22:16:14.478 [INFO] Method 16: BROWSER_API_QUERY - Checking
+22:16:15.285 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:15.285 [INFO] Method 1: found=False, internal=2, visible=2
+22:16:15.286 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:15.287 [INFO] Method 2: internal=2, visible=2
+22:16:15.287 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:15.287 [INFO] Method 3: found=False, html_length=2
+22:16:15.288 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:15.288 [INFO] Method 4: found=False, has_metadata=False
+22:16:15.288 [INFO] Method 5: API_STATE - Checking
+22:16:15.291 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+22:16:15.293 [INFO] Method 7: DOM_CONTENT - Checking
+22:16:15.293 [INFO] Method 8: MUTATION_OBSERVER - Checking
+22:16:15.293 [INFO] Method 9: DATA_RAW - Checking
+22:16:15.293 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:15.294 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+22:16:15.294 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'dict'
+22:16:15.295 [INFO] Method 11: SSE_EVENTS - Checking
+22:16:15.295 [INFO] Method 12: REQUEST_MONITOR - Checking
+22:16:15.295 [INFO] Method 13: SELENIUM - Checking
+22:16:15.296 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+22:16:15.296 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:15.296 [INFO] Method 1: found=False, internal=2, visible=2
+22:16:15.297 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:15.297 [INFO] Method 2: internal=2, visible=2
+22:16:15.297 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:15.297 [INFO] Method 3: found=False, html_length=2
+22:16:15.297 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:15.297 [INFO] Method 4: found=False, has_metadata=False
+22:16:15.297 [INFO] Method 9: DATA_RAW - Checking
+22:16:15.298 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:15.298 [INFO] Method 14: found=True, confidence=1/5
+22:16:15.298 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+22:16:17.299 [INFO] Method 15: No browser report found (total reports: 0)
+22:16:17.299 [INFO] Method 16: BROWSER_API_QUERY - Checking
+22:16:18.105 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:18.105 [INFO] Method 1: found=False, internal=2, visible=2
+22:16:18.106 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:18.106 [INFO] Method 2: internal=2, visible=2
+22:16:18.107 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:18.107 [INFO] Method 3: found=False, html_length=2
+22:16:18.107 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:18.107 [INFO] Method 4: found=False, has_metadata=False
+22:16:18.108 [INFO] Method 5: API_STATE - Checking
+22:16:18.110 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+22:16:18.113 [INFO] Method 7: DOM_CONTENT - Checking
+22:16:18.113 [INFO] Method 8: MUTATION_OBSERVER - Checking
+22:16:18.113 [INFO] Method 9: DATA_RAW - Checking
+22:16:18.114 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:18.114 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+22:16:18.114 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'dict'
+22:16:18.114 [INFO] Method 11: SSE_EVENTS - Checking
+22:16:18.114 [INFO] Method 12: REQUEST_MONITOR - Checking
+22:16:18.115 [INFO] Method 13: SELENIUM - Checking
+22:16:18.115 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+22:16:18.115 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:18.116 [INFO] Method 1: found=False, internal=2, visible=2
+22:16:18.116 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:18.116 [INFO] Method 2: internal=2, visible=2
+22:16:18.116 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:18.116 [INFO] Method 3: found=False, html_length=2
+22:16:18.116 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:18.117 [INFO] Method 4: found=False, has_metadata=False
+22:16:18.117 [INFO] Method 9: DATA_RAW - Checking
+22:16:18.117 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:18.117 [INFO] Method 14: found=True, confidence=1/5
+22:16:18.117 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+22:16:20.118 [INFO] Method 15: No browser report found (total reports: 0)
+22:16:20.120 [INFO] Method 16: BROWSER_API_QUERY - Checking
+22:16:20.925 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:20.926 [INFO] Method 1: found=False, internal=2, visible=2
+22:16:20.926 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:20.927 [INFO] Method 2: internal=2, visible=2
+22:16:20.927 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:20.928 [INFO] Method 3: found=False, html_length=2
+22:16:20.928 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:20.928 [INFO] Method 4: found=False, has_metadata=False
+22:16:20.929 [INFO] Method 5: API_STATE - Checking
+22:16:20.931 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+22:16:20.933 [INFO] Method 7: DOM_CONTENT - Checking
+22:16:20.934 [INFO] Method 8: MUTATION_OBSERVER - Checking
+22:16:20.934 [INFO] Method 9: DATA_RAW - Checking
+22:16:20.934 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:20.934 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+22:16:20.935 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'dict'
+22:16:20.935 [INFO] Method 11: SSE_EVENTS - Checking
+22:16:20.935 [INFO] Method 12: REQUEST_MONITOR - Checking
+22:16:20.935 [INFO] Method 13: SELENIUM - Checking
+22:16:20.936 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+22:16:20.936 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:20.936 [INFO] Method 1: found=False, internal=2, visible=2
+22:16:20.936 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:20.936 [INFO] Method 2: internal=2, visible=2
+22:16:20.937 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:20.937 [INFO] Method 3: found=False, html_length=2
+22:16:20.937 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:20.937 [INFO] Method 4: found=False, has_metadata=False
+22:16:20.937 [INFO] Method 9: DATA_RAW - Checking
+22:16:20.937 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:20.938 [INFO] Method 14: found=True, confidence=1/5
+22:16:20.938 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+22:16:22.939 [INFO] Method 15: No browser report found (total reports: 0)
+22:16:22.939 [INFO] Method 16: BROWSER_API_QUERY - Checking
+22:16:23.766 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:23.766 [INFO] Method 1: found=True, internal=3, visible=3
+22:16:23.766 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:23.767 [INFO] Method 2: internal=3, visible=3
+22:16:23.767 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:23.767 [INFO] Method 3: found=False, html_length=2
+22:16:23.768 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:23.768 [INFO] Method 4: found=False, has_metadata=False
+22:16:23.768 [INFO] Method 5: API_STATE - Checking
+22:16:23.771 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+22:16:23.772 [INFO] Method 7: DOM_CONTENT - Checking
+22:16:23.773 [INFO] Method 8: MUTATION_OBSERVER - Checking
+22:16:23.773 [INFO] Method 9: DATA_RAW - Checking
+22:16:23.773 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:23.773 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+22:16:23.773 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'dict'
+22:16:23.774 [INFO] Method 11: SSE_EVENTS - Checking
+22:16:23.774 [INFO] Method 12: REQUEST_MONITOR - Checking
+22:16:23.774 [INFO] Method 13: SELENIUM - Checking
+22:16:23.774 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+22:16:23.775 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:23.775 [INFO] Method 1: found=True, internal=3, visible=3
+22:16:23.775 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:23.775 [INFO] Method 2: internal=3, visible=3
+22:16:23.775 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:23.775 [INFO] Method 3: found=False, html_length=2
+22:16:23.776 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:23.776 [INFO] Method 4: found=False, has_metadata=False
+22:16:23.776 [INFO] Method 9: DATA_RAW - Checking
+22:16:23.776 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:23.776 [INFO] Method 14: found=True, confidence=2/5
+22:16:23.776 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+22:16:25.778 [INFO] Method 15: No browser report found (total reports: 0)
+22:16:25.778 [INFO] Method 16: BROWSER_API_QUERY - Checking
+22:16:26.584 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:26.584 [INFO] Method 1: found=True, internal=4, visible=4
+22:16:26.585 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:26.585 [INFO] Method 2: internal=4, visible=4
+22:16:26.585 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:26.586 [INFO] Method 3: found=False, html_length=2
+22:16:26.586 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:26.586 [INFO] Method 4: found=False, has_metadata=False
+22:16:26.586 [INFO] Method 5: API_STATE - Checking
+22:16:26.589 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+22:16:26.591 [INFO] Method 7: DOM_CONTENT - Checking
+22:16:26.591 [INFO] Method 8: MUTATION_OBSERVER - Checking
+22:16:26.591 [INFO] Method 9: DATA_RAW - Checking
+22:16:26.591 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:26.592 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+22:16:26.592 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'dict'
+22:16:26.592 [INFO] Method 11: SSE_EVENTS - Checking
+22:16:26.592 [INFO] Method 12: REQUEST_MONITOR - Checking
+22:16:26.592 [INFO] Method 13: SELENIUM - Checking
+22:16:26.593 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+22:16:26.593 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:26.593 [INFO] Method 1: found=True, internal=4, visible=4
+22:16:26.593 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:26.593 [INFO] Method 2: internal=4, visible=4
+22:16:26.594 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:26.594 [INFO] Method 3: found=False, html_length=2
+22:16:26.594 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:26.594 [INFO] Method 4: found=False, has_metadata=False
+22:16:26.594 [INFO] Method 9: DATA_RAW - Checking
+22:16:26.594 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:26.595 [INFO] Method 14: found=True, confidence=2/5
+22:16:26.595 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+22:16:28.596 [INFO] Method 15: No browser report found (total reports: 0)
+22:16:28.596 [INFO] Method 16: BROWSER_API_QUERY - Checking
+22:16:29.402 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:29.402 [INFO] Method 1: found=False, internal=4, visible=4
+22:16:29.403 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:29.403 [INFO] Method 2: internal=4, visible=4
+22:16:29.404 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:29.404 [INFO] Method 3: found=False, html_length=2
+22:16:29.404 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:29.404 [INFO] Method 4: found=False, has_metadata=False
+22:16:29.405 [INFO] Method 5: API_STATE - Checking
+22:16:29.408 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+22:16:29.412 [INFO] Method 7: DOM_CONTENT - Checking
+22:16:29.412 [INFO] Method 8: MUTATION_OBSERVER - Checking
+22:16:29.412 [INFO] Method 9: DATA_RAW - Checking
+22:16:29.413 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:29.413 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+22:16:29.413 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'dict'
+22:16:29.413 [INFO] Method 11: SSE_EVENTS - Checking
+22:16:29.414 [INFO] Method 12: REQUEST_MONITOR - Checking
+22:16:29.414 [INFO] Method 13: SELENIUM - Checking
+22:16:29.414 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+22:16:29.414 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:29.415 [INFO] Method 1: found=False, internal=4, visible=4
+22:16:29.415 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:29.415 [INFO] Method 2: internal=4, visible=4
+22:16:29.415 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:29.416 [INFO] Method 3: found=False, html_length=2
+22:16:29.416 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:29.417 [INFO] Method 4: found=False, has_metadata=False
+22:16:29.417 [INFO] Method 9: DATA_RAW - Checking
+22:16:29.417 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:29.417 [INFO] Method 14: found=True, confidence=1/5
+22:16:29.418 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+22:16:31.419 [INFO] Method 15: No browser report found (total reports: 0)
+22:16:31.419 [INFO] Method 16: BROWSER_API_QUERY - Checking
+22:16:32.275 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:32.275 [INFO] Method 1: found=False, internal=4, visible=4
+22:16:32.276 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:32.276 [INFO] Method 2: internal=4, visible=4
+22:16:32.276 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:32.276 [INFO] Method 3: found=False, html_length=2
+22:16:32.277 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:32.277 [INFO] Method 4: found=False, has_metadata=False
+22:16:32.277 [INFO] Method 5: API_STATE - Checking
+22:16:32.280 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+22:16:32.282 [INFO] Method 7: DOM_CONTENT - Checking
+22:16:32.282 [INFO] Method 8: MUTATION_OBSERVER - Checking
+22:16:32.283 [INFO] Method 9: DATA_RAW - Checking
+22:16:32.283 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:32.283 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+22:16:32.283 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'dict'
+22:16:32.284 [INFO] Method 11: SSE_EVENTS - Checking
+22:16:32.284 [INFO] Method 12: REQUEST_MONITOR - Checking
+22:16:32.284 [INFO] Method 13: SELENIUM - Checking
+22:16:32.285 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+22:16:32.285 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:32.285 [INFO] Method 1: found=False, internal=4, visible=4
+22:16:32.285 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:32.285 [INFO] Method 2: internal=4, visible=4
+22:16:32.285 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:32.286 [INFO] Method 3: found=False, html_length=2
+22:16:32.286 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:32.286 [INFO] Method 4: found=False, has_metadata=False
+22:16:32.286 [INFO] Method 9: DATA_RAW - Checking
+22:16:32.286 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:32.287 [INFO] Method 14: found=True, confidence=1/5
+22:16:32.287 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+22:16:34.288 [INFO] Method 15: No browser report found (total reports: 0)
+22:16:34.288 [INFO] Method 16: BROWSER_API_QUERY - Checking
+22:16:46.420 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:46.420 [INFO] Method 1: found=False, internal=4, visible=4
+22:16:46.421 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:46.421 [INFO] Method 2: internal=4, visible=4
+22:16:46.421 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:46.421 [INFO] Method 3: found=False, html_length=2
+22:16:46.422 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:46.422 [INFO] Method 4: found=False, has_metadata=False
+22:16:46.422 [INFO] Method 5: API_STATE - Checking
+22:16:46.425 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+22:16:46.446 [INFO] Method 7: DOM_CONTENT - Checking
+22:16:46.446 [INFO] Method 8: MUTATION_OBSERVER - Checking
+22:16:46.447 [INFO] Method 9: DATA_RAW - Checking
+22:16:46.447 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:46.448 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+22:16:46.448 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'dict'
+22:16:46.448 [INFO] Method 11: SSE_EVENTS - Checking
+22:16:46.449 [INFO] Method 12: REQUEST_MONITOR - Checking
+22:16:46.449 [INFO] Method 13: SELENIUM - Checking
+22:16:46.449 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+22:16:46.450 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:46.450 [INFO] Method 1: found=False, internal=4, visible=4
+22:16:46.450 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:46.450 [INFO] Method 2: internal=4, visible=4
+22:16:46.450 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:46.451 [INFO] Method 3: found=False, html_length=2
+22:16:46.451 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:46.451 [INFO] Method 4: found=False, has_metadata=False
+22:16:46.451 [INFO] Method 9: DATA_RAW - Checking
+22:16:46.451 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:46.452 [INFO] Method 14: found=True, confidence=1/5
+22:16:46.452 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+22:16:48.453 [INFO] Method 15: No browser report found (total reports: 0)
+22:16:48.453 [INFO] Method 16: BROWSER_API_QUERY - Checking
+22:16:49.264 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:49.264 [INFO] Method 1: found=False, internal=4, visible=4
+22:16:49.264 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:49.265 [INFO] Method 2: internal=4, visible=4
+22:16:49.265 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:49.266 [INFO] Method 3: found=False, html_length=2
+22:16:49.266 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:49.266 [INFO] Method 4: found=False, has_metadata=False
+22:16:49.267 [INFO] Method 5: API_STATE - Checking
+22:16:49.269 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+22:16:49.272 [INFO] Method 7: DOM_CONTENT - Checking
+22:16:49.272 [INFO] Method 8: MUTATION_OBSERVER - Checking
+22:16:49.272 [INFO] Method 9: DATA_RAW - Checking
+22:16:49.274 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:49.274 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+22:16:49.274 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'dict'
+22:16:49.274 [INFO] Method 11: SSE_EVENTS - Checking
+22:16:49.276 [INFO] Method 12: REQUEST_MONITOR - Checking
+22:16:49.277 [INFO] Method 13: SELENIUM - Checking
+22:16:49.277 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+22:16:49.278 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:49.278 [INFO] Method 1: found=False, internal=4, visible=4
+22:16:49.278 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:49.278 [INFO] Method 2: internal=4, visible=4
+22:16:49.278 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:49.278 [INFO] Method 3: found=False, html_length=2
+22:16:49.279 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:49.279 [INFO] Method 4: found=False, has_metadata=False
+22:16:49.279 [INFO] Method 9: DATA_RAW - Checking
+22:16:49.279 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:49.279 [INFO] Method 14: found=True, confidence=1/5
+22:16:49.280 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+22:16:51.280 [INFO] Method 15: No browser report found (total reports: 0)
+22:16:51.281 [INFO] Method 16: BROWSER_API_QUERY - Checking
+22:16:52.087 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:52.087 [INFO] Method 1: found=False, internal=4, visible=4
+22:16:52.088 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:52.088 [INFO] Method 2: internal=4, visible=4
+22:16:52.088 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:52.089 [INFO] Method 3: found=False, html_length=2
+22:16:52.089 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:52.090 [INFO] Method 4: found=False, has_metadata=False
+22:16:52.090 [INFO] Method 5: API_STATE - Checking
+22:16:52.103 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+22:16:52.105 [INFO] Method 7: DOM_CONTENT - Checking
+22:16:52.105 [INFO] Method 8: MUTATION_OBSERVER - Checking
+22:16:52.106 [INFO] Method 9: DATA_RAW - Checking
+22:16:52.106 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:52.107 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+22:16:52.107 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'dict'
+22:16:52.107 [INFO] Method 11: SSE_EVENTS - Checking
+22:16:52.108 [INFO] Method 12: REQUEST_MONITOR - Checking
+22:16:52.108 [INFO] Method 13: SELENIUM - Checking
+22:16:52.109 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+22:16:52.109 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:52.109 [INFO] Method 1: found=False, internal=4, visible=4
+22:16:52.109 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:52.109 [INFO] Method 2: internal=4, visible=4
+22:16:52.109 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:52.110 [INFO] Method 3: found=False, html_length=2
+22:16:52.110 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:52.110 [INFO] Method 4: found=False, has_metadata=False
+22:16:52.110 [INFO] Method 9: DATA_RAW - Checking
+22:16:52.110 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:52.111 [INFO] Method 14: found=True, confidence=1/5
+22:16:52.111 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+22:16:54.112 [INFO] Method 15: No browser report found (total reports: 0)
+22:16:54.112 [INFO] Method 16: BROWSER_API_QUERY - Checking
+22:16:54.916 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:54.916 [INFO] Method 1: found=False, internal=4, visible=4
+22:16:54.917 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:54.917 [INFO] Method 2: internal=4, visible=4
+22:16:54.917 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:54.917 [INFO] Method 3: found=False, html_length=2
+22:16:54.918 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:54.918 [INFO] Method 4: found=False, has_metadata=False
+22:16:54.918 [INFO] Method 5: API_STATE - Checking
+22:16:54.939 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+22:16:54.941 [INFO] Method 7: DOM_CONTENT - Checking
+22:16:54.941 [INFO] Method 8: MUTATION_OBSERVER - Checking
+22:16:54.942 [INFO] Method 9: DATA_RAW - Checking
+22:16:54.942 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:54.942 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+22:16:54.942 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'dict'
+22:16:54.943 [INFO] Method 11: SSE_EVENTS - Checking
+22:16:54.943 [INFO] Method 12: REQUEST_MONITOR - Checking
+22:16:54.943 [INFO] Method 13: SELENIUM - Checking
+22:16:54.944 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+22:16:54.944 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:54.944 [INFO] Method 1: found=False, internal=4, visible=4
+22:16:54.944 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:54.945 [INFO] Method 2: internal=4, visible=4
+22:16:54.945 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:54.945 [INFO] Method 3: found=False, html_length=2
+22:16:54.945 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:54.945 [INFO] Method 4: found=False, has_metadata=False
+22:16:54.946 [INFO] Method 9: DATA_RAW - Checking
+22:16:54.946 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:54.946 [INFO] Method 14: found=True, confidence=1/5
+22:16:54.946 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+22:16:56.947 [INFO] Method 15: No browser report found (total reports: 0)
+22:16:56.948 [INFO] Method 16: BROWSER_API_QUERY - Checking
+22:16:57.765 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:57.765 [INFO] Method 1: found=False, internal=4, visible=4
+22:16:57.766 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:57.766 [INFO] Method 2: internal=4, visible=4
+22:16:57.766 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:57.766 [INFO] Method 3: found=False, html_length=2
+22:16:57.767 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:57.767 [INFO] Method 4: found=False, has_metadata=False
+22:16:57.767 [INFO] Method 5: API_STATE - Checking
+22:16:57.770 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+22:16:57.776 [INFO] Method 7: DOM_CONTENT - Checking
+22:16:57.780 [INFO] Method 8: MUTATION_OBSERVER - Checking
+22:16:57.785 [INFO] Method 9: DATA_RAW - Checking
+22:16:57.786 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:57.786 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+22:16:57.786 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'dict'
+22:16:57.786 [INFO] Method 11: SSE_EVENTS - Checking
+22:16:57.787 [INFO] Method 12: REQUEST_MONITOR - Checking
+22:16:57.787 [INFO] Method 13: SELENIUM - Checking
+22:16:57.787 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+22:16:57.788 [INFO] Method 1: HISTORY_STATE - Checking
+22:16:57.788 [INFO] Method 1: found=False, internal=4, visible=4
+22:16:57.788 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:16:57.788 [INFO] Method 2: internal=4, visible=4
+22:16:57.788 [INFO] Method 3: DISPLAY_HTML - Checking
+22:16:57.789 [INFO] Method 3: found=False, html_length=2
+22:16:57.789 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:16:57.789 [INFO] Method 4: found=False, has_metadata=False
+22:16:57.789 [INFO] Method 9: DATA_RAW - Checking
+22:16:57.790 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:16:57.790 [INFO] Method 14: found=True, confidence=1/5
+22:16:57.790 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+22:16:59.791 [INFO] Method 15: No browser report found (total reports: 0)
+22:16:59.792 [INFO] Method 16: BROWSER_API_QUERY - Checking
+22:17:00.597 [INFO] Method 1: HISTORY_STATE - Checking
+22:17:00.598 [INFO] Method 1: found=False, internal=4, visible=4
+22:17:00.599 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:17:00.599 [INFO] Method 2: internal=4, visible=4
+22:17:00.599 [INFO] Method 3: DISPLAY_HTML - Checking
+22:17:00.599 [INFO] Method 3: found=False, html_length=2
+22:17:00.599 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:17:00.599 [INFO] Method 4: found=False, has_metadata=False
+22:17:00.601 [INFO] Method 5: API_STATE - Checking
+22:17:00.605 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+22:17:00.618 [INFO] Method 7: DOM_CONTENT - Checking
+22:17:00.618 [INFO] Method 8: MUTATION_OBSERVER - Checking
+22:17:00.619 [INFO] Method 9: DATA_RAW - Checking
+22:17:00.619 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:17:00.619 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+22:17:00.619 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'dict'
+22:17:00.620 [INFO] Method 11: SSE_EVENTS - Checking
+22:17:00.620 [INFO] Method 12: REQUEST_MONITOR - Checking
+22:17:00.620 [INFO] Method 13: SELENIUM - Checking
+22:17:00.621 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+22:17:00.621 [INFO] Method 1: HISTORY_STATE - Checking
+22:17:00.621 [INFO] Method 1: found=False, internal=4, visible=4
+22:17:00.621 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:17:00.622 [INFO] Method 2: internal=4, visible=4
+22:17:00.622 [INFO] Method 3: DISPLAY_HTML - Checking
+22:17:00.622 [INFO] Method 3: found=False, html_length=2
+22:17:00.622 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:17:00.622 [INFO] Method 4: found=False, has_metadata=False
+22:17:00.622 [INFO] Method 9: DATA_RAW - Checking
+22:17:00.623 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:17:00.623 [INFO] Method 14: found=True, confidence=1/5
+22:17:00.623 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+22:17:02.624 [INFO] Method 15: No browser report found (total reports: 0)
+22:17:02.625 [INFO] Method 16: BROWSER_API_QUERY - Checking
+22:17:03.455 [INFO] Method 1: HISTORY_STATE - Checking
+22:17:03.455 [INFO] Method 1: found=False, internal=4, visible=4
+22:17:03.455 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:17:03.456 [INFO] Method 2: internal=4, visible=4
+22:17:03.456 [INFO] Method 3: DISPLAY_HTML - Checking
+22:17:03.456 [INFO] Method 3: found=False, html_length=2
+22:17:03.456 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:17:03.457 [INFO] Method 4: found=False, has_metadata=False
+22:17:03.457 [INFO] Method 5: API_STATE - Checking
+22:17:03.459 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+22:17:03.462 [INFO] Method 7: DOM_CONTENT - Checking
+22:17:03.464 [INFO] Method 8: MUTATION_OBSERVER - Checking
+22:17:03.464 [INFO] Method 9: DATA_RAW - Checking
+22:17:03.464 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:17:03.464 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+22:17:03.465 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'dict'
+22:17:03.465 [INFO] Method 11: SSE_EVENTS - Checking
+22:17:03.465 [INFO] Method 12: REQUEST_MONITOR - Checking
+22:17:03.465 [INFO] Method 13: SELENIUM - Checking
+22:17:03.466 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+22:17:03.466 [INFO] Method 1: HISTORY_STATE - Checking
+22:17:03.466 [INFO] Method 1: found=False, internal=4, visible=4
+22:17:03.467 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:17:03.467 [INFO] Method 2: internal=4, visible=4
+22:17:03.467 [INFO] Method 3: DISPLAY_HTML - Checking
+22:17:03.467 [INFO] Method 3: found=False, html_length=2
+22:17:03.467 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:17:03.468 [INFO] Method 4: found=False, has_metadata=False
+22:17:03.468 [INFO] Method 9: DATA_RAW - Checking
+22:17:03.468 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:17:03.468 [INFO] Method 14: found=True, confidence=1/5
+22:17:03.469 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+22:17:05.470 [INFO] Method 15: No browser report found (total reports: 0)
+22:17:05.471 [INFO] Method 16: BROWSER_API_QUERY - Checking
+22:17:06.277 [INFO] Method 1: HISTORY_STATE - Checking
+22:17:06.277 [INFO] Method 1: found=False, internal=4, visible=4
+22:17:06.279 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:17:06.279 [INFO] Method 2: internal=4, visible=4
+22:17:06.279 [INFO] Method 3: DISPLAY_HTML - Checking
+22:17:06.280 [INFO] Method 3: found=False, html_length=2
+22:17:06.280 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:17:06.280 [INFO] Method 4: found=False, has_metadata=False
+22:17:06.280 [INFO] Method 5: API_STATE - Checking
+22:17:06.283 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+22:17:06.286 [INFO] Method 7: DOM_CONTENT - Checking
+22:17:06.286 [INFO] Method 8: MUTATION_OBSERVER - Checking
+22:17:06.287 [INFO] Method 9: DATA_RAW - Checking
+22:17:06.287 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:17:06.287 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+22:17:06.287 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'dict'
+22:17:06.287 [INFO] Method 11: SSE_EVENTS - Checking
+22:17:06.288 [INFO] Method 12: REQUEST_MONITOR - Checking
+22:17:06.288 [INFO] Method 13: SELENIUM - Checking
+22:17:06.289 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+22:17:06.289 [INFO] Method 1: HISTORY_STATE - Checking
+22:17:06.289 [INFO] Method 1: found=False, internal=4, visible=4
+22:17:06.289 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:17:06.290 [INFO] Method 2: internal=4, visible=4
+22:17:06.290 [INFO] Method 3: DISPLAY_HTML - Checking
+22:17:06.290 [INFO] Method 3: found=False, html_length=2
+22:17:06.290 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:17:06.290 [INFO] Method 4: found=False, has_metadata=False
+22:17:06.290 [INFO] Method 9: DATA_RAW - Checking
+22:17:06.291 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:17:06.291 [INFO] Method 14: found=True, confidence=1/5
+22:17:06.291 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+22:17:08.292 [INFO] Method 15: No browser report found (total reports: 0)
+22:17:08.298 [INFO] Method 16: BROWSER_API_QUERY - Checking
+22:17:09.106 [INFO] Method 1: HISTORY_STATE - Checking
+22:17:09.106 [INFO] Method 1: found=False, internal=4, visible=4
+22:17:09.106 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:17:09.107 [INFO] Method 2: internal=4, visible=4
+22:17:09.107 [INFO] Method 3: DISPLAY_HTML - Checking
+22:17:09.107 [INFO] Method 3: found=False, html_length=2
+22:17:09.108 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:17:09.108 [INFO] Method 4: found=False, has_metadata=False
+22:17:09.108 [INFO] Method 5: API_STATE - Checking
+22:17:09.112 [INFO] Method 6: VERIFICATION_ENDPOINT - Checking
+22:17:09.114 [INFO] Method 7: DOM_CONTENT - Checking
+22:17:09.114 [INFO] Method 8: MUTATION_OBSERVER - Checking
+22:17:09.114 [INFO] Method 9: DATA_RAW - Checking
+22:17:09.115 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:17:09.115 [INFO] Method 10: DOM_MESSAGE_COUNT - Checking
+22:17:09.115 [ERROR] Method 10: FAILED - expected string or bytes-like object, got 'dict'
+22:17:09.115 [INFO] Method 11: SSE_EVENTS - Checking
+22:17:09.115 [INFO] Method 12: REQUEST_MONITOR - Checking
+22:17:09.116 [INFO] Method 13: SELENIUM - Checking
+22:17:09.116 [INFO] Method 14: COMPREHENSIVE - Running all verifications
+22:17:09.116 [INFO] Method 1: HISTORY_STATE - Checking
+22:17:09.117 [INFO] Method 1: found=False, internal=4, visible=4
+22:17:09.117 [INFO] Method 2: MESSAGE_COUNT - Checking
+22:17:09.117 [INFO] Method 2: internal=4, visible=4
+22:17:09.117 [INFO] Method 3: DISPLAY_HTML - Checking
+22:17:09.117 [INFO] Method 3: found=False, html_length=2
+22:17:09.117 [INFO] Method 4: METADATA_TIMESTAMP - Checking
+22:17:09.117 [INFO] Method 4: found=False, has_metadata=False
+22:17:09.118 [INFO] Method 9: DATA_RAW - Checking
+22:17:09.118 [ERROR] Method 9: FAILED - expected string or bytes-like object, got 'dict'
+22:17:09.118 [INFO] Method 14: found=True, confidence=1/5
+22:17:09.118 [INFO] Method 15: BROWSER_CALLBACK - Waiting 2.0s for browser report
+22:17:11.119 [INFO] Method 15: No browser report found (total reports: 0)
+22:17:11.119 [INFO] Method 16: BROWSER_API_QUERY - Checking

@@ -1,4 +1,8 @@
 {
   "horny_stage": 1,
-  "horny_cooldown_until": "2025-08-02T00:02:08.008665"
+  "horny_on_cooldown": false,
+  "horny_cooldown_start": null,
+  "horny_cooldown_duration_minutes": 60,
+  "last_injection_time": null,
+  "total_injections": 0
 }

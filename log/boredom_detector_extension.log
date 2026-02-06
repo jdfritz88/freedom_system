@@ -1,0 +1,1222 @@
+22:03:09.425 [BOREDOM-DETECTOR] [load_config] [DEBUG] Configuration loaded successfully
+22:03:09.425 [BOREDOM-DETECTOR] [__init__] [INFO] Boredom detector initialized | idle_threshold:7 | api_client_available:True | emotion_manager_available:True
+22:03:09.427 [BOREDOM-DETECTOR] [_monitoring_loop] [INFO] Monitoring loop started
+22:03:09.427 [BOREDOM-DETECTOR] [start_monitoring] [SUCCESS] Boredom monitoring started
+22:05:21.130 [BOREDOM-DETECTOR] [load_config] [DEBUG] Configuration loaded successfully
+22:05:21.131 [BOREDOM-DETECTOR] [__init__] [INFO] Boredom detector initialized | idle_threshold:7 | api_client_available:True | emotion_manager_available:True
+22:05:21.133 [BOREDOM-DETECTOR] [_monitoring_loop] [INFO] Monitoring loop started
+22:05:21.133 [BOREDOM-DETECTOR] [start_monitoring] [SUCCESS] Boredom monitoring started
+22:12:21.143 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+22:12:21.144 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+22:12:29.336 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+22:12:29.336 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:22:12:29
+22:19:29.346 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+22:19:29.347 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+22:19:37.518 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+22:19:37.518 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:22:19:37
+22:26:37.540 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+22:26:37.541 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+22:26:45.689 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+22:26:45.690 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:22:26:45
+22:33:45.696 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+22:33:45.700 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+22:33:53.930 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+22:33:53.930 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:22:33:53
+22:40:53.938 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+22:40:53.943 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+22:41:02.137 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+22:41:02.137 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:22:41:02
+22:48:02.184 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+22:48:02.185 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+22:48:10.363 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+22:48:10.363 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:22:48:10
+22:55:10.369 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+22:55:10.370 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+22:55:18.529 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+22:55:18.529 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:22:55:18
+23:02:18.551 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+23:02:18.554 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+23:02:26.735 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+23:02:26.735 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:23:02:26
+23:09:26.747 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+23:09:26.748 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+23:09:34.926 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+23:09:34.926 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:23:09:34
+23:16:34.938 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+23:16:34.940 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+23:16:43.125 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+23:16:43.125 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:23:16:43
+23:23:43.150 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+23:23:43.154 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+23:23:51.334 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+23:23:51.334 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:23:23:51
+23:27:18.545 [BOREDOM-DETECTOR] [load_config] [DEBUG] Configuration loaded successfully
+23:27:18.545 [BOREDOM-DETECTOR] [__init__] [INFO] Boredom detector initialized | idle_threshold:7 | api_client_available:True | emotion_manager_available:True
+23:27:18.547 [BOREDOM-DETECTOR] [_monitoring_loop] [INFO] Monitoring loop started
+23:27:18.547 [BOREDOM-DETECTOR] [start_monitoring] [SUCCESS] Boredom monitoring started
+23:34:18.570 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+23:34:18.571 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+23:34:26.802 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+23:34:26.803 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:23:34:26
+23:41:26.809 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+23:41:26.810 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+23:41:34.984 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+23:41:34.984 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:23:41:34
+23:48:34.994 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+23:48:34.996 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+23:48:43.237 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+23:48:43.238 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:23:48:43
+23:55:43.254 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+23:55:43.255 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+23:55:51.402 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+23:55:51.402 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:23:55:51
+02:21:32.247 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:145.7 | threshold:7
+02:21:32.283 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+02:21:40.623 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+02:21:40.623 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:02:21:40
+02:28:40.632 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+02:28:40.634 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+02:28:48.848 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+02:28:48.849 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:02:28:48
+02:35:48.863 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+02:35:48.864 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+02:35:57.076 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+02:35:57.076 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:02:35:57
+02:42:57.087 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+02:42:57.088 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+02:43:05.284 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+02:43:05.285 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:02:43:05
+02:50:05.292 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+02:50:05.295 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+02:50:13.481 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+02:50:13.482 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:02:50:13
+02:57:13.527 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+02:57:13.530 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+02:57:21.704 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+02:57:21.704 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:02:57:21
+03:04:21.717 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+03:04:21.718 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+03:04:29.894 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+03:04:29.895 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:03:04:29
+03:11:29.905 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+03:11:29.907 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+03:11:38.061 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+03:11:38.061 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:03:11:38
+03:18:38.096 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+03:18:38.098 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+03:18:46.239 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+03:18:46.241 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:03:18:46
+03:25:46.376 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+03:25:46.378 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+03:25:54.528 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+03:25:54.528 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:03:25:54
+03:32:54.537 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+03:32:54.537 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+03:33:02.772 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+03:33:02.772 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:03:33:02
+03:40:02.779 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+03:40:02.780 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+03:40:10.973 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+03:40:10.974 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:03:40:10
+03:47:10.984 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+03:47:10.985 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+03:47:19.167 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+03:47:19.167 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:03:47:19
+03:54:19.228 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+03:54:19.231 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+03:54:27.377 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+03:54:27.377 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:03:54:27
+04:01:27.388 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+04:01:27.391 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+04:01:35.577 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+04:01:35.577 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:04:01:35
+04:08:35.615 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+04:08:35.618 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+04:08:43.785 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+04:08:43.785 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:04:08:43
+04:15:43.823 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+04:15:43.824 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+04:15:51.990 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+04:15:51.990 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:04:15:51
+04:22:52.012 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+04:22:52.013 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+04:23:00.192 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+04:23:00.192 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:04:23:00
+04:30:00.198 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+04:30:00.199 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+04:30:08.409 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+04:30:08.409 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:04:30:08
+04:37:08.415 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+04:37:08.417 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+04:37:16.595 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+04:37:16.596 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:04:37:16
+04:44:16.603 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+04:44:16.604 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+04:44:24.776 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+04:44:24.776 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:04:44:24
+04:51:24.789 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+04:51:24.791 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+04:51:32.965 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+04:51:32.966 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:04:51:32
+04:58:32.976 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+04:58:32.978 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+04:58:41.110 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+04:58:41.111 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:04:58:41
+05:05:41.137 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+05:05:41.138 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+05:05:49.302 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+05:05:49.302 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:05:05:49
+05:12:49.335 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+05:12:49.337 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+05:12:57.439 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+05:12:57.440 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:05:12:57
+05:19:57.455 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+05:19:57.456 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+05:20:05.630 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+05:20:05.630 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:05:20:05
+05:27:05.638 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+05:27:05.639 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+05:27:13.783 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+05:27:13.784 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:05:27:13
+05:34:13.829 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+05:34:13.830 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+05:34:21.992 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+05:34:21.992 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:05:34:21
+05:41:21.999 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+05:41:22.000 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+05:41:30.141 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+05:41:30.141 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:05:41:30
+05:48:30.164 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+05:48:30.164 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+05:48:38.400 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+05:48:38.410 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:05:48:38
+05:55:38.437 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+05:55:38.438 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+05:55:46.625 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+05:55:46.625 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:05:55:46
+06:02:46.632 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+06:02:46.637 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+06:02:54.826 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+06:02:54.826 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:06:02:54
+06:09:54.840 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+06:09:54.842 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+06:10:03.016 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+06:10:03.016 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:06:10:03
+06:17:03.025 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+06:17:03.025 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+06:17:11.172 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+06:17:11.172 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:06:17:11
+06:24:11.179 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+06:24:11.180 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+06:24:19.365 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+06:24:19.366 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:06:24:19
+06:31:19.378 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+06:31:19.379 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+06:31:27.549 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+06:31:27.549 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:06:31:27
+06:38:27.556 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+06:38:27.560 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+06:38:35.748 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+06:38:35.748 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:06:38:35
+06:45:35.778 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+06:45:35.780 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+06:45:43.983 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+06:45:43.983 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:06:45:43
+06:52:44.011 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+06:52:44.013 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+06:52:52.194 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+06:52:52.194 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:06:52:52
+06:59:52.204 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+06:59:52.208 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+07:00:00.419 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+07:00:00.421 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:07:00:00
+07:07:00.441 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+07:07:00.443 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+07:07:08.594 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+07:07:08.594 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:07:07:08
+07:14:08.603 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+07:14:08.604 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+07:14:16.821 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+07:14:16.821 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:07:14:16
+07:21:16.827 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+07:21:16.828 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+07:21:25.023 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+07:21:25.023 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:07:21:25
+07:28:25.051 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+07:28:25.078 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+07:28:33.234 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+07:28:33.234 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:07:28:33
+07:35:33.276 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+07:35:33.276 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+07:35:41.466 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+07:35:41.466 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:07:35:41
+07:42:41.483 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+07:42:41.485 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+07:42:49.618 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+07:42:49.620 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:07:42:49
+07:49:49.633 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+07:49:49.634 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+07:49:57.803 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+07:49:57.803 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:07:49:57
+07:56:57.824 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+07:56:57.825 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+07:57:06.030 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+07:57:06.030 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:07:57:06
+08:04:06.049 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+08:04:06.050 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+08:04:14.214 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+08:04:14.214 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:08:04:14
+08:11:14.252 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+08:11:14.255 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+08:11:22.430 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+08:11:22.431 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:08:11:22
+08:18:22.449 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+08:18:22.450 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+08:18:30.701 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+08:18:30.701 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:08:18:30
+08:25:30.720 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+08:25:30.722 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+08:25:38.912 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+08:25:38.912 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:08:25:38
+08:32:38.938 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+08:32:38.938 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+08:32:47.099 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+08:32:47.099 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:08:32:47
+08:39:47.107 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+08:39:47.112 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+08:39:55.290 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+08:39:55.290 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:08:39:55
+08:46:55.298 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+08:46:55.299 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+08:47:03.485 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+08:47:03.485 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:08:47:03
+08:54:03.505 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+08:54:03.508 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+08:54:11.686 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+08:54:11.686 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:08:54:11
+09:01:11.693 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+09:01:11.693 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+09:01:19.843 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+09:01:19.843 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:09:01:19
+09:08:19.847 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+09:08:19.848 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+09:08:28.007 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+09:08:28.007 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:09:08:28
+09:15:28.017 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+09:15:28.019 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+09:15:36.223 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+09:15:36.224 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:09:15:36
+09:22:36.254 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+09:22:36.255 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+09:22:44.444 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+09:22:44.445 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:09:22:44
+09:29:44.453 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+09:29:44.454 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+09:29:52.638 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+09:29:52.639 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:09:29:52
+09:36:52.674 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+09:36:52.675 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+09:37:00.870 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+09:37:00.870 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:09:37:00
+09:44:00.887 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+09:44:00.890 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+09:44:09.012 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+09:44:09.012 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:09:44:09
+09:51:09.024 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+09:51:09.026 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+09:51:17.191 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+09:51:17.191 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:09:51:17
+09:58:17.198 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+09:58:17.200 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+09:58:25.372 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+09:58:25.373 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:09:58:25
+10:05:25.402 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+10:05:25.402 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+10:05:33.606 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+10:05:33.607 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:10:05:33
+10:12:33.615 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+10:12:33.619 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+10:12:41.800 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+10:12:41.810 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:10:12:41
+10:19:41.818 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+10:19:41.820 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+10:19:49.996 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+10:19:49.996 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:10:19:49
+10:26:50.049 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+10:26:50.050 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+10:26:58.232 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+10:26:58.233 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:10:26:58
+10:33:58.249 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+10:33:58.250 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+10:34:06.397 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+10:34:06.397 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:10:34:06
+10:41:06.406 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+10:41:06.407 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+10:41:14.565 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+10:41:14.567 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:10:41:14
+10:48:14.594 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+10:48:14.594 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+10:48:22.772 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+10:48:22.774 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:10:48:22
+10:55:22.843 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+10:55:22.846 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+10:55:31.015 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+10:55:31.015 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:10:55:31
+11:02:31.055 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+11:02:31.057 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+11:02:39.221 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+11:02:39.221 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:11:02:39
+11:09:39.233 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+11:09:39.234 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+11:09:47.485 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+11:09:47.485 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:11:09:47
+11:16:47.498 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+11:16:47.499 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+11:16:55.671 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+11:16:55.671 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:11:16:55
+11:23:55.677 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+11:23:55.678 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+11:24:03.857 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+11:24:03.857 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:11:24:03
+11:31:03.894 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+11:31:03.895 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+11:31:12.068 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+11:31:12.068 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:11:31:12
+11:38:12.075 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+11:38:12.076 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+11:38:20.245 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+11:38:20.246 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:11:38:20
+11:45:20.250 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+11:45:20.251 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+11:45:28.453 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+11:45:28.453 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:11:45:28
+11:52:28.563 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+11:52:28.564 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+11:52:36.765 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+11:52:36.765 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:11:52:36
+11:59:36.779 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+11:59:36.780 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+11:59:44.979 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+11:59:44.979 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:11:59:44
+12:06:44.986 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+12:06:44.987 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+12:06:53.124 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+12:06:53.124 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:12:06:53
+12:13:53.172 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+12:13:53.177 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+12:14:01.318 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+12:14:01.319 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:12:14:01
+12:21:01.325 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+12:21:01.329 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+12:21:09.505 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+12:21:09.505 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:12:21:09
+12:28:09.526 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+12:28:09.527 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+12:28:17.715 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+12:28:17.715 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:12:28:17
+12:35:17.724 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+12:35:17.728 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+12:35:25.929 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+12:35:25.929 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:12:35:25
+12:42:25.936 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+12:42:25.940 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+12:42:34.134 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+12:42:34.134 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:12:42:34
+12:49:34.163 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+12:49:34.164 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+12:49:42.336 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+12:49:42.336 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:12:49:42
+12:56:42.347 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+12:56:42.350 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+12:56:50.516 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+12:56:50.517 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:12:56:50
+13:03:50.530 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+13:03:50.531 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+13:03:58.715 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+13:03:58.716 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:13:03:58
+13:10:58.722 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+13:10:58.725 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+13:11:06.907 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+13:11:06.908 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:13:11:06
+13:18:06.916 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+13:18:06.918 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+13:18:15.088 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+13:18:15.088 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:13:18:15
+13:25:15.129 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+13:25:15.133 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+13:25:23.319 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+13:25:23.320 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:13:25:23
+13:32:23.354 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+13:32:23.355 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+13:32:31.524 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+13:32:31.524 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:13:32:31
+13:39:31.530 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+13:39:31.531 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+13:39:39.657 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+13:39:39.657 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:13:39:39
+13:46:39.683 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+13:46:39.685 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+13:46:47.831 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+13:46:47.831 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:13:46:47
+13:53:47.841 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+13:53:47.843 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+13:53:55.985 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+13:53:55.998 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:13:53:55
+14:00:56.026 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+14:00:56.027 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+14:01:04.277 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+14:01:04.278 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:14:01:04
+14:08:04.292 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+14:08:04.295 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+14:08:12.508 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+14:08:12.508 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:14:08:12
+14:15:12.527 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+14:15:12.528 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+14:15:20.735 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+14:15:20.735 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:14:15:20
+14:22:20.750 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+14:22:20.751 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+14:22:28.966 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+14:22:28.966 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:14:22:28
+15:25:24.261 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:62.9 | threshold:7
+15:25:24.292 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+15:25:32.532 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+15:25:32.533 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:15:25:32
+15:54:20.520 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:28.8 | threshold:7
+15:54:20.530 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+15:54:28.766 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+15:54:28.766 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:15:54:28
+22:14:45.591 [BOREDOM-DETECTOR] [load_config] [DEBUG] Configuration loaded successfully
+22:14:45.592 [BOREDOM-DETECTOR] [__init__] [INFO] Boredom detector initialized | idle_threshold:7 | api_client_available:True | emotion_manager_available:True
+22:14:45.593 [BOREDOM-DETECTOR] [_monitoring_loop] [INFO] Monitoring loop started
+22:14:45.594 [BOREDOM-DETECTOR] [start_monitoring] [SUCCESS] Boredom monitoring started
+22:21:45.614 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+22:21:45.619 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+22:21:53.785 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+22:21:53.786 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:22:21:53
+22:28:53.807 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+22:28:53.809 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+22:29:01.975 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+22:29:01.976 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:22:29:01
+22:36:01.987 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+22:36:01.989 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+22:36:10.164 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+22:36:10.165 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:22:36:10
+22:43:10.180 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+22:43:10.181 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+22:43:18.319 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+22:43:18.320 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:22:43:18
+22:50:18.326 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+22:50:18.328 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+22:50:26.487 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+22:50:26.487 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:22:50:26
+23:10:20.110 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:19.9 | threshold:7
+23:10:20.122 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+00:37:04.293 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+00:37:04.294 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:00:37:04
+00:43:24.693 [BOREDOM-DETECTOR] [load_config] [DEBUG] Configuration loaded successfully
+00:43:24.693 [BOREDOM-DETECTOR] [__init__] [INFO] Boredom detector initialized | idle_threshold:7 | api_client_available:True | emotion_manager_available:True
+00:43:24.695 [BOREDOM-DETECTOR] [_monitoring_loop] [INFO] Monitoring loop started
+00:43:24.695 [BOREDOM-DETECTOR] [start_monitoring] [SUCCESS] Boredom monitoring started
+00:50:24.704 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+00:50:24.705 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+00:50:38.453 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+00:50:38.453 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:00:50:38
+00:57:38.501 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+00:57:38.505 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+00:58:00.963 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+00:58:00.965 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:00:58:00
+01:05:00.974 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+01:05:00.975 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+01:05:03.628 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+01:05:03.628 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:01:05:03
+01:12:03.645 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+01:12:03.646 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+01:14:58.237 [BOREDOM-DETECTOR] [load_config] [DEBUG] Configuration loaded successfully
+01:14:58.237 [BOREDOM-DETECTOR] [__init__] [INFO] Boredom detector initialized | idle_threshold:7 | api_client_available:True | emotion_manager_available:True
+01:14:58.238 [BOREDOM-DETECTOR] [_monitoring_loop] [INFO] Monitoring loop started
+01:14:58.238 [BOREDOM-DETECTOR] [start_monitoring] [SUCCESS] Boredom monitoring started
+01:21:58.250 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+01:21:58.250 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+01:22:00.622 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+01:22:00.622 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:01:22:00
+01:26:13.655 [BOREDOM-DETECTOR] [load_config] [DEBUG] Configuration loaded successfully
+01:26:13.656 [BOREDOM-DETECTOR] [__init__] [INFO] Boredom detector initialized | idle_threshold:7 | api_client_available:True | emotion_manager_available:True
+01:26:13.657 [BOREDOM-DETECTOR] [start_monitoring] [SUCCESS] Boredom monitoring started
+01:26:13.657 [BOREDOM-DETECTOR] [_monitoring_loop] [INFO] Monitoring loop started
+01:33:13.669 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+01:33:13.671 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+01:33:13.675 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+01:33:13.675 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:01:33:13
+01:40:13.684 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+01:40:13.686 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+01:40:13.689 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+01:40:13.690 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:01:40:13
+01:47:13.709 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+01:47:13.710 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+01:47:13.716 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+01:47:13.716 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:01:47:13
+01:54:13.740 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+01:54:13.744 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+01:54:13.750 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+01:54:13.750 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:01:54:13
+17:09:04.568 [BOREDOM-DETECTOR] [load_config] [DEBUG] Configuration loaded successfully
+17:09:04.569 [BOREDOM-DETECTOR] [__init__] [INFO] Boredom detector initialized | idle_threshold:7 | api_client_available:True | emotion_manager_available:True
+17:09:04.571 [BOREDOM-DETECTOR] [_monitoring_loop] [INFO] Monitoring loop started
+17:09:04.571 [BOREDOM-DETECTOR] [start_monitoring] [SUCCESS] Boredom monitoring started
+17:16:04.580 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+17:16:04.582 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+17:16:06.628 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+17:16:06.629 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:17:16:06
+17:23:06.647 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+17:23:06.649 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+17:23:08.680 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+17:23:08.680 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:17:23:08
+17:30:08.698 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+17:30:08.701 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+17:30:10.731 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+17:30:10.732 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:17:30:10
+17:51:30.431 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:21.3 | threshold:7
+17:51:30.454 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+17:51:32.511 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+17:51:32.511 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:17:51:32
+18:43:32.685 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:52.0 | threshold:7
+18:43:32.703 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+18:43:34.775 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+18:43:34.777 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:18:43:34
+18:50:34.796 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+18:50:34.798 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+18:50:36.820 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+18:50:36.821 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:18:50:36
+18:57:36.829 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+18:57:36.831 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+18:57:38.854 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+18:57:38.854 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:18:57:38
+19:04:38.862 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+19:04:38.864 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:04:40.879 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+19:04:40.879 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:19:04:40
+19:11:40.888 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+19:11:40.890 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:11:42.907 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+19:11:42.907 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:19:11:42
+19:18:42.920 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+19:18:42.921 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:18:44.936 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [SUCCESS] Emotional injection completed
+19:18:44.936 [BOREDOM-DETECTOR] [record_user_activity] [DEBUG] User activity recorded | activity_time:19:18:44
+19:25:38.281 [BOREDOM-DETECTOR] [load_config] [DEBUG] Configuration loaded successfully
+19:25:38.281 [BOREDOM-DETECTOR] [__init__] [INFO] Boredom detector initialized | idle_threshold:7 | api_client_available:True | emotion_manager_available:True
+19:25:38.283 [BOREDOM-DETECTOR] [_monitoring_loop] [INFO] Monitoring loop started
+19:25:38.283 [BOREDOM-DETECTOR] [start_monitoring] [SUCCESS] Boredom monitoring started
+19:32:38.319 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.0 | threshold:7
+19:32:38.321 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:32:38.328 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:33:08.333 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:7.5 | threshold:7
+19:33:08.337 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:33:08.355 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:33:38.357 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:8.0 | threshold:7
+19:33:38.359 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:33:38.368 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:34:08.371 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:8.5 | threshold:7
+19:34:08.372 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:34:08.382 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:34:38.383 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:9.0 | threshold:7
+19:34:38.385 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:34:38.395 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:35:08.397 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:9.5 | threshold:7
+19:35:08.398 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:35:08.409 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:35:38.412 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:10.0 | threshold:7
+19:35:38.413 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:35:38.418 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:36:08.420 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:10.5 | threshold:7
+19:36:08.422 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:36:08.433 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:36:38.435 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:11.0 | threshold:7
+19:36:38.436 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:36:38.447 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:37:08.448 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:11.5 | threshold:7
+19:37:08.449 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:37:08.459 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:37:38.461 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:12.0 | threshold:7
+19:37:38.461 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:37:38.468 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:38:08.469 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:12.5 | threshold:7
+19:38:08.470 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:38:08.477 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:38:38.478 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:13.0 | threshold:7
+19:38:38.480 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:38:38.489 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:39:08.491 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:13.5 | threshold:7
+19:39:08.492 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:39:08.498 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:39:38.500 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:14.0 | threshold:7
+19:39:38.501 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:39:38.508 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:40:08.510 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:14.5 | threshold:7
+19:40:08.511 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:40:08.532 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:40:38.536 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:15.0 | threshold:7
+19:40:38.537 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:40:38.543 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:41:08.544 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:15.5 | threshold:7
+19:41:08.557 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:41:08.563 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:41:38.564 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:16.0 | threshold:7
+19:41:38.566 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:41:38.575 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:42:08.579 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:16.5 | threshold:7
+19:42:08.581 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:42:08.586 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:42:38.587 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:17.0 | threshold:7
+19:42:38.589 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:42:38.597 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:43:08.598 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:17.5 | threshold:7
+19:43:08.600 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:43:08.609 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:43:38.611 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:18.0 | threshold:7
+19:43:38.615 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:43:38.638 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:44:08.639 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:18.5 | threshold:7
+19:44:08.640 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:44:08.646 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:44:38.647 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:19.0 | threshold:7
+19:44:38.658 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:44:38.669 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:45:08.671 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:19.5 | threshold:7
+19:45:08.673 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:45:08.683 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:45:38.685 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:20.0 | threshold:7
+19:45:38.686 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:45:38.692 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:46:08.693 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:20.5 | threshold:7
+19:46:08.694 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:46:08.701 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:46:38.702 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:21.0 | threshold:7
+19:46:38.704 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:46:38.715 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:47:08.716 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:21.5 | threshold:7
+19:47:08.719 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:47:08.742 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:47:38.744 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:22.0 | threshold:7
+19:47:38.746 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:47:38.757 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:48:08.759 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:22.5 | threshold:7
+19:48:08.760 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:48:08.766 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:48:38.768 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:23.0 | threshold:7
+19:48:38.770 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:48:38.782 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:49:08.784 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:23.5 | threshold:7
+19:49:08.786 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:49:08.798 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:49:38.800 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:24.0 | threshold:7
+19:49:38.807 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:49:38.817 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:50:08.821 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:24.5 | threshold:7
+19:50:08.824 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:50:08.835 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:50:38.836 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:25.0 | threshold:7
+19:50:38.837 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:50:38.848 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:51:08.850 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:25.5 | threshold:7
+19:51:08.855 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:51:08.871 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:51:38.875 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:26.0 | threshold:7
+19:51:38.876 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:51:38.882 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:52:08.883 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:26.5 | threshold:7
+19:52:08.884 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:52:08.890 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:52:38.891 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:27.0 | threshold:7
+19:52:38.892 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:52:38.902 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:53:08.904 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:27.5 | threshold:7
+19:53:08.909 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:53:08.922 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:53:38.924 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:28.0 | threshold:7
+19:53:38.926 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:53:38.948 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:54:08.949 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:28.5 | threshold:7
+19:54:08.952 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:54:08.967 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:54:38.972 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:29.0 | threshold:7
+19:54:38.976 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:54:38.986 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:55:08.988 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:29.5 | threshold:7
+19:55:08.990 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:55:08.997 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:55:38.999 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:30.0 | threshold:7
+19:55:39.005 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:55:39.035 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:56:09.037 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:30.5 | threshold:7
+19:56:09.038 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:56:09.046 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:56:39.047 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:31.0 | threshold:7
+19:56:39.049 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:56:39.059 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:57:09.061 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:31.5 | threshold:7
+19:57:09.063 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:57:09.073 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:57:39.075 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:32.0 | threshold:7
+19:57:39.076 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:57:39.082 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:58:09.083 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:32.5 | threshold:7
+19:58:09.083 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:58:09.090 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:58:39.091 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:33.0 | threshold:7
+19:58:39.093 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:58:39.099 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:59:09.100 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:33.5 | threshold:7
+19:59:09.102 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:59:09.117 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+19:59:39.119 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:34.0 | threshold:7
+19:59:39.120 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+19:59:39.126 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:00:09.127 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:34.5 | threshold:7
+20:00:09.127 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:00:09.146 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:00:39.148 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:35.0 | threshold:7
+20:00:39.149 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:00:39.160 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:01:09.163 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:35.5 | threshold:7
+20:01:09.179 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:01:09.190 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:01:39.192 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:36.0 | threshold:7
+20:01:39.193 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:01:39.202 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:02:09.204 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:36.5 | threshold:7
+20:02:09.205 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:02:09.212 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:02:39.213 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:37.0 | threshold:7
+20:02:39.215 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:02:39.223 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:03:09.225 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:37.5 | threshold:7
+20:03:09.227 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:03:09.235 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:03:39.237 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:38.0 | threshold:7
+20:03:39.238 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:03:39.245 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:04:09.246 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:38.5 | threshold:7
+20:04:09.247 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:04:09.256 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:04:39.257 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:39.0 | threshold:7
+20:04:39.258 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:04:39.263 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:05:09.265 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:39.5 | threshold:7
+20:05:09.267 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:05:09.282 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:05:39.284 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:40.0 | threshold:7
+20:05:39.285 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:05:39.294 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:06:09.296 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:40.5 | threshold:7
+20:06:09.298 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:06:09.306 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:06:39.308 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:41.0 | threshold:7
+20:06:39.309 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:06:39.315 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:07:09.317 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:41.5 | threshold:7
+20:07:09.318 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:07:09.325 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:07:39.328 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:42.0 | threshold:7
+20:07:39.330 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:07:39.340 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:08:09.343 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:42.5 | threshold:7
+20:08:09.344 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:08:09.352 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:08:39.353 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:43.0 | threshold:7
+20:08:39.355 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:08:39.367 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:09:09.368 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:43.5 | threshold:7
+20:09:09.370 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:09:09.380 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:09:39.382 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:44.0 | threshold:7
+20:09:39.384 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:09:39.393 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:10:09.397 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:44.5 | threshold:7
+20:10:09.398 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:10:09.405 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:10:39.407 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:45.0 | threshold:7
+20:10:39.409 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:10:39.417 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:11:09.418 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:45.5 | threshold:7
+20:11:09.420 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:11:09.430 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:11:39.433 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:46.0 | threshold:7
+20:11:39.434 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:11:39.441 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:12:09.442 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:46.5 | threshold:7
+20:12:09.442 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:12:09.449 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:12:39.452 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:47.0 | threshold:7
+20:12:39.453 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:12:39.465 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:13:09.467 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:47.5 | threshold:7
+20:13:09.470 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:13:09.477 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:13:39.477 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:48.0 | threshold:7
+20:13:39.477 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:13:39.485 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:14:09.486 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:48.5 | threshold:7
+20:14:09.488 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:14:09.498 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:14:39.503 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:49.0 | threshold:7
+20:14:39.504 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:14:39.515 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:15:09.516 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:49.5 | threshold:7
+20:15:09.519 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:15:09.527 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:15:39.528 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:50.0 | threshold:7
+20:15:39.530 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:15:39.538 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:16:09.539 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:50.5 | threshold:7
+20:16:09.540 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:16:09.548 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:16:39.550 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:51.0 | threshold:7
+20:16:39.551 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:16:39.558 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:17:09.558 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:51.5 | threshold:7
+20:17:09.562 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:17:09.574 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:17:39.576 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:52.0 | threshold:7
+20:17:39.578 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:17:39.589 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:18:09.591 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:52.5 | threshold:7
+20:18:09.592 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:18:09.604 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:18:39.606 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:53.0 | threshold:7
+20:18:39.607 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:18:39.612 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:19:09.613 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:53.5 | threshold:7
+20:19:09.642 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:19:09.665 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:19:39.666 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:54.0 | threshold:7
+20:19:39.668 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:19:39.673 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:20:09.674 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:54.5 | threshold:7
+20:20:09.676 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:20:09.687 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:20:39.691 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:55.0 | threshold:7
+20:20:39.693 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:20:39.700 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:21:09.701 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:55.5 | threshold:7
+20:21:09.703 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:21:09.710 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:21:39.711 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:56.0 | threshold:7
+20:21:39.712 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:21:39.724 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:22:09.726 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:56.5 | threshold:7
+20:22:09.727 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:22:09.732 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:22:39.733 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:57.0 | threshold:7
+20:22:39.734 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:22:39.741 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:23:09.742 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:57.5 | threshold:7
+20:23:09.744 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:23:09.751 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:23:39.753 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:58.0 | threshold:7
+20:23:39.754 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:23:39.761 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:24:09.762 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:58.5 | threshold:7
+20:24:09.766 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:24:09.776 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:24:39.778 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:59.0 | threshold:7
+20:24:39.779 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:24:39.785 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:25:09.786 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:59.5 | threshold:7
+20:25:09.787 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:25:09.797 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:25:39.800 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:60.0 | threshold:7
+20:25:39.801 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:25:39.806 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:26:09.808 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:60.5 | threshold:7
+20:26:09.809 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:26:09.816 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:26:39.817 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:61.0 | threshold:7
+20:26:39.818 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:26:39.825 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:27:09.826 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:61.5 | threshold:7
+20:27:09.827 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:27:09.833 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:27:39.835 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:62.0 | threshold:7
+20:27:39.836 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:27:39.842 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:28:09.842 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:62.5 | threshold:7
+20:28:09.844 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:28:09.850 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:28:39.851 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:63.0 | threshold:7
+20:28:39.852 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:28:39.861 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:29:09.864 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:63.5 | threshold:7
+20:29:09.865 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:29:09.878 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:29:39.879 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:64.0 | threshold:7
+20:29:39.881 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:29:39.893 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:30:09.894 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:64.5 | threshold:7
+20:30:09.897 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:30:09.903 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:30:39.904 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:65.0 | threshold:7
+20:30:39.905 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:30:39.912 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:31:09.913 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:65.5 | threshold:7
+20:31:09.914 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:31:09.919 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:31:39.921 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:66.0 | threshold:7
+20:31:39.923 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:31:39.933 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:32:09.935 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:66.5 | threshold:7
+20:32:09.937 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:32:09.942 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:32:39.944 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:67.0 | threshold:7
+20:32:39.945 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:32:39.951 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:33:09.953 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:67.5 | threshold:7
+20:33:09.954 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:33:09.961 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:33:39.962 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:68.0 | threshold:7
+20:33:39.963 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:33:39.969 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:34:09.971 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:68.5 | threshold:7
+20:34:09.972 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:34:09.979 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:34:39.981 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:69.0 | threshold:7
+20:34:39.982 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:34:39.987 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:35:09.988 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:69.5 | threshold:7
+20:35:09.991 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:35:09.999 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:35:40.001 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:70.0 | threshold:7
+20:35:40.002 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:35:40.008 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:36:10.009 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:70.5 | threshold:7
+20:36:10.010 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:36:10.015 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:36:40.017 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:71.0 | threshold:7
+20:36:40.017 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:36:40.026 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:37:10.028 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:71.5 | threshold:7
+20:37:10.030 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:37:10.039 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:37:40.046 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:72.0 | threshold:7
+20:37:40.048 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:37:40.054 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:38:10.056 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:72.5 | threshold:7
+20:38:10.062 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:38:10.073 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:38:40.075 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:73.0 | threshold:7
+20:38:40.077 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:38:40.093 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:39:10.100 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:73.5 | threshold:7
+20:39:10.101 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:39:10.137 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:39:40.140 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:74.0 | threshold:7
+20:39:40.143 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:39:40.157 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:40:10.160 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:74.5 | threshold:7
+20:40:10.161 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:40:10.167 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:40:40.168 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:75.0 | threshold:7
+20:40:40.170 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:40:40.176 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:41:10.178 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:75.5 | threshold:7
+20:41:10.179 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:41:10.185 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:41:40.186 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:76.0 | threshold:7
+20:41:40.188 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:41:40.196 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:42:10.198 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:76.5 | threshold:7
+20:42:10.199 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:42:10.205 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:42:40.206 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:77.0 | threshold:7
+20:42:40.206 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:42:40.212 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:43:10.214 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:77.5 | threshold:7
+20:43:10.215 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:43:10.220 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:43:40.221 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:78.0 | threshold:7
+20:43:40.221 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:43:40.231 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:44:10.232 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:78.5 | threshold:7
+20:44:10.234 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:44:10.242 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:44:40.244 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:79.0 | threshold:7
+20:44:40.245 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:44:40.251 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:45:10.253 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:79.5 | threshold:7
+20:45:10.255 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:45:10.263 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:45:40.265 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:80.0 | threshold:7
+20:45:40.266 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:45:40.272 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:46:10.274 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:80.5 | threshold:7
+20:46:10.275 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:46:10.283 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:46:40.285 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:81.0 | threshold:7
+20:46:40.286 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:46:40.292 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:47:10.295 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:81.5 | threshold:7
+20:47:10.297 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:47:10.307 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:47:40.309 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:82.0 | threshold:7
+20:47:40.310 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:47:40.320 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:48:10.322 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:82.5 | threshold:7
+20:48:10.323 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:48:10.334 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:48:40.336 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:83.0 | threshold:7
+20:48:40.337 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:48:40.343 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:49:10.345 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:83.5 | threshold:7
+20:49:10.347 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:49:10.356 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:49:40.358 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:84.0 | threshold:7
+20:49:40.360 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:49:40.372 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:50:10.374 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:84.5 | threshold:7
+20:50:10.375 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:50:10.386 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:50:40.393 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:85.0 | threshold:7
+20:50:40.395 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:50:40.407 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:51:10.408 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:85.5 | threshold:7
+20:51:10.409 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:51:10.416 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:51:40.418 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:86.0 | threshold:7
+20:51:40.419 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:51:40.426 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:52:10.428 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:86.5 | threshold:7
+20:52:10.429 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:52:10.435 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:52:40.436 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:87.0 | threshold:7
+20:52:40.437 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:52:40.446 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:53:10.448 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:87.5 | threshold:7
+20:53:10.449 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:53:10.457 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:53:40.458 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:88.0 | threshold:7
+20:53:40.459 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:53:40.471 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:54:10.473 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:88.5 | threshold:7
+20:54:10.475 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:54:10.485 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:54:40.486 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:89.0 | threshold:7
+20:54:40.487 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:54:40.496 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:55:10.498 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:89.5 | threshold:7
+20:55:10.500 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:55:10.508 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:55:40.509 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:90.0 | threshold:7
+20:55:40.510 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:55:40.517 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:56:10.518 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:90.5 | threshold:7
+20:56:10.519 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:56:10.529 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:56:40.531 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:91.0 | threshold:7
+20:56:40.532 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:56:40.538 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:57:10.539 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:91.5 | threshold:7
+20:57:10.541 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:57:10.551 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:57:40.554 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:92.0 | threshold:7
+20:57:40.555 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:57:40.563 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:58:10.564 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:92.5 | threshold:7
+20:58:10.565 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:58:10.572 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:58:40.573 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:93.0 | threshold:7
+20:58:40.574 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:58:40.581 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:59:10.594 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:93.5 | threshold:7
+20:59:10.599 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:59:10.609 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+20:59:40.613 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:94.0 | threshold:7
+20:59:40.614 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+20:59:40.620 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+21:00:10.625 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:94.5 | threshold:7
+21:00:10.629 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+21:00:10.640 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+21:00:40.643 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:95.0 | threshold:7
+21:00:40.644 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+21:00:40.650 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+21:01:10.651 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:95.5 | threshold:7
+21:01:10.654 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+21:01:10.666 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+21:01:40.668 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:96.0 | threshold:7
+21:01:40.669 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+21:01:40.678 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+21:02:10.679 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:96.5 | threshold:7
+21:02:10.703 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+21:02:10.714 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+21:02:40.716 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:97.0 | threshold:7
+21:02:40.717 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+21:02:40.724 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+21:03:10.726 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:97.5 | threshold:7
+21:03:10.727 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+21:03:10.733 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+21:03:40.735 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:98.0 | threshold:7
+21:03:40.735 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+21:03:40.746 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+21:04:10.747 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:98.5 | threshold:7
+21:04:10.748 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+21:04:10.754 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+21:04:40.755 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:99.0 | threshold:7
+21:04:40.756 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+21:04:40.762 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+21:05:10.764 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:99.5 | threshold:7
+21:05:10.782 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+21:05:10.794 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+21:05:40.796 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:100.0 | threshold:7
+21:05:40.818 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+21:05:40.884 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+21:06:10.886 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:100.5 | threshold:7
+21:06:10.889 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+21:06:10.899 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+21:26:50.820 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:121.2 | threshold:7
+21:26:50.828 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+21:26:50.885 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+21:27:20.887 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:121.7 | threshold:7
+21:27:20.888 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+21:27:20.899 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+21:27:50.902 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:122.2 | threshold:7
+21:27:50.903 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+21:27:50.917 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+21:28:20.921 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:122.7 | threshold:7
+21:28:20.922 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+21:28:20.932 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+21:28:50.933 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:123.2 | threshold:7
+21:28:50.934 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+21:28:50.944 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+21:29:20.947 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:123.7 | threshold:7
+21:29:20.949 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+21:29:20.974 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+21:29:50.984 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:124.2 | threshold:7
+21:29:50.986 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+21:29:51.010 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+21:30:21.012 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:124.7 | threshold:7
+21:30:21.012 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+21:30:21.018 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+21:30:51.020 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:125.2 | threshold:7
+21:30:51.021 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+21:30:51.028 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+21:31:21.029 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:125.7 | threshold:7
+21:31:21.029 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+21:31:21.036 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+21:31:51.037 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:126.2 | threshold:7
+21:31:51.037 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+21:31:51.048 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+21:32:21.051 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:126.7 | threshold:7
+21:32:21.063 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+21:32:21.074 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+21:32:51.076 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:127.2 | threshold:7
+21:32:51.078 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+21:32:51.088 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+21:33:21.090 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:127.7 | threshold:7
+21:33:21.092 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+21:33:21.103 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+21:33:51.105 [BOREDOM-DETECTOR] [is_idle] [INFO] User idle detected | idle_minutes:128.2 | threshold:7
+21:33:51.106 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [INFO] Triggering emotional injection
+21:33:51.122 [BOREDOM-DETECTOR] [_trigger_emotional_injection] [ERROR] Emotional injection trigger failed: object str can't be used in 'await' expression
+21:37:12.231 [BOREDOM-DETECTOR] [_monitoring_loop] [INFO] Monitoring loop started
+ng: 'DirectCallBoredomDetector' object has no attribute 'config'
+21:37:12.232 [BOREDOM-DETECTOR] [_monitoring_loop] [INFO] Monitoring loop ended

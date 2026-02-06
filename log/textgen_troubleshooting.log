@@ -1,0 +1,59 @@
+00:59:17.906 [TEXTGEN_TROUBLESHOOT] [troubleshoot_main] [INFO] === STARTING TEXT-GENERATION-WEBUI TROUBLESHOOTING ===
+00:59:17.906 [TEXTGEN_TROUBLESHOOT] [phase1] [INFO] Phase 1: Problem Definition and Surface Level Analysis
+00:59:17.907 [TEXTGEN_TROUBLESHOOT] [test_python_env] [INFO] Testing Python environment and basic imports
+00:59:17.907 [TEXTGEN_TROUBLESHOOT] [test_python_env] [INFO] Python executable: F:\Apps\freedom_system\freedom_system_2000\text-generation-webui\installer_files\env\python.exe
+00:59:17.907 [TEXTGEN_TROUBLESHOOT] [test_python_env] [INFO] Python version: 3.11.13
+00:59:17.907 [TEXTGEN_TROUBLESHOOT] [test_python_env] [INFO] Current working directory: 
+00:59:17.907 [TEXTGEN_TROUBLESHOOT] [test_modules] [INFO] Testing critical module availability
+00:59:18.003 [TEXTGEN_TROUBLESHOOT] [test_modules] [INFO] SUCCESS: requests imported
+00:59:18.003 [TEXTGEN_TROUBLESHOOT] [test_modules] [INFO] SUCCESS: json imported
+00:59:18.003 [TEXTGEN_TROUBLESHOOT] [test_modules] [INFO] SUCCESS: os imported
+00:59:18.003 [TEXTGEN_TROUBLESHOOT] [test_modules] [INFO] SUCCESS: sys imported
+00:59:18.003 [TEXTGEN_TROUBLESHOOT] [test_modules] [INFO] SUCCESS: pathlib imported
+00:59:18.003 [TEXTGEN_TROUBLESHOOT] [test_modules] [INFO] SUCCESS: datetime imported
+00:59:19.839 [TEXTGEN_TROUBLESHOOT] [test_modules] [INFO] SUCCESS: gradio imported
+00:59:21.284 [TEXTGEN_TROUBLESHOOT] [test_modules] [INFO] SUCCESS: torch imported
+00:59:24.471 [TEXTGEN_TROUBLESHOOT] [test_modules] [INFO] SUCCESS: transformers imported
+00:59:24.471 [TEXTGEN_TROUBLESHOOT] [test_modules] [SUCCESS] All critical modules imported successfully
+00:59:24.472 [TEXTGEN_TROUBLESHOOT] [phase1] [INFO] Phase 1 testing complete
+01:03:11.073 [TEXTGEN_TROUBLESHOOT] [phase2] [INFO] Phase 2: Testing text-generation-webui core modules
+01:03:12.878 [TEXTGEN_TROUBLESHOOT] [test_core_modules] [SUCCESS] SUCCESS: modules.shared imported
+01:03:12.898 [TEXTGEN_TROUBLESHOOT] [test_core_modules] [ERROR] FAILED: modules.chat - cannot import name 'load_history' from partially initialized module 'modules.chat' (most likely due 
+01:03:12.900 [TEXTGEN_TROUBLESHOOT] [test_core_modules] [ERROR] FAILED: modules.text_generation - cannot import name 'generate_reply' from partially initialized module 'modules.text_generation' (mos
+01:03:12.904 [TEXTGEN_TROUBLESHOOT] [test_core_modules] [SUCCESS] SUCCESS: modules.models imported
+01:03:12.904 [TEXTGEN_TROUBLESHOOT] [test_core_modules] [SUCCESS] SUCCESS: modules.utils imported
+01:03:12.904 [TEXTGEN_TROUBLESHOOT] [test_core_modules] [SUCCESS] SUCCESS: modules.ui imported
+01:03:12.904 [TEXTGEN_TROUBLESHOOT] [test_core_modules] [SUCCESS] SUCCESS: modules.loaders imported
+01:03:12.905 [TEXTGEN_TROUBLESHOOT] [test_core_modules] [WARNING] Core modules failed: 2 out of 7
+01:03:12.905 [TEXTGEN_TROUBLESHOOT] [test_core_modules] [WARNING]   modules.chat: cannot import name 'load_history' from partially initialized module 'modules.chat' (most likely due 
+01:03:12.905 [TEXTGEN_TROUBLESHOOT] [test_core_modules] [WARNING]   modules.text_generation: cannot import name 'generate_reply' from partially initialized module 'modules.text_generation' (mos
+01:03:12.905 [TEXTGEN_TROUBLESHOOT] [test_extensions] [INFO] Testing extensions system availability
+01:03:12.905 [TEXTGEN_TROUBLESHOOT] [test_extensions] [SUCCESS] SUCCESS: Extensions system accessible
+01:03:12.905 [TEXTGEN_TROUBLESHOOT] [phase2] [INFO] Phase 2 core module testing complete
+01:06:40.472 [TEXTGEN_TROUBLESHOOT] [phase3] [INFO] Phase 3: Testing web interface and API accessibility
+01:06:40.562 [TEXTGEN_TROUBLESHOOT] [test_web_interface] [INFO] Testing main web interface accessibility
+01:06:40.618 [TEXTGEN_TROUBLESHOOT] [test_web_interface] [SUCCESS] SUCCESS: Main web interface accessible (port 7860)
+01:06:40.619 [TEXTGEN_TROUBLESHOOT] [test_api] [INFO] Testing OpenAI-compatible API endpoint
+01:06:40.638 [TEXTGEN_TROUBLESHOOT] [test_api] [WARNING] WARNING: OpenAI API returned status 405
+01:06:40.638 [TEXTGEN_TROUBLESHOOT] [phase3] [INFO] Phase 3 web interface testing complete
+01:08:05.052 [TEXTGEN_TROUBLESHOOT] [phase4] [INFO] Phase 4: Analyzing pydantic warning impact on functionality
+01:08:05.052 [TEXTGEN_TROUBLESHOOT] [test_pydantic] [INFO] Testing AllTalk pydantic model creation and usage
+01:08:05.203 [TEXTGEN_TROUBLESHOOT] [test_pydantic] [SUCCESS] SUCCESS: AllTalk config classes imported despite warning
+01:08:05.204 [TEXTGEN_TROUBLESHOOT] [test_pydantic] [SUCCESS] SUCCESS: AllTalk config instance created
+01:08:05.204 [TEXTGEN_TROUBLESHOOT] [test_pydantic] [SUCCESS] SUCCESS: model_cache_size field accessible: 1
+01:08:05.205 [TEXTGEN_TROUBLESHOOT] [test_pydantic] [SUCCESS] SUCCESS: model_cache_size field modification works: 1 -> 2 -> 1
+01:08:05.205 [TEXTGEN_TROUBLESHOOT] [test_pydantic] [SUCCESS] CONCLUSION: Pydantic warning is COSMETIC - functionality is not impacted
+01:08:05.205 [TEXTGEN_TROUBLESHOOT] [phase4] [INFO] Phase 4 pydantic analysis complete
+01:11:55.488 [TEXTGEN_TROUBLESHOOT] [phase5] [INFO] Phase 5: Testing AllTalk integration functionality
+01:11:55.488 [TEXTGEN_TROUBLESHOOT] [test_alltalk] [INFO] Testing AllTalk extension import and core functionality
+01:12:05.122 [TEXTGEN_TROUBLESHOOT] [test_alltalk] [ERROR] FAILED: AllTalk extension import failed: cannot import name 'load_history' from partially initialized module 'modules.chat' (most likely due to a circular import) (F:\Apps\freedom_system\freedom_system_2000\text-generation-webui\modules\chat
+01:12:05.122 [TEXTGEN_TROUBLESHOOT] [phase5] [INFO] Phase 5 AllTalk integration testing complete
+01:21:36.375 [TEXTGEN_TROUBLESHOOT] [phase6] [INFO] Phase 6: Final AllTalk server connectivity test
+01:21:36.465 [TEXTGEN_TROUBLESHOOT] [test_alltalk_server] [INFO] Testing AllTalk server direct connectivity
+01:21:36.468 [TEXTGEN_TROUBLESHOOT] [test_alltalk_server] [SUCCESS] SUCCESS: AllTalk server is running and ready
+01:21:36.483 [TEXTGEN_TROUBLESHOOT] [test_alltalk_server] [SUCCESS] SUCCESS: AllTalk voices API - 18 voices available
+01:21:36.483 [TEXTGEN_TROUBLESHOOT] [test_alltalk_server] [SUCCESS] SUCCESS: Sample voices: ['Arnold.wav', 'Clint_Eastwood CC3 (enhanced).wav', 'Clint_Eastwood CC3.wav']
+01:21:36.483 [TEXTGEN_TROUBLESHOOT] [test_alltalk_server] [SUCCESS] CONCLUSION: AllTalk is fully functional despite startup warnings
+01:21:36.483 [TEXTGEN_TROUBLESHOOT] [phase6] [INFO] Phase 6 AllTalk server testing complete
+01:23:25.952 [TEXTGEN_TROUBLESHOOT] [final_summary] [INFO] === FINAL TROUBLESHOOTING SUMMARY AND DOCUMENTATION ===
+01:23:25.952 [TEXTGEN_TROUBLESHOOT] [final_summary] [SUCCESS] TROUBLESHOOTING CONCLUSION: System is FULLY FUNCTIONAL

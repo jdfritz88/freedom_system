@@ -103,7 +103,7 @@ if check_alltalk_server_running():
 else:
     try:
         from sync_voices import sync_all_voices
-        print("[AllTalk] Voice synchronization module loaded successfully")
+        # Moved detailed logging to be conditional
     except ImportError as e:
         print(f"[AllTalk] Warning: Voice synchronization module import failed: {e}")
         sync_all_voices = None
@@ -128,6 +128,9 @@ except ImportError as e:
     sys.exit(1)  # Exit the script to avoid further errors
 this_dir = Path(__file__).parent.resolve()
 
+# Fix sys.path for TGWUI_Extension imports - must happen before function definitions
+sys.path.insert(0, str(this_dir))
+
 # Note: The following function names are reserved for TGWUI integration.
 # When running under text-generation-webui, these functions will be imported from
 # system/TGWUI Extension/script.py when in TGWUI's Python environment/extensions dir.
@@ -146,64 +149,64 @@ TGWUI_AVAILABLE = False
 # pylint: disable=import-outside-toplevel
 def output_modifier(string, state):
     """Modify chat output (required for TGWUI)"""
-    print_message("[AllTalk] output_modifier called")
-    print_message(f"[AllTalk] String length: {len(string) if string else 0}")
-    print_message(f"[AllTalk] State keys: {list(state.keys()) if state and hasattr(state, 'keys') else 'No state or not dict-like'}")
+    print_message("[AllTalk] output_modifier called", "debug_func")
+    print_message(f"[AllTalk] String length: {len(string) if string else 0}", "debug_func")
+    print_message(f"[AllTalk] State keys: {list(state.keys()) if state and hasattr(state, 'keys') else 'No state or not dict-like'}", "debug_func")
     
     try:
         from .system.TGWUI_Extension.script import (
             output_modifier as tgwui_output_modifier,
         )
-        print_message("[AllTalk] Imported tgwui_output_modifier from relative path")
+        print_message("[AllTalk] Imported tgwui_output_modifier from relative path", "debug_func")
     except ImportError as e:
-        print_message(f"[AllTalk] Relative import failed: {e}, trying absolute")
+        print_message(f"[AllTalk] Relative import failed: {e}, trying absolute", "debug_func")
         from system.TGWUI_Extension.script import (
             output_modifier as tgwui_output_modifier,
         )
-        print_message("[AllTalk] Imported tgwui_output_modifier from absolute path")
+        print_message("[AllTalk] Imported tgwui_output_modifier from absolute path", "debug_func")
     
     result = tgwui_output_modifier(string, state)
-    print_message(f"[AllTalk] output_modifier result length: {len(result) if result else 0}")
+    print_message(f"[AllTalk] output_modifier result length: {len(result) if result else 0}", "debug_func")
     return result
 
 
 def input_modifier(string, state):
     """Modify chat input (required for TGWUI)"""
-    print_message("[AllTalk] input_modifier called")
-    print_message(f"[AllTalk] Input string: {string[:50] if string else 'None'}...")
+    print_message("[AllTalk] input_modifier called", "debug_func")
+    print_message(f"[AllTalk] Input string: {string[:50] if string else 'None'}...", "debug_func")
     
     try:
         from .system.TGWUI_Extension.script import (
             input_modifier as tgwui_input_modifier,
         )
-        print_message("[AllTalk] Imported tgwui_input_modifier from relative path")
+        print_message("[AllTalk] Imported tgwui_input_modifier from relative path", "debug_func")
     except ImportError as e:
-        print_message(f"[AllTalk] Relative import failed: {e}, trying absolute")
+        print_message(f"[AllTalk] Relative import failed: {e}, trying absolute", "debug_func")
         from system.TGWUI_Extension.script import input_modifier as tgwui_input_modifier
-        print_message("[AllTalk] Imported tgwui_input_modifier from absolute path")
+        print_message("[AllTalk] Imported tgwui_input_modifier from absolute path", "debug_func")
     
     result = tgwui_input_modifier(string, state)
-    print_message(f"[AllTalk] input_modifier result: {result[:50] if result else 'None'}...")
+    print_message(f"[AllTalk] input_modifier result: {result[:50] if result else 'None'}...", "debug_func")
     return result
 
 
 def state_modifier(state):
     """Modify chat state (required for TGWUI)"""
-    print_message("[AllTalk] state_modifier called")
-    print_message(f"[AllTalk] State keys: {list(state.keys()) if state and hasattr(state, 'keys') else 'None or not dict-like'}")
+    print_message("[AllTalk] state_modifier called", "debug_func")
+    print_message(f"[AllTalk] State keys: {list(state.keys()) if state and hasattr(state, 'keys') else 'None or not dict-like'}", "debug_func")
     
     try:
         from .system.TGWUI_Extension.script import (
             state_modifier as tgwui_state_modifier,
         )
-        print_message("[AllTalk] Imported tgwui_state_modifier from relative path")
+        print_message("[AllTalk] Imported tgwui_state_modifier from relative path", "debug_func")
     except ImportError as e:
-        print_message(f"[AllTalk] Relative import failed: {e}, trying absolute")
+        print_message(f"[AllTalk] Relative import failed: {e}, trying absolute", "debug_func")
         from system.TGWUI_Extension.script import state_modifier as tgwui_state_modifier
-        print_message("[AllTalk] Imported tgwui_state_modifier from absolute path")
+        print_message("[AllTalk] Imported tgwui_state_modifier from absolute path", "debug_func")
     
     result = tgwui_state_modifier(state)
-    print_message(f"[AllTalk] state_modifier result keys: {list(result.keys()) if result and hasattr(result, 'keys') else 'None or not dict-like'}")
+    print_message(f"[AllTalk] state_modifier result keys: {list(result.keys()) if result and hasattr(result, 'keys') else 'None or not dict-like'}", "debug_func")
     return result
 
 
@@ -277,6 +280,15 @@ except ImportError:
     shared = DummyShared()
 
 # pylint: enable=ungrouped-imports,unused-import,import-outside-toplevel
+
+#################################################
+# Import TGWUI_Extension for TTS functionality #
+#################################################
+try:
+    import system.TGWUI_Extension.script
+    # Success message is already printed by TGWUI_Extension itself
+except ImportError as e:
+    print(f"[AllTalk] TGWUI_Extension import failed: {e}")
 
 #########################
 # Central config loader #
@@ -776,13 +788,8 @@ startup_wait_time = 240
 ##############################################
 config = AlltalkConfig.get_instance()
 
-# Synchronize voice files with all configurations
-if sync_all_voices:
-    try:
-        print_message("Synchronizing voice files with configurations...")
-        sync_all_voices()
-    except Exception as e:
-        print_message(f"Warning: Voice synchronization failed: {e}")
+# Voice synchronization is now handled by TGWUI_Extension during initialization
+# No need to call it again here as it would cause duplicate synchronization
 
 github_site = "erew123"
 github_repository = "alltalk_tts"
@@ -1173,8 +1180,8 @@ else:
 
 def check_alltalk_already_running():
     """Check if AllTalk server is already running by testing API connectivity."""
-    print_message("[AllTalk] Checking if AllTalk is already running...")
-    print_message("[AllTalk] Waiting 10 seconds before first connection attempt...")
+    print_message("[AllTalk] Checking if AllTalk is already running...", "debug_func")
+    print_message("[AllTalk] Waiting 10 seconds before first connection attempt...", "debug_func")
     import time
     time.sleep(10)  # Wait 10 seconds before first attempt
     
@@ -1182,50 +1189,50 @@ def check_alltalk_already_running():
     for attempt in range(max_retries):
         try:
             import requests
-            print_message(f"[AllTalk] Connection attempt {attempt + 1} to http://127.0.0.1:7851/api/ready")
+            print_message(f"[AllTalk] Connection attempt {attempt + 1} to http://127.0.0.1:7851/api/ready", "debug_func")
             response = requests.get("http://127.0.0.1:7851/api/ready", timeout=3)
-            print_message(f"[AllTalk] Response status: {response.status_code}")
+            print_message(f"[AllTalk] Response status: {response.status_code}", "debug_func")
             return response.status_code == 200
         except Exception as e:
             if attempt < max_retries - 1:
-                print_message(f"AllTalk connection attempt {attempt + 1} failed, retrying...")
+                print_message(f"AllTalk connection attempt {attempt + 1} failed, retrying...", "debug_func")
                 time.sleep(1)
             else:
-                print_message(f"AllTalk connection failed after {max_retries} attempts")
+                print_message(f"AllTalk connection failed after {max_retries} attempts", "debug_func")
     return False
 
 # Check if AllTalk is already running before starting subprocess
-print_message("[AllTalk] Starting AllTalk initialization...")
-print_message(f"[AllTalk] Running in standalone mode: {running_in_standalone}")
-print_message(f"[AllTalk] Script path: {script_path}")
+print_message("[AllTalk] Starting AllTalk initialization...", "debug_func")
+print_message(f"[AllTalk] Running in standalone mode: {running_in_standalone}", "debug_func")
+print_message(f"[AllTalk] Script path: {script_path}", "debug_func")
 
 alltalk_already_running = check_alltalk_already_running()
-print_message(f"[AllTalk] AllTalk already running: {alltalk_already_running}")
+print_message(f"[AllTalk] AllTalk already running: {alltalk_already_running}", "debug_func")
 
 if alltalk_already_running:
-    print_message("AllTalk server already running - skipping subprocess creation")
-    print_message("Connecting to existing AllTalk at http://127.0.0.1:7851")
+    print_message("AllTalk server already running - skipping subprocess creation", "debug_func")
+    print_message("Connecting to existing AllTalk at http://127.0.0.1:7851", "debug_func")
     _state["process"] = None  # No subprocess needed
-    print_message("[AllTalk] Process state set to None (using existing server)")
+    print_message("[AllTalk] Process state set to None (using existing server)", "debug_func")
 else:
-    print_message("AllTalk server not detected - starting subprocess")
+    print_message("AllTalk server not detected - starting subprocess", "debug_func")
 
 # Start the subprocess (now unified for both Docker and non-Docker environments)
 # Not using 'with' as we want the process to run in the background  
 # pylint: disable=consider-using-with
 if not alltalk_already_running and running_in_standalone:
     # Running standalone - use current Python environment
-    print_message(f"[AllTalk] Starting subprocess with current Python: {sys.executable}")
+    print_message(f"[AllTalk] Starting subprocess with current Python: {sys.executable}", "debug_func")
     _state["process"] = subprocess.Popen([sys.executable, script_path])
-    print_message(f"[AllTalk] Subprocess PID: {_state['process'].pid}")
+    print_message(f"[AllTalk] Subprocess PID: {_state['process'].pid}", "debug_func")
 elif not alltalk_already_running:
     # Running in text-generation-webui - use AllTalk's standalone Python environment
     standalone_python = this_dir / "alltalk_environment" / "env" / "python.exe"
-    print_message(f"[AllTalk] Checking for standalone Python at: {standalone_python}")
+    print_message(f"[AllTalk] Checking for standalone Python at: {standalone_python}", "debug_func")
     if standalone_python.exists():
-        print_message(f"[AllTalk] Starting subprocess with standalone Python: {standalone_python}")
+        print_message(f"[AllTalk] Starting subprocess with standalone Python: {standalone_python}", "debug_func")
         _state["process"] = subprocess.Popen([str(standalone_python), str(script_path)])
-        print_message(f"[AllTalk] Subprocess PID: {_state['process'].pid}")
+        print_message(f"[AllTalk] Subprocess PID: {_state['process'].pid}", "debug_func")
     else:
         print_message("\033[93mWarning: AllTalk standalone environment not found. Using current Python environment.\033[0m")
         print_message(f"\033[93mExpected path: {standalone_python}\033[0m")

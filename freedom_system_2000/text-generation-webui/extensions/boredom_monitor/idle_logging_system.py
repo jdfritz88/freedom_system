@@ -1,50 +1,48 @@
 # ==========================================
-# FREEDOM SYSTEM - IDLE LOGGING SYSTEM
-# Follows Freedom_Installer_Coding_Standards.txt
-# Follows oobabooga_extension_standards.md
+# FREEDOM SYSTEM BOREDOM MONITOR - COMPREHENSIVE LOGGING SYSTEM
+# Enhanced logging following API_Extension_Development_Standards.md
 # ==========================================
 
-# Standard #9: Script Loader Override - Load from shared _env
-import sys
 import os
-from pathlib import Path
-
-# Auto-repair environment paths if missing
-try:
-    # Try to find the Oobabooga Python environment - Fixed for actual Oobabooga structure
-    current_dir = Path(__file__).parent
-    # Go from extensions/boredom_monitor to oobabooga root
-    oobabooga_root = current_dir.parent.parent  
-    env_candidates = [
-        oobabooga_root / "installer_files" / "env" / "Lib" / "site-packages",  # Primary: oobabooga/installer_files/env
-        oobabooga_root / "installer_files" / "conda" / "Lib" / "site-packages",  # Secondary: conda environment
-        Path("F:/Apps/freedom_system/componentsave/apps_installed/oobabooga/installer_files/env/Lib/site-packages"),  # Absolute primary
-        Path("F:/Apps/freedom_system/componentsave/apps_installed/oobabooga/installer_files/conda/Lib/site-packages"),  # Absolute secondary
-        oobabooga_root / "_env" / "Lib" / "site-packages",  # Legacy: oobabooga/_env/Lib/site-packages
-        current_dir / "_env" / "Lib" / "site-packages"  # Extension-relative fallback
-    ]
-    
-    env_path = None
-    for candidate in env_candidates:
-        if candidate.exists():
-            env_path = str(candidate)
-            break
-    
-    if env_path and env_path not in sys.path:
-        sys.path.insert(0, env_path)
-        print("SUCCESS: Environment path loaded: " + env_path)
-    elif not env_path:
-        print("WARNING: Shared _env folder not found, using system Python")
-        
-except Exception as e:
-    print("ERROR: Environment path setup failed: " + str(e))
-
-# Standard imports after environment setup
 import json
 import time
 import threading
 from datetime import datetime
+from pathlib import Path
 from collections import deque
+
+def setup_comprehensive_logging(component_name):
+    """
+    Setup comprehensive logging for complex extensions
+    Follows text_generation_webui_extension_standards.md Standard #19 (Enhanced)
+    """
+    def log_enhanced(message, level="INFO", function_name="", details=None):
+        timestamp = datetime.now().strftime("%H:%M:%S.%f")[:-3]
+        prefix = f"[{component_name}]"
+        
+        if function_name:
+            prefix = f"{prefix} [{function_name}]"
+        
+        full_message = f"{prefix} [{level}] {message}"
+        
+        # Add details for complex operations
+        if details and level in ["DEBUG", "INFO", "WARNING", "ERROR"]:
+            if isinstance(details, dict):
+                detail_str = " | ".join([f"{k}:{v}" for k, v in details.items()])
+                full_message += f" | {detail_str}"
+        
+        print(full_message)
+        
+        # Write to extension-specific log file
+        log_file = f"F:/Apps/freedom_system/log/{component_name.lower().replace('-', '_')}_extension.log"
+        try:
+            os.makedirs(os.path.dirname(log_file), exist_ok=True)
+            with open(log_file, "a", encoding="utf-8") as f:
+                f.write(f"{timestamp} {full_message}\n")
+        except Exception:
+            pass  # Don't fail on logging failures
+    
+    return log_enhanced
 
 class IdleLoggingSystem:
     """
@@ -510,3 +508,33 @@ if __name__ == "__main__":
     else:
         print("[FAIL] Initialization failed")
         print("[FAIL] Diagnostics could not run")
+
+# Legacy logging functions for backward compatibility
+def get_logger():
+    """Get logger - backward compatibility"""
+    return setup_comprehensive_logging("BOREDOM-MONITOR")
+
+def log_info(message, component=None):
+    """Log info message - backward compatibility"""
+    logger = setup_comprehensive_logging(component or "BOREDOM-MONITOR")
+    logger(message, "INFO")
+
+def log_success(message, component=None):
+    """Log success message - backward compatibility"""
+    logger = setup_comprehensive_logging(component or "BOREDOM-MONITOR")
+    logger(message, "SUCCESS")
+
+def log_warning(message, component=None):
+    """Log warning message - backward compatibility"""
+    logger = setup_comprehensive_logging(component or "BOREDOM-MONITOR")
+    logger(message, "WARNING")
+
+def log_error(message, component=None):
+    """Log error message - backward compatibility"""
+    logger = setup_comprehensive_logging(component or "BOREDOM-MONITOR")
+    logger(message, "ERROR")
+
+def log_fail(message, component=None):
+    """Log failure message - backward compatibility"""
+    logger = setup_comprehensive_logging(component or "BOREDOM-MONITOR")
+    logger(message, "CRITICAL")

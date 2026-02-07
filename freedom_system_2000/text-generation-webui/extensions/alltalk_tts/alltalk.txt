@@ -1,6 +1,0 @@
-https://github.com/erew123/alltalk_tts
-https://github.com/oobabooga/text-generation-webui
-https://github.com/erew123/alltalk_tts/wiki/Text%E2%80%90generation%E2%80%90webui-Remote-Extension
-https://github.com/erew123/alltalk_tts/wiki/API-%E2%80%90-Best-Practices-AllTalk-API-Integration
-https://github.com/erew123/alltalk_tts/wiki/Install-%E2%80%90-Text%E2%80%90generation%E2%80%90webui-Installation
-https://github.com/erew123/alltalk_tts/wiki/Error-Messages-List

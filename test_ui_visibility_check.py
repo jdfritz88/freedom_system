@@ -7,7 +7,7 @@ import sys
 import os
 
 # Add text-generation-webui to path
-webui_path = os.path.join(os.path.dirname(__file__), 'freedom_system_2000', 'text-generation-webui')
+webui_path = os.path.join(os.path.dirname(__file__), 'app_cabinet', 'text-generation-webui')
 sys.path.insert(0, webui_path)
 
 from modules import shared

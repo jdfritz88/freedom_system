@@ -6,7 +6,7 @@ import sys
 import os
 
 # Add text-generation-webui path
-webui_path = r"F:\Apps\freedom_system\freedom_system_2000\text-generation-webui"
+webui_path = r"F:\Apps\freedom_system\app_cabinet\text-generation-webui"
 sys.path.insert(0, webui_path)
 
 # Import the extension module

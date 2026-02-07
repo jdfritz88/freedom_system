@@ -3,21 +3,21 @@ componentsave/envs/coqui_env/Lib/site-packages/torch/lib/torch_cpu.dll
 componentsave/envs/coqui_env/Lib/site-packages/torch/lib/dnnl.lib
 
 # Large external codebases (standalone installations)
-freedom_system_2000/Stable_Diffusion_SDXL/
-freedom_system_2000/alltalk_tts/
-freedom_system_2000/koboldcpp/
+app_cabinet/Stable_Diffusion_SDXL/
+app_cabinet/alltalk_tts/
+app_cabinet/koboldcpp/
 
 # Upstream text-generation-webui (has its own git repo)
-freedom_system_2000/text-generation-webui/*
+app_cabinet/text-generation-webui/*
 # But DO track our custom extensions
-!freedom_system_2000/text-generation-webui/extensions/
-freedom_system_2000/text-generation-webui/extensions/*
-!freedom_system_2000/text-generation-webui/extensions/boredom_monitor/
-!freedom_system_2000/text-generation-webui/extensions/alltalk_tts/
-freedom_system_2000/text-generation-webui/extensions/alltalk_tts/*
-!freedom_system_2000/text-generation-webui/extensions/alltalk_tts/system/
-freedom_system_2000/text-generation-webui/extensions/alltalk_tts/system/*
-!freedom_system_2000/text-generation-webui/extensions/alltalk_tts/system/TGWUI_Extension/
+!app_cabinet/text-generation-webui/extensions/
+app_cabinet/text-generation-webui/extensions/*
+!app_cabinet/text-generation-webui/extensions/boredom_monitor/
+!app_cabinet/text-generation-webui/extensions/alltalk_tts/
+app_cabinet/text-generation-webui/extensions/alltalk_tts/*
+!app_cabinet/text-generation-webui/extensions/alltalk_tts/system/
+app_cabinet/text-generation-webui/extensions/alltalk_tts/system/*
+!app_cabinet/text-generation-webui/extensions/alltalk_tts/system/TGWUI_Extension/
 
 # Embedded git repos
 REPO_vs_claude_code_voice_mode/
@@ -25,7 +25,7 @@ REPO_claude_code_voice_mode/
 REPO_waiver/
 
 # Python virtual environments
-freedom_system_2000/whisper_stt/venv/
+app_cabinet/whisper_stt/venv/
 
 # Python cache
 **/__pycache__/
@@ -33,4 +33,4 @@ freedom_system_2000/whisper_stt/venv/
 
 # Windows artifacts
 nul
-freedom_system_2000/text-generation-webui/nul
+app_cabinet/text-generation-webui/nul

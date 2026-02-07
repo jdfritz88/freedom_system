@@ -10,7 +10,7 @@ print("BOREDOM MONITOR SOLUTION 2 - CODE VERIFICATION")
 print("=" * 60)
 
 # Read the script file
-script_path = r"F:\Apps\freedom_system\freedom_system_2000\text-generation-webui\extensions\boredom_monitor\script.py"
+script_path = r"F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\boredom_monitor\script.py"
 
 with open(script_path, 'r', encoding='utf-8') as f:
     content = f.read()

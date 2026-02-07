@@ -8,7 +8,7 @@ import sys
 import os
 
 # Add text-generation-webui to path (simulating how it's normally run)
-tgwui_path = "F:/Apps/freedom_system/freedom_system_2000/text-generation-webui"
+tgwui_path = "F:/Apps/freedom_system/app_cabinet/text-generation-webui"
 sys.path.insert(0, tgwui_path)
 
 print("=" * 60)

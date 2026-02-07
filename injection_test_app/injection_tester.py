@@ -29,7 +29,7 @@ from dataclasses import dataclass, field
 from enum import Enum
 
 # Add text-generation-webui to path
-TGWUI_PATH = Path("F:/Apps/freedom_system/freedom_system_2000/text-generation-webui")
+TGWUI_PATH = Path("F:/Apps/freedom_system/app_cabinet/text-generation-webui")
 sys.path.insert(0, str(TGWUI_PATH))
 
 # Configure logging

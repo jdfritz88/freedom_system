@@ -10,7 +10,7 @@ from pathlib import Path
 
 def test_clean_implementation():
     """Test that the implementation is now clean without inheritance issues"""
-    script_path = Path("freedom_system_2000/text-generation-webui/extensions/boredom_monitor/script.py")
+    script_path = Path("app_cabinet/text-generation-webui/extensions/boredom_monitor/script.py")
 
     with open(script_path, 'r', encoding='utf-8') as f:
         content = f.read()

@@ -74,7 +74,7 @@ def fix_save_config_method():
     """Fix save_config -> save_settings"""
     print_message("STEP 1: Fixing save_config method calls...")
     
-    script_path = "F:\\Apps\\freedom_system\\freedom_system_2000\\text-generation-webui\\extensions\\alltalk_tts\\system\\TGWUI_Extension\\script.py"
+    script_path = "F:\\Apps\\freedom_system\\app_cabinet\\text-generation-webui\\extensions\\alltalk_tts\\system\\TGWUI_Extension\\script.py"
     
     if not backup_file(script_path):
         return False
@@ -101,7 +101,7 @@ def add_enhanced_logging():
     """Add comprehensive logging throughout the script"""
     print_message("STEP 2: Adding enhanced logging...")
     
-    script_path = "F:\\Apps\\freedom_system\\freedom_system_2000\\text-generation-webui\\extensions\\alltalk_tts\\system\\TGWUI_Extension\\script.py"
+    script_path = "F:\\Apps\\freedom_system\\app_cabinet\\text-generation-webui\\extensions\\alltalk_tts\\system\\TGWUI_Extension\\script.py"
     
     content = read_file(script_path)
     if not content:
@@ -180,7 +180,7 @@ def add_voice_validation():
     """Add validation to prevent invalid voice names"""
     print_message("STEP 3: Adding voice validation...")
     
-    script_path = "F:\\Apps\\freedom_system\\freedom_system_2000\\text-generation-webui\\extensions\\alltalk_tts\\system\\TGWUI_Extension\\script.py"
+    script_path = "F:\\Apps\\freedom_system\\app_cabinet\\text-generation-webui\\extensions\\alltalk_tts\\system\\TGWUI_Extension\\script.py"
     
     content = read_file(script_path)
     if not content:
@@ -276,7 +276,7 @@ def add_api_request_logging():
     """Add detailed logging to API requests"""
     print_message("STEP 4: Adding API request logging...")
     
-    script_path = "F:\\Apps\\freedom_system\\freedom_system_2000\\text-generation-webui\\extensions\\alltalk_tts\\system\\TGWUI_Extension\\script.py"
+    script_path = "F:\\Apps\\freedom_system\\app_cabinet\\text-generation-webui\\extensions\\alltalk_tts\\system\\TGWUI_Extension\\script.py"
     
     content = read_file(script_path)
     if not content:

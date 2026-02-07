@@ -48,7 +48,7 @@ sys.argv = [sys.argv[0]]
 SCRIPT_DIR = Path(__file__).parent
 LOG_DIR = Path("F:/Apps/freedom_system/log")
 LOG_DIR.mkdir(exist_ok=True)
-WEBUI_START_BAT = Path("F:/Apps/freedom_system/freedom_system_2000/text-generation-webui/start_windows.bat")
+WEBUI_START_BAT = Path("F:/Apps/freedom_system/app_cabinet/text-generation-webui/start_windows.bat")
 
 # Configure logging
 log_file = LOG_DIR / f"injection_test_run_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
@@ -306,7 +306,7 @@ def check_prerequisites() -> Dict[str, bool]:
 
     # Check if we can import webui modules
     try:
-        sys.path.insert(0, str(Path("F:/Apps/freedom_system/freedom_system_2000/text-generation-webui")))
+        sys.path.insert(0, str(Path("F:/Apps/freedom_system/app_cabinet/text-generation-webui")))
         from modules import shared
         prereqs['webui_modules'] = True
         logger.info("  [OK] text-generation-webui modules available")

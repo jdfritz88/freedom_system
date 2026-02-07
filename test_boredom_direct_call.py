@@ -8,7 +8,7 @@ import os
 from pathlib import Path
 
 # Add the text-generation-webui path to import modules
-tgwui_path = Path("F:/Apps/freedom_system/freedom_system_2000/text-generation-webui")
+tgwui_path = Path("F:/Apps/freedom_system/app_cabinet/text-generation-webui")
 sys.path.insert(0, str(tgwui_path))
 
 print("[TEST] Starting Boredom Monitor Direct Call Test")

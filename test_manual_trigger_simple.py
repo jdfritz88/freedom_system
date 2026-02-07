@@ -7,8 +7,8 @@ import sys
 import os
 
 # Add the text-generation-webui modules to path
-sys.path.insert(0, 'F:\\Apps\\freedom_system\\freedom_system_2000\\text-generation-webui')
-os.chdir('F:\\Apps\\freedom_system\\freedom_system_2000\\text-generation-webui')
+sys.path.insert(0, 'F:\\Apps\\freedom_system\\app_cabinet\\text-generation-webui')
+os.chdir('F:\\Apps\\freedom_system\\app_cabinet\\text-generation-webui')
 
 print("=" * 60)
 print("MANUAL BOREDOM INJECTION TEST")

@@ -111,7 +111,7 @@ updates = [
 ]
 
 # Read file
-filepath = r'F:\Apps\freedom_system\freedom_system_2000\text-generation-webui\extensions\boredom_monitor\all_injection_methods.py'
+filepath = r'F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\boredom_monitor\all_injection_methods.py'
 with open(filepath, 'r', encoding='utf-8') as f:
     content = f.read()
 

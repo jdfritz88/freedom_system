@@ -9,7 +9,7 @@ from pathlib import Path
 
 print("[STRUCTURE-TEST] Validating Boredom Monitor Extension Structure")
 
-script_path = Path("F:/Apps/freedom_system/freedom_system_2000/text-generation-webui/extensions/boredom_monitor/script.py")
+script_path = Path("F:/Apps/freedom_system/app_cabinet/text-generation-webui/extensions/boredom_monitor/script.py")
 
 try:
     with open(script_path, 'r', encoding='utf-8') as f:

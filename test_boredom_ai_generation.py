@@ -8,8 +8,8 @@ import os
 import json
 
 # Add the text-generation-webui modules to path
-sys.path.insert(0, 'F:\\Apps\\freedom_system\\freedom_system_2000\\text-generation-webui')
-os.chdir('F:\\Apps\\freedom_system\\freedom_system_2000\\text-generation-webui')
+sys.path.insert(0, 'F:\\Apps\\freedom_system\\app_cabinet\\text-generation-webui')
+os.chdir('F:\\Apps\\freedom_system\\app_cabinet\\text-generation-webui')
 
 print("=" * 60)
 print("BOREDOM MONITOR AI INSTRUCTION TEST")
@@ -17,7 +17,7 @@ print("=" * 60)
 
 # Test 1: Check updated templates
 print("\n1. Testing updated meta prompt templates...")
-templates_path = "F:\\Apps\\freedom_system\\freedom_system_2000\\text-generation-webui\\extensions\\boredom_monitor\\idle_meta_prompt_templates.json"
+templates_path = "F:\\Apps\\freedom_system\\app_cabinet\\text-generation-webui\\extensions\\boredom_monitor\\idle_meta_prompt_templates.json"
 
 try:
     with open(templates_path, 'r', encoding='utf-8') as f:

@@ -9,7 +9,7 @@ import time
 from pathlib import Path
 
 # Add text-generation-webui to path
-tgwui_path = Path("F:/Apps/freedom_system/freedom_system_2000/text-generation-webui")
+tgwui_path = Path("F:/Apps/freedom_system/app_cabinet/text-generation-webui")
 sys.path.insert(0, str(tgwui_path))
 sys.path.insert(0, str(tgwui_path / "extensions" / "boredom_monitor"))
 

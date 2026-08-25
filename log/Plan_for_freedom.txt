@@ -1,0 +1,442 @@
+# Fix Voice Mode MCP Server Freeze — Detailed Plan
+# Generated: 2026-02-07
+
+## Context
+
+The `speak` tool in the voice mode MCP server freezes indefinitely. When Claude
+calls `speak`, the tool never returns — the user must manually interrupt it.
+
+The root cause is that multiple blocking operations in `speak_text()` and
+`speak_text_streaming()` have NO timeout or deadline. If AllTalk stalls
+mid-stream, the audio device is contended by another instance, or the drain
+loop never exits, the entire tool call hangs forever.
+
+This is a proper fix per DMAIC: we add bounded timeouts to every blocking
+operation. No architecture changes. Streaming remains the primary path.
+No shortcuts, dummies, or workarounds.
+
+================================================================================
+## Files Modified
+================================================================================
+
+1. F:\Apps\freedom_system\REPO_claude_code_voice_mode\claude_code_voice_mode_mcp_server.py
+   - All 6 blocking points fixed
+   - Phase timing logs added
+
+2. F:\Apps\freedom_system\REPO_claude_code_voice_mode\tts_hook.py
+   - Same drain loop pattern fixed (1 blocking point)
+
+================================================================================
+## All 7 Blocking Points Identified
+================================================================================
+
+#   Location                              What Blocks                          Fix
+--  ------------------------------------  -----------------------------------  ----------------------------------------
+1   speak_text_streaming L302             iter_content() hangs if AllTalk      Add elapsed-time deadline
+                                          stalls mid-stream                    (STREAM_ITER_TIMEOUT = 60s)
+
+2   speak_text_streaming L311             stream.write() blocks if audio       Wrap in try/except sd.PortAudioError
+                                          device locked by another instance
+
+3   speak_text_streaming L324-328         while stream.active drain loop       Add STREAM_DRAIN_TIMEOUT = 15s deadline
+                                          has no exit condition
+
+4   _wait_for_playback_or_pause L71-84    while True loop has no exit          Add PLAYBACK_DRAIN_TIMEOUT = 30s deadline
+                                          condition (used by Methods 2 & 3)
+
+5   call_tool L542                        asyncio.to_thread(speak_text)        Wrap with asyncio.wait_for(timeout=125s)
+                                          has no timeout
+
+6   call_tool L560                        asyncio.to_thread(speak_text)        Wrap with asyncio.wait_for(timeout=125s)
+                                          in converse has no timeout
+
+7   tts_hook.py L104-114                  Same while True drain loop           Add 30s deadline
+
+================================================================================
+## Change 1: Add Timeout Constants
+## Location: after line 37 (after WAV_HEADER_SIZE = 44)
+================================================================================
+
+Add these constants to the Configuration section:
+
+    SPEAK_OVERALL_TIMEOUT = 120     # Max total seconds for a single speak() call
+    STREAM_DRAIN_TIMEOUT = 15       # Max seconds to wait for audio buffer to drain
+    STREAM_ITER_TIMEOUT = 60        # Max elapsed seconds in iter_content loop
+    PLAYBACK_DRAIN_TIMEOUT = 30     # Max seconds for _wait_for_playback_or_pause
+
+Rationale for values:
+- 120s overall: A long TTS response (~2000 chars) at normal speech takes 60-90s.
+  120s gives headroom.
+- 15s drain: After all data is written, sounddevice buffers hold 1-3s of audio.
+  15s is generous.
+- 60s iter: The HTTP streaming loop should complete within 60s. Catches AllTalk
+  stalling mid-stream.
+- 30s playback drain: For non-streaming paths (Methods 2 & 3), the full audio
+  is buffered then played. 30s covers any single utterance.
+
+================================================================================
+## Change 2: Rewrite _wait_for_playback_or_pause
+## Location: lines 71-84
+================================================================================
+
+CURRENT CODE (lines 71-84):
+
+    def _wait_for_playback_or_pause():
+        """Wait for audio playback to complete, or stop if TTS is paused."""
+        while True:
+            try:
+                stream = sd.get_stream()
+                if not stream.active:
+                    break
+            except RuntimeError:
+                break
+            if is_tts_paused():
+                sd.stop()
+                logger.info("Playback stopped: TTS paused")
+                break
+            time.sleep(0.1)
+
+REPLACEMENT CODE:
+
+    def _wait_for_playback_or_pause(deadline: float = None):
+        """Wait for audio playback to complete, with a deadline.
+
+        Args:
+            deadline: Absolute time.monotonic() value to stop waiting.
+                      If None, uses PLAYBACK_DRAIN_TIMEOUT from now.
+        """
+        if deadline is None:
+            deadline = time.monotonic() + PLAYBACK_DRAIN_TIMEOUT
+        while True:
+            if time.monotonic() >= deadline:
+                sd.stop()
+                logger.warning(
+                    f"Playback drain timed out after "
+                    f"{PLAYBACK_DRAIN_TIMEOUT}s, forcing stop"
+                )
+                break
+            try:
+                stream = sd.get_stream()
+                if not stream.active:
+                    break
+            except RuntimeError:
+                break
+            if is_tts_paused():
+                sd.stop()
+                logger.info("Playback stopped: TTS paused")
+                break
+            time.sleep(0.1)
+
+WHAT CHANGED:
+- Added deadline parameter (defaults to PLAYBACK_DRAIN_TIMEOUT from now)
+- Checks time.monotonic() >= deadline at top of every loop iteration
+- Calls sd.stop() and breaks if deadline exceeded
+- Uses time.monotonic() (immune to system clock adjustments)
+- This automatically fixes Methods 2 and 3 (play_audio_bytes, play_audio_from_url)
+  which call this function at lines 190 and 216
+
+================================================================================
+## Change 3: Rewrite speak_text_streaming
+## Location: lines 249-334
+================================================================================
+
+CURRENT CODE (lines 249-334):
+- No overall deadline
+- iter_content loop at line 302 can hang forever
+- stream.write() at line 311 has no error handling
+- Drain loop at lines 324-328 has no deadline
+
+REPLACEMENT CODE:
+
+    def speak_text_streaming(text: str, voice: str) -> dict:
+        """Stream audio from AllTalk's streaming endpoint for low-latency playback."""
+        global _streaming_available
+
+        t_start = time.monotonic()
+        overall_deadline = t_start + SPEAK_OVERALL_TIMEOUT
+
+        params = {
+            "text": text,
+            "voice": voice,
+            "language": "en",
+            "output_file": "streaming_output.wav",
+        }
+
+        logger.info(f"Streaming TTS request: text_len={len(text)}, voice={voice}")
+
+        response = requests.get(
+            f"{ALLTALK_URL}/api/tts-generate-streaming",
+            params=params,
+            stream=True,
+            timeout=30,
+        )
+        response.raise_for_status()
+
+        t_after_connect = time.monotonic()
+        logger.info(
+            f"Streaming TTS connected in {t_after_connect - t_start:.2f}s"
+        )
+
+        # Read WAV header from first bytes of stream
+        header = b""
+        for chunk in response.iter_content(chunk_size=WAV_HEADER_SIZE):
+            header += chunk
+            if len(header) >= WAV_HEADER_SIZE:
+                break
+
+        fmt = _parse_wav_header(header[:WAV_HEADER_SIZE])
+        if fmt is None:
+            response.close()
+            raise ValueError("Invalid WAV header from streaming endpoint")
+
+        sr = fmt["sample_rate"]
+        ch = fmt["channels"]
+        dtype = "int16" if fmt["bits_per_sample"] == 16 else "int32"
+        frame_size = fmt["block_align"]
+
+        logger.info(
+            f"Streaming TTS: {sr}Hz, {ch}ch, {fmt['bits_per_sample']}bit"
+        )
+
+        stream = sd.RawOutputStream(
+            samplerate=sr, channels=ch, dtype=dtype
+        )
+        stream.start()
+
+        leftover = header[WAV_HEADER_SIZE:]
+        remainder = b""
+        bytes_written = 0
+        chunks_received = 0
+        iter_start = time.monotonic()
+
+        try:
+            if leftover:
+                remainder = leftover
+
+            for chunk in response.iter_content(chunk_size=STREAMING_CHUNK_SIZE):
+                now = time.monotonic()
+                chunks_received += 1
+
+                # Check overall deadline
+                if now >= overall_deadline:
+                    logger.warning(
+                        f"Streaming TTS hit overall timeout "
+                        f"({SPEAK_OVERALL_TIMEOUT}s) after "
+                        f"{chunks_received} chunks, {bytes_written} bytes"
+                    )
+                    break
+
+                # Check iter-loop deadline
+                if now - iter_start >= STREAM_ITER_TIMEOUT:
+                    logger.warning(
+                        f"Streaming iter_content loop timed out "
+                        f"({STREAM_ITER_TIMEOUT}s) after "
+                        f"{chunks_received} chunks"
+                    )
+                    break
+
+                if is_tts_paused():
+                    logger.info("Streaming playback stopped: TTS paused")
+                    break
+
+                data = remainder + chunk
+                usable = len(data) - (len(data) % frame_size)
+                if usable > 0:
+                    try:
+                        stream.write(data[:usable])
+                        bytes_written += usable
+                    except sd.PortAudioError as e:
+                        logger.error(
+                            f"stream.write() failed: {e} "
+                            f"(after {bytes_written} bytes written)"
+                        )
+                        break
+                remainder = data[usable:]
+
+            # Write any final remainder
+            if remainder and not is_tts_paused():
+                pad = frame_size - (len(remainder) % frame_size)
+                if pad < frame_size:
+                    remainder += b"\x00" * pad
+                try:
+                    stream.write(remainder)
+                    bytes_written += len(remainder)
+                except sd.PortAudioError as e:
+                    logger.error(f"Final stream.write() failed: {e}")
+
+        finally:
+            # Drain with deadline
+            drain_deadline = min(
+                time.monotonic() + STREAM_DRAIN_TIMEOUT,
+                overall_deadline,
+            )
+            drain_start = time.monotonic()
+            while stream.active:
+                if time.monotonic() >= drain_deadline:
+                    logger.warning(
+                        f"Stream drain timed out after "
+                        f"{time.monotonic() - drain_start:.2f}s, forcing stop"
+                    )
+                    break
+                if is_tts_paused():
+                    logger.info("Draining stopped: TTS paused")
+                    break
+                time.sleep(0.05)
+
+            stream.stop()
+            stream.close()
+            response.close()
+
+            t_end = time.monotonic()
+            logger.info(
+                f"Streaming TTS complete: {bytes_written} bytes, "
+                f"{chunks_received} chunks, "
+                f"total={t_end - t_start:.2f}s "
+                f"(connect={t_after_connect - t_start:.2f}s, "
+                f"stream={t_end - t_after_connect:.2f}s)"
+            )
+
+        _streaming_available = True
+        return {"status": "spoken", "voice": voice, "length": len(text)}
+
+WHAT CHANGED:
+- overall_deadline computed at function entry from SPEAK_OVERALL_TIMEOUT
+- iter_content loop checks both overall_deadline and STREAM_ITER_TIMEOUT
+- stream.write() wrapped in try/except sd.PortAudioError (catches locked device)
+- Drain loop uses min(STREAM_DRAIN_TIMEOUT, remaining overall time) as deadline
+- Phase timing logged: connect time, stream time, total time, bytes/chunks
+
+================================================================================
+## Change 4: Wrap asyncio.to_thread with asyncio.wait_for
+## Location: lines 539-543 (speak) and lines 554-560 (converse)
+================================================================================
+
+CURRENT speak handler (lines 539-543):
+
+    if name == "speak":
+        text = arguments.get("text", "")
+        voice = arguments.get("voice")
+        result = await asyncio.to_thread(speak_text, text, voice)
+        return [TextContent(type="text", text=json.dumps(result))]
+
+REPLACEMENT:
+
+    if name == "speak":
+        text = arguments.get("text", "")
+        voice = arguments.get("voice")
+        try:
+            result = await asyncio.wait_for(
+                asyncio.to_thread(speak_text, text, voice),
+                timeout=SPEAK_OVERALL_TIMEOUT + 5,
+            )
+        except asyncio.TimeoutError:
+            logger.error(
+                f"speak tool timed out after {SPEAK_OVERALL_TIMEOUT + 5}s "
+                f"(text_len={len(text)})"
+            )
+            result = {
+                "status": "error",
+                "message": f"Speech timed out after {SPEAK_OVERALL_TIMEOUT + 5}s",
+            }
+        return [TextContent(type="text", text=json.dumps(result))]
+
+CURRENT converse speak phase (lines 558-560):
+
+        if message:
+            await asyncio.to_thread(speak_text, message)
+
+REPLACEMENT:
+
+        if message:
+            try:
+                await asyncio.wait_for(
+                    asyncio.to_thread(speak_text, message),
+                    timeout=SPEAK_OVERALL_TIMEOUT + 5,
+                )
+            except asyncio.TimeoutError:
+                logger.error(
+                    f"converse speak phase timed out after "
+                    f"{SPEAK_OVERALL_TIMEOUT + 5}s"
+                )
+
+WHY +5 SECONDS:
+The +5 buffer lets internal deadlines (SPEAK_OVERALL_TIMEOUT=120s) fire first
+and do clean cleanup. The async timeout (125s) is the fallback safety net.
+Internal deadline fires → cleans up streams/responses → returns normally.
+Async timeout only fires if internal cleanup itself hangs.
+
+================================================================================
+## Change 5: Fix tts_hook.py drain loop
+## Location: tts_hook.py lines 104-114
+================================================================================
+
+CURRENT CODE (lines 104-114):
+
+                while True:
+                    try:
+                        stream = sd.get_stream()
+                        if not stream.active:
+                            break
+                    except RuntimeError:
+                        break
+                    if is_tts_paused():
+                        sd.stop()
+                        break
+                    time.sleep(0.1)
+
+REPLACEMENT:
+
+                drain_deadline = time.monotonic() + 30
+                while True:
+                    if time.monotonic() >= drain_deadline:
+                        sd.stop()
+                        break
+                    try:
+                        stream = sd.get_stream()
+                        if not stream.active:
+                            break
+                    except RuntimeError:
+                        break
+                    if is_tts_paused():
+                        sd.stop()
+                        break
+                    time.sleep(0.1)
+
+Note: time module already imported at line 14.
+
+================================================================================
+## What This Does NOT Change
+================================================================================
+
+- Streaming remains the primary TTS path (Method 1 -> 2 -> 3 fallback chain)
+- The pause mechanism (mic_state.json) is unchanged
+- The mic panel (mic_panel.py) is unchanged
+- Audio format handling, WAV parsing, resampling are unchanged
+- No API endpoints or parameters changed
+- No new dependencies added
+- No architecture changes
+
+================================================================================
+## Verification Steps
+================================================================================
+
+1. NORMAL SPEAK: Call speak tool with short text (~20 words). Verify audio plays
+   and tool returns normally with {"status": "spoken"}.
+
+2. LONG SPEAK: Call speak tool with ~1000 chars. Verify it completes within
+   reasonable time and logs show phase timing.
+
+3. TIMEOUT BEHAVIOR: Stop AllTalk mid-session, call speak. Verify it returns an
+   error within ~65s instead of hanging forever.
+
+4. PAUSE STILL WORKS: Toggle TTS pause during playback. Verify it stops
+   immediately.
+
+5. LOG OUTPUT: Check log/claude_code_voice_mode.log for timing entries like:
+   "Streaming TTS complete: X bytes, Y chunks, total=Zs (connect=As, stream=Bs)"
+
+6. TTS HOOK: Verify the stop hook (tts_hook.py) still speaks responses normally
+   after drain loop fix.
+
+7. CONVERSE: Call converse tool. Verify speak phase completes, then listen
+   phase activates normally.

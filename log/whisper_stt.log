@@ -1,19 +1,6 @@
 [WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
-[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
-[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
-[WHISPER_STT] [INFO] HTTP Request: HEAD https://huggingface.co/Systran/faster-whisper-base.en/resolve/3d3d5dee26484f91867d81cb899cfcf72b96be6c/config.json "HTTP/1.1 307 Temporary Redirect"
-[WHISPER_STT] [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-base.en/3d3d5dee26484f91867d81cb899cfcf72b96be6c/config.json "HTTP/1.1 200 OK"
-[WHISPER_STT] [INFO] HTTP Request: HEAD https://huggingface.co/Systran/faster-whisper-base.en/resolve/3d3d5dee26484f91867d81cb899cfcf72b96be6c/tokenizer.json "HTTP/1.1 307 Temporary Redirect"
-[WHISPER_STT] [INFO] HTTP Request: HEAD https://huggingface.co/Systran/faster-whisper-base.en/resolve/3d3d5dee26484f91867d81cb899cfcf72b96be6c/model.bin "HTTP/1.1 302 Found"
-[WHISPER_STT] [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-base.en/3d3d5dee26484f91867d81cb899cfcf72b96be6c/config.json "HTTP/1.1 200 OK"
-[WHISPER_STT] [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-base.en/3d3d5dee26484f91867d81cb899cfcf72b96be6c/tokenizer.json "HTTP/1.1 200 OK"
-[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-base.en/3d3d5dee26484f91867d81cb899cfcf72b96be6c/tokenizer.json "HTTP/1.1 200 OK"
-[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/xet-read-token/3d3d5dee26484f91867d81cb899cfcf72b96be6c "HTTP/1.1 200 OK"
-[WHISPER_STT] [INFO] HTTP Request: HEAD https://huggingface.co/Systran/faster-whisper-base.en/resolve/3d3d5dee26484f91867d81cb899cfcf72b96be6c/vocabulary.txt "HTTP/1.1 307 Temporary Redirect"
-[WHISPER_STT] [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-base.en/3d3d5dee26484f91867d81cb899cfcf72b96be6c/vocabulary.txt "HTTP/1.1 200 OK"
-[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-base.en/3d3d5dee26484f91867d81cb899cfcf72b96be6c/vocabulary.txt "HTTP/1.1 200 OK"
-[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
 [WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
 [WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
 [WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
@@ -38,14 +25,386 @@
 [WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
 [WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
 [WHISPER_STT] [INFO] Model loaded successfully.
-[WHISPER_STT] [INFO] Received audio: 353324 bytes, format: audio/wav
-[WHISPER_STT] [INFO] Processing audio with duration 00:11.040
-[WHISPER_STT] [INFO] VAD filter removed 00:11.040 of audio
+[WHISPER_STT] [INFO] Received audio: 342764 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:10.710
+[WHISPER_STT] [INFO] VAD filter removed 00:10.710 of audio
 [WHISPER_STT] [INFO] Transcribed: '...' (lang=en, prob=1.00)
-[WHISPER_STT] [INFO] Received audio: 360044 bytes, format: audio/wav
-[WHISPER_STT] [INFO] Processing audio with duration 00:11.250
-[WHISPER_STT] [INFO] VAD filter removed 00:11.250 of audio
+[WHISPER_STT] [INFO] Received audio: 348524 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:10.890
+[WHISPER_STT] [INFO] VAD filter removed 00:10.890 of audio
 [WHISPER_STT] [INFO] Transcribed: '...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Received audio: 351404 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:10.980
+[WHISPER_STT] [INFO] VAD filter removed 00:10.980 of audio
+[WHISPER_STT] [INFO] Transcribed: '...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 113324 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:03.540
+[WHISPER_STT] [INFO] VAD filter removed 00:03.540 of audio
+[WHISPER_STT] [INFO] Transcribed: '...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 281324 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:08.790
+[WHISPER_STT] [INFO] VAD filter removed 00:01.872 of audio
+[WHISPER_STT] [ERROR] Transcription failed: Library cublas64_12.dll is not found or cannot be loaded
+Traceback (most recent call last):
+  File "F:\Apps\freedom_system\app_cabinet\whisper_stt\server.py", line 103, in transcribe
+    text = " ".join(segment.text.strip() for segment in segments)
+  File "F:\Apps\freedom_system\app_cabinet\whisper_stt\server.py", line 103, in <genexpr>
+    text = " ".join(segment.text.strip() for segment in segments)
+  File "F:\Apps\freedom_system\app_cabinet\whisper_stt\venv\lib\site-packages\faster_whisper\transcribe.py", line 1851, in restore_speech_timestamps
+    for segment in segments:
+  File "F:\Apps\freedom_system\app_cabinet\whisper_stt\venv\lib\site-packages\faster_whisper\transcribe.py", line 1190, in generate_segments
+    encoder_output = self.encode(segment)
+  File "F:\Apps\freedom_system\app_cabinet\whisper_stt\venv\lib\site-packages\faster_whisper\transcribe.py", line 1400, in encode
+    return self.model.encode(features, to_cpu=to_cpu)
+RuntimeError: Library cublas64_12.dll is not found or cannot be loaded
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Received audio: 167084 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:05.220
+[WHISPER_STT] [INFO] VAD filter removed 00:02.932 of audio
+[WHISPER_STT] [ERROR] Transcription failed: Library cublas64_12.dll is not found or cannot be loaded
+Traceback (most recent call last):
+  File "F:\Apps\freedom_system\app_cabinet\whisper_stt\server.py", line 103, in transcribe
+    text = " ".join(segment.text.strip() for segment in segments)
+  File "F:\Apps\freedom_system\app_cabinet\whisper_stt\server.py", line 103, in <genexpr>
+    text = " ".join(segment.text.strip() for segment in segments)
+  File "F:\Apps\freedom_system\app_cabinet\whisper_stt\venv\lib\site-packages\faster_whisper\transcribe.py", line 1851, in restore_speech_timestamps
+    for segment in segments:
+  File "F:\Apps\freedom_system\app_cabinet\whisper_stt\venv\lib\site-packages\faster_whisper\transcribe.py", line 1190, in generate_segments
+    encoder_output = self.encode(segment)
+  File "F:\Apps\freedom_system\app_cabinet\whisper_stt\venv\lib\site-packages\faster_whisper\transcribe.py", line 1400, in encode
+    return self.model.encode(features, to_cpu=to_cpu)
+RuntimeError: Library cublas64_12.dll is not found or cannot be loaded
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Received audio: 103724 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:03.240
+[WHISPER_STT] [INFO] VAD filter removed 00:01.808 of audio
+[WHISPER_STT] [INFO] Transcribed: 'Test test test what...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Received audio: 149548 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:04.672
+[WHISPER_STT] [INFO] VAD filter removed 00:00.272 of audio
+[WHISPER_STT] [INFO] Transcribed: 'Test test test one two three testing one two three testing...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 105644 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:03.300
+[WHISPER_STT] [INFO] VAD filter removed 00:03.300 of audio
+[WHISPER_STT] [INFO] Transcribed: '...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Received audio: 65580 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:02.048
+[WHISPER_STT] [INFO] VAD filter removed 00:00.016 of audio
+[WHISPER_STT] [INFO] Transcribed: 'Test test test one two three...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 104492 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:03.264
+[WHISPER_STT] [INFO] VAD filter removed 00:00.304 of audio
+[WHISPER_STT] [INFO] Transcribed: 'Test, test, test, test. 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Received audio: 81964 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:02.560
+[WHISPER_STT] [INFO] VAD filter removed 00:00.176 of audio
+[WHISPER_STT] [INFO] Transcribed: 'Test, test, test, one, two, three, test....' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 79916 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:02.496
+[WHISPER_STT] [INFO] VAD filter removed 00:00.112 of audio
+[WHISPER_STT] [INFO] Transcribed: 'Test test test one two three testing...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 65580 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:02.048
+[WHISPER_STT] [INFO] VAD filter removed 00:00.272 of audio
+[WHISPER_STT] [INFO] Transcribed: 'Test test test one two three...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 75820 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:02.368
+[WHISPER_STT] [INFO] VAD filter removed 00:00.112 of audio
+[WHISPER_STT] [INFO] Transcribed: 'Hold the talk with the mute button on...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 204844 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:06.400
+[WHISPER_STT] [INFO] VAD filter removed 00:00.432 of audio
+[WHISPER_STT] [INFO] Transcribed: 'toggle mode, toggle the talk, toggle the talk unmuted, toggle the talk unmuted....' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 645164 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:20.160
+[WHISPER_STT] [INFO] VAD filter removed 00:11.808 of audio
+[WHISPER_STT] [INFO] Transcribed: 'Test test test 1 2 3 testing 1 2 3 testing 1 2 3 test test test 1 2 3...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 466988 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:14.592
+[WHISPER_STT] [INFO] VAD filter removed 00:00.976 of audio
+[WHISPER_STT] [INFO] Transcribed: 'toggle to talk and is not actually working. I think what I wanted was toggle to talk to pause and th...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 391212 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:12.224
+[WHISPER_STT] [INFO] VAD filter removed 00:00.272 of audio
+[WHISPER_STT] [INFO] Transcribed: 'Yes, but no shortcuts, completely remove all references to always on in the code. Don't leave any ot...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Received audio: 538668 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:16.832
+[WHISPER_STT] [INFO] VAD filter removed 00:00.528 of audio
+[WHISPER_STT] [INFO] Transcribed: 'Let's discuss VAD, voice activation where I speak in toggle to talk mode, it waits 1.45 seconds for ...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 241964 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:07.560
+[WHISPER_STT] [INFO] VAD filter removed 00:07.560 of audio
+[WHISPER_STT] [INFO] Transcribed: '...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Received audio: 136364 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:04.260
+[WHISPER_STT] [INFO] VAD filter removed 00:04.260 of audio
+[WHISPER_STT] [INFO] Transcribed: '...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Received audio: 277484 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:08.670
+[WHISPER_STT] [INFO] VAD filter removed 00:00.000 of audio
+[WHISPER_STT] [INFO] Transcribed: 'stuff. But there's no hard fast rule. He hasn't worked with families, he just could not make a decis...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Received audio: 110636 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:03.456
+[WHISPER_STT] [INFO] VAD filter removed 00:00.272 of audio
+[WHISPER_STT] [INFO] Transcribed: 'Test test test one two three four testing...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 86060 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:02.688
+[WHISPER_STT] [INFO] VAD filter removed 00:00.016 of audio
+[WHISPER_STT] [INFO] Transcribed: 'Test, test, test, one, two, three, four, test, test, test, test, test, test, test, test, test, test,...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 124972 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:03.904
+[WHISPER_STT] [INFO] VAD filter removed 00:00.208 of audio
+[WHISPER_STT] [INFO] Transcribed: 'The quick brown fox jumps over the lazy dog....' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 73772 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:02.304
+[WHISPER_STT] [INFO] VAD filter removed 00:00.432 of audio
+[WHISPER_STT] [INFO] Transcribed: 'Which branch is this?...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 247852 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:07.744
+[WHISPER_STT] [INFO] VAD filter removed 00:00.400 of audio
+[WHISPER_STT] [INFO] Transcribed: 'Are you able to commit the changes that we just made to branch 8? Commit and remote or push?...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Received audio: 131116 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:04.096
+[WHISPER_STT] [INFO] VAD filter removed 00:00.336 of audio
+[WHISPER_STT] [INFO] Transcribed: 'Are we able to add what cloud code does for streaming and unstreaming?...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 323628 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:10.112
+[WHISPER_STT] [INFO] VAD filter removed 00:00.272 of audio
+[WHISPER_STT] [INFO] Transcribed: 'Are we able to add the streaming and unstreaming generational button to make the generational button...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 61484 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:01.920
+[WHISPER_STT] [INFO] VAD filter removed 00:00.176 of audio
+[WHISPER_STT] [INFO] Transcribed: 'Test test test one two three...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 348204 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:10.880
+[WHISPER_STT] [INFO] VAD filter removed 00:00.784 of audio
+[WHISPER_STT] [INFO] Transcribed: 'For the generational button in all talk, can we tie that to cloud codes? Command to stream or not st...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 192556 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:06.016
+[WHISPER_STT] [INFO] VAD filter removed 00:03.584 of audio
+[WHISPER_STT] [INFO] Transcribed: 'Yes, add that to the plan....' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 309292 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:09.664
+[WHISPER_STT] [INFO] VAD filter removed 00:00.176 of audio
+[WHISPER_STT] [INFO] Transcribed: 'No, it needs to be moved to the other section the advanced engine Section it needs to be removed fro...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 180268 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:05.632
+[WHISPER_STT] [INFO] VAD filter removed 00:00.000 of audio
+[WHISPER_STT] [INFO] Transcribed: 'What about the dual wiring one for all talking the other one to cloud code?...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 276524 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:08.640
+[WHISPER_STT] [INFO] VAD filter removed 00:00.368 of audio
+[WHISPER_STT] [INFO] Transcribed: 'Add generation mode to the bottom section, the advanced engine settings, remove it from the clod one...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 243756 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:07.616
+[WHISPER_STT] [INFO] VAD filter removed 00:00.272 of audio
+[WHISPER_STT] [INFO] Transcribed: 'So there was no way to use generational mode to tell quad code to change from streaming to non-strea...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 845868 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:26.432
+[WHISPER_STT] [INFO] VAD filter removed 00:02.448 of audio
+[WHISPER_STT] [INFO] Transcribed: 'Yes, move it back with full dual wiring and you got to make changes to all talk and it has to make c...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 466988 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:14.592
+[WHISPER_STT] [INFO] VAD filter removed 00:00.592 of audio
+[WHISPER_STT] [INFO] Transcribed: 'We need to go ahead and make sure that there is a save file for all of these cloud capabilities on t...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Received audio: 36908 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:01.152
+[WHISPER_STT] [INFO] VAD filter removed 00:00.000 of audio
+[WHISPER_STT] [INFO] Transcribed: 'Test test test test test test test test test test test test test test test test test test test test ...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 260140 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:08.128
+[WHISPER_STT] [INFO] VAD filter removed 00:00.144 of audio
+[WHISPER_STT] [INFO] Transcribed: 'In all talk, I just changed the cloud code speed setting for your voice to 2. Can you tell the diffe...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 264236 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:08.256
+[WHISPER_STT] [INFO] VAD filter removed 00:00.400 of audio
+[WHISPER_STT] [INFO] Transcribed: 'No, it sounds the same. Can you check this because I thought you guys had settings on the cloud code...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 280620 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:08.768
+[WHISPER_STT] [INFO] VAD filter removed 00:00.016 of audio
+[WHISPER_STT] [INFO] Transcribed: 'Yes, any of the changes that we made, the settings, they all need to update either streaming or non-...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 129068 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:04.032
+[WHISPER_STT] [INFO] VAD filter removed 00:00.592 of audio
+[WHISPER_STT] [INFO] Transcribed: 'Change the sample rate during pro pro playback...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Received audio: 275564 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:08.610
+[WHISPER_STT] [INFO] VAD filter removed 00:08.610 of audio
+[WHISPER_STT] [INFO] Transcribed: '...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Received audio: 104492 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:03.264
+[WHISPER_STT] [INFO] VAD filter removed 00:00.080 of audio
+[WHISPER_STT] [INFO] Transcribed: 'Does this repo have a cloud dot MD?...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 346604 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:10.830
+[WHISPER_STT] [INFO] VAD filter removed 00:10.830 of audio
+[WHISPER_STT] [INFO] Transcribed: '...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 28716 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:00.896
+[WHISPER_STT] [INFO] VAD filter removed 00:00.048 of audio
+[WHISPER_STT] [INFO] Transcribed: 'Proceed....' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 351404 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:10.980
+[WHISPER_STT] [INFO] VAD filter removed 00:10.980 of audio
+[WHISPER_STT] [INFO] Transcribed: '...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Received audio: 729132 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:22.784
+[WHISPER_STT] [INFO] VAD filter removed 00:02.208 of audio
+[WHISPER_STT] [INFO] Transcribed: 'This looks a lot better, but the all-talk may be starting too late because the beginning of the all-...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 108588 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:03.392
+[WHISPER_STT] [INFO] VAD filter removed 00:00.048 of audio
+[WHISPER_STT] [INFO] Transcribed: 'I'll talk usually has all this stuff when loading....' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Received audio: 374828 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:11.712
+[WHISPER_STT] [INFO] VAD filter removed 00:00.144 of audio
+[WHISPER_STT] [INFO] Transcribed: 'That also means that the whisper console and the all-talk console also need to be interactive so I c...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Received audio: 108524 bytes, format: audio/wav
+[WHISPER_STT] [INFO] Processing audio with duration 00:03.390
+[WHISPER_STT] [INFO] VAD filter removed 00:03.390 of audio
+[WHISPER_STT] [INFO] Transcribed: '...' (lang=en, prob=1.00)
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
+[WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
+[WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
+[WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"
+[WHISPER_STT] [INFO] Model loaded successfully.
 [WHISPER_STT] [INFO] Starting Whisper STT server on port 8787...
 [WHISPER_STT] [INFO] Loading faster-whisper model 'base.en'...
 [WHISPER_STT] [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base.en/revision/main "HTTP/1.1 200 OK"

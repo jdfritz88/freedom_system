@@ -5,7 +5,14 @@ Runs on port 8787.
 """
 import io
 import logging
+import os
+import sys
 from pathlib import Path
+
+# Add nvidia cublas DLL directory to search path (needed by ctranslate2/faster-whisper)
+_cublas_bin = Path(sys.executable).resolve().parent / ".." / "Lib" / "site-packages" / "nvidia" / "cublas" / "bin"
+if _cublas_bin.is_dir():
+    os.add_dll_directory(str(_cublas_bin.resolve()))
 
 import numpy as np
 from fastapi import FastAPI, File, Form, UploadFile

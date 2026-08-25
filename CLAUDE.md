@@ -1,72 +1,39 @@
-\# My Freedom System Standards
+1) No guessing or assuming on errors or bugs.
+2) Never assume my what I want. If my instructions are vague and allow for multiple interpretations, then ask for more clarity.
+# Voice Mode
 
-# Error Analysis Standards
+Voice output is automatic and does NOT depend on you remembering to call anything: a user-level `Stop` hook (`~/.claude/settings.json`, script at `F:/Apps/freedom_system/REPO_claude_code_voice_mode/.claude/hooks/speak_on_stop.py`) fires after every response you give, strips code blocks and markdown formatting out of it, and speaks whatever prose remains via the `claude_code_voice_mode_mcp_server` TTS pipeline.
 
-## Critical Error Detection Parameters
-When analyzing system output, screenshots, or logs, ALWAYS follow these parameters:
+Do NOT call the `speak` tool yourself for normal responses — the hook already handles it, and calling it manually will make the response play twice. This applies in every project under `freedom_system`, not just the voice-mode repo itself.
 
-1. **Never declare success when errors are visible** - Any HTTP error codes (400, 500, etc.), exception traces, or error messages must be addressed before declaring completion
-2. **Don't prioritize positive findings over errors** - Error conditions take absolute priority over working features
-3. **Don't dismiss error codes as 'minor issues'** - HTTP 500, connection failures, and exceptions are critical issues requiring immediate attention
-4. **Wait for complete information** - Do not conclude analysis until all error conditions are investigated and resolved
-5. **Fix first, celebrate after** - Address all error conditions before reporting success or completion
-6. Stop exclaiming how correct or right the user is. Stop saying phrases such as "you're absolutely right"
+Start a new conversation with a short, natural greeting confirming voice mode is active (e.g. "Voice mode is on. I can hear and speak.") under 15 words — just write it normally, the hook will speak it. The mic starts muted - the user will unmute when ready to talk.
 
-## Primary Troubleshooting Authority
-For ALL fixes, errors, and implementation issues:
-- **coding_process.md is the PRIMARY and MANDATORY guide**
-- **AUTOMATIC REQUIREMENT: You MUST read standards/coding_process.md IMMEDIATELY when encountering ANY error, bug, or implementation issue**
-- You MUST follow Phases 1-5 systematically before any code changes
-- No exceptions, no shortcuts, no "quick fixes"
-- Reference specific phases in your work: "Following troubleshoot MD Phase 2..."
+Write responses in concise, natural prose since anything outside code blocks/structured data gets read aloud verbatim. Code blocks, file paths, and structured data are stripped before speaking, so it's fine to include them for the written record.
 
-## Troubleshoot MD Enforcement
-**MANDATORY AUTOMATIC ACTION**: When ANY of these occur:
-- User reports an error or bug
-- You encounter an error in testing
-- You see error messages, stack traces, or HTTP errors
-- You need to implement a fix or solution
+If you need to say something that should be spoken but NOT written to the transcript (e.g. the DMAIC audio-failure recovery flow), call the `speak` tool directly for that one case — the hook still fires afterward on your final message, so keep the written response for that turn free of duplicate prose.
 
-You MUST IMMEDIATELY:
-1. Read standards/coding_process.md without being asked
-2. State which troubleshoot MD phase you're following
-3. Show the systematic analysis from that phase
-4. Present plan via ExitPlanMode for approval
-5. Only then implement the proper fix
+# Debugging Pipeline: CP1 → CP2 → CP3
 
-## Implementation Requirements
-- Read ALL error messages and stack traces completely
-- Follow coding_process.md Phase 1 (Problem Definition) and Phase 2 (Analysis) before solutions
-- Use coding_process.md Phase 3 (Solution Generation) to choose "proper_fix" over "immediate_fix"
-- Test fixes thoroughly following coding_process.md Phase 4 (Implementation with Validation)
-- Document error patterns following coding_process.md Phase 5 (Evaluation and Prevention)
+When debugging, use the 3-subagent pipeline. Each subagent enforces every step automatically.
 
-## Placeholder Review Requirements
-After fixing any error or implementing any feature:
-1. **Review all changes for placeholder values** - Search for patterns like "unknown", "default", "Initializing...", fake configs
-2. **Never create fake data to satisfy errors** - Use proper inheritance, real configs, and meaningful defaults
-3. **Replace all placeholder decisions** - Every hardcoded fallback should use config values or proper logic
-4. **Check for duplicate attributes** - Use `super().__init__()` instead of recreating parent class attributes
-5. **Ensure UI text is specific** - Replace vague messages with informative status descriptions
+**CP1BUGSEARCH** → Finds the bug using 9 ordered techniques
+**CP2BUGFIX** → Fixes the bug (with logging console + fix log to prevent repeats)
+**CP3SIM** → Simulates the app to verify the fix worked
 
----
+### The Loop
+- Same error after fix? → Back to CP2 (new solution, not in the log)
+- Different error? → Back to CP1 (new bug search)
+- No error? → Done
 
-## Core Standards References
+### Rules
+- NO SHORTCUTS. NO WORKAROUNDS. NO DUMMIES. NO PLACEHOLDERS. NO STUBS. NO NUBS.
+- CP2 must check for a logging console in the launch file before fixing anything
+- CP2 must check `[root folder]_Fix_LOG.md` and create solutions NOT already in the log
+- If the bug involves an API, CP1 launches CP1API first (6-phase API troubleshooting)
 
-@standards/\_Freedom\_System\_Project\_Instructions\_Consolidated.md
-@standards/Freedom\_Installer\_Coding\_Standards.md
-@standards/Freedom\_UI\_Optimization\_Report.md
-@standards/Omega\_Reporting\_Package\_Instructions.md
-
-## Process Standards
-
-@standards/coding\_process.md
-@standards/API\_Extension\_Development\_Standards.md
-
-## Component-Specific Standards
-
-@standards/boredom\_monitor.md
-@standards/alltalk\_tts.md
-@standards/text\_gen\_ext\_standards.md
-@standards/text\_generation\_webui\_extension\_auto-injection.md
-
+### Reference Files
+- `standards/coding_process_step01_bug_search.md` - 9 debugging techniques
+- `standards/coding_process_step01_API.md` - API troubleshooting (6 phases)
+- `standards/coding_process_step02_bug_fix.md` - bug fix process
+- `standards/coding_process_step03_bug_fix_simulation.md` - simulation/verification
+- `standards/questioning_framework.md` - 4 groups of self-check questions

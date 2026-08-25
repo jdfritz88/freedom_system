@@ -1,0 +1,1140 @@
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Mute: False
+[MIC_PANEL] [INFO] Mute: True
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Mute: False
+[MIC_PANEL] [INFO] Mute: True
+[MIC_PANEL] [INFO] Shutting down all voice services...
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Shutting down all voice services...
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Shutting down all voice services...
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 18808 on port 7851)...
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [ERROR] Failed to find PID on port 8787: [WinError 6] The handle is invalid
+[MIC_PANEL] [WARNING] No process found on port 8787 for Whisper STT
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 16040 on port 7851)...
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [ERROR] Failed to find PID on port 8787: [WinError 6] The handle is invalid
+[MIC_PANEL] [WARNING] No process found on port 8787 for Whisper STT
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 16460 on port 7851)...
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 28740 on port 8787)...
+[MIC_PANEL] [ERROR] Failed to find parent of PID 28740: [WinError 6] The handle is invalid
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 14180 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 14180
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [ERROR] Failed to find PID on port 8787: [WinError 6] The handle is invalid
+[MIC_PANEL] [WARNING] No process found on port 8787 for Whisper STT
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 25936 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 25936
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 15596)
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 30352 on port 8787)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 30352
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 34120)
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Recording started
+[MIC_PANEL] [INFO] Recording stopped
+[MIC_PANEL] [INFO] Recording started
+[MIC_PANEL] [INFO] Recording stopped
+[MIC_PANEL] [INFO] Recording started
+[MIC_PANEL] [INFO] Recording stopped
+[MIC_PANEL] [INFO] Recording started
+[MIC_PANEL] [INFO] Recording stopped
+[MIC_PANEL] [INFO] Recording started
+[MIC_PANEL] [INFO] Recording stopped
+[MIC_PANEL] [INFO] Recording started
+[MIC_PANEL] [INFO] Recording stopped
+[MIC_PANEL] [INFO] Recording started
+[MIC_PANEL] [INFO] Recording stopped
+[MIC_PANEL] [INFO] Recording started
+[MIC_PANEL] [INFO] Recording stopped
+[MIC_PANEL] [INFO] Recording started
+[MIC_PANEL] [INFO] Recording stopped
+[MIC_PANEL] [INFO] Recording started
+[MIC_PANEL] [INFO] Recording stopped
+[MIC_PANEL] [INFO] Recording started
+[MIC_PANEL] [INFO] Recording stopped
+[MIC_PANEL] [INFO] Recording started
+[MIC_PANEL] [INFO] Recording stopped
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 14196 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 14196
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 23292)
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 2696 on port 8787)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 2696
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 4136)
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Input device changed to: Headset (JBL TUNE510BT)
+[MIC_PANEL] [INFO] Recording started
+[MIC_PANEL] [INFO] Recording stopped
+[MIC_PANEL] [INFO] Recording started
+[MIC_PANEL] [INFO] Recording stopped
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 23820 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 23820
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 22548)
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 22664 on port 8787)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 22664
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 1468)
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Input device changed to: Headset (JBL TUNE510BT)
+[MIC_PANEL] [INFO] Recording started
+[MIC_PANEL] [INFO] Recording stopped
+[MIC_PANEL] [INFO] Recording started
+[MIC_PANEL] [INFO] Recording stopped
+[MIC_PANEL] [INFO] Recording started
+[MIC_PANEL] [INFO] Recording stopped
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 23796 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 23796
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 29472)
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 24224 on port 8787)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 24224
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 23964)
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Recording started (InputStream opened)
+[MIC_PANEL] [INFO] Recording stopped, processing thread started
+[MIC_PANEL] [INFO] Processing 4.7s of recorded audio
+[MIC_PANEL] [INFO] WAV size: 149548 bytes
+[MIC_PANEL] [INFO] Transcribed: 'Test test test one two three testing one two three testing'
+[MIC_PANEL] [INFO] Found Claude Code Terminal (EnumWindows, non-console host): PID 66212, title='Claude Code Voice Mode Mic'
+[MIC_PANEL] [WARNING] AttachConsole(66212) failed (error 6)
+[MIC_PANEL] [INFO] Found Claude Code Terminal (EnumWindows, non-console host): PID 66212, title='Claude Code Voice Mode Mic'
+[MIC_PANEL] [ERROR] Cannot attach to Claude Code Terminal after retry
+[MIC_PANEL] [ERROR] Failed to inject text into terminal
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 44452 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 44452
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 54968)
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 59172 on port 8787)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 59172
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 57596)
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 8712 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 8712
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 20160)
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 6140 on port 8787)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 6140
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 17196)
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Input device changed to: Headset (JBL TUNE510BT)
+[MIC_PANEL] [INFO] Recording started (InputStream opened)
+[MIC_PANEL] [INFO] Recording stopped, processing thread started
+[MIC_PANEL] [INFO] Processing 2.0s of recorded audio
+[MIC_PANEL] [INFO] WAV size: 65580 bytes
+[MIC_PANEL] [INFO] Transcribed: 'Test test test one two three'
+[MIC_PANEL] [INFO] Discovered terminal: REPO_claude_code_voice_mode_01 (PID 25276)
+[MIC_PANEL] [INFO] Auto-selected terminal: REPO_claude_code_voice_mode_01
+[MIC_PANEL] [INFO] Injected 28 chars + Enter into REPO_claude_code_voice_mode_01 (PID 25276)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'Test test test one two three'
+[MIC_PANEL] [INFO] Mode changed to: toggle
+[MIC_PANEL] [INFO] Recording started (InputStream opened)
+[MIC_PANEL] [INFO] Recording stopped (no frames captured)
+[MIC_PANEL] [INFO] Recording started (InputStream opened)
+[MIC_PANEL] [INFO] Recording stopped (no frames captured)
+[MIC_PANEL] [INFO] Recording started (InputStream opened)
+[MIC_PANEL] [INFO] Recording stopped (no frames captured)
+[MIC_PANEL] [INFO] Mode changed to: push_to_talk
+[MIC_PANEL] [INFO] Recording started (InputStream opened)
+[MIC_PANEL] [INFO] Recording stopped, processing thread started
+[MIC_PANEL] [INFO] Processing 3.3s of recorded audio
+[MIC_PANEL] [INFO] WAV size: 104492 bytes
+[MIC_PANEL] [INFO] Transcribed: 'Test, test, test, test. 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, test, 1, 2, test, 1, 2'
+[MIC_PANEL] [INFO] Injected 427 chars + Enter into REPO_claude_code_voice_mode_01 (PID 25276)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'Test, test, test, test. 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, 3, test, 1, 2, test, 1, 2, test, 1, 2'
+[MIC_PANEL] [INFO] Mode changed to: always_on
+[MIC_PANEL] [INFO] Recording started (InputStream opened)
+[MIC_PANEL] [INFO] Mode changed to: always_on
+[MIC_PANEL] [INFO] Mode changed to: toggle
+[MIC_PANEL] [INFO] Recording stopped (no frames captured)
+[MIC_PANEL] [INFO] Mode changed to: always_on
+[MIC_PANEL] [INFO] Recording started (InputStream opened)
+[MIC_PANEL] [INFO] Mode changed to: push_to_talk
+[MIC_PANEL] [INFO] Recording stopped (no frames captured)
+[MIC_PANEL] [INFO] Mode changed to: toggle
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Discovered terminal: REPO_claude_code_voice_mode_01 (PID 25276)
+[MIC_PANEL] [INFO] Auto-selected terminal: REPO_claude_code_voice_mode_01
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Input device changed to: Headset (JBL TUNE510BT)
+[MIC_PANEL] [INFO] Mute: False
+[MIC_PANEL] [INFO] Recording started (InputStream opened)
+[MIC_PANEL] [INFO] Recording stopped, processing thread started
+[MIC_PANEL] [INFO] Processing 1.5s of recorded audio
+[MIC_PANEL] [INFO] Recording was silence, skipping transcription
+[MIC_PANEL] [INFO] Mute: True
+[MIC_PANEL] [INFO] Recording started (InputStream opened)
+[MIC_PANEL] [INFO] Recording stopped, processing thread started
+[MIC_PANEL] [INFO] Processing 2.6s of recorded audio
+[MIC_PANEL] [INFO] WAV size: 81964 bytes
+[MIC_PANEL] [INFO] Transcribed: 'Test, test, test, one, two, three, test.'
+[MIC_PANEL] [INFO] Injected 40 chars + Enter into REPO_claude_code_voice_mode_01 (PID 25276)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'Test, test, test, one, two, three, test.'
+[MIC_PANEL] [INFO] Mute: False
+[MIC_PANEL] [INFO] Recording started (InputStream opened)
+[MIC_PANEL] [INFO] Recording stopped, processing thread started
+[MIC_PANEL] [INFO] Processing 2.5s of recorded audio
+[MIC_PANEL] [INFO] WAV size: 79916 bytes
+[MIC_PANEL] [INFO] Transcribed: 'Test test test one two three testing'
+[MIC_PANEL] [INFO] Injected 36 chars + Enter into REPO_claude_code_voice_mode_01 (PID 25276)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'Test test test one two three testing'
+[MIC_PANEL] [INFO] Recording started (InputStream opened)
+[MIC_PANEL] [INFO] Recording stopped, processing thread started
+[MIC_PANEL] [INFO] Processing 2.0s of recorded audio
+[MIC_PANEL] [INFO] WAV size: 65580 bytes
+[MIC_PANEL] [INFO] Transcribed: 'Test test test one two three'
+[MIC_PANEL] [INFO] Injected 28 chars + Enter into REPO_claude_code_voice_mode_01 (PID 25276)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'Test test test one two three'
+[MIC_PANEL] [INFO] Recording started (InputStream opened)
+[MIC_PANEL] [INFO] Recording stopped, processing thread started
+[MIC_PANEL] [INFO] Processing 2.4s of recorded audio
+[MIC_PANEL] [INFO] WAV size: 75820 bytes
+[MIC_PANEL] [INFO] Transcribed: 'Hold the talk with the mute button on'
+[MIC_PANEL] [INFO] Injected 37 chars + Enter into REPO_claude_code_voice_mode_01 (PID 25276)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'Hold the talk with the mute button on'
+[MIC_PANEL] [INFO] Mode changed to: toggle
+[MIC_PANEL] [INFO] Recording started (InputStream opened)
+[MIC_PANEL] [INFO] Recording stopped, processing thread started
+[MIC_PANEL] [INFO] Processing 6.4s of recorded audio
+[MIC_PANEL] [INFO] WAV size: 204844 bytes
+[MIC_PANEL] [INFO] Transcribed: 'toggle mode, toggle the talk, toggle the talk unmuted, toggle the talk unmuted.'
+[MIC_PANEL] [INFO] Injected 79 chars + Enter into REPO_claude_code_voice_mode_01 (PID 25276)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'toggle mode, toggle the talk, toggle the talk unmuted, toggle the talk unmuted.'
+[MIC_PANEL] [INFO] Recording started (InputStream opened)
+[MIC_PANEL] [INFO] Recording stopped, processing thread started
+[MIC_PANEL] [INFO] Processing 20.2s of recorded audio
+[MIC_PANEL] [INFO] WAV size: 645164 bytes
+[MIC_PANEL] [INFO] Transcribed: 'Test test test 1 2 3 testing 1 2 3 testing 1 2 3 test test test 1 2 3'
+[MIC_PANEL] [INFO] Injected 69 chars + Enter into REPO_claude_code_voice_mode_01 (PID 25276)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'Test test test 1 2 3 testing 1 2 3 testing 1 2 3 test test test 1 2 3'
+[MIC_PANEL] [INFO] Mode changed to: push_to_talk
+[MIC_PANEL] [INFO] Recording started (InputStream opened)
+[MIC_PANEL] [INFO] Recording stopped, processing thread started
+[MIC_PANEL] [INFO] Processing 14.6s of recorded audio
+[MIC_PANEL] [INFO] WAV size: 466988 bytes
+[MIC_PANEL] [INFO] Transcribed: 'toggle to talk and is not actually working. I think what I wanted was toggle to talk to pause and then you pick it up and respond while the mic is still hot.'
+[MIC_PANEL] [INFO] Injected 157 chars + Enter into REPO_claude_code_voice_mode_01 (PID 25276)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'toggle to talk and is not actually working. I think what I wanted was toggle to talk to pause and then you pick it up and respond while the mic is still hot.'
+[MIC_PANEL] [INFO] Recording started (InputStream opened)
+[MIC_PANEL] [INFO] Recording stopped, processing thread started
+[MIC_PANEL] [INFO] Processing 0.5s of recorded audio
+[MIC_PANEL] [INFO] Recording was silence, skipping transcription
+[MIC_PANEL] [INFO] Recording started (InputStream opened)
+[MIC_PANEL] [INFO] Recording stopped, processing thread started
+[MIC_PANEL] [INFO] Processing 12.2s of recorded audio
+[MIC_PANEL] [INFO] WAV size: 391212 bytes
+[MIC_PANEL] [INFO] Transcribed: 'Yes, but no shortcuts, completely remove all references to always on in the code. Don't leave any other references to always on in the code, completely remove it.'
+[MIC_PANEL] [INFO] Injected 162 chars + Enter into REPO_claude_code_voice_mode_01 (PID 25276)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'Yes, but no shortcuts, completely remove all references to always on in the code. Don't leave any other references to always on in the code, completely remove it.'
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 27524 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 27524
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 7236)
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 25348 on port 8787)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 25348
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 12132)
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Input device changed to: Headset (JBL TUNE510BT)
+[MIC_PANEL] [INFO] Recording started (InputStream opened)
+[MIC_PANEL] [INFO] Recording stopped, processing thread started
+[MIC_PANEL] [INFO] Processing 16.8s of recorded audio
+[MIC_PANEL] [INFO] WAV size: 538668 bytes
+[MIC_PANEL] [INFO] Transcribed: 'Let's discuss VAD, voice activation where I speak in toggle to talk mode, it waits 1.45 seconds for silence before responding while the mic is live hot.'
+[MIC_PANEL] [INFO] Discovered terminal: REPO_claude_code_voice_mode_01 (PID 4392)
+[MIC_PANEL] [INFO] Auto-selected terminal: REPO_claude_code_voice_mode_01
+[MIC_PANEL] [INFO] Injected 152 chars + Enter into REPO_claude_code_voice_mode_01 (PID 4392)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'Let's discuss VAD, voice activation where I speak in toggle to talk mode, it waits 1.45 seconds for silence before responding while the mic is live hot.'
+[MIC_PANEL] [INFO] Discovered terminal: REPO_claude_code_voice_mode_01 (PID 4392)
+[MIC_PANEL] [INFO] Discovered terminal: REPO_claude_code_voice_mode_01 (PID 5632)
+[MIC_PANEL] [INFO] Recording started (InputStream opened)
+[MIC_PANEL] [INFO] Recording stopped, processing thread started
+[MIC_PANEL] [INFO] Processing 9.1s of recorded audio
+[MIC_PANEL] [INFO] Recording was silence, skipping transcription
+[MIC_PANEL] [INFO] Recording started (InputStream opened)
+[MIC_PANEL] [INFO] Recording stopped, processing thread started
+[MIC_PANEL] [INFO] Processing 19.3s of recorded audio
+[MIC_PANEL] [INFO] Recording was silence, skipping transcription
+[MIC_PANEL] [INFO] Mute: False
+[MIC_PANEL] [INFO] Recording started (InputStream opened)
+[MIC_PANEL] [INFO] Recording stopped, processing thread started
+[MIC_PANEL] [INFO] Processing 9.6s of recorded audio
+[MIC_PANEL] [INFO] Recording was silence, skipping transcription
+[MIC_PANEL] [INFO] Discovered terminal: REPO_claude_code_voice_mode_01 (PID 4392)
+[MIC_PANEL] [INFO] Recording started (InputStream opened)
+[MIC_PANEL] [INFO] Recording stopped, processing thread started
+[MIC_PANEL] [INFO] Processing 8.1s of recorded audio
+[MIC_PANEL] [INFO] Recording was silence, skipping transcription
+[MIC_PANEL] [INFO] Recording started (InputStream opened)
+[MIC_PANEL] [INFO] Recording stopped, processing thread started
+[MIC_PANEL] [INFO] Processing 2.2s of recorded audio
+[MIC_PANEL] [INFO] Recording was silence, skipping transcription
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 500 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 500
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 19108)
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 27956 on port 8787)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 27956
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 20564)
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Input device changed to: Headset (JBL TUNE510BT)
+[MIC_PANEL] [INFO] Shared audio stream opened on device: Headset (JBL TUNE510BT) (index=4)
+[MIC_PANEL] [ERROR] Shared audio stream error: Error opening InputStream: Unanticipated host error [PaErrorCode -9999]: 'Undefined external error.' [MME error 1]
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 6672 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 6672
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 23144)
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 21688 on port 8787)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 21688
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 31572)
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Mute: False
+[MIC_PANEL] [INFO] Discovered terminal: REPO_claude_code_voice_mode_01 (PID 31908)
+[MIC_PANEL] [INFO] Auto-selected terminal: REPO_claude_code_voice_mode_01
+[MIC_PANEL] [INFO] Mute: True
+[MIC_PANEL] [INFO] Mute: False
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 8588 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 8588
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 30468)
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 3836 on port 8787)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 3836
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 20896)
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Refreshed input devices: 5 found
+[MIC_PANEL] [INFO] Input device changed to: Headset (JBL TUNE510BT)
+[MIC_PANEL] [INFO] Shared audio stream opened on device: Headset (JBL TUNE510BT) (index=4)
+[MIC_PANEL] [WARNING] Audio stream status: input overflow
+[MIC_PANEL] [WARNING] Audio stream status: input overflow
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 33856 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 33856
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 32800)
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 35228 on port 8787)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 35228
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 27932)
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Restarting mic panel...
+[MIC_PANEL] [INFO] Discovered terminal: REPO_claude_code_voice_mode_01 (PID 19928)
+[MIC_PANEL] [INFO] Auto-selected terminal: REPO_claude_code_voice_mode_01
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Input device changed to: Headset (JBL TUNE510BT)
+[MIC_PANEL] [INFO] Shared audio stream opened on device: Headset (JBL TUNE510BT) (index=4)
+[MIC_PANEL] [INFO] Restarting mic panel...
+[MIC_PANEL] [INFO] Restored input device from prefs: Windows Default
+[MIC_PANEL] [INFO] Discovered terminal: REPO_claude_code_voice_mode_01 (PID 19928)
+[MIC_PANEL] [INFO] Auto-selected terminal: REPO_claude_code_voice_mode_01
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Restarting mic panel...
+[MIC_PANEL] [INFO] Restored input device from prefs: Headset (JBL TUNE510BT)
+[MIC_PANEL] [INFO] Discovered terminal: REPO_claude_code_voice_mode_01 (PID 19928)
+[MIC_PANEL] [INFO] Auto-selected terminal: REPO_claude_code_voice_mode_01
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped (no frames captured)
+[MIC_PANEL] [INFO] Mute: False
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped (no frames captured)
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped (no frames captured)
+[MIC_PANEL] [INFO] Input device changed to: Windows Default
+[MIC_PANEL] [INFO] Shared audio stream opened on device: Windows Default (index=None)
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped, 54 frames captured, processing...
+[MIC_PANEL] [INFO] Processing 3.5s of recorded audio (54 frames, RMS=72.2, peak=642)
+[MIC_PANEL] [INFO] WAV size: 110636 bytes
+[MIC_PANEL] [INFO] Transcribed: 'Test test test one two three four testing'
+[MIC_PANEL] [INFO] Injected 41 chars + Enter into REPO_claude_code_voice_mode_01 (PID 19928)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'Test test test one two three four testing'
+[MIC_PANEL] [INFO] Input device changed to: Microphone Array (Intel® Smart 
+[MIC_PANEL] [INFO] Shared audio stream opened on device: Microphone Array (Intel® Smart  (index=1)
+[MIC_PANEL] [INFO] Shared audio stream closed
+[MIC_PANEL] [INFO] Refreshed input devices: 5 found
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped, 42 frames captured, processing...
+[MIC_PANEL] [INFO] Processing 2.7s of recorded audio (42 frames, RMS=85.8, peak=708)
+[MIC_PANEL] [INFO] WAV size: 86060 bytes
+[MIC_PANEL] [INFO] Transcribed: 'Test, test, test, one, two, three, four, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test'
+[MIC_PANEL] [INFO] Injected 669 chars + Enter into REPO_claude_code_voice_mode_01 (PID 19928)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'Test, test, test, one, two, three, four, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test'
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped, 61 frames captured, processing...
+[MIC_PANEL] [INFO] Processing 3.9s of recorded audio (61 frames, RMS=112.7, peak=941)
+[MIC_PANEL] [INFO] WAV size: 124972 bytes
+[MIC_PANEL] [INFO] Transcribed: 'The quick brown fox jumps over the lazy dog.'
+[MIC_PANEL] [INFO] Injected 44 chars + Enter into REPO_claude_code_voice_mode_01 (PID 19928)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'The quick brown fox jumps over the lazy dog.'
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped, 36 frames captured, processing...
+[MIC_PANEL] [INFO] Processing 2.3s of recorded audio (36 frames, RMS=79.2, peak=535)
+[MIC_PANEL] [INFO] WAV size: 73772 bytes
+[MIC_PANEL] [INFO] Transcribed: 'Which branch is this?'
+[MIC_PANEL] [INFO] Injected 21 chars + Enter into REPO_claude_code_voice_mode_01 (PID 19928)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'Which branch is this?'
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped, 121 frames captured, processing...
+[MIC_PANEL] [INFO] Processing 7.7s of recorded audio (121 frames, RMS=77.4, peak=622)
+[MIC_PANEL] [INFO] WAV size: 247852 bytes
+[MIC_PANEL] [INFO] Transcribed: 'Are you able to commit the changes that we just made to branch 8? Commit and remote or push?'
+[MIC_PANEL] [INFO] Injected 92 chars + Enter into REPO_claude_code_voice_mode_01 (PID 19928)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'Are you able to commit the changes that we just made to branch 8? Commit and remote or push?'
+[MIC_PANEL] [INFO] Restarting mic panel...
+[MIC_PANEL] [INFO] Restored input device from prefs: Microphone Array (Intel® Smart 
+[MIC_PANEL] [INFO] Discovered terminal: REPO_claude_code_voice_mode_01 (PID 19928)
+[MIC_PANEL] [INFO] Auto-selected terminal: REPO_claude_code_voice_mode_01
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [WARNING] No process found on port 7851 for AllTalk TTS
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 12180 on port 8787)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 12180
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 27140)
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Restored input device from prefs: Microphone Array (Intel® Smart 
+[MIC_PANEL] [INFO] Discovered terminal: REPO_claude_code_voice_mode_01 (PID 19928)
+[MIC_PANEL] [INFO] Auto-selected terminal: REPO_claude_code_voice_mode_01
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped (no frames captured)
+[MIC_PANEL] [INFO] Discovered terminal: REPO_claude_code_voice_mode_01 (PID 19928)
+[MIC_PANEL] [INFO] Discovered terminal: REPO_claude_code_voice_mode_01 (PID 6856)
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped (no frames captured)
+[MIC_PANEL] [INFO] Mute: False
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped (no frames captured)
+[MIC_PANEL] [INFO] Input device changed to: Windows Default
+[MIC_PANEL] [INFO] Shared audio stream opened on device: Windows Default (index=None)
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped, 64 frames captured, processing...
+[MIC_PANEL] [INFO] Processing 4.1s of recorded audio (64 frames, RMS=123.3, peak=838)
+[MIC_PANEL] [INFO] WAV size: 131116 bytes
+[MIC_PANEL] [INFO] Transcribed: 'Are we able to add what cloud code does for streaming and unstreaming?'
+[MIC_PANEL] [INFO] Injected 70 chars + Enter into REPO_claude_code_voice_mode_01 (PID 19928)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'Are we able to add what cloud code does for streaming and unstreaming?'
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped, 158 frames captured, processing...
+[MIC_PANEL] [INFO] Processing 10.1s of recorded audio (158 frames, RMS=126.6, peak=853)
+[MIC_PANEL] [INFO] WAV size: 323628 bytes
+[MIC_PANEL] [INFO] Transcribed: 'Are we able to add the streaming and unstreaming generational button to make the generational button on the all talk affect all cloud code?'
+[MIC_PANEL] [INFO] Injected 139 chars + Enter into REPO_claude_code_voice_mode_01 (PID 19928)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'Are we able to add the streaming and unstreaming generational button to make the generational button on the all talk affect all cloud code?'
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped, 30 frames captured, processing...
+[MIC_PANEL] [INFO] Processing 1.9s of recorded audio (30 frames, RMS=122.2, peak=1021)
+[MIC_PANEL] [INFO] WAV size: 61484 bytes
+[MIC_PANEL] [INFO] Transcribed: 'Test test test one two three'
+[MIC_PANEL] [WARNING] AttachConsole(19928) failed (error 87)
+[MIC_PANEL] [INFO] Discovered terminal: REPO_claude_code_voice_mode_01 (PID 6856)
+[MIC_PANEL] [INFO] Discovered terminal: REPO_claude_code_voice_mode_01 (PID 6856)
+[MIC_PANEL] [INFO] Injected 28 chars + Enter into REPO_claude_code_voice_mode_01 (PID 6856)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'Test test test one two three'
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped, 170 frames captured, processing...
+[MIC_PANEL] [INFO] Processing 10.9s of recorded audio (170 frames, RMS=162.5, peak=1345)
+[MIC_PANEL] [INFO] WAV size: 348204 bytes
+[MIC_PANEL] [INFO] Transcribed: 'For the generational button in all talk, can we tie that to cloud codes? Command to stream or not stream?'
+[MIC_PANEL] [INFO] Injected 105 chars + Enter into REPO_claude_code_voice_mode_01 (PID 6856)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'For the generational button in all talk, can we tie that to cloud codes? Command to stream or not stream?'
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped, 94 frames captured, processing...
+[MIC_PANEL] [INFO] Processing 6.0s of recorded audio (94 frames, RMS=73.6, peak=877)
+[MIC_PANEL] [INFO] WAV size: 192556 bytes
+[MIC_PANEL] [INFO] Transcribed: 'Yes, add that to the plan.'
+[MIC_PANEL] [INFO] Injected 26 chars + Enter into REPO_claude_code_voice_mode_01 (PID 6856)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'Yes, add that to the plan.'
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped, 151 frames captured, processing...
+[MIC_PANEL] [INFO] Processing 9.7s of recorded audio (151 frames, RMS=153.3, peak=1196)
+[MIC_PANEL] [INFO] WAV size: 309292 bytes
+[MIC_PANEL] [INFO] Transcribed: 'No, it needs to be moved to the other section the advanced engine Section it needs to be removed from the clod section'
+[MIC_PANEL] [INFO] Injected 118 chars + Enter into REPO_claude_code_voice_mode_01 (PID 6856)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'No, it needs to be moved to the other section the advanced engine Section it needs to be removed from the clod section'
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped, 88 frames captured, processing...
+[MIC_PANEL] [INFO] Processing 5.6s of recorded audio (88 frames, RMS=153.1, peak=1330)
+[MIC_PANEL] [INFO] WAV size: 180268 bytes
+[MIC_PANEL] [INFO] Transcribed: 'What about the dual wiring one for all talking the other one to cloud code?'
+[MIC_PANEL] [INFO] Injected 75 chars + Enter into REPO_claude_code_voice_mode_01 (PID 6856)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'What about the dual wiring one for all talking the other one to cloud code?'
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped, 135 frames captured, processing...
+[MIC_PANEL] [INFO] Processing 8.6s of recorded audio (135 frames, RMS=138.7, peak=1085)
+[MIC_PANEL] [INFO] WAV size: 276524 bytes
+[MIC_PANEL] [INFO] Transcribed: 'Add generation mode to the bottom section, the advanced engine settings, remove it from the clod one.'
+[MIC_PANEL] [INFO] Injected 101 chars + Enter into REPO_claude_code_voice_mode_01 (PID 6856)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'Add generation mode to the bottom section, the advanced engine settings, remove it from the clod one.'
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped, 119 frames captured, processing...
+[MIC_PANEL] [INFO] Processing 7.6s of recorded audio (119 frames, RMS=166.5, peak=1226)
+[MIC_PANEL] [INFO] WAV size: 243756 bytes
+[MIC_PANEL] [INFO] Transcribed: 'So there was no way to use generational mode to tell quad code to change from streaming to non-streaming.'
+[MIC_PANEL] [INFO] Injected 105 chars + Enter into REPO_claude_code_voice_mode_01 (PID 6856)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'So there was no way to use generational mode to tell quad code to change from streaming to non-streaming.'
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped, 413 frames captured, processing...
+[MIC_PANEL] [INFO] Processing 26.4s of recorded audio (413 frames, RMS=144.8, peak=1492)
+[MIC_PANEL] [INFO] WAV size: 845868 bytes
+[MIC_PANEL] [INFO] Transcribed: 'Yes, move it back with full dual wiring and you got to make changes to all talk and it has to make changes to Claude code all of these Claude Availability is on all talk they need to mission needed they need to They need to be saved in a JSON for all talk this way when we reload it all the savings settings are saved'
+[MIC_PANEL] [INFO] Injected 317 chars + Enter into REPO_claude_code_voice_mode_01 (PID 6856)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'Yes, move it back with full dual wiring and you got to make changes to all talk and it has to make changes to Claude code all of these Claude Availability is on all talk they need to mission needed they need to They need to be saved in a JSON for all talk this way when we reload it all the savings settings are saved'
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped, 228 frames captured, processing...
+[MIC_PANEL] [INFO] Processing 14.6s of recorded audio (228 frames, RMS=172.3, peak=1191)
+[MIC_PANEL] [INFO] WAV size: 466988 bytes
+[MIC_PANEL] [INFO] Transcribed: 'We need to go ahead and make sure that there is a save file for all of these cloud capabilities on the all-talk side This way when we reload all talk we restart it all those settings are saved and confirmed'
+[MIC_PANEL] [INFO] Injected 206 chars + Enter into REPO_claude_code_voice_mode_01 (PID 6856)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'We need to go ahead and make sure that there is a save file for all of these cloud capabilities on the all-talk side This way when we reload all talk we restart it all those settings are saved and confirmed'
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 28688 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 28688
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 1640)
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 3636 on port 8787)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 3636
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 1272)
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Restored input device from prefs: Windows Default
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped (no frames captured)
+[MIC_PANEL] [INFO] Discovered terminal: REPO_claude_code_voice_mode_01 (PID 13904)
+[MIC_PANEL] [INFO] Auto-selected terminal: REPO_claude_code_voice_mode_01
+[MIC_PANEL] [INFO] Discovered terminal: REPO_claude_code_voice_mode_01 (PID 13904)
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped (no frames captured)
+[MIC_PANEL] [INFO] Refreshed input devices: 4 found
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped (no frames captured)
+[MIC_PANEL] [INFO] Input device changed to: Microphone Array (Intel® Smart 
+[MIC_PANEL] [INFO] Shared audio stream opened on device: Microphone Array (Intel® Smart  (index=1)
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped, 18 frames captured, processing...
+[MIC_PANEL] [INFO] Processing 1.2s of recorded audio (18 frames, RMS=133.5, peak=715)
+[MIC_PANEL] [INFO] WAV size: 36908 bytes
+[MIC_PANEL] [INFO] Transcribed: 'Test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test'
+[MIC_PANEL] [INFO] Injected 1114 chars + Enter into REPO_claude_code_voice_mode_01 (PID 13904)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'Test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test'
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped, 127 frames captured, processing...
+[MIC_PANEL] [INFO] Processing 8.1s of recorded audio (127 frames, RMS=147.8, peak=1192)
+[MIC_PANEL] [INFO] WAV size: 260140 bytes
+[MIC_PANEL] [INFO] Transcribed: 'In all talk, I just changed the cloud code speed setting for your voice to 2. Can you tell the difference?'
+[MIC_PANEL] [INFO] Injected 106 chars + Enter into REPO_claude_code_voice_mode_01 (PID 13904)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'In all talk, I just changed the cloud code speed setting for your voice to 2. Can you tell the difference?'
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped, 129 frames captured, processing...
+[MIC_PANEL] [INFO] Processing 8.3s of recorded audio (129 frames, RMS=169.4, peak=1257)
+[MIC_PANEL] [INFO] WAV size: 264236 bytes
+[MIC_PANEL] [INFO] Transcribed: 'No, it sounds the same. Can you check this because I thought you guys had settings on the cloud code side as well?'
+[MIC_PANEL] [INFO] Injected 114 chars + Enter into REPO_claude_code_voice_mode_01 (PID 13904)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'No, it sounds the same. Can you check this because I thought you guys had settings on the cloud code side as well?'
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped, 137 frames captured, processing...
+[MIC_PANEL] [INFO] Processing 8.8s of recorded audio (137 frames, RMS=209.4, peak=1353)
+[MIC_PANEL] [INFO] WAV size: 280620 bytes
+[MIC_PANEL] [INFO] Transcribed: 'Yes, any of the changes that we made, the settings, they all need to update either streaming or non-streaming in Cloud Code.'
+[MIC_PANEL] [INFO] Injected 124 chars + Enter into REPO_claude_code_voice_mode_01 (PID 13904)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'Yes, any of the changes that we made, the settings, they all need to update either streaming or non-streaming in Cloud Code.'
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped, 63 frames captured, processing...
+[MIC_PANEL] [INFO] Processing 4.0s of recorded audio (63 frames, RMS=176.6, peak=1228)
+[MIC_PANEL] [INFO] WAV size: 129068 bytes
+[MIC_PANEL] [INFO] Transcribed: 'Change the sample rate during pro pro playback'
+[MIC_PANEL] [INFO] Injected 46 chars + Enter into REPO_claude_code_voice_mode_01 (PID 13904)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'Change the sample rate during pro pro playback'
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 31476 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 31476
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 9084)
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 30732 on port 8787)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 30732
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 28680)
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Restored input device from prefs: Microphone Array (Intel® Smart 
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 39056 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 39056
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 30892)
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 36548 on port 8787)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 36548
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 13480)
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Restored input device from prefs: Microphone Array (Intel® Smart 
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [WARNING] No process found on port 7851 for AllTalk TTS
+[MIC_PANEL] [WARNING] No process found on port 8787 for Whisper STT
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Restored input device from prefs: Microphone Array (Intel® Smart 
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Discovered terminal: REPO_claude_code_voice_mode_01 (PID 14848)
+[MIC_PANEL] [INFO] Auto-selected terminal: REPO_claude_code_voice_mode_01
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 18736 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 18736
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 3524)
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 12088 on port 8787)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 12088
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 25432)
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Restored input device from prefs: Microphone Array (Intel® Smart 
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped (no frames captured)
+[MIC_PANEL] [INFO] Discovered terminal: REPO_claude_code_voice_mode_01 (PID 6392)
+[MIC_PANEL] [INFO] Auto-selected terminal: REPO_claude_code_voice_mode_01
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped (no frames captured)
+[MIC_PANEL] [INFO] Refreshed input devices: 5 found
+[MIC_PANEL] [INFO] Input device changed to: Microphone Array (Intel® Smart 
+[MIC_PANEL] [INFO] Shared audio stream opened on device: Microphone Array (Intel® Smart  (index=1)
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped, 51 frames captured, processing...
+[MIC_PANEL] [INFO] Processing 3.3s of recorded audio (51 frames, RMS=208.3, peak=1241)
+[MIC_PANEL] [INFO] WAV size: 104492 bytes
+[MIC_PANEL] [INFO] Transcribed: 'Does this repo have a cloud dot MD?'
+[MIC_PANEL] [INFO] Injected 35 chars + Enter into REPO_claude_code_voice_mode_01 (PID 6392)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'Does this repo have a cloud dot MD?'
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped, 14 frames captured, processing...
+[MIC_PANEL] [INFO] Processing 0.9s of recorded audio (14 frames, RMS=184.3, peak=933)
+[MIC_PANEL] [INFO] WAV size: 28716 bytes
+[MIC_PANEL] [INFO] Transcribed: 'Proceed.'
+[MIC_PANEL] [INFO] Injected 8 chars + Enter into REPO_claude_code_voice_mode_01 (PID 6392)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'Proceed.'
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 14856 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 14856
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 25996)
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 17464 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 17464
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 2872)
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 30244 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 30244
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 21776)
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 9416 on port 8787)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 9416
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 27676)
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Restored input device from prefs: Microphone Array (Intel® Smart 
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 29296 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 29296
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 7020)
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 27936 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 27936
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 28848)
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 28216 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 28216
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 10884)
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 14108 on port 8787)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 14108
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 4900)
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Restored input device from prefs: Microphone Array (Intel® Smart 
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 12112 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 12112
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 30412)
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 27652 on port 8787)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 27652
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 10968)
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Restored input device from prefs: Microphone Array (Intel® Smart 
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [ERROR] Shared audio stream error: main thread is not in main loop
+[MIC_PANEL] [INFO] Whisper STT not running — auto-starting...
+[MIC_PANEL] [INFO] Launching Whisper STT: cmd /c "cd /d F:\Apps\freedom_system\app_cabinet\whisper_stt && call venv\Scripts\activate.bat && python server.py"
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Service on port 8787 is ready
+[MIC_PANEL] [INFO] AllTalk TTS not running — auto-starting...
+[MIC_PANEL] [INFO] Launching AllTalk TTS: cmd /c "cd /d F:\Apps\freedom_system\app_cabinet\alltalk_tts && call start_alltalk.bat"
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Refreshed input devices: 4 found
+[MIC_PANEL] [INFO] Input device changed to: Windows Default
+[MIC_PANEL] [INFO] Shared audio stream opened on device: Windows Default (index=None)
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped, 356 frames captured, processing...
+[MIC_PANEL] [INFO] Processing 22.8s of recorded audio (356 frames, RMS=180.4, peak=1306)
+[MIC_PANEL] [INFO] WAV size: 729132 bytes
+[MIC_PANEL] [INFO] Transcribed: 'This looks a lot better, but the all-talk may be starting too late because the beginning of the all-talk console is missing. Plus, I'll need the web addresses to click on so that they'll pop up in the chrome.'
+[MIC_PANEL] [INFO] Discovered terminal: REPO_claude_code_voice_mode_01 (PID 29584)
+[MIC_PANEL] [INFO] Auto-selected terminal: REPO_claude_code_voice_mode_01
+[MIC_PANEL] [INFO] Injected 208 chars + Enter into REPO_claude_code_voice_mode_01 (PID 29584)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'This looks a lot better, but the all-talk may be starting too late because the beginning of the all-talk console is missing. Plus, I'll need the web addresses to click on so that they'll pop up in the chrome.'
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped, 53 frames captured, processing...
+[MIC_PANEL] [INFO] Processing 3.4s of recorded audio (53 frames, RMS=220.7, peak=1445)
+[MIC_PANEL] [INFO] WAV size: 108588 bytes
+[MIC_PANEL] [INFO] Transcribed: 'I'll talk usually has all this stuff when loading.'
+[MIC_PANEL] [INFO] Injected 50 chars + Enter into REPO_claude_code_voice_mode_01 (PID 29584)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'I'll talk usually has all this stuff when loading.'
+[MIC_PANEL] [INFO] Recording started (using shared stream)
+[MIC_PANEL] [INFO] Recording stopped, 183 frames captured, processing...
+[MIC_PANEL] [INFO] Processing 11.7s of recorded audio (183 frames, RMS=186.2, peak=1514)
+[MIC_PANEL] [INFO] WAV size: 374828 bytes
+[MIC_PANEL] [INFO] Transcribed: 'That also means that the whisper console and the all-talk console also need to be interactive so I can click on the link that will open up inside the Chrome.'
+[MIC_PANEL] [INFO] Injected 157 chars + Enter into REPO_claude_code_voice_mode_01 (PID 29584)
+[MIC_PANEL] [INFO] Successfully sent to terminal: 'That also means that the whisper console and the all-talk console also need to be interactive so I can click on the link that will open up inside the Chrome.'
+[MIC_PANEL] [WARNING] Audio stream status: input overflow
+[MIC_PANEL] [WARNING] Audio stream status: input overflow
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 14168 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 14168
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 5400)
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 17668 on port 8787)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 17668
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 10800)
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Restored input device from prefs: Windows Default
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Restored input device from prefs: Windows Default
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] About to start mainloop
+[MIC_PANEL] [ERROR] Shared audio stream error: main thread is not in main loop
+[MIC_PANEL] [INFO] _auto_start_services CALLED!
+[MIC_PANEL] [INFO] _auto_start_services RETURNED OK
+[MIC_PANEL] [INFO] Whisper STT already running — skipping auto-start
+[MIC_PANEL] [INFO] AllTalk TTS already running — skipping auto-start
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Stopping after 5 seconds
+[MIC_PANEL] [INFO] Mainloop ended
+[MIC_PANEL] [INFO] Restored input device from prefs: Windows Default
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] About to start mainloop
+[MIC_PANEL] [ERROR] Shared audio stream error: main thread is not in main loop
+[MIC_PANEL] [INFO] _is_service_running(8787) -> faking False
+[MIC_PANEL] [INFO] Whisper STT not running — auto-starting...
+[MIC_PANEL] [INFO] _start_whisper called (faked)
+[MIC_PANEL] [INFO] _wait_for_service_ready(8787) called (faked - returning True)
+[MIC_PANEL] [INFO] _is_service_running(7851) -> faking False
+[MIC_PANEL] [INFO] AllTalk TTS not running — auto-starting...
+[MIC_PANEL] [INFO] _start_alltalk called (faked)
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Stopping after 4 seconds
+[MIC_PANEL] [INFO] Mainloop ended
+[MIC_PANEL] [INFO] Creating panel...
+[MIC_PANEL] [INFO] Restored input device from prefs: Windows Default
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Starting mainloop
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] _is_service_running(8787) = False
+[MIC_PANEL] [INFO] Whisper STT not running — auto-starting...
+[MIC_PANEL] [INFO] _wait_for_service_ready(8787) FAKED
+[MIC_PANEL] [INFO] _launch_service(Whisper STT) FAKED
+[MIC_PANEL] [INFO] _is_service_running(7851) = False
+[MIC_PANEL] [INFO] AllTalk TTS not running — auto-starting...
+[MIC_PANEL] [INFO] _launch_service(AllTalk TTS) FAKED
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] === STOPPING ===
+[MIC_PANEL] [INFO] Done
+[MIC_PANEL] [INFO] Restored input device from prefs: Windows Default
+[MIC_PANEL] [INFO] Shared audio stream opened on device: Windows Default (index=None)
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Auto-start services triggered
+[MIC_PANEL] [INFO] Whisper STT already running — skipping auto-start
+[MIC_PANEL] [ERROR] Auto-start services failed
+Traceback (most recent call last):
+  File "F:\Apps\freedom_system\REPO_claude_code_voice_mode\mic_panel.py", line 949, in _do_auto_start
+    _append_to_text_widget(self._whisper_text, "[INFO] Whisper STT already running on port 8787\n")
+  File "F:\Apps\freedom_system\REPO_claude_code_voice_mode\mic_panel.py", line 196, in _append_to_text_widget
+    widget.after(0, _do)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\tkinter\__init__.py", line 850, in after
+    name = self._register(callit)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\tkinter\__init__.py", line 1557, in _register
+    self.tk.createcommand(name, f)
+RuntimeError: main thread is not in main loop
+[MIC_PANEL] [INFO] Restored input device from prefs: Windows Default
+[MIC_PANEL] [INFO] Shared audio stream opened on device: Windows Default (index=None)
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Auto-start services triggered
+[MIC_PANEL] [INFO] Whisper STT not running — auto-starting...
+[MIC_PANEL] [INFO] Launching Whisper STT: cmd /c "cd /d F:\Apps\freedom_system\app_cabinet\whisper_stt && call venv\Scripts\activate.bat && python server.py"
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Service on port 8787 is ready
+[MIC_PANEL] [INFO] AllTalk TTS not running — auto-starting...
+[MIC_PANEL] [INFO] Launching AllTalk TTS: cmd /c "cd /d F:\Apps\freedom_system\app_cabinet\alltalk_tts && call start_alltalk.bat"
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Opened new terminal: REPO_claude_code_voice_mode_01 in F:\Apps\freedom_system\REPO_claude_code_voice_mode
+[MIC_PANEL] [INFO] Discovered terminal: REPO_claude_code_voice_mode_01 (PID 60248)
+[MIC_PANEL] [INFO] Auto-selected terminal: REPO_claude_code_voice_mode_01
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 47148 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 47148
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 36852)
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 41192 on port 8787)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 41192
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 64316)
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Shared audio stream closed
+[MIC_PANEL] [INFO] Restored input device from prefs: Windows Default
+[MIC_PANEL] [INFO] Shared audio stream opened on device: Windows Default (index=None)
+[MIC_PANEL] [INFO] Discovered terminal: REPO_claude_code_voice_mode_01 (PID 60248)
+[MIC_PANEL] [INFO] Auto-selected terminal: REPO_claude_code_voice_mode_01
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Auto-start services triggered
+[MIC_PANEL] [INFO] Whisper STT not running — auto-starting...
+[MIC_PANEL] [INFO] Launching Whisper STT: cmd /c "cd /d F:\Apps\freedom_system\app_cabinet\whisper_stt && call venv\Scripts\activate.bat && python server.py"
+[MIC_PANEL] [INFO] Service on port 8787 is ready
+[MIC_PANEL] [INFO] AllTalk TTS not running — auto-starting...
+[MIC_PANEL] [INFO] Launching AllTalk TTS: cmd /c "cd /d F:\Apps\freedom_system\app_cabinet\alltalk_tts && call start_alltalk.bat"
+[MIC_PANEL] [WARNING] Audio stream status: input overflow
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 39140 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 39140
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 19360)
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 40948 on port 8787)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 40948
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 4908)
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Restored input device from prefs: Windows Default
+[MIC_PANEL] [INFO] Shared audio stream opened on device: Windows Default (index=None)
+[MIC_PANEL] [INFO] Discovered terminal: REPO_claude_code_voice_mode_01 (PID 60248)
+[MIC_PANEL] [INFO] Auto-selected terminal: REPO_claude_code_voice_mode_01
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Auto-start services triggered
+[MIC_PANEL] [INFO] Whisper STT not running — auto-starting...
+[MIC_PANEL] [INFO] Launching Whisper STT: cmd /c "cd /d F:\Apps\freedom_system\app_cabinet\whisper_stt && call venv\Scripts\activate.bat && python server.py"
+[MIC_PANEL] [INFO] Service on port 8787 is ready
+[MIC_PANEL] [INFO] AllTalk TTS not running — auto-starting...
+[MIC_PANEL] [INFO] Launching AllTalk TTS: cmd /c "cd /d F:\Apps\freedom_system\app_cabinet\alltalk_tts && call start_alltalk.bat"
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 63676 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 63676
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 51416)
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 44340 on port 8787)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 44340
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 7584)
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Restored input device from prefs: Windows Default
+[MIC_PANEL] [INFO] Shared audio stream opened on device: Windows Default (index=None)
+[MIC_PANEL] [INFO] Discovered terminal: REPO_claude_code_voice_mode_01 (PID 60248)
+[MIC_PANEL] [INFO] Auto-selected terminal: REPO_claude_code_voice_mode_01
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Auto-start services triggered
+[MIC_PANEL] [INFO] Whisper STT not running — auto-starting...
+[MIC_PANEL] [INFO] Launching Whisper STT: cmd /c "cd /d F:\Apps\freedom_system\app_cabinet\whisper_stt && call venv\Scripts\activate.bat && python server.py"
+[MIC_PANEL] [INFO] Service on port 8787 is ready
+[MIC_PANEL] [INFO] AllTalk TTS not running — auto-starting...
+[MIC_PANEL] [INFO] Launching AllTalk TTS: cmd /c "cd /d F:\Apps\freedom_system\app_cabinet\alltalk_tts && call start_alltalk.bat"
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 33288 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 33288
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 9388)
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 39132 on port 8787)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 39132
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 24828)
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Shared audio stream closed
+[MIC_PANEL] [INFO] Restored input device from prefs: Windows Default
+[MIC_PANEL] [INFO] Shared audio stream opened on device: Windows Default (index=None)
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Auto-start services triggered
+[MIC_PANEL] [INFO] Whisper STT not running — auto-starting...
+[MIC_PANEL] [INFO] Launching Whisper STT: cd /d F:\Apps\freedom_system\app_cabinet\whisper_stt && call venv\Scripts\activate.bat && python server.py
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Service on port 8787 is ready
+[MIC_PANEL] [INFO] AllTalk TTS not running — auto-starting...
+[MIC_PANEL] [INFO] Launching AllTalk TTS: cd /d F:\Apps\freedom_system\app_cabinet\alltalk_tts && call start_alltalk.bat
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Opened new terminal: REPO_waiver_01 in F:\Apps\freedom_system\REPO_waiver
+[MIC_PANEL] [INFO] Discovered terminal: REPO_waiver_01 (PID 11952)
+[MIC_PANEL] [INFO] Auto-selected terminal: REPO_waiver_01
+[MIC_PANEL] [WARNING] Audio stream status: input overflow
+[MIC_PANEL] [WARNING] Audio stream status: input overflow
+[MIC_PANEL] [WARNING] Audio stream status: input overflow
+[MIC_PANEL] [WARNING] Audio stream status: input overflow
+[MIC_PANEL] [WARNING] Audio stream status: input overflow
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 23020 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 23020
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 19668)
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 20132 on port 8787)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 20132
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 18532)
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Restored input device from prefs: Windows Default
+[MIC_PANEL] [INFO] Shared audio stream opened on device: Windows Default (index=None)
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Auto-start services triggered
+[MIC_PANEL] [INFO] Whisper STT not running — auto-starting...
+[MIC_PANEL] [INFO] Launching Whisper STT: cd /d F:\Apps\freedom_system\app_cabinet\whisper_stt && call venv\Scripts\activate.bat && python server.py
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [WARNING] Audio stream status: input overflow
+[MIC_PANEL] [INFO] Service on port 8787 is ready
+[MIC_PANEL] [INFO] AllTalk TTS not running — auto-starting...
+[MIC_PANEL] [INFO] Launching AllTalk TTS: cd /d F:\Apps\freedom_system\app_cabinet\alltalk_tts && call start_alltalk.bat
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [WARNING] Audio stream status: input overflow
+[MIC_PANEL] [INFO] Opened new terminal: REPO_punithVT_01 in F:\Apps\freedom_system\REPO_punithVT
+[MIC_PANEL] [WARNING] Audio stream status: input overflow
+[MIC_PANEL] [INFO] Discovered terminal: REPO_punithVT_01 (PID 49300)
+[MIC_PANEL] [INFO] Auto-selected terminal: REPO_punithVT_01
+[MIC_PANEL] [WARNING] Audio stream status: input overflow
+[MIC_PANEL] [INFO] Input device changed to: Headset (JBL Live 770NC)
+[MIC_PANEL] [INFO] Shared audio stream opened on device: Headset (JBL Live 770NC) (index=2)
+[MIC_PANEL] [INFO] Shared audio stream closed
+[MIC_PANEL] [WARNING] Audio stream status: input overflow
+[MIC_PANEL] [WARNING] Audio stream status: input overflow
+[MIC_PANEL] [WARNING] Audio stream status: input overflow
+[MIC_PANEL] [INFO] Restarting AllTalk TTS...
+[MIC_PANEL] [INFO] Killing AllTalk TTS (PID 27780) on port 7851
+[MIC_PANEL] [INFO] Launching AllTalk TTS: cd /d F:\Apps\freedom_system\app_cabinet\alltalk_tts && call start_alltalk.bat
+[MIC_PANEL] [WARNING] Service on port 7851 did not become ready within 60s
+[MIC_PANEL] [WARNING] No process found on port 7851 for AllTalk TTS
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 33416 on port 8787)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 33416
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 36500)
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Restored input device from prefs: Headset (JBL Live 770NC)
+[MIC_PANEL] [INFO] Shared audio stream opened on device: Headset (JBL Live 770NC) (index=2)
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Auto-start services triggered
+[MIC_PANEL] [INFO] Whisper STT not running — auto-starting...
+[MIC_PANEL] [INFO] Launching Whisper STT: cd /d F:\Apps\freedom_system\app_cabinet\whisper_stt && call venv\Scripts\activate.bat && python server.py
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Service on port 8787 is ready
+[MIC_PANEL] [INFO] AllTalk TTS not running — auto-starting...
+[MIC_PANEL] [INFO] Launching AllTalk TTS: cd /d F:\Apps\freedom_system\app_cabinet\alltalk_tts && call start_alltalk.bat
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Opened new terminal: REPO_claude_code_voice_mode_01 in F:\Apps\freedom_system\REPO_claude_code_voice_mode
+[MIC_PANEL] [INFO] Discovered terminal: REPO_claude_code_voice_mode_01 (PID 15608)
+[MIC_PANEL] [INFO] Auto-selected terminal: REPO_claude_code_voice_mode_01
+[MIC_PANEL] [INFO] Opened new terminal: REPO_punithVT_01 in F:\Apps\freedom_system\REPO_punithVT
+[MIC_PANEL] [INFO] Discovered terminal: REPO_punithVT_01 (PID 33520)
+[MIC_PANEL] [INFO] Auto-selected terminal: REPO_punithVT_01
+[MIC_PANEL] [INFO] Shutting down AllTalk TTS (PID 29672 on port 7851)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 29672
+[MIC_PANEL] [INFO] AllTalk TTS shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 28148)
+[MIC_PANEL] [INFO] AllTalk TTS shutdown complete
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 32324 on port 8787)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 32324
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 9196)
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Saved device 'Headset (JBL Live 770NC)' not available, using Windows Default
+[MIC_PANEL] [INFO] Shared audio stream opened on device: Windows Default (index=None)
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Auto-start services triggered
+[MIC_PANEL] [INFO] Whisper STT not running — auto-starting...
+[MIC_PANEL] [INFO] Launching Whisper STT: cd /d F:\Apps\freedom_system\app_cabinet\whisper_stt && call venv\Scripts\activate.bat && python server.py
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Service on port 8787 is ready
+[MIC_PANEL] [INFO] AllTalk TTS not running — auto-starting...
+[MIC_PANEL] [INFO] Launching AllTalk TTS: cd /d F:\Apps\freedom_system\app_cabinet\alltalk_tts && call start_alltalk.bat
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Opened new terminal: REPO_punithVT_01 in F:\Apps\freedom_system\REPO_punithVT
+[MIC_PANEL] [INFO] Discovered terminal: REPO_punithVT_01 (PID 46168)
+[MIC_PANEL] [INFO] Auto-selected terminal: REPO_punithVT_01
+[MIC_PANEL] [WARNING] Audio stream status: input overflow
+[MIC_PANEL] [WARNING] Audio stream status: input overflow
+[MIC_PANEL] [WARNING] No process found on port 7851 for AllTalk TTS
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 30016 on port 8787)...
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 30016
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Closing terminal window (cmd.exe PID 48972)
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down

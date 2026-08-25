@@ -1,0 +1,185 @@
+# Fix: Streaming TTS Infinite Loop — DMAIC Process
+# Date: 2026-02-07
+# Repo: REPO_claude_code_voice_mode
+# Branch: Branch03_claude_code_voice_mode-setup-streaming-stt
+
+---
+
+## PHASE 1: DEFINE
+
+Symptom: The `speak` MCP tool freezes Claude Code. The user must interrupt the tool call every time.
+
+Expected behavior: `speak` plays audio through speakers and returns control to Claude Code within seconds.
+
+When it started: After streaming TTS was added (commit e10e8bc).
+
+Reproduction: 100% reproducible — every `speak` call freezes.
+
+Log evidence (F:\Apps\freedom_system\log\claude_code_voice_mode.log):
+- Lines 162-163: "Streaming TTS: 24000Hz, 1ch, 16bit" then server restarts (function never returned)
+- Lines 170-171, 178-179, 190-191: Same pattern on every call
+- Lines 180-182, 192: "Request 2 cancelled - duplicate response suppressed" — MCP framework cancelled the hanging call
+
+---
+
+## PHASE 2: ANALYZE
+
+### Root cause — VERIFIED
+
+The bug is in speak_text_streaming() lines 323-328 of claude_code_voice_mode_mcp_server.py:
+
+    while stream.active:  # <-- INFINITE LOOP
+        if is_tts_paused():
+            break
+        time.sleep(0.05)
+    stream.stop()  # <-- never reached
+
+Verification of RawOutputStream.active behavior:
+
+From sounddevice.py lines 1022-1028:
+  "A stream is active after a successful call to start(), until it becomes inactive
+   either as a result of a call to stop() or abort(), or as a result of an exception
+   raised in the stream callback."
+
+Our stream at line 288-290 has NO callback:
+    stream = sd.RawOutputStream(samplerate=sr, channels=ch, dtype=dtype)
+
+Therefore `active` can ONLY become False via stop() — but stop() is AFTER the loop.
+INFINITE LOOP CONFIRMED.
+
+Verification of "Request cancelled" log:
+
+From mcp/server/lowlevel/server.py lines 766-771: this message is logged when
+anyio.CancelledError is raised, confirming Claude Code's MCP client timed out and
+cancelled the hung call.
+
+Verification of write behavior:
+
+From sounddevice.py lines 1535-1540: write() blocks until "the entire buffer has been
+consumed." This means audio plays approximately in real-time as chunks are written,
+and very little audio remains buffered when the HTTP stream ends.
+
+---
+
+## PHASE 3: SOLUTION
+
+### Approach: Time-based drain with safety timeout
+
+Replace the `while stream.active` loop with a calculated wait time based on actual
+audio data written.
+
+Why this addresses root cause (not symptoms):
+- The root cause is using an API (stream.active) that doesn't do what the code expects
+- The fix replaces it with a correct mechanism: calculating remaining playback time
+  from known quantities (bytes written, sample rate, elapsed time)
+
+Why not other approaches:
+- stream.write_available — PortAudio doesn't expose total buffer capacity, unreliable
+- Fixed timeout — would either cut off long audio or add unnecessary delay
+- Callback-based stream — correct but much larger rewrite, unnecessary for this fix
+
+### Streaming architecture PRESERVED:
+- AllTalk streaming endpoint (/api/tts-generate-streaming) — unchanged
+- sd.RawOutputStream for real-time chunk playback — unchanged
+- WAV header parsing — unchanged
+- Chunk-by-chunk iter_content loop — unchanged
+- TTS pause support — unchanged
+- Three-method fallback (streaming -> OpenAI -> native) — unchanged
+
+### File affected
+F:\Apps\freedom_system\REPO_claude_code_voice_mode\claude_code_voice_mode_mcp_server.py
+
+### Changes (3 edits to speak_text_streaming, lines 249-334)
+
+EDIT 1 — Add tracking variables (after `remainder = b""` at line 295):
+
+    total_bytes_written = 0
+    playback_start = time.monotonic()
+
+EDIT 2 — Track bytes written (after each stream.write() call):
+- After line 311 stream.write(data[:usable]): add total_bytes_written += usable
+- After line 320 stream.write(remainder): add total_bytes_written += len(remainder)
+
+EDIT 3 — Replace the finally block (lines 322-331):
+
+REMOVE:
+    finally:
+        while stream.active:
+            if is_tts_paused():
+                logger.info("Draining stopped: TTS paused")
+                break
+            time.sleep(0.05)
+        stream.stop()
+        stream.close()
+        response.close()
+
+REPLACE WITH:
+    finally:
+        # Calculate remaining playback time from tracked data
+        total_frames = total_bytes_written // frame_size
+        total_duration = total_frames / sr if sr > 0 else 0.0
+        elapsed = time.monotonic() - playback_start
+        output_latency = stream.latency if isinstance(stream.latency, (int, float)) else 0.1
+        remaining = total_duration - elapsed + output_latency
+
+        SAFETY_TIMEOUT = 30.0
+        drain_time = max(0.0, min(remaining, SAFETY_TIMEOUT))
+
+        if drain_time > 0 and not is_tts_paused():
+            logger.info(f"Draining audio: {drain_time:.2f}s remaining")
+            drain_deadline = time.monotonic() + drain_time
+            while time.monotonic() < drain_deadline:
+                if is_tts_paused():
+                    logger.info("Draining stopped: TTS paused")
+                    break
+                time.sleep(0.05)
+
+        stream.stop()
+        stream.close()
+        response.close()
+
+How the drain calculation works:
+1. Tracks total bytes pushed to audio stream during streaming
+2. After HTTP stream ends: remaining = total_audio_duration - elapsed_wall_time + output_latency
+3. Since write() blocks until data is consumed, most audio has already played —
+   remaining is typically near zero
+4. 30s safety timeout guarantees termination regardless
+5. TTS pause check preserved every 50ms
+
+Edge cases handled:
+- Short audio (<1s): elapsed >= total_duration, drain_time clamps to 0, returns immediately
+- Zero-length audio: total_frames = 0, drain skipped
+- Exception during streaming: finally block runs, drain calculation uses partial data
+- Division by zero: sr > 0 guard
+- TTS paused during drain: checked every 50ms, breaks immediately
+
+---
+
+## PHASE 4: APPROVAL
+
+Problem: `speak` tool freezes Claude Code due to infinite loop in streaming TTS drain.
+
+Root cause: `while stream.active` never becomes False for a RawOutputStream without
+a callback. Verified against sounddevice source code.
+
+Proposed fix: Replace infinite loop with time-based drain that calculates remaining
+playback from bytes written. 3 small edits in one function, one file.
+
+File affected: claude_code_voice_mode_mcp_server.py (function speak_text_streaming,
+lines 249-334)
+
+Rollback: git stash before applying, or revert with:
+    git checkout -- claude_code_voice_mode_mcp_server.py
+
+---
+
+## PHASE 5: VERIFICATION PLAN
+
+After applying the fix:
+1. Restart Claude Code (restarts the MCP server)
+2. Call `speak` tool — should play audio and return without freezing
+3. Check log for "Draining audio: X.XXs remaining" — confirms new code path ran
+4. Verify log no longer shows server restarts or "Request cancelled" after streaming
+5. Test with short text ("hi") and long text (full paragraph) to verify drain scales
+6. Test TTS pause during playback still works
+7. Test fallback methods still work if streaming endpoint is unavailable

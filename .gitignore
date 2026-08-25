@@ -23,6 +23,12 @@ app_cabinet/text-generation-webui/extensions/alltalk_tts/system/*
 REPO_vs_claude_code_voice_mode/
 REPO_claude_code_voice_mode/
 REPO_waiver/
+REPO_koboldccp_sst_tts_media/
+REPO_punithVT/
+REPO_avatarAI/
+
+# Duplicate embedded Waiver clone (has its own git repo)
+app_cabinet/Waiver/
 
 # Python virtual environments
 app_cabinet/whisper_stt/venv/

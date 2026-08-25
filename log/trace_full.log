@@ -1,0 +1,9 @@
+2026-02-19 00:36:35,254 [tf] Creating panel...
+2026-02-19 00:36:36,394 [tf] Starting mainloop
+2026-02-19 00:36:37,511 [tf] _is_service_running(8787) = False
+2026-02-19 00:36:37,524 [tf] _wait_for_service_ready(8787) FAKED
+2026-02-19 00:36:37,524 [tf] _launch_service(Whisper STT) FAKED
+2026-02-19 00:36:37,524 [tf] _is_service_running(7851) = False
+2026-02-19 00:36:37,531 [tf] _launch_service(AllTalk TTS) FAKED
+2026-02-19 00:36:39,569 [tf] === STOPPING ===
+2026-02-19 00:36:39,613 [tf] Done

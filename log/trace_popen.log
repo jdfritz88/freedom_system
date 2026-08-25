@@ -1,0 +1,7 @@
+2026-02-19 00:36:01,231 Python: C:\Users\jespe\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\pythonw.exe
+2026-02-19 00:36:01,231 stdin: <_io.TextIOWrapper name='<stdin>' mode='r' encoding='cp1252'>
+2026-02-19 00:36:01,231 About to Popen: cmd /c "echo HELLO_FROM_SUBPROCESS"
+2026-02-19 00:36:01,237 Popen succeeded, PID=41548
+2026-02-19 00:36:01,260 Output: b'HELLO_FROM_SUBPROCESS\r\n'
+2026-02-19 00:36:01,260 Return code: 0
+2026-02-19 00:36:01,261 Test complete

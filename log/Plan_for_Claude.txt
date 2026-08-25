@@ -1,0 +1,191 @@
+# DMAIC: TTS Audio Not Playing — Detailed Investigation & Fix Plan
+
+## Context
+Speech worked in earlier sessions but now produces no audio at all. AllTalk and Whisper
+services are healthy. The MCP server logs show streaming TTS initiates (header parsed,
+24000Hz/1ch/16bit detected) but then the MCP framework logs "Request 2 cancelled -
+duplicate response suppressed" — an anyio.CancelledError caught at
+mcp/server/lowlevel/server.py:766. There is a critical logging gap between streaming
+start and completion — we cannot see whether audio bytes are actually being written or
+played.
+
+---
+
+## DMAIC PHASE 1: DEFINE THE PROBLEM
+
+Symptom:       No audio output from speakers when speak tool is called
+Expected:      Audio plays through speakers
+Onset:         Worked before in earlier sessions, then stopped (same code, no changes)
+Reproducible:  Yes — every speak call produces no audio
+
+### Verified Facts
+- AllTalk TTS: running, GET /api/ready returns "Ready"
+- Whisper STT: running, GET /health returns ready
+- Streaming endpoint: GET /api/tts-generate-streaming returns HTTP 200 with 37KB audio
+- tts_paused: false in mic_state.json
+- tts_hook.py exists but is NOT configured as an active hook (no conflict)
+- No hooks configured in .claude/settings.json or .claude/hooks/
+
+### Log Evidence (F:\Apps\freedom_system\log\claude_code_voice_mode.log)
+Last speak attempt logged:
+  Line 190: Speaking: 'Let me analyze...' with voice=Freya.wav
+  Line 191: Streaming TTS: 24000Hz, 1ch, 16bit
+  Line 192: Request 2 cancelled - duplicate response suppressed
+
+Earlier working sessions (same code):
+  Line 162-163: Streaming TTS: 24000Hz, 1ch, 16bit — NO cancellation (worked)
+  Line 170-171: Streaming TTS: 24000Hz, 1ch, 16bit — NO cancellation (worked)
+
+Recent broken sessions:
+  Line 178-182: Streaming starts, then "Request 2 cancelled" x3
+  Line 190-192: Streaming starts, then "Request 2 cancelled" x1
+
+### Cancellation Source
+Found in: venv\Lib\site-packages\mcp\server\lowlevel\server.py lines 766-771
+```python
+except anyio.get_cancelled_exc_class():
+    logger.info("Request %s cancelled - duplicate response suppressed", message.request_id)
+    return
+```
+This fires when the async handler running await handler(req) is cancelled by anyio.
+The handler wraps: await asyncio.to_thread(speak_text, text, voice)
+
+### Critical Logging Gap
+Between "Streaming TTS: 24000Hz, 1ch, 16bit" and "Request 2 cancelled" there is
+ZERO logging of:
+- Whether sd.RawOutputStream actually started
+- Whether any audio chunks were written
+- How many bytes total were written
+- Whether the chunk-writing for loop executed at all
+- Whether any exception occurred during writing
+- Whether the finally block (drain/stop/close) executed
+- Whether stream.active was True or False at any point
+
+We MUST NOT guess the root cause. We must add logging first.
+
+---
+
+## DMAIC PHASE 2: ANALYZE — Add Diagnostic Logging
+
+### File: claude_code_voice_mode_mcp_server.py
+
+### Step 1: Add logging to speak_text_streaming() (lines 249-334)
+
+Location A — After stream.start() (after line 291):
+  Log: "Stream started on device: {sd.default.device[1]}"
+
+Location B — First chunk write (inside the for loop, after line 311):
+  Log on first write only: "First chunk written: {usable} bytes"
+  Track: total_bytes_written counter, chunk_count counter
+
+Location C — After the for loop exits (after line 320):
+  Log: "Streaming loop done: {chunk_count} chunks, {total_bytes_written} bytes total, reason={reason}"
+  Where reason = "exhausted" (normal end), "paused" (tts_paused), or "error"
+
+Location D — In the finally block (around lines 323-331):
+  Log before drain: "Draining stream, active={stream.active}"
+  Log after stop: "Stream stopped and closed"
+
+Location E — Wrap the entire chunk-writing loop in try/except:
+  Log any exception: "Chunk writing error: {type(e).__name__}: {e}"
+
+### Step 2: Add logging to speak_text() fallback path (lines 337-417)
+
+After streaming attempt (around line 362):
+  If streaming returned successfully, log: "Streaming speak completed successfully"
+
+Before Method 2 attempt:
+  Log: "Trying OpenAI endpoint fallback"
+
+Before Method 3 attempt:
+  Log: "Trying native endpoint fallback"
+
+After all methods exhausted:
+  Log: "All TTS methods failed"
+
+### Step 3: Trigger speak and read log
+
+After adding logging, call the speak tool with a short test phrase like "Testing one two three"
+and immediately read the log to see exactly which log lines appear.
+
+---
+
+## DMAIC PHASE 3: GENERATE SOLUTIONS (conditional on diagnostic output)
+
+### Scenario A: Chunks are written but no audio plays
+Root cause: sounddevice output device issue
+Evidence: Log shows "First chunk written" and "Streaming loop done: N chunks, M bytes"
+         but user hears nothing
+Fix: Add explicit device parameter to sd.RawOutputStream, or add blocksize/latency
+     params. Verify with sd.query_devices() logged at startup.
+
+### Scenario B: No chunks written (loop never executes or exits immediately)
+Root cause: response.iter_content() blocks or returns empty
+Evidence: Log shows "Stream started" but no "First chunk written"
+Fix: Debug AllTalk streaming response. Add per-chunk timeout. Verify iter_content
+     yields data by logging chunk sizes.
+
+### Scenario C: Exception during chunk writing
+Root cause: sounddevice write error (buffer, device, format)
+Evidence: Log shows "Chunk writing error: ..."
+Fix: Address specific error. May need blocksize, latency, or device params.
+
+### Scenario D: Thread killed by async cancellation before playback
+Root cause: asyncio.to_thread + anyio cancellation kills the thread or prevents writes
+Evidence: Log shows "Stream started" but nothing after — no chunks, no finally block
+Fix: Decouple audio playback from async response lifecycle. Run the actual streaming
+     playback in a fire-and-forget daemon thread using threading.Thread(daemon=True).
+     The MCP handler starts the thread and returns immediately. Audio continues
+     independently of MCP request lifecycle.
+
+     Implementation:
+     - speak_text_streaming() stays as-is (the actual streaming logic)
+     - In call_tool(), instead of await asyncio.to_thread(speak_text, ...),
+       start speak_text in a daemon thread and return the result dict immediately
+     - The daemon thread handles all audio playback independently
+     - MCP cancellation can no longer affect audio output
+
+### Scenario E: Stream starts and writes but finally block kills audio prematurely
+Root cause: The while stream.active loop exits too early, or stream.stop() is called
+            before audio finishes playing
+Evidence: Log shows chunks written, but "Draining stream, active=False" immediately
+Fix: Add a small sleep after writing last chunk before checking stream.active,
+     or use stream.write() with blocking mode to ensure all data is played.
+
+---
+
+## DMAIC PHASE 4: IMPLEMENT
+
+### Files to modify
+- claude_code_voice_mode_mcp_server.py (all changes in this one file)
+
+### Implementation order
+1. Add all diagnostic logging from Phase 2 (Steps 1-2)
+2. Call speak tool, read log → identify which Scenario (A-E) matches
+3. Apply the targeted fix for the identified scenario
+4. Call speak tool again, read log → verify fix works
+5. Call speak tool 3 more times → verify consistency
+
+### Rollback plan
+- All changes are in one file
+- git stash or git checkout to revert if needed
+- Diagnostic logging can remain permanently (it aids future debugging)
+
+---
+
+## DMAIC PHASE 5: VERIFY
+
+1. Call speak tool with "Testing one two three" — confirm audio plays
+2. Read log — confirm clean execution path with no errors
+3. Call speak tool 3 more times with different text lengths — confirm consistency
+4. Check that streaming is used (log shows "Streaming TTS:" not fallback messages)
+5. Test TTS pause: set tts_paused=true in mic_state.json, call speak, verify it skips
+6. Reset tts_paused=false, call speak again, verify audio resumes
+
+## DMAIC PHASE 6: EVALUATE & PREVENT
+
+After fix is verified:
+1. Keep diagnostic logging permanently (low overhead, high diagnostic value)
+2. Update MEMORY.md with root cause finding and fix
+3. Consider adding a voice_test diagnostic to the voice_status tool output
+   (e.g., play a short beep to confirm audio path works)

@@ -1,0 +1,8 @@
+2026-02-19 00:35:16,025 About to start mainloop
+2026-02-19 00:35:16,527 _is_service_running(8787) -> faking False
+2026-02-19 00:35:16,528 _start_whisper called (faked)
+2026-02-19 00:35:16,528 _wait_for_service_ready(8787) called (faked - returning True)
+2026-02-19 00:35:16,528 _is_service_running(7851) -> faking False
+2026-02-19 00:35:16,529 _start_alltalk called (faked)
+2026-02-19 00:35:20,036 Stopping after 4 seconds
+2026-02-19 00:35:20,077 Mainloop ended

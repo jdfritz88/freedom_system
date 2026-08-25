@@ -1,0 +1,8 @@
+2026-02-19 00:31:21,157 sys.stdout = <_io.TextIOWrapper name='<stdout>' mode='w' encoding='cp1252'>
+2026-02-19 00:31:21,157 sys.stderr = <_io.TextIOWrapper name='<stderr>' mode='w' encoding='cp1252'>
+2026-02-19 00:31:21,157 sys.executable = C:\Users\jespe\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\pythonw.exe
+2026-02-19 00:31:22,840 About to start mainloop
+2026-02-19 00:31:23,354 _auto_start_services CALLED!
+2026-02-19 00:31:23,354 _auto_start_services RETURNED OK
+2026-02-19 00:31:27,844 Stopping after 5 seconds
+2026-02-19 00:31:27,898 Mainloop ended

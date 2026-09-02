@@ -1,25 +1,27 @@
-# Coding Process Step 02: Bug Fix (CP2BUGFIX)
+# Coding Process Step 02: Bug Fix (CP3BUGFIX)
 
-This document is the reference wiki for the CP2BUGFIX subagent. CP2 receives a bug found by CP1BUGSEARCH and fixes it systematically.
+This document is the reference wiki for the CP3BUGFIX subagent. CP3 receives a bug found by CP1BUGSEARCH and fixes it systematically.
 
-NO SHORTCUTS. NO WORKAROUNDS. NO DUMMIES. NO PLACEHOLDERS. NO STUBS. NO NUBS.
+NEVER ASSUME. NEVER GUESS. NO SHORTCUTS. NO WORKAROUNDS. NO DUMMIES. NO PLACEHOLDERS. NO STUBS. NO NUBS.
+
+Do not disable, remove, or break anything CP1 set up while investigating - the logging console (Step 1 below), the passive logs CP1 read, or `[root folder]_Monitor_LOG.md`. CP4 needs all of it intact to verify your fix.
 
 ---
 
 ## STEP 1: CHECK FOR LOGGING CONSOLE IN LAUNCH FILE
 
-**This is the first thing CP2 does. Every time. No exceptions.**
+**This is the first thing CP3 does. Every time. No exceptions.**
 
 Before any fix is attempted, check if the app's launch file (`.bat` or `.py`) has a detailed logging console that logs every single app activity as the app tries to run.
 
-CP3SIM/Claude Code needs to watch and read this logging console for ERRORS. If the logging console code doesn't exist, CREATE IT in the launch file.
+CP4SIM/Claude Code needs to watch and read this logging console for ERRORS. If the logging console code doesn't exist, CREATE IT in the launch file.
 
 ### What the logging console must do:
 - Log every single app activity as it happens
 - Show timestamps for each activity
 - Show errors with full stack traces
 - Write output to both console AND a log file
-- Be readable by CP3SIM in real time
+- Be readable by CP4SIM in real time
 
 ### Python launch file example:
 
@@ -30,7 +32,7 @@ import os
 import traceback
 from datetime import datetime
 
-# === LOGGING CONSOLE - REQUIRED BY CP2BUGFIX ===
+# === LOGGING CONSOLE - REQUIRED BY CP3BUGFIX ===
 log_file = f"{__file__}_run_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
 
 logging.basicConfig(
@@ -63,7 +65,7 @@ except Exception as e:
 
 ```batch
 @echo off
-REM === LOGGING CONSOLE - REQUIRED BY CP2BUGFIX ===
+REM === LOGGING CONSOLE - REQUIRED BY CP3BUGFIX ===
 set LOGFILE=%~dp0app_run_%date:~-4%%date:~4,2%%date:~7,2%_%time:~0,2%%time:~3,2%%time:~6,2%.log
 echo === APP LAUNCH START === >> "%LOGFILE%" 2>&1
 echo Timestamp: %date% %time% >> "%LOGFILE%" 2>&1
@@ -94,7 +96,7 @@ If the bug came from:
 
 **Action**: Just fix it directly. These are straightforward problems with obvious fixes.
 
-Then launch subagent CP3SIM to simulate the app and verify the fix.
+Then launch subagent CP4SIM to simulate the app and verify the fix.
 
 ### Path B: Full Fix Process (Techniques 4, 5, 6, 7, 8, 9)
 
@@ -115,8 +117,8 @@ If the bug came from:
 Check for `[root folder]_Fix_LOG.md`. If it doesn't exist, create it.
 
 The fix log tracks every solution attempted so that:
-- CP2 never tries the same solution twice
-- CP3 can record which solutions failed and why
+- CP3 never tries the same solution twice
+- CP4 can record which solutions failed and why
 - There is a complete history of what was tried
 
 ### Fix log format:
@@ -190,7 +192,7 @@ Before implementing, add the solution to `[root folder]_Fix_LOG.md`:
 - Description of the solution
 - Which technique found the bug
 - What files will be changed
-- Result field left as "PENDING" until CP3SIM verifies
+- Result field left as "PENDING" until CP4SIM verifies
 
 ---
 
@@ -209,15 +211,15 @@ NO SHORTCUTS. NO WORKAROUNDS. NO DUMMIES. NO PLACEHOLDERS. NO STUBS. NO NUBS.
 
 ---
 
-## STEP 7: LAUNCH CP3SIM
+## STEP 7: LAUNCH CP4SIM
 
-After implementing the solution, launch subagent CP3SIM to:
+After implementing the solution, launch subagent CP4SIM to:
 1. Watch the logging console
 2. Launch the app
 3. Simulate the original error
 4. Report back whether the fix worked
 
-Pass to CP3SIM:
+Pass to CP4SIM:
 - The original bug description from CP1
 - Which technique found it
 - What solution was applied
@@ -227,20 +229,20 @@ Pass to CP3SIM:
 
 ## LOOP BACK RULES
 
-### CP3SIM says: SAME ERROR
+### CP4SIM says: SAME ERROR
 - The fix didn't work
-- CP3SIM will undo the fix
-- CP3SIM updates the fix log with FAIL - same error
-- Control returns to CP2 Step 4: Create a NEW solution (not in the log)
+- CP4SIM will undo the fix
+- CP4SIM updates the fix log with FAIL - same error
+- Control returns to CP3 Step 4: Create a NEW solution (not in the log)
 - NO SHORTCUTS. NO WORKAROUNDS. NO DUMMIES. NO PLACEHOLDERS. NO STUBS. NO NUBS.
 
-### CP3SIM says: DIFFERENT ERROR
+### CP4SIM says: DIFFERENT ERROR
 - The fix changed something but introduced a new bug
 - Control returns to CP1 to search for the new bug
 - The original fix stays (it solved the original problem)
 - CP1 starts the search process over for the new error
 
-### CP3SIM says: NO ERROR
+### CP4SIM says: NO ERROR
 - The fix worked
 - Update the fix log with PASS
 - Done

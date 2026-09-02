@@ -24,7 +24,10 @@ logging.basicConfig(
     format="[WHISPER_STT] [%(levelname)s] %(message)s",
     handlers=[
         logging.StreamHandler(),
-        logging.FileHandler("F:/Apps/freedom_system/log/whisper_stt.log", encoding="utf-8"),
+        logging.FileHandler(
+            "F:/Apps/freedom_system/REPO_koboldccp_sst_tts_media/logs/whisper_stt.log",
+            encoding="utf-8",
+        ),
     ],
 )
 logger = logging.getLogger(__name__)

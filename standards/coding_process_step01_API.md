@@ -1,8 +1,10 @@
-# Coding Process Step 01 API: API Troubleshooting (CP1API)
+# Coding Process Step 01 API: API Troubleshooting (CP2API)
 
-This document is the reference wiki for the CP1API subagent. When a bug involves two programs talking to each other over HTTP (an API call), this is the systematic process for finding what's wrong.
+This document is the reference wiki for the CP2API subagent. When a bug involves two programs talking to each other over HTTP (an API call), this is the systematic process for finding what's wrong.
 
-NO SHORTCUTS. NO WORKAROUNDS. NO DUMMIES. NO PLACEHOLDERS. NO STUBS. NO NUBS.
+NEVER ASSUME. NEVER GUESS. NO SHORTCUTS. NO WORKAROUNDS. NO DUMMIES. NO PLACEHOLDERS. NO STUBS. NO NUBS.
+
+Before Phase 1, call ToolSearch once for `mcp__claude-in-chrome__read_network_requests` and `mcp__windows-mcp__Process` - you may need them below (Step 1.5, Step 1.6). Log every use of them to `[root folder]_Monitor_LOG.md` (create it if CP1 hasn't already).
 
 ---
 
@@ -188,6 +190,14 @@ def check_endpoint_exists(endpoint_url, timeout=5):
 # - Missing a path segment (e.g., /api/v1/endpoint vs /api/endpoint)
 # - Trailing slash matters on some servers (/endpoint vs /endpoint/)
 ```
+
+### Step 1.5: If none of the above explains it, check for interference
+
+Only if Steps 1.1-1.4 didn't explain the failure - is Windows Defender scanning or blocking the connection right now? Is the Killer networking software throttling this specific connection? Is Citrix intercepting the traffic? Check via `tasklist`/`Get-Process`. Log the check to `[root folder]_Monitor_LOG.md` either way.
+
+### Step 1.6: If the call comes from a browser, see what the browser actually saw
+
+If this API call originates from a web frontend, use `mcp__claude-in-chrome__read_network_requests` to see the real request/response as the browser experienced it - this can catch things curl/requests won't (CORS failures, a service worker rewriting the request, browser-cached responses).
 
 ---
 

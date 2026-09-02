@@ -134,8 +134,6 @@
       "Bash(winget install:*)",
       "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" repo list jdfritz88)",
       "Bash(git remote:*)",
-      "Bash(set GH_TOKEN=***REMOVED-REVOKED-TOKEN***)",
-      "Bash(export GH_TOKEN=***REMOVED-REVOKED-TOKEN***)",
       "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" auth status)",
       "Bash(git config:*)",
       "Bash(export PATH=\"$PATH:/c/Program Files/GitHub CLI\")",

@@ -1138,3 +1138,30 @@ RuntimeError: main thread is not in main loop
 [MIC_PANEL] [INFO] Whisper STT shutdown complete
 [MIC_PANEL] [INFO] All services shut down — closing mic panel
 [MIC_PANEL] [INFO] Mic panel shutting down
+[MIC_PANEL] [INFO] Restored input device from prefs: Headset (JBL Live 770NC)
+[MIC_PANEL] [INFO] Shared audio stream opened on device: Headset (JBL Live 770NC) (index=2)
+[MIC_PANEL] [ERROR] Terminal discovery failed: [WinError 2] The system cannot find the file specified
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Mic Control Panel starting
+[MIC_PANEL] [INFO] Auto-start services triggered
+[MIC_PANEL] [INFO] Whisper STT not running — auto-starting...
+[MIC_PANEL] [INFO] Launching Whisper STT: cd /d F:\Apps\freedom_system\app_cabinet\whisper_stt && call venv\Scripts\activate.bat && python server.py
+[MIC_PANEL] [ERROR] Terminal discovery failed: [WinError 2] The system cannot find the file specified
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Service on port 8787 is ready
+[MIC_PANEL] [INFO] AllTalk TTS not running — auto-starting...
+[MIC_PANEL] [INFO] Launching AllTalk TTS: cd /d F:\Apps\freedom_system\app_cabinet\alltalk_tts && call start_alltalk.bat
+[MIC_PANEL] [ERROR] Terminal discovery failed: [WinError 2] The system cannot find the file specified
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [INFO] Opened new terminal: REPO_koboldccp_sst_tts_media_01 in F:\Apps\freedom_system\REPO_koboldccp_sst_tts_media
+[MIC_PANEL] [ERROR] Terminal discovery failed: [WinError 2] The system cannot find the file specified
+[MIC_PANEL] [INFO] No Claude Code terminals found
+[MIC_PANEL] [WARNING] Audio stream status: input overflow
+[MIC_PANEL] [WARNING] No process found on port 7851 for AllTalk TTS
+[MIC_PANEL] [INFO] Shutting down Whisper STT (PID 30960 on port 8787)...
+[MIC_PANEL] [ERROR] Failed to find ancestor of PID 30960: [WinError 2] The system cannot find the file specified
+[MIC_PANEL] [INFO] Ctrl+C sent to console of PID 30960
+[MIC_PANEL] [INFO] Whisper STT shut down gracefully
+[MIC_PANEL] [INFO] Whisper STT shutdown complete
+[MIC_PANEL] [INFO] All services shut down — closing mic panel
+[MIC_PANEL] [INFO] Mic panel shutting down

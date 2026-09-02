@@ -12,24 +12,28 @@ Write responses in concise, natural prose since anything outside code blocks/str
 
 If you need to say something that should be spoken but NOT written to the transcript (e.g. the DMAIC audio-failure recovery flow), call the `speak` tool directly for that one case — the hook still fires afterward on your final message, so keep the written response for that turn free of duplicate prose.
 
-# Debugging Pipeline: CP1 → CP2 → CP3
+# Debugging Pipeline: CP1 → CP2 → CP3 → CP4
 
-When debugging, use the 3-subagent pipeline. Each subagent enforces every step automatically.
+When debugging, use the 4-subagent pipeline. Each subagent enforces every step automatically.
 
 **CP1BUGSEARCH** → Finds the bug using 9 ordered techniques
-**CP2BUGFIX** → Fixes the bug (with logging console + fix log to prevent repeats)
-**CP3SIM** → Simulates the app to verify the fix worked
+**CP2API** → (only if the bug involves an API) diagnoses the API failure using 6 ordered phases
+**CP3BUGFIX** → Fixes the bug (with logging console + fix log to prevent repeats)
+**CP4SIM** → Simulates the app to verify the fix worked
 
 ### The Loop
-- Same error after fix? → Back to CP2 (new solution, not in the log)
+- Same error after fix? → Back to CP3 (new solution, not in the log)
 - Different error? → Back to CP1 (new bug search)
 - No error? → Done
 
 ### Rules
-- NO SHORTCUTS. NO WORKAROUNDS. NO DUMMIES. NO PLACEHOLDERS. NO STUBS. NO NUBS.
-- CP2 must check for a logging console in the launch file before fixing anything
-- CP2 must check `[root folder]_Fix_LOG.md` and create solutions NOT already in the log
-- If the bug involves an API, CP1 launches CP1API first (6-phase API troubleshooting)
+- NEVER ASSUME. NEVER GUESS. NO SHORTCUTS. NO WORKAROUNDS. NO DUMMIES. NO PLACEHOLDERS. NO STUBS. NO NUBS.
+- CP3 must check for a logging console in the launch file before fixing anything
+- CP3 must check `[root folder]_Fix_LOG.md` and create solutions NOT already in the log
+- If the bug involves an API, CP1 launches CP2 first (6-phase API troubleshooting)
+- CP1 loads every monitoring tool (Windows-MCP, Chrome browser tools) up front and verifies each one actually works before relying on it - never assume a tool is available just because it's listed
+- CP1, CP2, and CP4 all log every monitoring check to `[root folder]_Monitor_LOG.md` - passive log files, screenshots, browser reads, interference checks. Nothing gets checked silently
+- CP4 cannot declare a fix verified from a clean console log alone - it must also re-check passive logs and actually look at the running result (screenshot or browser read)
 
 ### Reference Files
 - `standards/coding_process_step01_bug_search.md` - 9 debugging techniques

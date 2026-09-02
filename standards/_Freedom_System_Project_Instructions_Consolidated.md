@@ -143,8 +143,8 @@ The `[DONE]` message must **only** appear if ALL conditions are true:
 ---
 
 ## 🔑 GITHUB ACCESS TOKEN
-Use this token if needed for GitHub operations:
-`***REMOVED-REVOKED-TOKEN***`
+Do NOT paste GitHub tokens into this file or any other file that gets committed to git.
+Store the token only in a local, git-ignored `.env` file or the OS credential manager, and load it from there.
 
 ---
 

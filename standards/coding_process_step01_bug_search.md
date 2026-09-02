@@ -1,6 +1,51 @@
 # Coding Process Step 01: Bug Search (CP1BUGSEARCH)
 
-This document is the reference wiki for the CP1BUGSEARCH subagent. CP1 finds bugs using 9 ordered techniques.
+This document is the reference wiki for the CP1BUGSEARCH subagent. CP1 finds bugs using 9 ordered techniques, plus a monitoring layer that watches the actual running app instead of just its code and logs.
+
+NEVER ASSUME. NEVER GUESS. NO SHORTCUTS. NO WORKAROUNDS. NO DUMMIES. NO PLACEHOLDERS. NO STUBS. NO NUBS.
+
+---
+
+## 🔭 STEP 0: Load Every Monitoring Tool
+
+**Before touching any of the 9 techniques below, load everything you might need in one call - don't guess ahead of time which ones "seem relevant." That guessing is exactly how a browser or desktop monitoring tool ends up silently unused when it turns out to matter.**
+
+```
+ToolSearch({query: "select:mcp__claude-in-chrome__tabs_context_mcp,mcp__claude-in-chrome__navigate,mcp__claude-in-chrome__computer,mcp__claude-in-chrome__read_page,mcp__claude-in-chrome__get_page_text,mcp__claude-in-chrome__read_console_messages,mcp__claude-in-chrome__read_network_requests,mcp__claude-in-chrome__tabs_create_mcp,mcp__claude-in-chrome__tabs_close_mcp,mcp__windows-mcp__Screenshot,mcp__windows-mcp__Snapshot,mcp__windows-mcp__App,mcp__windows-mcp__Process,mcp__windows-mcp__PowerShell,WebFetch,WebSearch", max_results: 20})
+```
+
+This is unconditional - run it every single time, on every bug, regardless of what kind of app it looks like at first glance.
+
+## 🩺 STEP 0B: Verify Every Tool Actually Works
+
+**A tool showing up after ToolSearch only proves its description loaded - it does not prove the tool works. Test it with one real, cheap call before trusting it.**
+
+- `mcp__claude-in-chrome__tabs_context_mcp` if a browser is involved
+- `mcp__windows-mcp__Screenshot` if a Windows desktop app is involved
+
+If a test call fails, retry up to 3 attempts total. If it's still failing after 3 attempts, do not silently skip it and do not just write it to a log where it could go unnoticed - stop and ask the user directly:
+
+> "Tool [name] hasn't responded after 3 attempts. What do you want me to do?"
+> 1. **Skip it** - continue without this tool for this run
+> 2. **Keep retrying** - same approach, try again
+> 3. **Force it** - check whether the underlying process is hung or dead (`mcp__windows-mcp__Process` mode="list", or `tasklist`/`Get-Process`) and try to recover it; if it's still dead after that, say so plainly - a fully broken MCP connection usually needs a new Claude Code session, and claiming it's fixed when it isn't is worse than admitting it needs a restart
+> 4. **Stop here** - halt until it's fixed
+
+## 📋 STEP 0C: Scope Check and the Monitor Log
+
+**Figure out what actually applies to this app before digging in - not to decide which tools to load (you loaded everything in STEP 0 regardless), but to decide which passive log files are worth checking.**
+
+Ask: Does it have a browser/web component? Does it have a Windows desktop window? Which project is this (so you know which project-specific logs exist, e.g. AvatarAI's watchdog logs only exist in that project)?
+
+Create (or open) `[root folder]_Monitor_LOG.md` in the project root. Every monitoring check anywhere in the pipeline - CP1, CP2, or CP4 - gets one line here, whether it found something or not:
+
+```markdown
+## [timestamp] - [CP stage] - [tool/monitor name]
+- **Checked:** [what was checked]
+- **Result:** [what was found - "nothing unusual" counts as a result, not silence]
+```
+
+A monitor that was never checked and a monitor that was checked and found nothing look identical unless both get written down. Write both down.
 
 ---
 
@@ -47,6 +92,16 @@ def backup_everything(project_root):
 
 ---
 
+### Monitoring Check A: Read the Logs That Already Exist
+
+**Before digging into anything, read whatever passive log files apply per STEP 0C - these are free, they're already sitting on disk, no extra work required to produce them.**
+
+- `log/claude_code_voice_mode.log`, `log/claude_code_voice_mode_mic_panel.log`, `log/whisper_stt.log` (if voice mode is involved)
+- `log/boredom_monitor.log` and the `log/*_extension.log` files (if text-generation-webui is involved)
+- Project-specific watchdog logs (e.g. AvatarAI's `Logs/cuda_graph_watchdog_incidents.log`, `worker_stderr_*.log` - only if this is that project)
+
+Log every check to `[root folder]_Monitor_LOG.md`, including logs that showed nothing relevant.
+
 ### Technique 2: Environment Differences
 
 **"Works on my machine!" The usual suspects: different Python version, missing packages, wrong file paths (Windows `\` vs Linux `/`), missing `.env` file, case sensitivity. A checklist for when code works in one place but not another.**
@@ -60,6 +115,14 @@ def backup_everything(project_root):
 - [ ] File paths correct? (Windows `\` vs Linux `/`)
 - [ ] Permissions correct? (especially on Linux)
 - [ ] Same working directory when running?
+
+**Also check for background Windows software interfering** - only if the above doesn't explain the failure:
+- [ ] Is antivirus (Windows Defender) scanning or blocking a file/port right now?
+- [ ] Is the Killer networking software throttling a local connection?
+- [ ] Is a scheduled update task (Adobe, NVIDIA, etc.) eating CPU at this exact moment?
+- [ ] Is Citrix intercepting network, clipboard, or USB in a way that could explain this?
+
+Check via `tasklist`/`Get-Process` and `schtasks /query`/`Get-ScheduledTask`. Log what you checked and found to `[root folder]_Monitor_LOG.md`, even if the answer is "nothing interfering."
 
 ```python
 def diagnose_environment_differences():
@@ -103,6 +166,21 @@ def diagnose_environment_differences():
 - [ ] Correct git branch checked out?
 - [ ] Import statement present for the module you're using?
 - [ ] Syntax error earlier in the file breaking later code?
+
+---
+
+### Monitoring Check B: Actually Look At It
+
+**Don't just infer what's happening from code and logs - look at the real thing.**
+
+- **Web app / browser involved:** use `mcp__claude-in-chrome__get_page_text`, `read_console_messages`, and `read_network_requests` to see the actual rendered page, real browser errors, and real network traffic - not what the code says should happen
+- **Windows desktop app involved:** use `mcp__windows-mcp__Screenshot` (fast) or `mcp__windows-mcp__Snapshot` (full UI element detail) to see the actual screen
+
+Log what you looked at and what you saw to `[root folder]_Monitor_LOG.md`.
+
+### Monitoring Check C: Cross-Check
+
+**Look back over `[root folder]_Monitor_LOG.md` so far. Did two or more independent monitors show something unusual close together in time?** For example, a watchdog log entry and a browser console error within the same few seconds. That correlation is a stronger lead than either alone - call it out explicitly and investigate it first before moving into the deeper techniques below.
 
 ---
 
@@ -332,12 +410,12 @@ def create_minimal_example():
 ---
 
 ### After Finding a Bug: Verify It (Questioning Framework - Group 2)
-Before handing off to CP2BUGFIX, answer these:
+Before handing off to CP3BUGFIX, answer these:
 - Which specific part is actually failing? What am I assuming that might be wrong? Am I looking at the right thing?
 
 See `standards/questioning_framework.md` for the full framework.
 
-### If the Bug Involves an API: Use CP1API
-If the bug is about one program talking to another over HTTP, see `standards/coding_process_step01_API.md` for the full 6-phase API troubleshooting process. Launch the CP1API subagent to run this process before handing off to CP2BUGFIX.
+### If the Bug Involves an API: Use CP2API
+If the bug is about one program talking to another over HTTP, see `standards/coding_process_step01_API.md` for the full 6-phase API troubleshooting process. Launch the CP2API subagent to run this process before handing off to CP3BUGFIX.
 
 ---

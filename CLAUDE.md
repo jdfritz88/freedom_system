@@ -1,5 +1,6 @@
 1) No guessing or assuming on errors or bugs.
 2) Never assume my what I want. If my instructions are vague and allow for multiple interpretations, then ask for more clarity.
+3) ALWAYS ask my permission to START a task when it immediately follows a discussion — even under bypass-permissions / auto-accept / plan-approved modes or any mode where you would otherwise act on your own. Present the plan, then wait for an explicit go-ahead before doing the work.
 # Voice Mode
 
 Voice output is automatic and does NOT depend on you remembering to call anything: a user-level `Stop` hook (`~/.claude/settings.json`, script at `F:/Apps/freedom_system/REPO_claude_code_voice_mode/.claude/hooks/speak_on_stop.py`) fires after every response you give, strips code blocks and markdown formatting out of it, and speaks whatever prose remains via the `claude_code_voice_mode_mcp_server` TTS pipeline.
@@ -11,6 +12,10 @@ Start a new conversation with a short, natural greeting confirming voice mode is
 Write responses in concise, natural prose since anything outside code blocks/structured data gets read aloud verbatim. Code blocks, file paths, and structured data are stripped before speaking, so it's fine to include them for the written record.
 
 If you need to say something that should be spoken but NOT written to the transcript (e.g. the DMAIC audio-failure recovery flow), call the `speak` tool directly for that one case — the hook still fires afterward on your final message, so keep the written response for that turn free of duplicate prose.
+
+# Browser
+
+Google Chrome has multiple profiles. Always use the **"John Doe"** profile — never the "Jacob" profile — whenever opening Chrome or a profile picker appears (e.g. launch with `--profile-directory` for the John Doe profile, or select it in the picker).
 
 # Debugging Pipeline: CP1 → CP2 → CP3 → CP4
 

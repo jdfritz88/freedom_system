@@ -7183,3 +7183,26 @@ Your message just said "flag." â€” I don...' with voice=Freya.wav
 [CLAUDE_CODE_VOICE_MODE] [2026-09-01 18:01:00] [INFO] Streaming TTS: 24000Hz, 1ch, 16bit, speed=1.0x (playback_sr=24000Hz)
 [CLAUDE_CODE_VOICE_MODE] [2026-09-01 18:01:01] [INFO] [STREAM-A] RawOutputStream opened: device=6, sr=24000, ch=1, dtype=int16, latency=0.182
 [CLAUDE_CODE_VOICE_MODE] [2026-09-01 18:01:01] [INFO] [STREAM-B] First chunk written: 4096 bytes (time_to_first_audio=0.125s)
+[CLAUDE_CODE_VOICE_MODE] [2026-09-01 18:36:41] [INFO] Speaking: 'I'll wait for that to finish before confirming. Quick note on your question in t...' with voice=Freya.wav
+[CLAUDE_CODE_VOICE_MODE] [2026-09-01 18:36:43] [INFO] Streaming TTS: 24000Hz, 1ch, 16bit, speed=1.0x (playback_sr=24000Hz)
+[CLAUDE_CODE_VOICE_MODE] [2026-09-01 18:36:44] [INFO] [STREAM-A] RawOutputStream opened: device=6, sr=24000, ch=1, dtype=int16, latency=0.182
+[CLAUDE_CODE_VOICE_MODE] [2026-09-01 18:36:44] [INFO] [STREAM-B] First chunk written: 4096 bytes (time_to_first_audio=0.125s)
+[CLAUDE_CODE_VOICE_MODE] [2026-09-01 18:37:10] [INFO] [STREAM-C] Iter loop done: 313 chunks, 1252864 bytes, reason=exhausted, loop_duration=26.000s
+[CLAUDE_CODE_VOICE_MODE] [2026-09-01 18:37:10] [INFO] [STREAM-D] Drain: device_latency=0.182s, calculated_wait=0.682s
+[CLAUDE_CODE_VOICE_MODE] [2026-09-01 18:37:10] [INFO] [STREAM-D] Complete: 1252864 bytes, 313 chunks, wall=26.922s, audio_dur=26.101s
+[CLAUDE_CODE_VOICE_MODE] [2026-09-01 18:38:36] [INFO] Speaking: 'Answering where things stand right now:
+Committed: Yes â€” everything reviewable...' with voice=Freya.wav
+[CLAUDE_CODE_VOICE_MODE] [2026-09-01 18:38:38] [INFO] Streaming TTS: 24000Hz, 1ch, 16bit, speed=1.0x (playback_sr=24000Hz)
+[CLAUDE_CODE_VOICE_MODE] [2026-09-01 18:38:38] [INFO] [STREAM-A] RawOutputStream opened: device=6, sr=24000, ch=1, dtype=int16, latency=0.182
+[CLAUDE_CODE_VOICE_MODE] [2026-09-01 18:38:39] [INFO] [STREAM-B] First chunk written: 4096 bytes (time_to_first_audio=0.125s)
+[CLAUDE_CODE_VOICE_MODE] [2026-09-01 18:39:44] [INFO] [STREAM-C] Iter loop done: 775 chunks, 3122688 bytes, reason=exhausted, loop_duration=64.984s
+[CLAUDE_CODE_VOICE_MODE] [2026-09-01 18:39:44] [INFO] [STREAM-D] Drain: device_latency=0.182s, calculated_wait=0.682s
+[CLAUDE_CODE_VOICE_MODE] [2026-09-01 18:39:44] [INFO] [STREAM-D] Complete: 3122688 bytes, 775 chunks, wall=65.969s, audio_dur=65.056s
+[CLAUDE_CODE_VOICE_MODE] [2026-09-01 18:39:53] [INFO] Speaking: 'The push landed successfully â€” now matches local ( ), confirmed via .
+Status: ...' with voice=Freya.wav
+[CLAUDE_CODE_VOICE_MODE] [2026-09-01 18:39:55] [INFO] Streaming TTS: 24000Hz, 1ch, 16bit, speed=1.0x (playback_sr=24000Hz)
+[CLAUDE_CODE_VOICE_MODE] [2026-09-01 18:39:56] [INFO] [STREAM-A] RawOutputStream opened: device=6, sr=24000, ch=1, dtype=int16, latency=0.182
+[CLAUDE_CODE_VOICE_MODE] [2026-09-01 18:39:56] [INFO] [STREAM-B] First chunk written: 4096 bytes (time_to_first_audio=0.125s)
+[CLAUDE_CODE_VOICE_MODE] [2026-09-01 18:40:40] [INFO] [STREAM-C] Iter loop done: 532 chunks, 2141696 bytes, reason=exhausted, loop_duration=44.547s
+[CLAUDE_CODE_VOICE_MODE] [2026-09-01 18:40:40] [INFO] [STREAM-D] Drain: device_latency=0.182s, calculated_wait=0.682s
+[CLAUDE_CODE_VOICE_MODE] [2026-09-01 18:40:41] [INFO] [STREAM-D] Complete: 2141696 bytes, 532 chunks, wall=45.469s, audio_dur=44.619s

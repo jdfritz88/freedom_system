@@ -6,6 +6,8 @@ componentsave/envs/coqui_env/Lib/site-packages/torch/lib/dnnl.lib
 app_cabinet/Stable_Diffusion_SDXL/
 app_cabinet/alltalk_tts/
 app_cabinet/koboldcpp/
+app_cabinet/comfyui/
+app_cabinet/sillytavern/
 
 # Upstream text-generation-webui (has its own git repo)
 app_cabinet/text-generation-webui/*
@@ -32,6 +34,7 @@ app_cabinet/Waiver/
 
 # Python virtual environments
 app_cabinet/whisper_stt/venv/
+app_cabinet/resource_monitor/venv/
 
 # Python cache
 **/__pycache__/

@@ -1,0 +1,6 @@
+# Standalone Verification Monitor Requirements
+# Core requirements (usually already installed)
+requests>=2.25.0
+
+# Optional: For Selenium browser verification (Method 13)
+# selenium>=4.0.0

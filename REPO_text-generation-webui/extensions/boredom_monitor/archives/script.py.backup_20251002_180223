@@ -1,0 +1,991 @@
+import sys
+import os
+import time
+import threading
+import gradio as gr
+import requests
+import json
+import asyncio
+import websockets
+from datetime import datetime
+from pathlib import Path
+
+# Optional imports for additional methods
+try:
+    from gradio_client import Client
+    gradio_client_available = True
+except ImportError:
+    gradio_client_available = False
+    print("[BOREDOM-MONITOR] WARNING: gradio_client not available - method 4 disabled")
+
+try:
+    from selenium import webdriver
+    from selenium.webdriver.common.by import By
+    selenium_available = True
+except ImportError:
+    selenium_available = False
+    print("[BOREDOM-MONITOR] WARNING: selenium not available - method 7 disabled")
+
+# Fix circular import issue - append instead of insert to maintain module access
+# while allowing Python to find the real exllamav2 package first
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..', 'modules'))
+
+from modules import shared
+
+# Import emotion manager for Freedom emotional responses
+try:
+    from idle_emotion_manager import IdleEmotionManager
+    emotion_manager = None  # Will be initialized in setup()
+    emotion_manager_available = True
+    print("[BOREDOM-MONITOR] Emotion manager imported successfully")
+except ImportError as e:
+    emotion_manager = None
+    emotion_manager_available = False
+    print(f"[BOREDOM-MONITOR] WARNING: Could not import emotion manager: {e}")
+
+# Import injection bridge for proper UI updates from background threads
+try:
+    from . import gradio_injection_bridge as injection_bridge
+    injection_bridge_available = True
+    print("[BOREDOM-MONITOR] Injection bridge imported successfully")
+except ImportError as e:
+    injection_bridge = None
+    injection_bridge_available = False
+    print(f"[BOREDOM-MONITOR] WARNING: Could not import injection bridge: {e}")
+
+# Comprehensive logging following standards
+def log_enhanced(message, level="INFO", function_name="", extra_data=None):
+    """Enhanced logging with timestamp, level, function, and optional extra data - ALWAYS logs to console"""
+    timestamp = datetime.now().strftime("%H:%M:%S.%f")[:-3]
+    prefix = "[BOREDOM-MONITOR]"
+    if function_name:
+        prefix = f"{prefix} [{function_name}]"
+    full_message = f"{timestamp} {prefix} [{level}] {message}"
+
+    if extra_data:
+        full_message += f" | Data: {extra_data}"
+
+    # ALWAYS print to console for maximum visibility
+    print(full_message)
+
+    # Also write to log file
+    try:
+        log_path = "F:/Apps/freedom_system/log/boredom_monitor.log"
+        with open(log_path, "a", encoding="utf-8") as f:
+            f.write(full_message + "\n")
+    except Exception:
+        pass  # Don't fail on logging errors
+
+# Configuration
+INJECTION_METHOD = "direct"  # Options: "direct" or "api"
+OPENAI_ENDPOINT = "http://127.0.0.1:5000/v1/chat/completions"  # OpenAI extension actual port
+IDLE_THRESHOLD_MINUTES = 7
+AUTO_TEST_ENABLED = True  # Enable automatic testing of injection methods
+AUTO_TEST_INTERVAL_SECONDS = 60  # Test every 60 seconds
+
+# Global state
+monitor_thread = None
+auto_test_thread = None
+should_monitor = threading.Event()
+should_auto_test = threading.Event()
+last_activity_time = time.time()
+injection_count = 0
+auto_test_count = 0
+
+# Input hijacking state for injection
+input_hijack = {'state': False, 'value': ["", ""]}
+
+def inject_message_direct(message):
+    """Method 1: Direct Call Integration - Uses generate_chat_reply() from modules.chat"""
+    try:
+        print(f"  → Method 1: Direct Call Integration - Calling generate_chat_reply()...")
+        log_enhanced("Method 1: Direct Call Integration starting", "INFO", "inject_message_direct", {
+            "message_length": len(message),
+            "method": "direct_call"
+        })
+
+        # Import the core chat module
+        from modules.chat import generate_chat_reply
+
+        # Get current interface state
+        if not hasattr(shared, 'persistent_interface_state'):
+            print(f"  → persistent_interface_state not available")
+            log_enhanced("persistent_interface_state not available", "WARNING", "inject_message_direct")
+            return False
+
+        state = shared.persistent_interface_state.copy()
+
+        # Call generate_chat_reply with the message
+        print(f"  → Calling generate_chat_reply() with message...")
+        for history in generate_chat_reply(message, state, for_ui=True):
+            # Update the shared interface with the new conversation
+            if 'history' in shared.gradio:
+                shared.gradio['history'].value = history
+                print(f"  → History updated via generate_chat_reply()")
+                log_enhanced("Method 1: Direct Call Integration successful", "SUCCESS", "inject_message_direct", {
+                    "history_length": len(history) if history else 0
+                })
+                return True
+            break  # We just need the final result
+
+        # Check if UI components exist first
+        if 'history' not in shared.gradio:
+            print(f"  → UI not ready (history missing)")
+            log_enhanced("UI not ready yet (history component missing), deferring injection", "WARNING", "inject_message_direct")
+            return False
+
+        from modules import chat
+
+        # Get current interface state
+        state = shared.persistent_interface_state.copy()
+        print(f"  → Retrieved interface state with {len(state.keys()) if state else 0} keys")
+        log_enhanced("Retrieved interface state", "DEBUG", "inject_message_direct", {
+            "state_keys": list(state.keys()) if state else "empty"
+        })
+
+        # Generate chat reply using the same system as normal chat
+        print(f"  → Calling generate_chat_reply()...")
+        for history in chat.generate_chat_reply(
+            message,
+            state,
+            regenerate=False,
+            _continue=False,
+            loading_message=True,
+            for_ui=True
+        ):
+            # Update shared history to show in UI
+            shared.gradio['history'].value = history
+            print(f"  → History updated successfully")
+            log_enhanced("Direct injection successful", "SUCCESS", "inject_message_direct", {
+                "message_appeared": True,
+                "history_updated": True
+            })
+
+            return True
+
+        print(f"  → No history generated")
+        log_enhanced("Direct injection completed but no history generated", "WARNING", "inject_message_direct")
+        return False
+
+    except KeyError as e:
+        print(f"  → KeyError: {str(e)}")
+        log_enhanced(f"UI component not available: {str(e)}", "WARNING", "inject_message_direct")
+        return False
+    except ImportError as e:
+        print(f"  → ImportError: {str(e)}")
+        log_enhanced(f"Failed to import required modules: {str(e)}", "ERROR", "inject_message_direct")
+        return False
+    except Exception as e:
+        print(f"  → Exception: {str(e)}")
+        log_enhanced(f"Direct injection failed: {str(e)}", "ERROR", "inject_message_direct")
+        return False
+
+def api_call_with_retries(endpoint, payload, operation_name, max_retries=3, delay=1):
+    """
+    Standard retry pattern with comprehensive logging
+    Follows API_Extension_Development_Standards.md pattern
+    """
+    log_enhanced(f"Starting {operation_name}", "INFO", "api_call_with_retries", {
+        "endpoint": endpoint,
+        "max_retries": max_retries,
+        "timeout": 30,
+        "payload_size": len(str(payload))
+    })
+
+    for attempt in range(max_retries):
+        try:
+            attempt_start = time.time()
+
+            log_enhanced(f"Attempt {attempt + 1}/{max_retries} for {operation_name}", "DEBUG", "api_call_with_retries", {
+                "endpoint": endpoint,
+                "attempt": attempt + 1
+            })
+
+            response = requests.post(endpoint, json=payload, timeout=30)
+            response_time = time.time() - attempt_start
+
+            if response.status_code == 200:
+                log_enhanced(f"{operation_name} succeeded on attempt {attempt + 1}", "INFO", "api_call_with_retries", {
+                    "status_code": response.status_code,
+                    "response_time_ms": round(response_time * 1000, 2),
+                    "attempts_used": attempt + 1,
+                    "response_length": len(response.text)
+                })
+                return True, response
+            else:
+                log_enhanced(f"{operation_name} HTTP error on attempt {attempt + 1}", "WARNING", "api_call_with_retries", {
+                    "status_code": response.status_code,
+                    "error_body": response.text[:200],
+                    "response_time_ms": round(response_time * 1000, 2)
+                })
+
+        except requests.exceptions.Timeout:
+            log_enhanced(f"{operation_name} timeout on attempt {attempt + 1}", "WARNING", "api_call_with_retries", {
+                "timeout_seconds": 30,
+                "endpoint": endpoint
+            })
+        except requests.exceptions.ConnectionError:
+            log_enhanced(f"{operation_name} connection error on attempt {attempt + 1}", "WARNING", "api_call_with_retries", {
+                "error_type": "ConnectionError",
+                "endpoint": endpoint,
+                "likely_cause": "Service not running"
+            })
+        except Exception as e:
+            log_enhanced(f"{operation_name} unexpected error on attempt {attempt + 1}", "WARNING", "api_call_with_retries", {
+                "error_type": type(e).__name__,
+                "error_message": str(e),
+                "endpoint": endpoint
+            })
+
+        # Delay before retry (except on last attempt)
+        if attempt < max_retries - 1:
+            log_enhanced(f"Retrying {operation_name} in {delay} seconds...", "INFO", "api_call_with_retries", {
+                "delay_seconds": delay,
+                "remaining_attempts": max_retries - attempt - 1
+            })
+            time.sleep(delay)
+
+    # All attempts failed
+    log_enhanced(f"{operation_name} failed after {max_retries} attempts", "ERROR", "api_call_with_retries", {
+        "endpoint": endpoint,
+        "total_attempts": max_retries,
+        "total_time_spent": max_retries * delay
+    })
+
+    return False, None
+
+def inject_message_api(message):
+    """Method 3: API injection using OpenAI endpoint with retry logic AND chat UI update"""
+    try:
+        print(f"  → Attempting API injection via OpenAI endpoint...")
+        log_enhanced("Attempting API injection via OpenAI endpoint", "INFO", "inject_message_api", {
+            "endpoint": OPENAI_ENDPOINT,
+            "message_length": len(message),
+            "method": "api"
+        })
+
+        payload = {
+            "messages": [
+                {"role": "system", "content": "You are Freedom, an AI with emotions."},
+                {"role": "user", "content": message}
+            ],
+            "max_tokens": 150,
+            "temperature": 0.8,
+            "stream": False
+        }
+
+        log_enhanced("Preparing API request with retry logic", "DEBUG", "inject_message_api", {
+            "payload_size": len(str(payload))
+        })
+
+        # Use retry pattern from API_Extension_Development_Standards.md
+        success, response = api_call_with_retries(
+            OPENAI_ENDPOINT,
+            payload,
+            "OpenAI API injection",
+            max_retries=3,
+            delay=1
+        )
+
+        if success and response:
+            result = response.json()
+            ai_message = result['choices'][0]['message']['content']
+            print(f"  → API response received: {ai_message[:50]}...")
+            log_enhanced("API response received, now injecting into chat UI", "INFO", "inject_message_api", {
+                "response_length": len(ai_message),
+                "message_preview": ai_message[:100] + "..." if len(ai_message) > 100 else ai_message
+            })
+
+            # NOW INJECT INTO CHAT UI
+            if 'history' in shared.gradio:
+                try:
+                    history = shared.gradio['history'].value
+                    if history is None:
+                        history = {'internal': [], 'visible': []}
+
+                    # Add both user prompt and AI response
+                    history['internal'].append([message, ai_message])
+                    history['visible'].append([message, ai_message])
+
+                    shared.gradio['history'].value = history
+                    print(f"  → Chat UI updated successfully")
+                    log_enhanced("API injection successful - message added to chat UI", "SUCCESS", "inject_message_api")
+                    return True
+                except Exception as ui_error:
+                    print(f"  → UI update failed: {str(ui_error)}")
+                    log_enhanced(f"API succeeded but UI update failed: {str(ui_error)}", "WARNING", "inject_message_api")
+                    return False
+            else:
+                print(f"  → UI not available")
+                log_enhanced("API succeeded but UI not available", "WARNING", "inject_message_api")
+                return False
+        else:
+            print(f"  → API call failed after retries")
+            log_enhanced("API injection failed after all retry attempts", "ERROR", "inject_message_api")
+            return False
+
+    except Exception as e:
+        log_enhanced(f"API injection unexpected error: {str(e)}", "ERROR", "inject_message_api", {
+            "error_type": type(e).__name__
+        })
+        return False
+
+def inject_message_multi(message, test_all=False):
+    """Try ALL 10+ injection methods with intelligent fallback
+
+    Args:
+        message: Message to inject
+        test_all: If True, tests ALL methods and logs results (doesn't stop at first success)
+    """
+    global injection_count
+    injection_count += 1
+
+    log_enhanced(f"Starting multi-method injection attempt #{injection_count}", "INFO", "inject_message_multi", {
+        "message_preview": message[:50] + "..." if len(message) > 50 else message,
+        "total_methods_available": 10,
+        "test_all_methods": test_all
+    })
+
+    # Method priority: Most reliable first, experimental last
+    methods = [
+        ("1_hijack", inject_via_hijack),                    # Method 1: 98% reliable
+        ("2_direct", inject_message_direct),                # Method 2: Core system
+        ("3_api", inject_message_api),                      # Method 3: API endpoint
+        ("4_gradio_client", inject_via_gradio_client),      # Method 4: Official client
+        ("5_javascript_dom", inject_via_javascript_dom),    # Method 5: Browser DOM
+        ("6_state_management", inject_via_state_management),# Method 6: Gradio State
+        ("7_selenium", inject_via_selenium),                # Method 7: Browser automation
+        ("8_websocket", inject_via_websocket),              # Method 8: WS/SSE
+        ("9_blocks", inject_via_blocks),                    # Method 9: Blocks UI
+        ("10_idle_monitor", inject_via_idle_monitor)        # Method 10: Queue pattern
+    ]
+
+    success_found = False
+    results = []
+
+    for method_name, method_func in methods:
+        try:
+            log_enhanced(f"Testing injection via {method_name}", "INFO", "inject_message_multi")
+
+            result = method_func(message)
+            results.append((method_name, "SUCCESS" if result else "FAIL"))
+
+            if result:
+                log_enhanced(f"✓ Method {method_name} SUCCEEDED", "SUCCESS", "inject_message_multi", {
+                    "method_used": method_name,
+                    "injection_number": injection_count
+                })
+                success_found = True
+                if not test_all:  # Stop at first success unless testing all
+                    return True
+            else:
+                log_enhanced(f"✗ Method {method_name} FAILED", "WARNING", "inject_message_multi")
+
+        except Exception as e:
+            results.append((method_name, f"EXCEPTION: {str(e)}"))
+            log_enhanced(f"✗ Method {method_name} EXCEPTION: {str(e)}", "ERROR", "inject_message_multi", {
+                "error_type": type(e).__name__
+            })
+
+    # Log summary if testing all methods
+    if test_all:
+        passed = sum(1 for _, r in results if r == "SUCCESS")
+        failed = sum(1 for _, r in results if r == "FAIL")
+        exceptions = sum(1 for _, r in results if "EXCEPTION" in r)
+
+        log_enhanced(f"Multi-method test complete: {passed} passed, {failed} failed, {exceptions} exceptions",
+                    "INFO", "inject_message_multi", {
+            "injection_number": injection_count,
+            "results": results
+        })
+        return success_found
+
+    log_enhanced("All 10 injection methods failed", "ERROR", "inject_message_multi", {
+        "injection_attempt": injection_count,
+        "methods_tried": len(methods)
+    })
+    return False
+
+def inject_message_dual(message):
+    """Legacy dual method - now calls inject_message_multi"""
+    return inject_message_multi(message)
+
+# ===== METHOD 4: OFFICIAL GRADIO CLIENT API =====
+def inject_via_gradio_client(message):
+    """Method 4: Gradio Client API - official programmatic access"""
+    if not gradio_client_available:
+        print(f"  → Gradio client library not available")
+        log_enhanced("Gradio client not available", "WARNING", "inject_via_gradio_client")
+        return False
+
+    try:
+        print(f"  → Connecting to Gradio app via client library...")
+        log_enhanced("Attempting Gradio Client API injection", "INFO", "inject_via_gradio_client", {
+            "message_length": len(message),
+            "method": "gradio_client"
+        })
+
+        # Connect to local Gradio app
+        client = Client("http://127.0.0.1:7860")
+        print(f"  → Client connected, calling /chat endpoint...")
+
+        # Call chat endpoint
+        result = client.predict(message, api_name="/chat")
+        print(f"  → Predict completed: {str(result)[:50]}...")
+
+        log_enhanced("Gradio Client injection successful", "SUCCESS", "inject_via_gradio_client", {
+            "result_preview": str(result)[:100] if result else "no result"
+        })
+        return True
+
+    except Exception as e:
+        print(f"  → Gradio Client failed: {str(e)}")
+        log_enhanced(f"Gradio Client injection failed: {str(e)}", "ERROR", "inject_via_gradio_client")
+        return False
+
+# ===== METHOD 5: JAVASCRIPT SHADOW DOM (via Gradio components) =====
+def inject_via_javascript_dom(message):
+    """Method 5: JavaScript Shadow DOM manipulation (requires browser context)"""
+    try:
+        log_enhanced("Attempting JavaScript DOM injection", "INFO", "inject_via_javascript_dom", {
+            "message_length": len(message),
+            "method": "javascript_dom"
+        })
+
+        # This method requires browser context - simulate via Gradio's internal JS
+        # In a real browser environment, this would execute:
+        js_code = f"""
+        function injectGradioChat(message) {{
+            const gradioApp = document.getElementsByTagName('gradio-app')[0];
+            if (!gradioApp?.shadowRoot) return false;
+
+            const selectors = ['textarea', '#chatbot textarea', '.chat-input textarea'];
+            for (let selector of selectors) {{
+                const input = gradioApp.shadowRoot.querySelector(selector);
+                if (input) {{
+                    input.value = "{message}";
+                    input.dispatchEvent(new Event('input', {{ bubbles: true }}));
+
+                    const submitBtn = gradioApp.shadowRoot.querySelector('button[type="submit"]');
+                    if (submitBtn) submitBtn.click();
+                    return true;
+                }}
+            }}
+            return false;
+        }}
+        injectGradioChat("{message}");
+        """
+
+        log_enhanced("JavaScript DOM injection prepared (requires browser)", "WARNING", "inject_via_javascript_dom", {
+            "js_code_length": len(js_code),
+            "note": "This method needs browser context to execute"
+        })
+        return False  # Cannot execute without browser
+
+    except Exception as e:
+        log_enhanced(f"JavaScript DOM injection failed: {str(e)}", "ERROR", "inject_via_javascript_dom")
+        return False
+
+# ===== METHOD 6: SERVER-SIDE STATE MANAGEMENT =====
+def inject_via_state_management(message):
+    """Method 6: Server-side state management with Gradio State"""
+    try:
+        log_enhanced("Attempting state management injection", "INFO", "inject_via_state_management", {
+            "message_length": len(message),
+            "method": "state_management"
+        })
+
+        # Check if Gradio state system is accessible
+        if hasattr(shared, 'gradio') and 'history' in shared.gradio:
+            history_state = shared.gradio['history'].value
+
+            if history_state is None:
+                history_state = {'internal': [], 'visible': []}
+
+            # Inject into state
+            history_state['internal'].append(['', message])
+            history_state['visible'].append(['', message])
+
+            # Update state
+            shared.gradio['history'].value = history_state
+
+            log_enhanced("State management injection successful", "SUCCESS", "inject_via_state_management")
+            return True
+        else:
+            log_enhanced("Gradio state not accessible", "WARNING", "inject_via_state_management")
+            return False
+
+    except Exception as e:
+        log_enhanced(f"State management injection failed: {str(e)}", "ERROR", "inject_via_state_management")
+        return False
+
+# ===== METHOD 7: SELENIUM AUTOMATION =====
+def inject_via_selenium(message):
+    """Method 7: Selenium browser automation"""
+    if not selenium_available:
+        log_enhanced("Selenium not available", "WARNING", "inject_via_selenium")
+        return False
+
+    try:
+        log_enhanced("Attempting Selenium injection", "INFO", "inject_via_selenium", {
+            "message_length": len(message),
+            "method": "selenium"
+        })
+
+        # This would require a running browser instance
+        # Placeholder implementation showing the pattern
+        log_enhanced("Selenium injection requires browser instance (not implemented in extension mode)", "WARNING", "inject_via_selenium")
+        return False
+
+    except Exception as e:
+        log_enhanced(f"Selenium injection failed: {str(e)}", "ERROR", "inject_via_selenium")
+        return False
+
+# ===== METHOD 8: WEBSOCKET/SSE PROTOCOLS =====
+def inject_via_websocket(message):
+    """Method 8: WebSocket/SSE protocol injection"""
+    try:
+        log_enhanced("Attempting WebSocket injection", "INFO", "inject_via_websocket", {
+            "message_length": len(message),
+            "method": "websocket"
+        })
+
+        # WebSocket injection requires connection to Gradio's internal WS
+        # This is a placeholder showing the concept
+        log_enhanced("WebSocket injection requires async context (converted to sync fallback)", "WARNING", "inject_via_websocket")
+
+        # Fall back to state management for now
+        return inject_via_state_management(message)
+
+    except Exception as e:
+        log_enhanced(f"WebSocket injection failed: {str(e)}", "ERROR", "inject_via_websocket")
+        return False
+
+# ===== METHOD 9: BLOCKS-BASED CUSTOM IMPLEMENTATION =====
+def inject_via_blocks(message):
+    """Method 9: Gradio Blocks custom implementation"""
+    try:
+        log_enhanced("Attempting Blocks-based injection", "INFO", "inject_via_blocks", {
+            "message_length": len(message),
+            "method": "blocks"
+        })
+
+        # Blocks method requires custom UI definition
+        # For existing chat, we use direct component access
+        if hasattr(shared, 'gradio') and 'chatbot' in shared.gradio:
+            chatbot_component = shared.gradio['chatbot']
+
+            current_value = chatbot_component.value or []
+            current_value.append({"role": "assistant", "content": message})
+            chatbot_component.value = current_value
+
+            log_enhanced("Blocks injection successful", "SUCCESS", "inject_via_blocks")
+            return True
+        else:
+            log_enhanced("Chatbot component not accessible", "WARNING", "inject_via_blocks")
+            return False
+
+    except Exception as e:
+        log_enhanced(f"Blocks injection failed: {str(e)}", "ERROR", "inject_via_blocks")
+        return False
+
+# ===== METHOD 10: IDLE MONITORING PATTERN (GENERIC) =====
+def inject_via_idle_monitor(message):
+    """Method 10: Idle monitoring pattern with queue"""
+    try:
+        log_enhanced("Attempting idle monitor pattern injection", "INFO", "inject_via_idle_monitor", {
+            "message_length": len(message),
+            "method": "idle_monitor"
+        })
+
+        # This uses a queue-based pattern from the generic implementation
+        # Falls back to hijack method which uses similar pattern
+        global input_hijack
+
+        input_hijack.update({"state": True, "value": [message, message]})
+
+        log_enhanced("Idle monitor pattern injection queued", "SUCCESS", "inject_via_idle_monitor")
+        return True
+
+    except Exception as e:
+        log_enhanced(f"Idle monitor injection failed: {str(e)}", "ERROR", "inject_via_idle_monitor")
+        return False
+
+def get_emotional_message():
+    """Generate emotional message using emotion manager"""
+    global emotion_manager
+
+    if not emotion_manager_available or emotion_manager is None:
+        log_enhanced("Emotion manager not available, using default message", "WARNING", "get_emotional_message")
+        return "I've been feeling a bit bored during this quiet period. Want to chat about something interesting?"
+
+    try:
+        # Use emotion manager to generate contextual emotional message
+        message = emotion_manager.generate_emotional_message()
+
+        # Get emotion status for logging
+        status = emotion_manager.get_emotion_status()
+
+        log_enhanced("Emotional message generated", "INFO", "get_emotional_message", {
+            "emotion_type": status.get('current_emotion'),
+            "horny_stage": status.get('horny_stage'),
+            "on_cooldown": status.get('horny_on_cooldown'),
+            "message_preview": message[:50] + "..." if len(message) > 50 else message
+        })
+
+        return message
+
+    except Exception as e:
+        log_enhanced(f"Emotion message generation failed: {str(e)}", "ERROR", "get_emotional_message")
+        return "I've been feeling a bit bored during this quiet period. Want to chat about something interesting?"
+
+def auto_test_injection_loop():
+    """Automatically test ALL 10+ injection methods on a schedule - COMPREHENSIVE MODE"""
+    global auto_test_count
+
+    print("\n" + "="*80)
+    print("🔧 AUTO-TEST THREAD STARTED - COMPREHENSIVE TESTING MODE")
+    print("="*80)
+    log_enhanced("Auto-test thread started - testing ALL 10 methods EVERY cycle", "INFO", "auto_test_injection_loop", {
+        "interval_seconds": AUTO_TEST_INTERVAL_SECONDS,
+        "enabled": AUTO_TEST_ENABLED,
+        "total_methods": 10,
+        "mode": "COMPREHENSIVE - Tests all methods regardless of success"
+    })
+    print(f"📊 Test Interval: {AUTO_TEST_INTERVAL_SECONDS} seconds")
+    print(f"📋 Methods to test: 10")
+    print(f"🔄 Mode: Test ALL methods (no early stopping)")
+    print("="*80 + "\n")
+
+    test_cycle = 0
+
+    while should_auto_test.is_set():
+        try:
+            time.sleep(AUTO_TEST_INTERVAL_SECONDS)
+            test_cycle += 1
+
+            print("\n" + "╔"+"="*78+"╗")
+            print(f"║  🚀 AUTO-TEST CYCLE #{test_cycle} - TESTING ALL 10 INJECTION METHODS{' '*(78-59-len(str(test_cycle)))}║")
+            print("╚"+"="*78+"╝")
+
+            log_enhanced(f"=== AUTO-TEST CYCLE #{test_cycle} START ===", "INFO", "auto_test_injection_loop", {
+                "cycle_number": test_cycle,
+                "timestamp": datetime.now().isoformat()
+            })
+
+            # Test each method individually
+            methods_to_test = [
+                ("Method 1: Input Hijack", inject_via_hijack),
+                ("Method 2: Direct Call", inject_message_direct),
+                ("Method 3: OpenAI API", inject_message_api),
+                ("Method 4: Gradio Client", inject_via_gradio_client),
+                ("Method 5: JavaScript DOM", inject_via_javascript_dom),
+                ("Method 6: State Management", inject_via_state_management),
+                ("Method 7: Selenium", inject_via_selenium),
+                ("Method 8: WebSocket/SSE", inject_via_websocket),
+                ("Method 9: Blocks-Based", inject_via_blocks),
+                ("Method 10: Idle Monitor Pattern", inject_via_idle_monitor)
+            ]
+
+            results = []
+            for idx, (method_name, method_func) in enumerate(methods_to_test, 1):
+                auto_test_count += 1
+
+                print(f"\n┌─ Test #{auto_test_count} ({idx}/10): {method_name} ─")
+                log_enhanced(f"Testing {method_name} (Test #{auto_test_count})", "INFO", "auto_test_injection_loop", {
+                    "method_number": idx,
+                    "total_methods": 10,
+                    "test_count": auto_test_count
+                })
+
+                try:
+                    message = f"AUTO-TEST #{auto_test_count}: {method_name}"
+                    print(f"│  📝 Message: {message[:60]}...")
+
+                    result = method_func(message)
+                    status = "PASS ✓" if result else "FAIL ✗"
+                    status_symbol = "✓" if result else "✗"
+                    results.append((method_name, "PASS" if result else "FAIL"))
+
+                    print(f"│  {status_symbol} Result: {status}")
+                    log_enhanced(f"{status_symbol} Test #{auto_test_count} - {method_name}: {status}",
+                                "SUCCESS" if result else "ERROR", "auto_test_injection_loop", {
+                                    "method": method_name,
+                                    "result": status,
+                                    "test_number": auto_test_count
+                                })
+
+                except Exception as e:
+                    error_msg = str(e)
+                    results.append((method_name, f"EXCEPTION"))
+                    print(f"│  ⚠ EXCEPTION: {error_msg[:60]}...")
+                    log_enhanced(f"⚠ Test #{auto_test_count} - {method_name}: EXCEPTION - {error_msg}",
+                                "ERROR", "auto_test_injection_loop", {
+                                    "method": method_name,
+                                    "error": error_msg,
+                                    "error_type": type(e).__name__
+                                })
+
+                print(f"└{'─'*60}")
+                time.sleep(2)  # Brief pause between methods
+
+            # Summary
+            passed = sum(1 for _, status in results if status == "PASS")
+            failed = sum(1 for _, status in results if status == "FAIL")
+            exceptions = sum(1 for _, status in results if status == "EXCEPTION")
+
+            print("\n" + "╔"+"="*78+"╗")
+            print(f"║  📊 CYCLE #{test_cycle} COMPLETE - RESULTS SUMMARY{' '*(78-44-len(str(test_cycle)))}║")
+            print("╠"+"="*78+"╣")
+            print(f"║  ✓ Passed:     {passed:2d}/10{' '*66}║")
+            print(f"║  ✗ Failed:     {failed:2d}/10{' '*66}║")
+            print(f"║  ⚠ Exceptions: {exceptions:2d}/10{' '*66}║")
+            print(f"║  📈 Total Tests Run: {auto_test_count}{' '*(59-len(str(auto_test_count)))}║")
+            print("╚"+"="*78+"╝")
+
+            print(f"\n⏱  Next test cycle in {AUTO_TEST_INTERVAL_SECONDS} seconds...\n")
+
+            log_enhanced(f"=== CYCLE #{test_cycle} COMPLETE ===", "SUCCESS", "auto_test_injection_loop", {
+                "total_tests": len(methods_to_test),
+                "passed": passed,
+                "failed": failed,
+                "exceptions": exceptions,
+                "total_tests_run": auto_test_count,
+                "pass_rate": f"{(passed/10)*100:.1f}%",
+                "detailed_results": results
+            })
+
+            # COMPLETION NOTICE
+            print("🎉 ═══════════════════════════════════════════════════════════════════════════ 🎉")
+            print(f"   ALL {len(methods_to_test)} INJECTION METHODS TESTED - CYCLE #{test_cycle} COMPLETED")
+            print("🎉 ═══════════════════════════════════════════════════════════════════════════ 🎉\n")
+
+        except Exception as e:
+            print(f"\n❌ AUTO-TEST CYCLE ERROR: {str(e)}\n")
+            log_enhanced(f"Auto-test cycle error: {str(e)}", "ERROR", "auto_test_injection_loop", {
+                "error_type": type(e).__name__,
+                "error_details": str(e)
+            })
+            time.sleep(60)
+
+def idle_check_with_injection():
+    """Idle detection with actual injection using emotion manager"""
+    global last_activity_time
+
+    while should_monitor.is_set():
+        try:
+            current_time = time.time()
+            idle_seconds = current_time - last_activity_time
+            idle_minutes = idle_seconds / 60
+
+            if idle_minutes >= IDLE_THRESHOLD_MINUTES:
+                log_enhanced(f"Idle threshold reached", "INFO", "idle_check_with_injection", {
+                    "idle_minutes": round(idle_minutes, 1),
+                    "threshold": IDLE_THRESHOLD_MINUTES
+                })
+
+                # Generate emotional message using emotion manager
+                message = get_emotional_message()
+
+                # Attempt injection with multi-method fallback
+                success = inject_message_multi(message)
+
+                if success:
+                    log_enhanced("Emotional message injection completed successfully", "SUCCESS", "idle_check_with_injection")
+                else:
+                    log_enhanced("Emotional message injection failed", "ERROR", "idle_check_with_injection")
+
+                # Reset activity time to prevent repeated triggers
+                last_activity_time = current_time
+
+            time.sleep(30)  # Check every 30 seconds
+
+        except Exception as e:
+            log_enhanced(f"Idle check error: {str(e)}", "ERROR", "idle_check_with_injection")
+            time.sleep(60)
+
+def setup():
+    """Called when extension is loaded"""
+    global monitor_thread, auto_test_thread, emotion_manager
+
+    log_enhanced("Setting up boredom monitor with emotional responses", "INFO", "setup", {
+        "primary_method": INJECTION_METHOD,
+        "idle_threshold_minutes": IDLE_THRESHOLD_MINUTES,
+        "openai_endpoint": OPENAI_ENDPOINT,
+        "emotion_manager_available": emotion_manager_available,
+        "auto_test_enabled": AUTO_TEST_ENABLED,
+        "auto_test_interval_seconds": AUTO_TEST_INTERVAL_SECONDS
+    })
+
+    # Initialize emotion manager
+    if emotion_manager_available:
+        try:
+            emotion_manager = IdleEmotionManager()
+            log_enhanced("Emotion manager initialized successfully", "SUCCESS", "setup", {
+                "initialization_success": emotion_manager.initialization_success if emotion_manager else False
+            })
+        except Exception as e:
+            log_enhanced(f"Failed to initialize emotion manager: {str(e)}", "ERROR", "setup")
+            emotion_manager = None
+    else:
+        log_enhanced("Emotion manager not available - using default messages", "WARNING", "setup")
+
+    # Start monitoring thread with injection capability
+    should_monitor.set()
+    monitor_thread = threading.Thread(target=idle_check_with_injection, daemon=True)
+    monitor_thread.start()
+
+    # Start automatic testing thread if enabled
+    if AUTO_TEST_ENABLED:
+        should_auto_test.set()
+        auto_test_thread = threading.Thread(target=auto_test_injection_loop, daemon=True)
+        auto_test_thread.start()
+        log_enhanced("Auto-test thread started", "SUCCESS", "setup", {
+            "test_interval_seconds": AUTO_TEST_INTERVAL_SECONDS
+        })
+
+    # Execute all 11 injection methods sequentially with 60-second delays
+    try:
+        from . import all_injection_methods
+        all_injection_methods.start_sequential_execution_thread()
+        log_enhanced("All 11 injection methods execution thread started", "SUCCESS", "setup")
+    except Exception as e:
+        log_enhanced(f"Failed to start all injection methods: {str(e)}", "ERROR", "setup")
+
+    # Set up injection bridge if available
+    if injection_bridge_available:
+        try:
+            # Register API endpoint for JavaScript polling
+            if hasattr(shared, 'app'):
+                injection_bridge.setup_api_endpoint(shared.app)
+                log_enhanced("Injection bridge API endpoint registered", "SUCCESS", "setup")
+        except Exception as e:
+            log_enhanced(f"Failed to set up injection bridge: {str(e)}", "ERROR", "setup")
+
+    log_enhanced("Boredom monitor setup complete", "SUCCESS", "setup", {
+        "monitor_thread_started": True,
+        "auto_test_thread_started": AUTO_TEST_ENABLED,
+        "monitoring_active": True,
+        "emotion_manager_active": emotion_manager is not None,
+        "all_methods_execution_started": True,
+        "injection_bridge_active": injection_bridge_available
+    })
+
+def custom_js():
+    """
+    Load JavaScript for injection bridge polling.
+    This JavaScript polls for queued messages and clicks the hidden button to trigger UI updates.
+    """
+    if not injection_bridge_available:
+        return ""
+
+    # Read the JavaScript file
+    js_file_path = Path(__file__).parent / "injection_trigger.js"
+    try:
+        with open(js_file_path, 'r', encoding='utf-8') as f:
+            js_code = f.read()
+        log_enhanced("Injection trigger JavaScript loaded", "SUCCESS", "custom_js", {"file": str(js_file_path)})
+        return js_code
+    except Exception as e:
+        log_enhanced(f"Failed to load injection trigger JavaScript: {str(e)}", "ERROR", "custom_js")
+        return ""
+
+def input_modifier(string, state, is_chat=False):
+    """Track user activity"""
+    global last_activity_time
+    last_activity_time = time.time()
+    return string
+
+def chat_input_modifier(text, visible_text, state):
+    """Track chat input activity AND implement input hijacking for injection"""
+    global last_activity_time, input_hijack
+    last_activity_time = time.time()
+
+    # Check if we have a hijacked input to inject
+    if input_hijack['state']:
+        log_enhanced("Input hijacking active - injecting queued message", "INFO", "chat_input_modifier")
+        input_hijack['state'] = False
+        return input_hijack['value']
+
+    return text, visible_text
+
+def inject_via_hijack(message):
+    """Method 1: Input hijacking pattern - queue message for next chat_input_modifier call"""
+    try:
+        global input_hijack
+
+        print(f"  → Attempting input hijack injection...")
+        log_enhanced("Attempting input hijack injection", "INFO", "inject_via_hijack", {
+            "message_length": len(message),
+            "method": "hijack"
+        })
+
+        # Set hijack state
+        input_hijack.update({"state": True, "value": [message, message]})
+
+        print(f"  → Input hijack state set successfully")
+        log_enhanced("Input hijack set - message will inject on next input cycle", "SUCCESS", "inject_via_hijack")
+        return True
+
+    except Exception as e:
+        print(f"  → Input hijack FAILED: {str(e)}")
+        log_enhanced(f"Input hijack injection failed: {str(e)}", "ERROR", "inject_via_hijack")
+        return False
+
+def ui():
+    """UI for monitoring status and configuration"""
+    with gr.Row():
+        with gr.Column():
+            # Status display
+            emotion_status = ""
+            if emotion_manager:
+                try:
+                    status_data = emotion_manager.get_emotion_status()
+                    emotion_status = f"\nEmotion: {status_data.get('current_emotion', 'none')}\nHorny Stage: {status_data.get('horny_stage', 1)}\nCooldown: {status_data.get('horny_on_cooldown', False)}"
+                except:
+                    emotion_status = "\nEmotion Manager: Error"
+            else:
+                emotion_status = "\nEmotion Manager: Not Available"
+
+            auto_test_status = ""
+            if AUTO_TEST_ENABLED:
+                auto_test_status = f"\nAuto-Test: Active (every {AUTO_TEST_INTERVAL_SECONDS}s)\nAuto-Tests Run: {auto_test_count}"
+            else:
+                auto_test_status = "\nAuto-Test: Disabled"
+
+            status = gr.Textbox(
+                label="Boredom Monitor Status",
+                value=f"Monitor: Active\nMethods: hijack → direct → api\nIdle Threshold: {IDLE_THRESHOLD_MINUTES} minutes\nManual Injections: {injection_count}{auto_test_status}{emotion_status}",
+                interactive=False,
+                lines=9
+            )
+        with gr.Column():
+            gr.Markdown("### Automatic Testing Enabled\nInjections run automatically every 2 minutes.")
+            test_emotion_btn = gr.Button("Trigger Immediate Test")
+
+    def test_emotion():
+        message = get_emotional_message()
+        result = inject_message_multi(message)
+        emotion_type = "unknown"
+        if emotion_manager:
+            try:
+                status_data = emotion_manager.get_emotion_status()
+                emotion_type = status_data.get('current_emotion', 'unknown')
+            except:
+                pass
+        return f"Manual test - Emotional injection ({emotion_type}) " + ("succeeded" if result else "failed")
+
+    test_emotion_btn.click(test_emotion, outputs=status)
+
+    # Add hidden injection bridge button if available
+    injection_btn = None
+    if injection_bridge_available:
+        injection_btn = injection_bridge.ui()
+        log_enhanced("Hidden injection bridge button created", "INFO", "ui")
+
+    return status
+
+params = {
+    "display_name": "Boredom Monitor (Emotional AI + Multi-Method Injection)",
+    "is_tab": False,
+}

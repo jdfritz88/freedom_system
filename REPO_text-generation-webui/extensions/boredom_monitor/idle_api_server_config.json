@@ -1,0 +1,19 @@
+{
+  "server": {
+    "port": 7852,
+    "host": "127.0.0.1",
+    "enable_cors": true,
+    "api_key_required": false
+  },
+  "endpoints": {
+    "health_check": "/api/v1/boredom/health",
+    "status": "/api/v1/boredom/status",
+    "inject": "/api/v1/boredom/inject",
+    "emotions": "/api/v1/boredom/emotions"
+  },
+  "logging": {
+    "log_requests": true,
+    "log_responses": true,
+    "log_level": "INFO"
+  }
+}

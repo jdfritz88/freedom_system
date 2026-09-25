@@ -1,0 +1,7 @@
+{
+  "webui_base": "http://127.0.0.1:7860",
+  "timeout_seconds": 5,
+  "log_to_file": true,
+  "log_file": "chat_inject_monitor.log",
+  "default_test_message": "[INJECTION-TEST] Hello World"
+}

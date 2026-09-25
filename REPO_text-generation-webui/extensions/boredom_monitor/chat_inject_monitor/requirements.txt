@@ -1,0 +1,11 @@
+# Chat Inject Monitor Requirements
+# These are typically already installed with text-generation-webui
+
+# Core requirement for HTTP API calls
+requests>=2.25.0
+
+# GUI is built with tkinter which comes with Python standard library
+# No additional GUI packages needed
+
+# Optional: For Selenium browser verification (Method 13)
+# selenium>=4.0.0

@@ -1,0 +1,4690 @@
+{
+  "start_time": "2025-12-04T22:15:46.608460",
+  "end_time": "2025-12-04T22:17:11.623545",
+  "duration_seconds": 85.015085,
+  "total_injections": 26,
+  "total_verifications": 16,
+  "matrix": {
+    "1": {
+      "injection_method": 1,
+      "injection_name": "CHARACTER_GREETING",
+      "timestamp": "2025-12-04T22:15:46.609458",
+      "injection_result": {
+        "method": "CHARACTER_GREETING",
+        "success": true,
+        "error": null,
+        "history_count": 1
+      },
+      "verification_results": {
+        "1": {
+          "method": "HISTORY_STATE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 1,
+          "visible_count": 1,
+          "found_in_internal": true,
+          "found_in_visible": true
+        },
+        "2": {
+          "method": "MESSAGE_COUNT",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 1,
+          "visible_count": 1
+        },
+        "3": {
+          "method": "DISPLAY_HTML",
+          "success": true,
+          "found": false,
+          "error": null,
+          "html_length": 2
+        },
+        "4": {
+          "method": "METADATA_TIMESTAMP",
+          "success": true,
+          "found": false,
+          "error": null,
+          "has_metadata": false
+        },
+        "5": {
+          "method": "API_STATE",
+          "success": true,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "6": {
+          "method": "VERIFICATION_ENDPOINT",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "7": {
+          "method": "DOM_CONTENT",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - Cannot access DOM from Python",
+          "note": "Use verify_method_13_selenium for browser verification"
+        },
+        "8": {
+          "method": "MUTATION_OBSERVER",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - MutationObserver is JavaScript API",
+          "note": "Would need JavaScript bridge to check mutations"
+        },
+        "9": {
+          "method": "DATA_RAW",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "10": {
+          "method": "DOM_MESSAGE_COUNT",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "11": {
+          "method": "SSE_EVENTS",
+          "success": true,
+          "found": false,
+          "error": "NOT_PRACTICAL - SSE requires persistent connection",
+          "note": "SSE monitoring best done during injection, not after"
+        },
+        "12": {
+          "method": "REQUEST_MONITOR",
+          "success": true,
+          "found": false,
+          "error": "NOT_AVAILABLE - Would require request logging middleware",
+          "note": "Consider checking server logs instead"
+        },
+        "13": {
+          "method": "SELENIUM",
+          "success": true,
+          "found": false,
+          "error": "selenium not installed"
+        },
+        "14": {
+          "method": "COMPREHENSIVE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "found_count": 2,
+          "total_checked": 5,
+          "method_results": {
+            "1": {
+              "method": "HISTORY_STATE",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 1,
+              "visible_count": 1,
+              "found_in_internal": true,
+              "found_in_visible": true
+            },
+            "2": {
+              "method": "MESSAGE_COUNT",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 1,
+              "visible_count": 1
+            },
+            "3": {
+              "method": "DISPLAY_HTML",
+              "success": true,
+              "found": false,
+              "error": null,
+              "html_length": 2
+            },
+            "4": {
+              "method": "METADATA_TIMESTAMP",
+              "success": true,
+              "found": false,
+              "error": null,
+              "has_metadata": false
+            },
+            "9": {
+              "method": "DATA_RAW",
+              "success": false,
+              "found": false,
+              "error": "expected string or bytes-like object, got 'dict'"
+            }
+          },
+          "confidence": "2/5"
+        },
+        "15": {
+          "method": "BROWSER_CALLBACK",
+          "success": true,
+          "found": false,
+          "error": null,
+          "total_reports": 0
+        },
+        "16": {
+          "method": "BROWSER_API_QUERY",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        }
+      },
+      "any_verification_passed": true,
+      "character_state": {
+        "character_menu": "Willow_Chat",
+        "unique_id": "20251204-00-04-15",
+        "name2": "Willow_Chat",
+        "history_count_before": 1
+      },
+      "display_refreshed": true,
+      "test_message": "[INJECTION-TEST] Method-1 @ 221546"
+    },
+    "2": {
+      "injection_method": 2,
+      "injection_name": "HISTORY_MODIFIER",
+      "timestamp": "2025-12-04T22:15:49.445096",
+      "injection_result": {
+        "method": "HISTORY_MODIFIER",
+        "success": true,
+        "error": null,
+        "history_count": 2
+      },
+      "verification_results": {
+        "1": {
+          "method": "HISTORY_STATE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 2,
+          "visible_count": 2,
+          "found_in_internal": true,
+          "found_in_visible": true
+        },
+        "2": {
+          "method": "MESSAGE_COUNT",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 2,
+          "visible_count": 2
+        },
+        "3": {
+          "method": "DISPLAY_HTML",
+          "success": true,
+          "found": false,
+          "error": null,
+          "html_length": 2
+        },
+        "4": {
+          "method": "METADATA_TIMESTAMP",
+          "success": true,
+          "found": false,
+          "error": null,
+          "has_metadata": false
+        },
+        "5": {
+          "method": "API_STATE",
+          "success": true,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "6": {
+          "method": "VERIFICATION_ENDPOINT",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "7": {
+          "method": "DOM_CONTENT",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - Cannot access DOM from Python",
+          "note": "Use verify_method_13_selenium for browser verification"
+        },
+        "8": {
+          "method": "MUTATION_OBSERVER",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - MutationObserver is JavaScript API",
+          "note": "Would need JavaScript bridge to check mutations"
+        },
+        "9": {
+          "method": "DATA_RAW",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "10": {
+          "method": "DOM_MESSAGE_COUNT",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "11": {
+          "method": "SSE_EVENTS",
+          "success": true,
+          "found": false,
+          "error": "NOT_PRACTICAL - SSE requires persistent connection",
+          "note": "SSE monitoring best done during injection, not after"
+        },
+        "12": {
+          "method": "REQUEST_MONITOR",
+          "success": true,
+          "found": false,
+          "error": "NOT_AVAILABLE - Would require request logging middleware",
+          "note": "Consider checking server logs instead"
+        },
+        "13": {
+          "method": "SELENIUM",
+          "success": true,
+          "found": false,
+          "error": "selenium not installed"
+        },
+        "14": {
+          "method": "COMPREHENSIVE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "found_count": 2,
+          "total_checked": 5,
+          "method_results": {
+            "1": {
+              "method": "HISTORY_STATE",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 2,
+              "visible_count": 2,
+              "found_in_internal": true,
+              "found_in_visible": true
+            },
+            "2": {
+              "method": "MESSAGE_COUNT",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 2,
+              "visible_count": 2
+            },
+            "3": {
+              "method": "DISPLAY_HTML",
+              "success": true,
+              "found": false,
+              "error": null,
+              "html_length": 2
+            },
+            "4": {
+              "method": "METADATA_TIMESTAMP",
+              "success": true,
+              "found": false,
+              "error": null,
+              "has_metadata": false
+            },
+            "9": {
+              "method": "DATA_RAW",
+              "success": false,
+              "found": false,
+              "error": "expected string or bytes-like object, got 'dict'"
+            }
+          },
+          "confidence": "2/5"
+        },
+        "15": {
+          "method": "BROWSER_CALLBACK",
+          "success": true,
+          "found": false,
+          "error": null,
+          "total_reports": 0
+        },
+        "16": {
+          "method": "BROWSER_API_QUERY",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        }
+      },
+      "any_verification_passed": true,
+      "character_state": {
+        "character_menu": "Willow_Chat",
+        "unique_id": "20251204-00-04-15",
+        "name2": "Willow_Chat",
+        "history_count_before": 1
+      },
+      "display_refreshed": true,
+      "test_message": "[INJECTION-TEST] Method-2 @ 221549"
+    },
+    "3": {
+      "injection_method": 3,
+      "injection_name": "STATE_MODIFIER",
+      "timestamp": "2025-12-04T22:15:52.269596",
+      "injection_result": {
+        "method": "STATE_MODIFIER",
+        "success": true,
+        "error": null
+      },
+      "verification_results": {
+        "1": {
+          "method": "HISTORY_STATE",
+          "success": true,
+          "found": false,
+          "error": null,
+          "internal_count": 2,
+          "visible_count": 2,
+          "found_in_internal": false,
+          "found_in_visible": false
+        },
+        "2": {
+          "method": "MESSAGE_COUNT",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 2,
+          "visible_count": 2
+        },
+        "3": {
+          "method": "DISPLAY_HTML",
+          "success": true,
+          "found": false,
+          "error": null,
+          "html_length": 2
+        },
+        "4": {
+          "method": "METADATA_TIMESTAMP",
+          "success": true,
+          "found": false,
+          "error": null,
+          "has_metadata": false
+        },
+        "5": {
+          "method": "API_STATE",
+          "success": true,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "6": {
+          "method": "VERIFICATION_ENDPOINT",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "7": {
+          "method": "DOM_CONTENT",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - Cannot access DOM from Python",
+          "note": "Use verify_method_13_selenium for browser verification"
+        },
+        "8": {
+          "method": "MUTATION_OBSERVER",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - MutationObserver is JavaScript API",
+          "note": "Would need JavaScript bridge to check mutations"
+        },
+        "9": {
+          "method": "DATA_RAW",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "10": {
+          "method": "DOM_MESSAGE_COUNT",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "11": {
+          "method": "SSE_EVENTS",
+          "success": true,
+          "found": false,
+          "error": "NOT_PRACTICAL - SSE requires persistent connection",
+          "note": "SSE monitoring best done during injection, not after"
+        },
+        "12": {
+          "method": "REQUEST_MONITOR",
+          "success": true,
+          "found": false,
+          "error": "NOT_AVAILABLE - Would require request logging middleware",
+          "note": "Consider checking server logs instead"
+        },
+        "13": {
+          "method": "SELENIUM",
+          "success": true,
+          "found": false,
+          "error": "selenium not installed"
+        },
+        "14": {
+          "method": "COMPREHENSIVE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "found_count": 1,
+          "total_checked": 5,
+          "method_results": {
+            "1": {
+              "method": "HISTORY_STATE",
+              "success": true,
+              "found": false,
+              "error": null,
+              "internal_count": 2,
+              "visible_count": 2,
+              "found_in_internal": false,
+              "found_in_visible": false
+            },
+            "2": {
+              "method": "MESSAGE_COUNT",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 2,
+              "visible_count": 2
+            },
+            "3": {
+              "method": "DISPLAY_HTML",
+              "success": true,
+              "found": false,
+              "error": null,
+              "html_length": 2
+            },
+            "4": {
+              "method": "METADATA_TIMESTAMP",
+              "success": true,
+              "found": false,
+              "error": null,
+              "has_metadata": false
+            },
+            "9": {
+              "method": "DATA_RAW",
+              "success": false,
+              "found": false,
+              "error": "expected string or bytes-like object, got 'dict'"
+            }
+          },
+          "confidence": "1/5"
+        },
+        "15": {
+          "method": "BROWSER_CALLBACK",
+          "success": true,
+          "found": false,
+          "error": null,
+          "total_reports": 0
+        },
+        "16": {
+          "method": "BROWSER_API_QUERY",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        }
+      },
+      "any_verification_passed": true,
+      "character_state": {
+        "character_menu": "Willow_Chat",
+        "unique_id": "20251204-00-04-15",
+        "name2": "Willow_Chat",
+        "history_count_before": 1
+      },
+      "display_refreshed": true,
+      "test_message": "[INJECTION-TEST] Method-3 @ 221552"
+    },
+    "4": {
+      "injection_method": 4,
+      "injection_name": "CHAT_INPUT_MODIFIER",
+      "timestamp": "2025-12-04T22:15:55.114374",
+      "injection_result": {
+        "method": "CHAT_INPUT_MODIFIER",
+        "success": true,
+        "error": null
+      },
+      "verification_results": {
+        "1": {
+          "method": "HISTORY_STATE",
+          "success": true,
+          "found": false,
+          "error": null,
+          "internal_count": 2,
+          "visible_count": 2,
+          "found_in_internal": false,
+          "found_in_visible": false
+        },
+        "2": {
+          "method": "MESSAGE_COUNT",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 2,
+          "visible_count": 2
+        },
+        "3": {
+          "method": "DISPLAY_HTML",
+          "success": true,
+          "found": false,
+          "error": null,
+          "html_length": 2
+        },
+        "4": {
+          "method": "METADATA_TIMESTAMP",
+          "success": true,
+          "found": false,
+          "error": null,
+          "has_metadata": false
+        },
+        "5": {
+          "method": "API_STATE",
+          "success": true,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "6": {
+          "method": "VERIFICATION_ENDPOINT",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "7": {
+          "method": "DOM_CONTENT",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - Cannot access DOM from Python",
+          "note": "Use verify_method_13_selenium for browser verification"
+        },
+        "8": {
+          "method": "MUTATION_OBSERVER",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - MutationObserver is JavaScript API",
+          "note": "Would need JavaScript bridge to check mutations"
+        },
+        "9": {
+          "method": "DATA_RAW",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "10": {
+          "method": "DOM_MESSAGE_COUNT",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "11": {
+          "method": "SSE_EVENTS",
+          "success": true,
+          "found": false,
+          "error": "NOT_PRACTICAL - SSE requires persistent connection",
+          "note": "SSE monitoring best done during injection, not after"
+        },
+        "12": {
+          "method": "REQUEST_MONITOR",
+          "success": true,
+          "found": false,
+          "error": "NOT_AVAILABLE - Would require request logging middleware",
+          "note": "Consider checking server logs instead"
+        },
+        "13": {
+          "method": "SELENIUM",
+          "success": true,
+          "found": false,
+          "error": "selenium not installed"
+        },
+        "14": {
+          "method": "COMPREHENSIVE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "found_count": 1,
+          "total_checked": 5,
+          "method_results": {
+            "1": {
+              "method": "HISTORY_STATE",
+              "success": true,
+              "found": false,
+              "error": null,
+              "internal_count": 2,
+              "visible_count": 2,
+              "found_in_internal": false,
+              "found_in_visible": false
+            },
+            "2": {
+              "method": "MESSAGE_COUNT",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 2,
+              "visible_count": 2
+            },
+            "3": {
+              "method": "DISPLAY_HTML",
+              "success": true,
+              "found": false,
+              "error": null,
+              "html_length": 2
+            },
+            "4": {
+              "method": "METADATA_TIMESTAMP",
+              "success": true,
+              "found": false,
+              "error": null,
+              "has_metadata": false
+            },
+            "9": {
+              "method": "DATA_RAW",
+              "success": false,
+              "found": false,
+              "error": "expected string or bytes-like object, got 'dict'"
+            }
+          },
+          "confidence": "1/5"
+        },
+        "15": {
+          "method": "BROWSER_CALLBACK",
+          "success": true,
+          "found": false,
+          "error": null,
+          "total_reports": 0
+        },
+        "16": {
+          "method": "BROWSER_API_QUERY",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        }
+      },
+      "any_verification_passed": true,
+      "character_state": {
+        "character_menu": "Willow_Chat",
+        "unique_id": "20251204-00-04-15",
+        "name2": "Willow_Chat",
+        "history_count_before": 1
+      },
+      "display_refreshed": true,
+      "test_message": "[INJECTION-TEST] Method-4 @ 221555"
+    },
+    "5": {
+      "injection_method": 5,
+      "injection_name": "INPUT_MODIFIER",
+      "timestamp": "2025-12-04T22:15:57.960744",
+      "injection_result": {
+        "method": "INPUT_MODIFIER",
+        "success": true,
+        "error": null,
+        "hijack_set": true
+      },
+      "verification_results": {
+        "1": {
+          "method": "HISTORY_STATE",
+          "success": true,
+          "found": false,
+          "error": null,
+          "internal_count": 2,
+          "visible_count": 2,
+          "found_in_internal": false,
+          "found_in_visible": false
+        },
+        "2": {
+          "method": "MESSAGE_COUNT",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 2,
+          "visible_count": 2
+        },
+        "3": {
+          "method": "DISPLAY_HTML",
+          "success": true,
+          "found": false,
+          "error": null,
+          "html_length": 2
+        },
+        "4": {
+          "method": "METADATA_TIMESTAMP",
+          "success": true,
+          "found": false,
+          "error": null,
+          "has_metadata": false
+        },
+        "5": {
+          "method": "API_STATE",
+          "success": true,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "6": {
+          "method": "VERIFICATION_ENDPOINT",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "7": {
+          "method": "DOM_CONTENT",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - Cannot access DOM from Python",
+          "note": "Use verify_method_13_selenium for browser verification"
+        },
+        "8": {
+          "method": "MUTATION_OBSERVER",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - MutationObserver is JavaScript API",
+          "note": "Would need JavaScript bridge to check mutations"
+        },
+        "9": {
+          "method": "DATA_RAW",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "10": {
+          "method": "DOM_MESSAGE_COUNT",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "11": {
+          "method": "SSE_EVENTS",
+          "success": true,
+          "found": false,
+          "error": "NOT_PRACTICAL - SSE requires persistent connection",
+          "note": "SSE monitoring best done during injection, not after"
+        },
+        "12": {
+          "method": "REQUEST_MONITOR",
+          "success": true,
+          "found": false,
+          "error": "NOT_AVAILABLE - Would require request logging middleware",
+          "note": "Consider checking server logs instead"
+        },
+        "13": {
+          "method": "SELENIUM",
+          "success": true,
+          "found": false,
+          "error": "selenium not installed"
+        },
+        "14": {
+          "method": "COMPREHENSIVE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "found_count": 1,
+          "total_checked": 5,
+          "method_results": {
+            "1": {
+              "method": "HISTORY_STATE",
+              "success": true,
+              "found": false,
+              "error": null,
+              "internal_count": 2,
+              "visible_count": 2,
+              "found_in_internal": false,
+              "found_in_visible": false
+            },
+            "2": {
+              "method": "MESSAGE_COUNT",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 2,
+              "visible_count": 2
+            },
+            "3": {
+              "method": "DISPLAY_HTML",
+              "success": true,
+              "found": false,
+              "error": null,
+              "html_length": 2
+            },
+            "4": {
+              "method": "METADATA_TIMESTAMP",
+              "success": true,
+              "found": false,
+              "error": null,
+              "has_metadata": false
+            },
+            "9": {
+              "method": "DATA_RAW",
+              "success": false,
+              "found": false,
+              "error": "expected string or bytes-like object, got 'dict'"
+            }
+          },
+          "confidence": "1/5"
+        },
+        "15": {
+          "method": "BROWSER_CALLBACK",
+          "success": true,
+          "found": false,
+          "error": null,
+          "total_reports": 0
+        },
+        "16": {
+          "method": "BROWSER_API_QUERY",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        }
+      },
+      "any_verification_passed": true,
+      "character_state": {
+        "character_menu": "Willow_Chat",
+        "unique_id": "20251204-00-04-15",
+        "name2": "Willow_Chat",
+        "history_count_before": 1
+      },
+      "display_refreshed": true,
+      "test_message": "[INJECTION-TEST] Method-5 @ 221557"
+    },
+    "6": {
+      "injection_method": 6,
+      "injection_name": "BOT_PREFIX_MODIFIER",
+      "timestamp": "2025-12-04T22:16:00.793363",
+      "injection_result": {
+        "method": "BOT_PREFIX_MODIFIER",
+        "success": true,
+        "error": null
+      },
+      "verification_results": {
+        "1": {
+          "method": "HISTORY_STATE",
+          "success": true,
+          "found": false,
+          "error": null,
+          "internal_count": 2,
+          "visible_count": 2,
+          "found_in_internal": false,
+          "found_in_visible": false
+        },
+        "2": {
+          "method": "MESSAGE_COUNT",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 2,
+          "visible_count": 2
+        },
+        "3": {
+          "method": "DISPLAY_HTML",
+          "success": true,
+          "found": false,
+          "error": null,
+          "html_length": 2
+        },
+        "4": {
+          "method": "METADATA_TIMESTAMP",
+          "success": true,
+          "found": false,
+          "error": null,
+          "has_metadata": false
+        },
+        "5": {
+          "method": "API_STATE",
+          "success": true,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "6": {
+          "method": "VERIFICATION_ENDPOINT",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "7": {
+          "method": "DOM_CONTENT",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - Cannot access DOM from Python",
+          "note": "Use verify_method_13_selenium for browser verification"
+        },
+        "8": {
+          "method": "MUTATION_OBSERVER",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - MutationObserver is JavaScript API",
+          "note": "Would need JavaScript bridge to check mutations"
+        },
+        "9": {
+          "method": "DATA_RAW",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "10": {
+          "method": "DOM_MESSAGE_COUNT",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "11": {
+          "method": "SSE_EVENTS",
+          "success": true,
+          "found": false,
+          "error": "NOT_PRACTICAL - SSE requires persistent connection",
+          "note": "SSE monitoring best done during injection, not after"
+        },
+        "12": {
+          "method": "REQUEST_MONITOR",
+          "success": true,
+          "found": false,
+          "error": "NOT_AVAILABLE - Would require request logging middleware",
+          "note": "Consider checking server logs instead"
+        },
+        "13": {
+          "method": "SELENIUM",
+          "success": true,
+          "found": false,
+          "error": "selenium not installed"
+        },
+        "14": {
+          "method": "COMPREHENSIVE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "found_count": 1,
+          "total_checked": 5,
+          "method_results": {
+            "1": {
+              "method": "HISTORY_STATE",
+              "success": true,
+              "found": false,
+              "error": null,
+              "internal_count": 2,
+              "visible_count": 2,
+              "found_in_internal": false,
+              "found_in_visible": false
+            },
+            "2": {
+              "method": "MESSAGE_COUNT",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 2,
+              "visible_count": 2
+            },
+            "3": {
+              "method": "DISPLAY_HTML",
+              "success": true,
+              "found": false,
+              "error": null,
+              "html_length": 2
+            },
+            "4": {
+              "method": "METADATA_TIMESTAMP",
+              "success": true,
+              "found": false,
+              "error": null,
+              "has_metadata": false
+            },
+            "9": {
+              "method": "DATA_RAW",
+              "success": false,
+              "found": false,
+              "error": "expected string or bytes-like object, got 'dict'"
+            }
+          },
+          "confidence": "1/5"
+        },
+        "15": {
+          "method": "BROWSER_CALLBACK",
+          "success": true,
+          "found": false,
+          "error": null,
+          "total_reports": 0
+        },
+        "16": {
+          "method": "BROWSER_API_QUERY",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        }
+      },
+      "any_verification_passed": true,
+      "character_state": {
+        "character_menu": "Willow_Chat",
+        "unique_id": "20251204-00-04-15",
+        "name2": "Willow_Chat",
+        "history_count_before": 1
+      },
+      "display_refreshed": true,
+      "test_message": "[INJECTION-TEST] Method-6 @ 221600"
+    },
+    "7": {
+      "injection_method": 7,
+      "injection_name": "OUTPUT_MODIFIER",
+      "timestamp": "2025-12-04T22:16:03.643835",
+      "injection_result": {
+        "method": "OUTPUT_MODIFIER",
+        "success": true,
+        "error": null
+      },
+      "verification_results": {
+        "1": {
+          "method": "HISTORY_STATE",
+          "success": true,
+          "found": false,
+          "error": null,
+          "internal_count": 2,
+          "visible_count": 2,
+          "found_in_internal": false,
+          "found_in_visible": false
+        },
+        "2": {
+          "method": "MESSAGE_COUNT",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 2,
+          "visible_count": 2
+        },
+        "3": {
+          "method": "DISPLAY_HTML",
+          "success": true,
+          "found": false,
+          "error": null,
+          "html_length": 2
+        },
+        "4": {
+          "method": "METADATA_TIMESTAMP",
+          "success": true,
+          "found": false,
+          "error": null,
+          "has_metadata": false
+        },
+        "5": {
+          "method": "API_STATE",
+          "success": true,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "6": {
+          "method": "VERIFICATION_ENDPOINT",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "7": {
+          "method": "DOM_CONTENT",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - Cannot access DOM from Python",
+          "note": "Use verify_method_13_selenium for browser verification"
+        },
+        "8": {
+          "method": "MUTATION_OBSERVER",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - MutationObserver is JavaScript API",
+          "note": "Would need JavaScript bridge to check mutations"
+        },
+        "9": {
+          "method": "DATA_RAW",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "10": {
+          "method": "DOM_MESSAGE_COUNT",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "11": {
+          "method": "SSE_EVENTS",
+          "success": true,
+          "found": false,
+          "error": "NOT_PRACTICAL - SSE requires persistent connection",
+          "note": "SSE monitoring best done during injection, not after"
+        },
+        "12": {
+          "method": "REQUEST_MONITOR",
+          "success": true,
+          "found": false,
+          "error": "NOT_AVAILABLE - Would require request logging middleware",
+          "note": "Consider checking server logs instead"
+        },
+        "13": {
+          "method": "SELENIUM",
+          "success": true,
+          "found": false,
+          "error": "selenium not installed"
+        },
+        "14": {
+          "method": "COMPREHENSIVE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "found_count": 1,
+          "total_checked": 5,
+          "method_results": {
+            "1": {
+              "method": "HISTORY_STATE",
+              "success": true,
+              "found": false,
+              "error": null,
+              "internal_count": 2,
+              "visible_count": 2,
+              "found_in_internal": false,
+              "found_in_visible": false
+            },
+            "2": {
+              "method": "MESSAGE_COUNT",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 2,
+              "visible_count": 2
+            },
+            "3": {
+              "method": "DISPLAY_HTML",
+              "success": true,
+              "found": false,
+              "error": null,
+              "html_length": 2
+            },
+            "4": {
+              "method": "METADATA_TIMESTAMP",
+              "success": true,
+              "found": false,
+              "error": null,
+              "has_metadata": false
+            },
+            "9": {
+              "method": "DATA_RAW",
+              "success": false,
+              "found": false,
+              "error": "expected string or bytes-like object, got 'dict'"
+            }
+          },
+          "confidence": "1/5"
+        },
+        "15": {
+          "method": "BROWSER_CALLBACK",
+          "success": true,
+          "found": false,
+          "error": null,
+          "total_reports": 0
+        },
+        "16": {
+          "method": "BROWSER_API_QUERY",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        }
+      },
+      "any_verification_passed": true,
+      "character_state": {
+        "character_menu": "Willow_Chat",
+        "unique_id": "20251204-00-04-15",
+        "name2": "Willow_Chat",
+        "history_count_before": 1
+      },
+      "display_refreshed": true,
+      "test_message": "[INJECTION-TEST] Method-7 @ 221603"
+    },
+    "8": {
+      "injection_method": 8,
+      "injection_name": "CUSTOM_GENERATE_PROMPT",
+      "timestamp": "2025-12-04T22:16:06.467138",
+      "injection_result": {
+        "method": "CUSTOM_GENERATE_PROMPT",
+        "success": true,
+        "error": null,
+        "note": "Prompt stored, requires generation to apply"
+      },
+      "verification_results": {
+        "1": {
+          "method": "HISTORY_STATE",
+          "success": true,
+          "found": false,
+          "error": null,
+          "internal_count": 2,
+          "visible_count": 2,
+          "found_in_internal": false,
+          "found_in_visible": false
+        },
+        "2": {
+          "method": "MESSAGE_COUNT",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 2,
+          "visible_count": 2
+        },
+        "3": {
+          "method": "DISPLAY_HTML",
+          "success": true,
+          "found": false,
+          "error": null,
+          "html_length": 2
+        },
+        "4": {
+          "method": "METADATA_TIMESTAMP",
+          "success": true,
+          "found": false,
+          "error": null,
+          "has_metadata": false
+        },
+        "5": {
+          "method": "API_STATE",
+          "success": true,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "6": {
+          "method": "VERIFICATION_ENDPOINT",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "7": {
+          "method": "DOM_CONTENT",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - Cannot access DOM from Python",
+          "note": "Use verify_method_13_selenium for browser verification"
+        },
+        "8": {
+          "method": "MUTATION_OBSERVER",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - MutationObserver is JavaScript API",
+          "note": "Would need JavaScript bridge to check mutations"
+        },
+        "9": {
+          "method": "DATA_RAW",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "10": {
+          "method": "DOM_MESSAGE_COUNT",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "11": {
+          "method": "SSE_EVENTS",
+          "success": true,
+          "found": false,
+          "error": "NOT_PRACTICAL - SSE requires persistent connection",
+          "note": "SSE monitoring best done during injection, not after"
+        },
+        "12": {
+          "method": "REQUEST_MONITOR",
+          "success": true,
+          "found": false,
+          "error": "NOT_AVAILABLE - Would require request logging middleware",
+          "note": "Consider checking server logs instead"
+        },
+        "13": {
+          "method": "SELENIUM",
+          "success": true,
+          "found": false,
+          "error": "selenium not installed"
+        },
+        "14": {
+          "method": "COMPREHENSIVE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "found_count": 1,
+          "total_checked": 5,
+          "method_results": {
+            "1": {
+              "method": "HISTORY_STATE",
+              "success": true,
+              "found": false,
+              "error": null,
+              "internal_count": 2,
+              "visible_count": 2,
+              "found_in_internal": false,
+              "found_in_visible": false
+            },
+            "2": {
+              "method": "MESSAGE_COUNT",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 2,
+              "visible_count": 2
+            },
+            "3": {
+              "method": "DISPLAY_HTML",
+              "success": true,
+              "found": false,
+              "error": null,
+              "html_length": 2
+            },
+            "4": {
+              "method": "METADATA_TIMESTAMP",
+              "success": true,
+              "found": false,
+              "error": null,
+              "has_metadata": false
+            },
+            "9": {
+              "method": "DATA_RAW",
+              "success": false,
+              "found": false,
+              "error": "expected string or bytes-like object, got 'dict'"
+            }
+          },
+          "confidence": "1/5"
+        },
+        "15": {
+          "method": "BROWSER_CALLBACK",
+          "success": true,
+          "found": false,
+          "error": null,
+          "total_reports": 0
+        },
+        "16": {
+          "method": "BROWSER_API_QUERY",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        }
+      },
+      "any_verification_passed": true,
+      "character_state": {
+        "character_menu": "Willow_Chat",
+        "unique_id": "20251204-00-04-15",
+        "name2": "Willow_Chat",
+        "history_count_before": 1
+      },
+      "display_refreshed": true,
+      "test_message": "[INJECTION-TEST] Method-8 @ 221606"
+    },
+    "9": {
+      "injection_method": 9,
+      "injection_name": "CUSTOM_GENERATE_REPLY",
+      "timestamp": "2025-12-04T22:16:09.310699",
+      "injection_result": {
+        "method": "CUSTOM_GENERATE_REPLY",
+        "success": true,
+        "error": null,
+        "note": "Reply stored, will override next generation"
+      },
+      "verification_results": {
+        "1": {
+          "method": "HISTORY_STATE",
+          "success": true,
+          "found": false,
+          "error": null,
+          "internal_count": 2,
+          "visible_count": 2,
+          "found_in_internal": false,
+          "found_in_visible": false
+        },
+        "2": {
+          "method": "MESSAGE_COUNT",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 2,
+          "visible_count": 2
+        },
+        "3": {
+          "method": "DISPLAY_HTML",
+          "success": true,
+          "found": false,
+          "error": null,
+          "html_length": 2
+        },
+        "4": {
+          "method": "METADATA_TIMESTAMP",
+          "success": true,
+          "found": false,
+          "error": null,
+          "has_metadata": false
+        },
+        "5": {
+          "method": "API_STATE",
+          "success": true,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "6": {
+          "method": "VERIFICATION_ENDPOINT",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "7": {
+          "method": "DOM_CONTENT",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - Cannot access DOM from Python",
+          "note": "Use verify_method_13_selenium for browser verification"
+        },
+        "8": {
+          "method": "MUTATION_OBSERVER",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - MutationObserver is JavaScript API",
+          "note": "Would need JavaScript bridge to check mutations"
+        },
+        "9": {
+          "method": "DATA_RAW",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "10": {
+          "method": "DOM_MESSAGE_COUNT",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "11": {
+          "method": "SSE_EVENTS",
+          "success": true,
+          "found": false,
+          "error": "NOT_PRACTICAL - SSE requires persistent connection",
+          "note": "SSE monitoring best done during injection, not after"
+        },
+        "12": {
+          "method": "REQUEST_MONITOR",
+          "success": true,
+          "found": false,
+          "error": "NOT_AVAILABLE - Would require request logging middleware",
+          "note": "Consider checking server logs instead"
+        },
+        "13": {
+          "method": "SELENIUM",
+          "success": true,
+          "found": false,
+          "error": "selenium not installed"
+        },
+        "14": {
+          "method": "COMPREHENSIVE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "found_count": 1,
+          "total_checked": 5,
+          "method_results": {
+            "1": {
+              "method": "HISTORY_STATE",
+              "success": true,
+              "found": false,
+              "error": null,
+              "internal_count": 2,
+              "visible_count": 2,
+              "found_in_internal": false,
+              "found_in_visible": false
+            },
+            "2": {
+              "method": "MESSAGE_COUNT",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 2,
+              "visible_count": 2
+            },
+            "3": {
+              "method": "DISPLAY_HTML",
+              "success": true,
+              "found": false,
+              "error": null,
+              "html_length": 2
+            },
+            "4": {
+              "method": "METADATA_TIMESTAMP",
+              "success": true,
+              "found": false,
+              "error": null,
+              "has_metadata": false
+            },
+            "9": {
+              "method": "DATA_RAW",
+              "success": false,
+              "found": false,
+              "error": "expected string or bytes-like object, got 'dict'"
+            }
+          },
+          "confidence": "1/5"
+        },
+        "15": {
+          "method": "BROWSER_CALLBACK",
+          "success": true,
+          "found": false,
+          "error": null,
+          "total_reports": 0
+        },
+        "16": {
+          "method": "BROWSER_API_QUERY",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        }
+      },
+      "any_verification_passed": true,
+      "character_state": {
+        "character_menu": "Willow_Chat",
+        "unique_id": "20251204-00-04-15",
+        "name2": "Willow_Chat",
+        "history_count_before": 1
+      },
+      "display_refreshed": true,
+      "test_message": "[INJECTION-TEST] Method-9 @ 221609"
+    },
+    "10": {
+      "injection_method": 10,
+      "injection_name": "LOGITS_PROCESSOR",
+      "timestamp": "2025-12-04T22:16:12.152055",
+      "injection_result": {
+        "method": "LOGITS_PROCESSOR",
+        "success": false,
+        "error": "UNSUPPORTED - Logits processor cannot inject text directly",
+        "note": "This hook modifies token probabilities, not text"
+      },
+      "verification_results": {
+        "1": {
+          "method": "HISTORY_STATE",
+          "success": true,
+          "found": false,
+          "error": null,
+          "internal_count": 2,
+          "visible_count": 2,
+          "found_in_internal": false,
+          "found_in_visible": false
+        },
+        "2": {
+          "method": "MESSAGE_COUNT",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 2,
+          "visible_count": 2
+        },
+        "3": {
+          "method": "DISPLAY_HTML",
+          "success": true,
+          "found": false,
+          "error": null,
+          "html_length": 2
+        },
+        "4": {
+          "method": "METADATA_TIMESTAMP",
+          "success": true,
+          "found": false,
+          "error": null,
+          "has_metadata": false
+        },
+        "5": {
+          "method": "API_STATE",
+          "success": true,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "6": {
+          "method": "VERIFICATION_ENDPOINT",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "7": {
+          "method": "DOM_CONTENT",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - Cannot access DOM from Python",
+          "note": "Use verify_method_13_selenium for browser verification"
+        },
+        "8": {
+          "method": "MUTATION_OBSERVER",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - MutationObserver is JavaScript API",
+          "note": "Would need JavaScript bridge to check mutations"
+        },
+        "9": {
+          "method": "DATA_RAW",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "10": {
+          "method": "DOM_MESSAGE_COUNT",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "11": {
+          "method": "SSE_EVENTS",
+          "success": true,
+          "found": false,
+          "error": "NOT_PRACTICAL - SSE requires persistent connection",
+          "note": "SSE monitoring best done during injection, not after"
+        },
+        "12": {
+          "method": "REQUEST_MONITOR",
+          "success": true,
+          "found": false,
+          "error": "NOT_AVAILABLE - Would require request logging middleware",
+          "note": "Consider checking server logs instead"
+        },
+        "13": {
+          "method": "SELENIUM",
+          "success": true,
+          "found": false,
+          "error": "selenium not installed"
+        },
+        "14": {
+          "method": "COMPREHENSIVE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "found_count": 1,
+          "total_checked": 5,
+          "method_results": {
+            "1": {
+              "method": "HISTORY_STATE",
+              "success": true,
+              "found": false,
+              "error": null,
+              "internal_count": 2,
+              "visible_count": 2,
+              "found_in_internal": false,
+              "found_in_visible": false
+            },
+            "2": {
+              "method": "MESSAGE_COUNT",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 2,
+              "visible_count": 2
+            },
+            "3": {
+              "method": "DISPLAY_HTML",
+              "success": true,
+              "found": false,
+              "error": null,
+              "html_length": 2
+            },
+            "4": {
+              "method": "METADATA_TIMESTAMP",
+              "success": true,
+              "found": false,
+              "error": null,
+              "has_metadata": false
+            },
+            "9": {
+              "method": "DATA_RAW",
+              "success": false,
+              "found": false,
+              "error": "expected string or bytes-like object, got 'dict'"
+            }
+          },
+          "confidence": "1/5"
+        },
+        "15": {
+          "method": "BROWSER_CALLBACK",
+          "success": true,
+          "found": false,
+          "error": null,
+          "total_reports": 0
+        },
+        "16": {
+          "method": "BROWSER_API_QUERY",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        }
+      },
+      "any_verification_passed": true,
+      "character_state": {
+        "character_menu": "Willow_Chat",
+        "unique_id": "20251204-00-04-15",
+        "name2": "Willow_Chat",
+        "history_count_before": 1
+      },
+      "display_refreshed": false,
+      "test_message": "[INJECTION-TEST] Method-10 @ 221612"
+    },
+    "11": {
+      "injection_method": 11,
+      "injection_name": "TOKENIZER_MODIFIER",
+      "timestamp": "2025-12-04T22:16:14.982186",
+      "injection_result": {
+        "method": "TOKENIZER_MODIFIER",
+        "success": false,
+        "error": "UNSUPPORTED - Tokenizer modifier cannot inject text directly",
+        "note": "This hook modifies tokenization, not text"
+      },
+      "verification_results": {
+        "1": {
+          "method": "HISTORY_STATE",
+          "success": true,
+          "found": false,
+          "error": null,
+          "internal_count": 2,
+          "visible_count": 2,
+          "found_in_internal": false,
+          "found_in_visible": false
+        },
+        "2": {
+          "method": "MESSAGE_COUNT",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 2,
+          "visible_count": 2
+        },
+        "3": {
+          "method": "DISPLAY_HTML",
+          "success": true,
+          "found": false,
+          "error": null,
+          "html_length": 2
+        },
+        "4": {
+          "method": "METADATA_TIMESTAMP",
+          "success": true,
+          "found": false,
+          "error": null,
+          "has_metadata": false
+        },
+        "5": {
+          "method": "API_STATE",
+          "success": true,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "6": {
+          "method": "VERIFICATION_ENDPOINT",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "7": {
+          "method": "DOM_CONTENT",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - Cannot access DOM from Python",
+          "note": "Use verify_method_13_selenium for browser verification"
+        },
+        "8": {
+          "method": "MUTATION_OBSERVER",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - MutationObserver is JavaScript API",
+          "note": "Would need JavaScript bridge to check mutations"
+        },
+        "9": {
+          "method": "DATA_RAW",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "10": {
+          "method": "DOM_MESSAGE_COUNT",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "11": {
+          "method": "SSE_EVENTS",
+          "success": true,
+          "found": false,
+          "error": "NOT_PRACTICAL - SSE requires persistent connection",
+          "note": "SSE monitoring best done during injection, not after"
+        },
+        "12": {
+          "method": "REQUEST_MONITOR",
+          "success": true,
+          "found": false,
+          "error": "NOT_AVAILABLE - Would require request logging middleware",
+          "note": "Consider checking server logs instead"
+        },
+        "13": {
+          "method": "SELENIUM",
+          "success": true,
+          "found": false,
+          "error": "selenium not installed"
+        },
+        "14": {
+          "method": "COMPREHENSIVE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "found_count": 1,
+          "total_checked": 5,
+          "method_results": {
+            "1": {
+              "method": "HISTORY_STATE",
+              "success": true,
+              "found": false,
+              "error": null,
+              "internal_count": 2,
+              "visible_count": 2,
+              "found_in_internal": false,
+              "found_in_visible": false
+            },
+            "2": {
+              "method": "MESSAGE_COUNT",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 2,
+              "visible_count": 2
+            },
+            "3": {
+              "method": "DISPLAY_HTML",
+              "success": true,
+              "found": false,
+              "error": null,
+              "html_length": 2
+            },
+            "4": {
+              "method": "METADATA_TIMESTAMP",
+              "success": true,
+              "found": false,
+              "error": null,
+              "has_metadata": false
+            },
+            "9": {
+              "method": "DATA_RAW",
+              "success": false,
+              "found": false,
+              "error": "expected string or bytes-like object, got 'dict'"
+            }
+          },
+          "confidence": "1/5"
+        },
+        "15": {
+          "method": "BROWSER_CALLBACK",
+          "success": true,
+          "found": false,
+          "error": null,
+          "total_reports": 0
+        },
+        "16": {
+          "method": "BROWSER_API_QUERY",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        }
+      },
+      "any_verification_passed": true,
+      "character_state": {
+        "character_menu": "Willow_Chat",
+        "unique_id": "20251204-00-04-15",
+        "name2": "Willow_Chat",
+        "history_count_before": 1
+      },
+      "display_refreshed": false,
+      "test_message": "[INJECTION-TEST] Method-11 @ 221614"
+    },
+    "12": {
+      "injection_method": 12,
+      "injection_name": "SEND_DUMMY_MESSAGE",
+      "timestamp": "2025-12-04T22:16:17.803988",
+      "injection_result": {
+        "method": "SEND_DUMMY_MESSAGE",
+        "success": false,
+        "error": "argument of type 'NoneType' is not iterable"
+      },
+      "verification_results": {
+        "1": {
+          "method": "HISTORY_STATE",
+          "success": true,
+          "found": false,
+          "error": null,
+          "internal_count": 2,
+          "visible_count": 2,
+          "found_in_internal": false,
+          "found_in_visible": false
+        },
+        "2": {
+          "method": "MESSAGE_COUNT",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 2,
+          "visible_count": 2
+        },
+        "3": {
+          "method": "DISPLAY_HTML",
+          "success": true,
+          "found": false,
+          "error": null,
+          "html_length": 2
+        },
+        "4": {
+          "method": "METADATA_TIMESTAMP",
+          "success": true,
+          "found": false,
+          "error": null,
+          "has_metadata": false
+        },
+        "5": {
+          "method": "API_STATE",
+          "success": true,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "6": {
+          "method": "VERIFICATION_ENDPOINT",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "7": {
+          "method": "DOM_CONTENT",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - Cannot access DOM from Python",
+          "note": "Use verify_method_13_selenium for browser verification"
+        },
+        "8": {
+          "method": "MUTATION_OBSERVER",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - MutationObserver is JavaScript API",
+          "note": "Would need JavaScript bridge to check mutations"
+        },
+        "9": {
+          "method": "DATA_RAW",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "10": {
+          "method": "DOM_MESSAGE_COUNT",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "11": {
+          "method": "SSE_EVENTS",
+          "success": true,
+          "found": false,
+          "error": "NOT_PRACTICAL - SSE requires persistent connection",
+          "note": "SSE monitoring best done during injection, not after"
+        },
+        "12": {
+          "method": "REQUEST_MONITOR",
+          "success": true,
+          "found": false,
+          "error": "NOT_AVAILABLE - Would require request logging middleware",
+          "note": "Consider checking server logs instead"
+        },
+        "13": {
+          "method": "SELENIUM",
+          "success": true,
+          "found": false,
+          "error": "selenium not installed"
+        },
+        "14": {
+          "method": "COMPREHENSIVE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "found_count": 1,
+          "total_checked": 5,
+          "method_results": {
+            "1": {
+              "method": "HISTORY_STATE",
+              "success": true,
+              "found": false,
+              "error": null,
+              "internal_count": 2,
+              "visible_count": 2,
+              "found_in_internal": false,
+              "found_in_visible": false
+            },
+            "2": {
+              "method": "MESSAGE_COUNT",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 2,
+              "visible_count": 2
+            },
+            "3": {
+              "method": "DISPLAY_HTML",
+              "success": true,
+              "found": false,
+              "error": null,
+              "html_length": 2
+            },
+            "4": {
+              "method": "METADATA_TIMESTAMP",
+              "success": true,
+              "found": false,
+              "error": null,
+              "has_metadata": false
+            },
+            "9": {
+              "method": "DATA_RAW",
+              "success": false,
+              "found": false,
+              "error": "expected string or bytes-like object, got 'dict'"
+            }
+          },
+          "confidence": "1/5"
+        },
+        "15": {
+          "method": "BROWSER_CALLBACK",
+          "success": true,
+          "found": false,
+          "error": null,
+          "total_reports": 0
+        },
+        "16": {
+          "method": "BROWSER_API_QUERY",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        }
+      },
+      "any_verification_passed": true,
+      "character_state": {
+        "character_menu": "Willow_Chat",
+        "unique_id": "20251204-00-04-15",
+        "name2": "Willow_Chat",
+        "history_count_before": 1
+      },
+      "display_refreshed": false,
+      "test_message": "[INJECTION-TEST] Method-12 @ 221617"
+    },
+    "13": {
+      "injection_method": 13,
+      "injection_name": "SEND_DUMMY_REPLY",
+      "timestamp": "2025-12-04T22:16:20.623292",
+      "injection_result": {
+        "method": "SEND_DUMMY_REPLY",
+        "success": false,
+        "error": "argument of type 'NoneType' is not iterable"
+      },
+      "verification_results": {
+        "1": {
+          "method": "HISTORY_STATE",
+          "success": true,
+          "found": false,
+          "error": null,
+          "internal_count": 2,
+          "visible_count": 2,
+          "found_in_internal": false,
+          "found_in_visible": false
+        },
+        "2": {
+          "method": "MESSAGE_COUNT",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 2,
+          "visible_count": 2
+        },
+        "3": {
+          "method": "DISPLAY_HTML",
+          "success": true,
+          "found": false,
+          "error": null,
+          "html_length": 2
+        },
+        "4": {
+          "method": "METADATA_TIMESTAMP",
+          "success": true,
+          "found": false,
+          "error": null,
+          "has_metadata": false
+        },
+        "5": {
+          "method": "API_STATE",
+          "success": true,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "6": {
+          "method": "VERIFICATION_ENDPOINT",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "7": {
+          "method": "DOM_CONTENT",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - Cannot access DOM from Python",
+          "note": "Use verify_method_13_selenium for browser verification"
+        },
+        "8": {
+          "method": "MUTATION_OBSERVER",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - MutationObserver is JavaScript API",
+          "note": "Would need JavaScript bridge to check mutations"
+        },
+        "9": {
+          "method": "DATA_RAW",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "10": {
+          "method": "DOM_MESSAGE_COUNT",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "11": {
+          "method": "SSE_EVENTS",
+          "success": true,
+          "found": false,
+          "error": "NOT_PRACTICAL - SSE requires persistent connection",
+          "note": "SSE monitoring best done during injection, not after"
+        },
+        "12": {
+          "method": "REQUEST_MONITOR",
+          "success": true,
+          "found": false,
+          "error": "NOT_AVAILABLE - Would require request logging middleware",
+          "note": "Consider checking server logs instead"
+        },
+        "13": {
+          "method": "SELENIUM",
+          "success": true,
+          "found": false,
+          "error": "selenium not installed"
+        },
+        "14": {
+          "method": "COMPREHENSIVE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "found_count": 1,
+          "total_checked": 5,
+          "method_results": {
+            "1": {
+              "method": "HISTORY_STATE",
+              "success": true,
+              "found": false,
+              "error": null,
+              "internal_count": 2,
+              "visible_count": 2,
+              "found_in_internal": false,
+              "found_in_visible": false
+            },
+            "2": {
+              "method": "MESSAGE_COUNT",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 2,
+              "visible_count": 2
+            },
+            "3": {
+              "method": "DISPLAY_HTML",
+              "success": true,
+              "found": false,
+              "error": null,
+              "html_length": 2
+            },
+            "4": {
+              "method": "METADATA_TIMESTAMP",
+              "success": true,
+              "found": false,
+              "error": null,
+              "has_metadata": false
+            },
+            "9": {
+              "method": "DATA_RAW",
+              "success": false,
+              "found": false,
+              "error": "expected string or bytes-like object, got 'dict'"
+            }
+          },
+          "confidence": "1/5"
+        },
+        "15": {
+          "method": "BROWSER_CALLBACK",
+          "success": true,
+          "found": false,
+          "error": null,
+          "total_reports": 0
+        },
+        "16": {
+          "method": "BROWSER_API_QUERY",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        }
+      },
+      "any_verification_passed": true,
+      "character_state": {
+        "character_menu": "Willow_Chat",
+        "unique_id": "20251204-00-04-15",
+        "name2": "Willow_Chat",
+        "history_count_before": 1
+      },
+      "display_refreshed": false,
+      "test_message": "[INJECTION-TEST] Method-13 @ 221620"
+    },
+    "14": {
+      "injection_method": 14,
+      "injection_name": "REDRAW_HTML",
+      "timestamp": "2025-12-04T22:16:23.465272",
+      "injection_result": {
+        "method": "REDRAW_HTML",
+        "success": false,
+        "error": "redraw_html() missing 2 required positional arguments: 'style' and 'character'"
+      },
+      "verification_results": {
+        "1": {
+          "method": "HISTORY_STATE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 3,
+          "visible_count": 3,
+          "found_in_internal": true,
+          "found_in_visible": true
+        },
+        "2": {
+          "method": "MESSAGE_COUNT",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 3,
+          "visible_count": 3
+        },
+        "3": {
+          "method": "DISPLAY_HTML",
+          "success": true,
+          "found": false,
+          "error": null,
+          "html_length": 2
+        },
+        "4": {
+          "method": "METADATA_TIMESTAMP",
+          "success": true,
+          "found": false,
+          "error": null,
+          "has_metadata": false
+        },
+        "5": {
+          "method": "API_STATE",
+          "success": true,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "6": {
+          "method": "VERIFICATION_ENDPOINT",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "7": {
+          "method": "DOM_CONTENT",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - Cannot access DOM from Python",
+          "note": "Use verify_method_13_selenium for browser verification"
+        },
+        "8": {
+          "method": "MUTATION_OBSERVER",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - MutationObserver is JavaScript API",
+          "note": "Would need JavaScript bridge to check mutations"
+        },
+        "9": {
+          "method": "DATA_RAW",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "10": {
+          "method": "DOM_MESSAGE_COUNT",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "11": {
+          "method": "SSE_EVENTS",
+          "success": true,
+          "found": false,
+          "error": "NOT_PRACTICAL - SSE requires persistent connection",
+          "note": "SSE monitoring best done during injection, not after"
+        },
+        "12": {
+          "method": "REQUEST_MONITOR",
+          "success": true,
+          "found": false,
+          "error": "NOT_AVAILABLE - Would require request logging middleware",
+          "note": "Consider checking server logs instead"
+        },
+        "13": {
+          "method": "SELENIUM",
+          "success": true,
+          "found": false,
+          "error": "selenium not installed"
+        },
+        "14": {
+          "method": "COMPREHENSIVE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "found_count": 2,
+          "total_checked": 5,
+          "method_results": {
+            "1": {
+              "method": "HISTORY_STATE",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 3,
+              "visible_count": 3,
+              "found_in_internal": true,
+              "found_in_visible": true
+            },
+            "2": {
+              "method": "MESSAGE_COUNT",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 3,
+              "visible_count": 3
+            },
+            "3": {
+              "method": "DISPLAY_HTML",
+              "success": true,
+              "found": false,
+              "error": null,
+              "html_length": 2
+            },
+            "4": {
+              "method": "METADATA_TIMESTAMP",
+              "success": true,
+              "found": false,
+              "error": null,
+              "has_metadata": false
+            },
+            "9": {
+              "method": "DATA_RAW",
+              "success": false,
+              "found": false,
+              "error": "expected string or bytes-like object, got 'dict'"
+            }
+          },
+          "confidence": "2/5"
+        },
+        "15": {
+          "method": "BROWSER_CALLBACK",
+          "success": true,
+          "found": false,
+          "error": null,
+          "total_reports": 0
+        },
+        "16": {
+          "method": "BROWSER_API_QUERY",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        }
+      },
+      "any_verification_passed": true,
+      "character_state": {
+        "character_menu": "Willow_Chat",
+        "unique_id": "20251204-00-04-15",
+        "name2": "Willow_Chat",
+        "history_count_before": 1
+      },
+      "display_refreshed": false,
+      "test_message": "[INJECTION-TEST] Method-14 @ 221623"
+    },
+    "15": {
+      "injection_method": 15,
+      "injection_name": "DIRECT_HISTORY",
+      "timestamp": "2025-12-04T22:16:26.282015",
+      "injection_result": {
+        "method": "DIRECT_HISTORY",
+        "success": true,
+        "error": null,
+        "history_count": 4
+      },
+      "verification_results": {
+        "1": {
+          "method": "HISTORY_STATE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 4,
+          "visible_count": 4,
+          "found_in_internal": true,
+          "found_in_visible": true
+        },
+        "2": {
+          "method": "MESSAGE_COUNT",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 4,
+          "visible_count": 4
+        },
+        "3": {
+          "method": "DISPLAY_HTML",
+          "success": true,
+          "found": false,
+          "error": null,
+          "html_length": 2
+        },
+        "4": {
+          "method": "METADATA_TIMESTAMP",
+          "success": true,
+          "found": false,
+          "error": null,
+          "has_metadata": false
+        },
+        "5": {
+          "method": "API_STATE",
+          "success": true,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "6": {
+          "method": "VERIFICATION_ENDPOINT",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "7": {
+          "method": "DOM_CONTENT",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - Cannot access DOM from Python",
+          "note": "Use verify_method_13_selenium for browser verification"
+        },
+        "8": {
+          "method": "MUTATION_OBSERVER",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - MutationObserver is JavaScript API",
+          "note": "Would need JavaScript bridge to check mutations"
+        },
+        "9": {
+          "method": "DATA_RAW",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "10": {
+          "method": "DOM_MESSAGE_COUNT",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "11": {
+          "method": "SSE_EVENTS",
+          "success": true,
+          "found": false,
+          "error": "NOT_PRACTICAL - SSE requires persistent connection",
+          "note": "SSE monitoring best done during injection, not after"
+        },
+        "12": {
+          "method": "REQUEST_MONITOR",
+          "success": true,
+          "found": false,
+          "error": "NOT_AVAILABLE - Would require request logging middleware",
+          "note": "Consider checking server logs instead"
+        },
+        "13": {
+          "method": "SELENIUM",
+          "success": true,
+          "found": false,
+          "error": "selenium not installed"
+        },
+        "14": {
+          "method": "COMPREHENSIVE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "found_count": 2,
+          "total_checked": 5,
+          "method_results": {
+            "1": {
+              "method": "HISTORY_STATE",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 4,
+              "visible_count": 4,
+              "found_in_internal": true,
+              "found_in_visible": true
+            },
+            "2": {
+              "method": "MESSAGE_COUNT",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 4,
+              "visible_count": 4
+            },
+            "3": {
+              "method": "DISPLAY_HTML",
+              "success": true,
+              "found": false,
+              "error": null,
+              "html_length": 2
+            },
+            "4": {
+              "method": "METADATA_TIMESTAMP",
+              "success": true,
+              "found": false,
+              "error": null,
+              "has_metadata": false
+            },
+            "9": {
+              "method": "DATA_RAW",
+              "success": false,
+              "found": false,
+              "error": "expected string or bytes-like object, got 'dict'"
+            }
+          },
+          "confidence": "2/5"
+        },
+        "15": {
+          "method": "BROWSER_CALLBACK",
+          "success": true,
+          "found": false,
+          "error": null,
+          "total_reports": 0
+        },
+        "16": {
+          "method": "BROWSER_API_QUERY",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        }
+      },
+      "any_verification_passed": true,
+      "character_state": {
+        "character_menu": "Willow_Chat",
+        "unique_id": "20251204-00-04-15",
+        "name2": "Willow_Chat",
+        "history_count_before": 1
+      },
+      "display_refreshed": true,
+      "test_message": "[INJECTION-TEST] Method-15 @ 221626"
+    },
+    "16": {
+      "injection_method": 16,
+      "injection_name": "GENERATE_WRAPPER",
+      "timestamp": "2025-12-04T22:16:29.100751",
+      "injection_result": {
+        "method": "GENERATE_WRAPPER",
+        "success": false,
+        "error": "SKIPPED - Would trigger actual generation",
+        "note": "Use with caution - triggers model inference"
+      },
+      "verification_results": {
+        "1": {
+          "method": "HISTORY_STATE",
+          "success": true,
+          "found": false,
+          "error": null,
+          "internal_count": 4,
+          "visible_count": 4,
+          "found_in_internal": false,
+          "found_in_visible": false
+        },
+        "2": {
+          "method": "MESSAGE_COUNT",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 4,
+          "visible_count": 4
+        },
+        "3": {
+          "method": "DISPLAY_HTML",
+          "success": true,
+          "found": false,
+          "error": null,
+          "html_length": 2
+        },
+        "4": {
+          "method": "METADATA_TIMESTAMP",
+          "success": true,
+          "found": false,
+          "error": null,
+          "has_metadata": false
+        },
+        "5": {
+          "method": "API_STATE",
+          "success": true,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "6": {
+          "method": "VERIFICATION_ENDPOINT",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "7": {
+          "method": "DOM_CONTENT",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - Cannot access DOM from Python",
+          "note": "Use verify_method_13_selenium for browser verification"
+        },
+        "8": {
+          "method": "MUTATION_OBSERVER",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - MutationObserver is JavaScript API",
+          "note": "Would need JavaScript bridge to check mutations"
+        },
+        "9": {
+          "method": "DATA_RAW",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "10": {
+          "method": "DOM_MESSAGE_COUNT",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "11": {
+          "method": "SSE_EVENTS",
+          "success": true,
+          "found": false,
+          "error": "NOT_PRACTICAL - SSE requires persistent connection",
+          "note": "SSE monitoring best done during injection, not after"
+        },
+        "12": {
+          "method": "REQUEST_MONITOR",
+          "success": true,
+          "found": false,
+          "error": "NOT_AVAILABLE - Would require request logging middleware",
+          "note": "Consider checking server logs instead"
+        },
+        "13": {
+          "method": "SELENIUM",
+          "success": true,
+          "found": false,
+          "error": "selenium not installed"
+        },
+        "14": {
+          "method": "COMPREHENSIVE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "found_count": 1,
+          "total_checked": 5,
+          "method_results": {
+            "1": {
+              "method": "HISTORY_STATE",
+              "success": true,
+              "found": false,
+              "error": null,
+              "internal_count": 4,
+              "visible_count": 4,
+              "found_in_internal": false,
+              "found_in_visible": false
+            },
+            "2": {
+              "method": "MESSAGE_COUNT",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 4,
+              "visible_count": 4
+            },
+            "3": {
+              "method": "DISPLAY_HTML",
+              "success": true,
+              "found": false,
+              "error": null,
+              "html_length": 2
+            },
+            "4": {
+              "method": "METADATA_TIMESTAMP",
+              "success": true,
+              "found": false,
+              "error": null,
+              "has_metadata": false
+            },
+            "9": {
+              "method": "DATA_RAW",
+              "success": false,
+              "found": false,
+              "error": "expected string or bytes-like object, got 'dict'"
+            }
+          },
+          "confidence": "1/5"
+        },
+        "15": {
+          "method": "BROWSER_CALLBACK",
+          "success": true,
+          "found": false,
+          "error": null,
+          "total_reports": 0
+        },
+        "16": {
+          "method": "BROWSER_API_QUERY",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        }
+      },
+      "any_verification_passed": true,
+      "character_state": {
+        "character_menu": "Willow_Chat",
+        "unique_id": "20251204-00-04-15",
+        "name2": "Willow_Chat",
+        "history_count_before": 1
+      },
+      "display_refreshed": false,
+      "test_message": "[INJECTION-TEST] Method-16 @ 221629"
+    },
+    "17": {
+      "injection_method": 17,
+      "injection_name": "OPENAI_CHAT_API",
+      "timestamp": "2025-12-04T22:16:31.922727",
+      "injection_result": {
+        "method": "OPENAI_CHAT_API",
+        "success": false,
+        "error": "HTTP 500: Internal Server Error"
+      },
+      "verification_results": {
+        "1": {
+          "method": "HISTORY_STATE",
+          "success": true,
+          "found": false,
+          "error": null,
+          "internal_count": 4,
+          "visible_count": 4,
+          "found_in_internal": false,
+          "found_in_visible": false
+        },
+        "2": {
+          "method": "MESSAGE_COUNT",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 4,
+          "visible_count": 4
+        },
+        "3": {
+          "method": "DISPLAY_HTML",
+          "success": true,
+          "found": false,
+          "error": null,
+          "html_length": 2
+        },
+        "4": {
+          "method": "METADATA_TIMESTAMP",
+          "success": true,
+          "found": false,
+          "error": null,
+          "has_metadata": false
+        },
+        "5": {
+          "method": "API_STATE",
+          "success": true,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "6": {
+          "method": "VERIFICATION_ENDPOINT",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "7": {
+          "method": "DOM_CONTENT",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - Cannot access DOM from Python",
+          "note": "Use verify_method_13_selenium for browser verification"
+        },
+        "8": {
+          "method": "MUTATION_OBSERVER",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - MutationObserver is JavaScript API",
+          "note": "Would need JavaScript bridge to check mutations"
+        },
+        "9": {
+          "method": "DATA_RAW",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "10": {
+          "method": "DOM_MESSAGE_COUNT",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "11": {
+          "method": "SSE_EVENTS",
+          "success": true,
+          "found": false,
+          "error": "NOT_PRACTICAL - SSE requires persistent connection",
+          "note": "SSE monitoring best done during injection, not after"
+        },
+        "12": {
+          "method": "REQUEST_MONITOR",
+          "success": true,
+          "found": false,
+          "error": "NOT_AVAILABLE - Would require request logging middleware",
+          "note": "Consider checking server logs instead"
+        },
+        "13": {
+          "method": "SELENIUM",
+          "success": true,
+          "found": false,
+          "error": "selenium not installed"
+        },
+        "14": {
+          "method": "COMPREHENSIVE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "found_count": 1,
+          "total_checked": 5,
+          "method_results": {
+            "1": {
+              "method": "HISTORY_STATE",
+              "success": true,
+              "found": false,
+              "error": null,
+              "internal_count": 4,
+              "visible_count": 4,
+              "found_in_internal": false,
+              "found_in_visible": false
+            },
+            "2": {
+              "method": "MESSAGE_COUNT",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 4,
+              "visible_count": 4
+            },
+            "3": {
+              "method": "DISPLAY_HTML",
+              "success": true,
+              "found": false,
+              "error": null,
+              "html_length": 2
+            },
+            "4": {
+              "method": "METADATA_TIMESTAMP",
+              "success": true,
+              "found": false,
+              "error": null,
+              "has_metadata": false
+            },
+            "9": {
+              "method": "DATA_RAW",
+              "success": false,
+              "found": false,
+              "error": "expected string or bytes-like object, got 'dict'"
+            }
+          },
+          "confidence": "1/5"
+        },
+        "15": {
+          "method": "BROWSER_CALLBACK",
+          "success": true,
+          "found": false,
+          "error": null,
+          "total_reports": 0
+        },
+        "16": {
+          "method": "BROWSER_API_QUERY",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        }
+      },
+      "any_verification_passed": true,
+      "character_state": {
+        "character_menu": "Willow_Chat",
+        "unique_id": "20251204-00-04-15",
+        "name2": "Willow_Chat",
+        "history_count_before": 1
+      },
+      "display_refreshed": false,
+      "test_message": "[INJECTION-TEST] Method-17 @ 221631"
+    },
+    "18": {
+      "injection_method": 18,
+      "injection_name": "OPENAI_COMPLETIONS_API",
+      "timestamp": "2025-12-04T22:16:34.792493",
+      "injection_result": {
+        "method": "OPENAI_COMPLETIONS_API",
+        "success": true,
+        "error": null,
+        "response_preview": "{'id': 'conv-1764915394795654912', 'object': 'text_completion', 'created': 1764915394, 'model': 'Pyg"
+      },
+      "verification_results": {
+        "1": {
+          "method": "HISTORY_STATE",
+          "success": true,
+          "found": false,
+          "error": null,
+          "internal_count": 4,
+          "visible_count": 4,
+          "found_in_internal": false,
+          "found_in_visible": false
+        },
+        "2": {
+          "method": "MESSAGE_COUNT",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 4,
+          "visible_count": 4
+        },
+        "3": {
+          "method": "DISPLAY_HTML",
+          "success": true,
+          "found": false,
+          "error": null,
+          "html_length": 2
+        },
+        "4": {
+          "method": "METADATA_TIMESTAMP",
+          "success": true,
+          "found": false,
+          "error": null,
+          "has_metadata": false
+        },
+        "5": {
+          "method": "API_STATE",
+          "success": true,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "6": {
+          "method": "VERIFICATION_ENDPOINT",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "7": {
+          "method": "DOM_CONTENT",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - Cannot access DOM from Python",
+          "note": "Use verify_method_13_selenium for browser verification"
+        },
+        "8": {
+          "method": "MUTATION_OBSERVER",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - MutationObserver is JavaScript API",
+          "note": "Would need JavaScript bridge to check mutations"
+        },
+        "9": {
+          "method": "DATA_RAW",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "10": {
+          "method": "DOM_MESSAGE_COUNT",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "11": {
+          "method": "SSE_EVENTS",
+          "success": true,
+          "found": false,
+          "error": "NOT_PRACTICAL - SSE requires persistent connection",
+          "note": "SSE monitoring best done during injection, not after"
+        },
+        "12": {
+          "method": "REQUEST_MONITOR",
+          "success": true,
+          "found": false,
+          "error": "NOT_AVAILABLE - Would require request logging middleware",
+          "note": "Consider checking server logs instead"
+        },
+        "13": {
+          "method": "SELENIUM",
+          "success": true,
+          "found": false,
+          "error": "selenium not installed"
+        },
+        "14": {
+          "method": "COMPREHENSIVE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "found_count": 1,
+          "total_checked": 5,
+          "method_results": {
+            "1": {
+              "method": "HISTORY_STATE",
+              "success": true,
+              "found": false,
+              "error": null,
+              "internal_count": 4,
+              "visible_count": 4,
+              "found_in_internal": false,
+              "found_in_visible": false
+            },
+            "2": {
+              "method": "MESSAGE_COUNT",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 4,
+              "visible_count": 4
+            },
+            "3": {
+              "method": "DISPLAY_HTML",
+              "success": true,
+              "found": false,
+              "error": null,
+              "html_length": 2
+            },
+            "4": {
+              "method": "METADATA_TIMESTAMP",
+              "success": true,
+              "found": false,
+              "error": null,
+              "has_metadata": false
+            },
+            "9": {
+              "method": "DATA_RAW",
+              "success": false,
+              "found": false,
+              "error": "expected string or bytes-like object, got 'dict'"
+            }
+          },
+          "confidence": "1/5"
+        },
+        "15": {
+          "method": "BROWSER_CALLBACK",
+          "success": true,
+          "found": false,
+          "error": null,
+          "total_reports": 0
+        },
+        "16": {
+          "method": "BROWSER_API_QUERY",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        }
+      },
+      "any_verification_passed": true,
+      "character_state": {
+        "character_menu": "Willow_Chat",
+        "unique_id": "20251204-00-04-15",
+        "name2": "Willow_Chat",
+        "history_count_before": 1
+      },
+      "display_refreshed": true,
+      "test_message": "[INJECTION-TEST] Method-18 @ 221634"
+    },
+    "19": {
+      "injection_method": 19,
+      "injection_name": "CUSTOM_API",
+      "timestamp": "2025-12-04T22:16:48.958198",
+      "injection_result": {
+        "method": "CUSTOM_API",
+        "success": false,
+        "error": "HTTP 404"
+      },
+      "verification_results": {
+        "1": {
+          "method": "HISTORY_STATE",
+          "success": true,
+          "found": false,
+          "error": null,
+          "internal_count": 4,
+          "visible_count": 4,
+          "found_in_internal": false,
+          "found_in_visible": false
+        },
+        "2": {
+          "method": "MESSAGE_COUNT",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 4,
+          "visible_count": 4
+        },
+        "3": {
+          "method": "DISPLAY_HTML",
+          "success": true,
+          "found": false,
+          "error": null,
+          "html_length": 2
+        },
+        "4": {
+          "method": "METADATA_TIMESTAMP",
+          "success": true,
+          "found": false,
+          "error": null,
+          "has_metadata": false
+        },
+        "5": {
+          "method": "API_STATE",
+          "success": true,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "6": {
+          "method": "VERIFICATION_ENDPOINT",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "7": {
+          "method": "DOM_CONTENT",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - Cannot access DOM from Python",
+          "note": "Use verify_method_13_selenium for browser verification"
+        },
+        "8": {
+          "method": "MUTATION_OBSERVER",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - MutationObserver is JavaScript API",
+          "note": "Would need JavaScript bridge to check mutations"
+        },
+        "9": {
+          "method": "DATA_RAW",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "10": {
+          "method": "DOM_MESSAGE_COUNT",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "11": {
+          "method": "SSE_EVENTS",
+          "success": true,
+          "found": false,
+          "error": "NOT_PRACTICAL - SSE requires persistent connection",
+          "note": "SSE monitoring best done during injection, not after"
+        },
+        "12": {
+          "method": "REQUEST_MONITOR",
+          "success": true,
+          "found": false,
+          "error": "NOT_AVAILABLE - Would require request logging middleware",
+          "note": "Consider checking server logs instead"
+        },
+        "13": {
+          "method": "SELENIUM",
+          "success": true,
+          "found": false,
+          "error": "selenium not installed"
+        },
+        "14": {
+          "method": "COMPREHENSIVE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "found_count": 1,
+          "total_checked": 5,
+          "method_results": {
+            "1": {
+              "method": "HISTORY_STATE",
+              "success": true,
+              "found": false,
+              "error": null,
+              "internal_count": 4,
+              "visible_count": 4,
+              "found_in_internal": false,
+              "found_in_visible": false
+            },
+            "2": {
+              "method": "MESSAGE_COUNT",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 4,
+              "visible_count": 4
+            },
+            "3": {
+              "method": "DISPLAY_HTML",
+              "success": true,
+              "found": false,
+              "error": null,
+              "html_length": 2
+            },
+            "4": {
+              "method": "METADATA_TIMESTAMP",
+              "success": true,
+              "found": false,
+              "error": null,
+              "has_metadata": false
+            },
+            "9": {
+              "method": "DATA_RAW",
+              "success": false,
+              "found": false,
+              "error": "expected string or bytes-like object, got 'dict'"
+            }
+          },
+          "confidence": "1/5"
+        },
+        "15": {
+          "method": "BROWSER_CALLBACK",
+          "success": true,
+          "found": false,
+          "error": null,
+          "total_reports": 0
+        },
+        "16": {
+          "method": "BROWSER_API_QUERY",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        }
+      },
+      "any_verification_passed": true,
+      "character_state": {
+        "character_menu": "Willow_Chat",
+        "unique_id": "20251204-00-04-15",
+        "name2": "Willow_Chat",
+        "history_count_before": 1
+      },
+      "display_refreshed": false,
+      "test_message": "[INJECTION-TEST] Method-19 @ 221648"
+    },
+    "20": {
+      "injection_method": 20,
+      "injection_name": "MORPHDOM_UPDATE",
+      "timestamp": "2025-12-04T22:16:51.785790",
+      "injection_result": {
+        "method": "MORPHDOM_UPDATE",
+        "success": false,
+        "error": "REQUIRES_BROWSER - Cannot execute from Python",
+        "note": "This method requires JavaScript in browser context",
+        "js_code": "handleMorphdomUpdate('[INJECTION-TEST] Method-20 @ 221651')"
+      },
+      "verification_results": {
+        "1": {
+          "method": "HISTORY_STATE",
+          "success": true,
+          "found": false,
+          "error": null,
+          "internal_count": 4,
+          "visible_count": 4,
+          "found_in_internal": false,
+          "found_in_visible": false
+        },
+        "2": {
+          "method": "MESSAGE_COUNT",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 4,
+          "visible_count": 4
+        },
+        "3": {
+          "method": "DISPLAY_HTML",
+          "success": true,
+          "found": false,
+          "error": null,
+          "html_length": 2
+        },
+        "4": {
+          "method": "METADATA_TIMESTAMP",
+          "success": true,
+          "found": false,
+          "error": null,
+          "has_metadata": false
+        },
+        "5": {
+          "method": "API_STATE",
+          "success": true,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "6": {
+          "method": "VERIFICATION_ENDPOINT",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "7": {
+          "method": "DOM_CONTENT",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - Cannot access DOM from Python",
+          "note": "Use verify_method_13_selenium for browser verification"
+        },
+        "8": {
+          "method": "MUTATION_OBSERVER",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - MutationObserver is JavaScript API",
+          "note": "Would need JavaScript bridge to check mutations"
+        },
+        "9": {
+          "method": "DATA_RAW",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "10": {
+          "method": "DOM_MESSAGE_COUNT",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "11": {
+          "method": "SSE_EVENTS",
+          "success": true,
+          "found": false,
+          "error": "NOT_PRACTICAL - SSE requires persistent connection",
+          "note": "SSE monitoring best done during injection, not after"
+        },
+        "12": {
+          "method": "REQUEST_MONITOR",
+          "success": true,
+          "found": false,
+          "error": "NOT_AVAILABLE - Would require request logging middleware",
+          "note": "Consider checking server logs instead"
+        },
+        "13": {
+          "method": "SELENIUM",
+          "success": true,
+          "found": false,
+          "error": "selenium not installed"
+        },
+        "14": {
+          "method": "COMPREHENSIVE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "found_count": 1,
+          "total_checked": 5,
+          "method_results": {
+            "1": {
+              "method": "HISTORY_STATE",
+              "success": true,
+              "found": false,
+              "error": null,
+              "internal_count": 4,
+              "visible_count": 4,
+              "found_in_internal": false,
+              "found_in_visible": false
+            },
+            "2": {
+              "method": "MESSAGE_COUNT",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 4,
+              "visible_count": 4
+            },
+            "3": {
+              "method": "DISPLAY_HTML",
+              "success": true,
+              "found": false,
+              "error": null,
+              "html_length": 2
+            },
+            "4": {
+              "method": "METADATA_TIMESTAMP",
+              "success": true,
+              "found": false,
+              "error": null,
+              "has_metadata": false
+            },
+            "9": {
+              "method": "DATA_RAW",
+              "success": false,
+              "found": false,
+              "error": "expected string or bytes-like object, got 'dict'"
+            }
+          },
+          "confidence": "1/5"
+        },
+        "15": {
+          "method": "BROWSER_CALLBACK",
+          "success": true,
+          "found": false,
+          "error": null,
+          "total_reports": 0
+        },
+        "16": {
+          "method": "BROWSER_API_QUERY",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        }
+      },
+      "any_verification_passed": true,
+      "character_state": {
+        "character_menu": "Willow_Chat",
+        "unique_id": "20251204-00-04-15",
+        "name2": "Willow_Chat",
+        "history_count_before": 1
+      },
+      "display_refreshed": false,
+      "test_message": "[INJECTION-TEST] Method-20 @ 221651"
+    },
+    "21": {
+      "injection_method": 21,
+      "injection_name": "DIRECT_DOM",
+      "timestamp": "2025-12-04T22:16:54.615771",
+      "injection_result": {
+        "method": "DIRECT_DOM",
+        "success": false,
+        "error": "REQUIRES_BROWSER - Cannot execute from Python",
+        "note": "This method requires JavaScript in browser context"
+      },
+      "verification_results": {
+        "1": {
+          "method": "HISTORY_STATE",
+          "success": true,
+          "found": false,
+          "error": null,
+          "internal_count": 4,
+          "visible_count": 4,
+          "found_in_internal": false,
+          "found_in_visible": false
+        },
+        "2": {
+          "method": "MESSAGE_COUNT",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 4,
+          "visible_count": 4
+        },
+        "3": {
+          "method": "DISPLAY_HTML",
+          "success": true,
+          "found": false,
+          "error": null,
+          "html_length": 2
+        },
+        "4": {
+          "method": "METADATA_TIMESTAMP",
+          "success": true,
+          "found": false,
+          "error": null,
+          "has_metadata": false
+        },
+        "5": {
+          "method": "API_STATE",
+          "success": true,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "6": {
+          "method": "VERIFICATION_ENDPOINT",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "7": {
+          "method": "DOM_CONTENT",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - Cannot access DOM from Python",
+          "note": "Use verify_method_13_selenium for browser verification"
+        },
+        "8": {
+          "method": "MUTATION_OBSERVER",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - MutationObserver is JavaScript API",
+          "note": "Would need JavaScript bridge to check mutations"
+        },
+        "9": {
+          "method": "DATA_RAW",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "10": {
+          "method": "DOM_MESSAGE_COUNT",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "11": {
+          "method": "SSE_EVENTS",
+          "success": true,
+          "found": false,
+          "error": "NOT_PRACTICAL - SSE requires persistent connection",
+          "note": "SSE monitoring best done during injection, not after"
+        },
+        "12": {
+          "method": "REQUEST_MONITOR",
+          "success": true,
+          "found": false,
+          "error": "NOT_AVAILABLE - Would require request logging middleware",
+          "note": "Consider checking server logs instead"
+        },
+        "13": {
+          "method": "SELENIUM",
+          "success": true,
+          "found": false,
+          "error": "selenium not installed"
+        },
+        "14": {
+          "method": "COMPREHENSIVE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "found_count": 1,
+          "total_checked": 5,
+          "method_results": {
+            "1": {
+              "method": "HISTORY_STATE",
+              "success": true,
+              "found": false,
+              "error": null,
+              "internal_count": 4,
+              "visible_count": 4,
+              "found_in_internal": false,
+              "found_in_visible": false
+            },
+            "2": {
+              "method": "MESSAGE_COUNT",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 4,
+              "visible_count": 4
+            },
+            "3": {
+              "method": "DISPLAY_HTML",
+              "success": true,
+              "found": false,
+              "error": null,
+              "html_length": 2
+            },
+            "4": {
+              "method": "METADATA_TIMESTAMP",
+              "success": true,
+              "found": false,
+              "error": null,
+              "has_metadata": false
+            },
+            "9": {
+              "method": "DATA_RAW",
+              "success": false,
+              "found": false,
+              "error": "expected string or bytes-like object, got 'dict'"
+            }
+          },
+          "confidence": "1/5"
+        },
+        "15": {
+          "method": "BROWSER_CALLBACK",
+          "success": true,
+          "found": false,
+          "error": null,
+          "total_reports": 0
+        },
+        "16": {
+          "method": "BROWSER_API_QUERY",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        }
+      },
+      "any_verification_passed": true,
+      "character_state": {
+        "character_menu": "Willow_Chat",
+        "unique_id": "20251204-00-04-15",
+        "name2": "Willow_Chat",
+        "history_count_before": 1
+      },
+      "display_refreshed": false,
+      "test_message": "[INJECTION-TEST] Method-21 @ 221654"
+    },
+    "22": {
+      "injection_method": 22,
+      "injection_name": "MESSAGE_EDIT",
+      "timestamp": "2025-12-04T22:16:57.463693",
+      "injection_result": {
+        "method": "MESSAGE_EDIT",
+        "success": false,
+        "error": "REQUIRES_BROWSER - submitMessageEdit needs browser context",
+        "note": "This method edits existing messages via browser"
+      },
+      "verification_results": {
+        "1": {
+          "method": "HISTORY_STATE",
+          "success": true,
+          "found": false,
+          "error": null,
+          "internal_count": 4,
+          "visible_count": 4,
+          "found_in_internal": false,
+          "found_in_visible": false
+        },
+        "2": {
+          "method": "MESSAGE_COUNT",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 4,
+          "visible_count": 4
+        },
+        "3": {
+          "method": "DISPLAY_HTML",
+          "success": true,
+          "found": false,
+          "error": null,
+          "html_length": 2
+        },
+        "4": {
+          "method": "METADATA_TIMESTAMP",
+          "success": true,
+          "found": false,
+          "error": null,
+          "has_metadata": false
+        },
+        "5": {
+          "method": "API_STATE",
+          "success": true,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "6": {
+          "method": "VERIFICATION_ENDPOINT",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "7": {
+          "method": "DOM_CONTENT",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - Cannot access DOM from Python",
+          "note": "Use verify_method_13_selenium for browser verification"
+        },
+        "8": {
+          "method": "MUTATION_OBSERVER",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - MutationObserver is JavaScript API",
+          "note": "Would need JavaScript bridge to check mutations"
+        },
+        "9": {
+          "method": "DATA_RAW",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "10": {
+          "method": "DOM_MESSAGE_COUNT",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "11": {
+          "method": "SSE_EVENTS",
+          "success": true,
+          "found": false,
+          "error": "NOT_PRACTICAL - SSE requires persistent connection",
+          "note": "SSE monitoring best done during injection, not after"
+        },
+        "12": {
+          "method": "REQUEST_MONITOR",
+          "success": true,
+          "found": false,
+          "error": "NOT_AVAILABLE - Would require request logging middleware",
+          "note": "Consider checking server logs instead"
+        },
+        "13": {
+          "method": "SELENIUM",
+          "success": true,
+          "found": false,
+          "error": "selenium not installed"
+        },
+        "14": {
+          "method": "COMPREHENSIVE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "found_count": 1,
+          "total_checked": 5,
+          "method_results": {
+            "1": {
+              "method": "HISTORY_STATE",
+              "success": true,
+              "found": false,
+              "error": null,
+              "internal_count": 4,
+              "visible_count": 4,
+              "found_in_internal": false,
+              "found_in_visible": false
+            },
+            "2": {
+              "method": "MESSAGE_COUNT",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 4,
+              "visible_count": 4
+            },
+            "3": {
+              "method": "DISPLAY_HTML",
+              "success": true,
+              "found": false,
+              "error": null,
+              "html_length": 2
+            },
+            "4": {
+              "method": "METADATA_TIMESTAMP",
+              "success": true,
+              "found": false,
+              "error": null,
+              "has_metadata": false
+            },
+            "9": {
+              "method": "DATA_RAW",
+              "success": false,
+              "found": false,
+              "error": "expected string or bytes-like object, got 'dict'"
+            }
+          },
+          "confidence": "1/5"
+        },
+        "15": {
+          "method": "BROWSER_CALLBACK",
+          "success": true,
+          "found": false,
+          "error": null,
+          "total_reports": 0
+        },
+        "16": {
+          "method": "BROWSER_API_QUERY",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        }
+      },
+      "any_verification_passed": true,
+      "character_state": {
+        "character_menu": "Willow_Chat",
+        "unique_id": "20251204-00-04-15",
+        "name2": "Willow_Chat",
+        "history_count_before": 1
+      },
+      "display_refreshed": false,
+      "test_message": "[INJECTION-TEST] Method-22 @ 221657"
+    },
+    "23": {
+      "injection_method": 23,
+      "injection_name": "GRADIO_COMPONENTS",
+      "timestamp": "2025-12-04T22:17:00.296299",
+      "injection_result": {
+        "method": "GRADIO_COMPONENTS",
+        "success": false,
+        "error": "unsupported operand type(s) for +: 'dict' and 'str'"
+      },
+      "verification_results": {
+        "1": {
+          "method": "HISTORY_STATE",
+          "success": true,
+          "found": false,
+          "error": null,
+          "internal_count": 4,
+          "visible_count": 4,
+          "found_in_internal": false,
+          "found_in_visible": false
+        },
+        "2": {
+          "method": "MESSAGE_COUNT",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 4,
+          "visible_count": 4
+        },
+        "3": {
+          "method": "DISPLAY_HTML",
+          "success": true,
+          "found": false,
+          "error": null,
+          "html_length": 2
+        },
+        "4": {
+          "method": "METADATA_TIMESTAMP",
+          "success": true,
+          "found": false,
+          "error": null,
+          "has_metadata": false
+        },
+        "5": {
+          "method": "API_STATE",
+          "success": true,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "6": {
+          "method": "VERIFICATION_ENDPOINT",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "7": {
+          "method": "DOM_CONTENT",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - Cannot access DOM from Python",
+          "note": "Use verify_method_13_selenium for browser verification"
+        },
+        "8": {
+          "method": "MUTATION_OBSERVER",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - MutationObserver is JavaScript API",
+          "note": "Would need JavaScript bridge to check mutations"
+        },
+        "9": {
+          "method": "DATA_RAW",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "10": {
+          "method": "DOM_MESSAGE_COUNT",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "11": {
+          "method": "SSE_EVENTS",
+          "success": true,
+          "found": false,
+          "error": "NOT_PRACTICAL - SSE requires persistent connection",
+          "note": "SSE monitoring best done during injection, not after"
+        },
+        "12": {
+          "method": "REQUEST_MONITOR",
+          "success": true,
+          "found": false,
+          "error": "NOT_AVAILABLE - Would require request logging middleware",
+          "note": "Consider checking server logs instead"
+        },
+        "13": {
+          "method": "SELENIUM",
+          "success": true,
+          "found": false,
+          "error": "selenium not installed"
+        },
+        "14": {
+          "method": "COMPREHENSIVE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "found_count": 1,
+          "total_checked": 5,
+          "method_results": {
+            "1": {
+              "method": "HISTORY_STATE",
+              "success": true,
+              "found": false,
+              "error": null,
+              "internal_count": 4,
+              "visible_count": 4,
+              "found_in_internal": false,
+              "found_in_visible": false
+            },
+            "2": {
+              "method": "MESSAGE_COUNT",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 4,
+              "visible_count": 4
+            },
+            "3": {
+              "method": "DISPLAY_HTML",
+              "success": true,
+              "found": false,
+              "error": null,
+              "html_length": 2
+            },
+            "4": {
+              "method": "METADATA_TIMESTAMP",
+              "success": true,
+              "found": false,
+              "error": null,
+              "has_metadata": false
+            },
+            "9": {
+              "method": "DATA_RAW",
+              "success": false,
+              "found": false,
+              "error": "expected string or bytes-like object, got 'dict'"
+            }
+          },
+          "confidence": "1/5"
+        },
+        "15": {
+          "method": "BROWSER_CALLBACK",
+          "success": true,
+          "found": false,
+          "error": null,
+          "total_reports": 0
+        },
+        "16": {
+          "method": "BROWSER_API_QUERY",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        }
+      },
+      "any_verification_passed": true,
+      "character_state": {
+        "character_menu": "Willow_Chat",
+        "unique_id": "20251204-00-04-15",
+        "name2": "Willow_Chat",
+        "history_count_before": 1
+      },
+      "display_refreshed": false,
+      "test_message": "[INJECTION-TEST] Method-23 @ 221700"
+    },
+    "24": {
+      "injection_method": 24,
+      "injection_name": "INPUT_HIJACK",
+      "timestamp": "2025-12-04T22:17:03.152098",
+      "injection_result": {
+        "method": "INPUT_HIJACK",
+        "success": true,
+        "error": null,
+        "hijack_state": {
+          "state": true,
+          "value": [
+            "",
+            "[INJECTION-TEST] Method-24 @ 221703"
+          ]
+        }
+      },
+      "verification_results": {
+        "1": {
+          "method": "HISTORY_STATE",
+          "success": true,
+          "found": false,
+          "error": null,
+          "internal_count": 4,
+          "visible_count": 4,
+          "found_in_internal": false,
+          "found_in_visible": false
+        },
+        "2": {
+          "method": "MESSAGE_COUNT",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 4,
+          "visible_count": 4
+        },
+        "3": {
+          "method": "DISPLAY_HTML",
+          "success": true,
+          "found": false,
+          "error": null,
+          "html_length": 2
+        },
+        "4": {
+          "method": "METADATA_TIMESTAMP",
+          "success": true,
+          "found": false,
+          "error": null,
+          "has_metadata": false
+        },
+        "5": {
+          "method": "API_STATE",
+          "success": true,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "6": {
+          "method": "VERIFICATION_ENDPOINT",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "7": {
+          "method": "DOM_CONTENT",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - Cannot access DOM from Python",
+          "note": "Use verify_method_13_selenium for browser verification"
+        },
+        "8": {
+          "method": "MUTATION_OBSERVER",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - MutationObserver is JavaScript API",
+          "note": "Would need JavaScript bridge to check mutations"
+        },
+        "9": {
+          "method": "DATA_RAW",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "10": {
+          "method": "DOM_MESSAGE_COUNT",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "11": {
+          "method": "SSE_EVENTS",
+          "success": true,
+          "found": false,
+          "error": "NOT_PRACTICAL - SSE requires persistent connection",
+          "note": "SSE monitoring best done during injection, not after"
+        },
+        "12": {
+          "method": "REQUEST_MONITOR",
+          "success": true,
+          "found": false,
+          "error": "NOT_AVAILABLE - Would require request logging middleware",
+          "note": "Consider checking server logs instead"
+        },
+        "13": {
+          "method": "SELENIUM",
+          "success": true,
+          "found": false,
+          "error": "selenium not installed"
+        },
+        "14": {
+          "method": "COMPREHENSIVE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "found_count": 1,
+          "total_checked": 5,
+          "method_results": {
+            "1": {
+              "method": "HISTORY_STATE",
+              "success": true,
+              "found": false,
+              "error": null,
+              "internal_count": 4,
+              "visible_count": 4,
+              "found_in_internal": false,
+              "found_in_visible": false
+            },
+            "2": {
+              "method": "MESSAGE_COUNT",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 4,
+              "visible_count": 4
+            },
+            "3": {
+              "method": "DISPLAY_HTML",
+              "success": true,
+              "found": false,
+              "error": null,
+              "html_length": 2
+            },
+            "4": {
+              "method": "METADATA_TIMESTAMP",
+              "success": true,
+              "found": false,
+              "error": null,
+              "has_metadata": false
+            },
+            "9": {
+              "method": "DATA_RAW",
+              "success": false,
+              "found": false,
+              "error": "expected string or bytes-like object, got 'dict'"
+            }
+          },
+          "confidence": "1/5"
+        },
+        "15": {
+          "method": "BROWSER_CALLBACK",
+          "success": true,
+          "found": false,
+          "error": null,
+          "total_reports": 0
+        },
+        "16": {
+          "method": "BROWSER_API_QUERY",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        }
+      },
+      "any_verification_passed": true,
+      "character_state": {
+        "character_menu": "Willow_Chat",
+        "unique_id": "20251204-00-04-15",
+        "name2": "Willow_Chat",
+        "history_count_before": 1
+      },
+      "display_refreshed": true,
+      "test_message": "[INJECTION-TEST] Method-24 @ 221703"
+    },
+    "25": {
+      "injection_method": 25,
+      "injection_name": "INJECTION_BRIDGE",
+      "timestamp": "2025-12-04T22:17:05.975596",
+      "injection_result": {
+        "method": "INJECTION_BRIDGE",
+        "success": false,
+        "error": "queue_injection not found in bridge"
+      },
+      "verification_results": {
+        "1": {
+          "method": "HISTORY_STATE",
+          "success": true,
+          "found": false,
+          "error": null,
+          "internal_count": 4,
+          "visible_count": 4,
+          "found_in_internal": false,
+          "found_in_visible": false
+        },
+        "2": {
+          "method": "MESSAGE_COUNT",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 4,
+          "visible_count": 4
+        },
+        "3": {
+          "method": "DISPLAY_HTML",
+          "success": true,
+          "found": false,
+          "error": null,
+          "html_length": 2
+        },
+        "4": {
+          "method": "METADATA_TIMESTAMP",
+          "success": true,
+          "found": false,
+          "error": null,
+          "has_metadata": false
+        },
+        "5": {
+          "method": "API_STATE",
+          "success": true,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "6": {
+          "method": "VERIFICATION_ENDPOINT",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "7": {
+          "method": "DOM_CONTENT",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - Cannot access DOM from Python",
+          "note": "Use verify_method_13_selenium for browser verification"
+        },
+        "8": {
+          "method": "MUTATION_OBSERVER",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - MutationObserver is JavaScript API",
+          "note": "Would need JavaScript bridge to check mutations"
+        },
+        "9": {
+          "method": "DATA_RAW",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "10": {
+          "method": "DOM_MESSAGE_COUNT",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "11": {
+          "method": "SSE_EVENTS",
+          "success": true,
+          "found": false,
+          "error": "NOT_PRACTICAL - SSE requires persistent connection",
+          "note": "SSE monitoring best done during injection, not after"
+        },
+        "12": {
+          "method": "REQUEST_MONITOR",
+          "success": true,
+          "found": false,
+          "error": "NOT_AVAILABLE - Would require request logging middleware",
+          "note": "Consider checking server logs instead"
+        },
+        "13": {
+          "method": "SELENIUM",
+          "success": true,
+          "found": false,
+          "error": "selenium not installed"
+        },
+        "14": {
+          "method": "COMPREHENSIVE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "found_count": 1,
+          "total_checked": 5,
+          "method_results": {
+            "1": {
+              "method": "HISTORY_STATE",
+              "success": true,
+              "found": false,
+              "error": null,
+              "internal_count": 4,
+              "visible_count": 4,
+              "found_in_internal": false,
+              "found_in_visible": false
+            },
+            "2": {
+              "method": "MESSAGE_COUNT",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 4,
+              "visible_count": 4
+            },
+            "3": {
+              "method": "DISPLAY_HTML",
+              "success": true,
+              "found": false,
+              "error": null,
+              "html_length": 2
+            },
+            "4": {
+              "method": "METADATA_TIMESTAMP",
+              "success": true,
+              "found": false,
+              "error": null,
+              "has_metadata": false
+            },
+            "9": {
+              "method": "DATA_RAW",
+              "success": false,
+              "found": false,
+              "error": "expected string or bytes-like object, got 'dict'"
+            }
+          },
+          "confidence": "1/5"
+        },
+        "15": {
+          "method": "BROWSER_CALLBACK",
+          "success": true,
+          "found": false,
+          "error": null,
+          "total_reports": 0
+        },
+        "16": {
+          "method": "BROWSER_API_QUERY",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        }
+      },
+      "any_verification_passed": true,
+      "character_state": {
+        "character_menu": "Willow_Chat",
+        "unique_id": "20251204-00-04-15",
+        "name2": "Willow_Chat",
+        "history_count_before": 1
+      },
+      "display_refreshed": false,
+      "test_message": "[INJECTION-TEST] Method-25 @ 221705"
+    },
+    "26": {
+      "injection_method": 26,
+      "injection_name": "APSCHEDULER",
+      "timestamp": "2025-12-04T22:17:08.802035",
+      "injection_result": {
+        "method": "APSCHEDULER",
+        "success": false,
+        "error": "apscheduler not installed"
+      },
+      "verification_results": {
+        "1": {
+          "method": "HISTORY_STATE",
+          "success": true,
+          "found": false,
+          "error": null,
+          "internal_count": 4,
+          "visible_count": 4,
+          "found_in_internal": false,
+          "found_in_visible": false
+        },
+        "2": {
+          "method": "MESSAGE_COUNT",
+          "success": true,
+          "found": true,
+          "error": null,
+          "internal_count": 4,
+          "visible_count": 4
+        },
+        "3": {
+          "method": "DISPLAY_HTML",
+          "success": true,
+          "found": false,
+          "error": null,
+          "html_length": 2
+        },
+        "4": {
+          "method": "METADATA_TIMESTAMP",
+          "success": true,
+          "found": false,
+          "error": null,
+          "has_metadata": false
+        },
+        "5": {
+          "method": "API_STATE",
+          "success": true,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "6": {
+          "method": "VERIFICATION_ENDPOINT",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        },
+        "7": {
+          "method": "DOM_CONTENT",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - Cannot access DOM from Python",
+          "note": "Use verify_method_13_selenium for browser verification"
+        },
+        "8": {
+          "method": "MUTATION_OBSERVER",
+          "success": true,
+          "found": false,
+          "error": "REQUIRES_BROWSER - MutationObserver is JavaScript API",
+          "note": "Would need JavaScript bridge to check mutations"
+        },
+        "9": {
+          "method": "DATA_RAW",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "10": {
+          "method": "DOM_MESSAGE_COUNT",
+          "success": false,
+          "found": false,
+          "error": "expected string or bytes-like object, got 'dict'"
+        },
+        "11": {
+          "method": "SSE_EVENTS",
+          "success": true,
+          "found": false,
+          "error": "NOT_PRACTICAL - SSE requires persistent connection",
+          "note": "SSE monitoring best done during injection, not after"
+        },
+        "12": {
+          "method": "REQUEST_MONITOR",
+          "success": true,
+          "found": false,
+          "error": "NOT_AVAILABLE - Would require request logging middleware",
+          "note": "Consider checking server logs instead"
+        },
+        "13": {
+          "method": "SELENIUM",
+          "success": true,
+          "found": false,
+          "error": "selenium not installed"
+        },
+        "14": {
+          "method": "COMPREHENSIVE",
+          "success": true,
+          "found": true,
+          "error": null,
+          "found_count": 1,
+          "total_checked": 5,
+          "method_results": {
+            "1": {
+              "method": "HISTORY_STATE",
+              "success": true,
+              "found": false,
+              "error": null,
+              "internal_count": 4,
+              "visible_count": 4,
+              "found_in_internal": false,
+              "found_in_visible": false
+            },
+            "2": {
+              "method": "MESSAGE_COUNT",
+              "success": true,
+              "found": true,
+              "error": null,
+              "internal_count": 4,
+              "visible_count": 4
+            },
+            "3": {
+              "method": "DISPLAY_HTML",
+              "success": true,
+              "found": false,
+              "error": null,
+              "html_length": 2
+            },
+            "4": {
+              "method": "METADATA_TIMESTAMP",
+              "success": true,
+              "found": false,
+              "error": null,
+              "has_metadata": false
+            },
+            "9": {
+              "method": "DATA_RAW",
+              "success": false,
+              "found": false,
+              "error": "expected string or bytes-like object, got 'dict'"
+            }
+          },
+          "confidence": "1/5"
+        },
+        "15": {
+          "method": "BROWSER_CALLBACK",
+          "success": true,
+          "found": false,
+          "error": null,
+          "total_reports": 0
+        },
+        "16": {
+          "method": "BROWSER_API_QUERY",
+          "success": false,
+          "found": false,
+          "error": "HTTP 404"
+        }
+      },
+      "any_verification_passed": true,
+      "character_state": {
+        "character_menu": "Willow_Chat",
+        "unique_id": "20251204-00-04-15",
+        "name2": "Willow_Chat",
+        "history_count_before": 1
+      },
+      "display_refreshed": false,
+      "test_message": "[INJECTION-TEST] Method-26 @ 221708"
+    }
+  },
+  "summary": {
+    "successful_injections": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      15,
+      18,
+      24
+    ],
+    "failed_injections": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      19,
+      20,
+      21,
+      22,
+      23,
+      25,
+      26
+    ],
+    "verified_injections": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      15,
+      18,
+      24
+    ],
+    "unverified_injections": [],
+    "verification_matrix": {
+      "1": [
+        1,
+        2,
+        14
+      ],
+      "2": [
+        1,
+        2,
+        14
+      ],
+      "3": [
+        2,
+        14
+      ],
+      "4": [
+        2,
+        14
+      ],
+      "5": [
+        2,
+        14
+      ],
+      "6": [
+        2,
+        14
+      ],
+      "7": [
+        2,
+        14
+      ],
+      "8": [
+        2,
+        14
+      ],
+      "9": [
+        2,
+        14
+      ],
+      "10": [
+        2,
+        14
+      ],
+      "11": [
+        2,
+        14
+      ],
+      "12": [
+        2,
+        14
+      ],
+      "13": [
+        2,
+        14
+      ],
+      "14": [
+        1,
+        2,
+        14
+      ],
+      "15": [
+        1,
+        2,
+        14
+      ],
+      "16": [
+        2,
+        14
+      ],
+      "17": [
+        2,
+        14
+      ],
+      "18": [
+        2,
+        14
+      ],
+      "19": [
+        2,
+        14
+      ],
+      "20": [
+        2,
+        14
+      ],
+      "21": [
+        2,
+        14
+      ],
+      "22": [
+        2,
+        14
+      ],
+      "23": [
+        2,
+        14
+      ],
+      "24": [
+        2,
+        14
+      ],
+      "25": [
+        2,
+        14
+      ],
+      "26": [
+        2,
+        14
+      ]
+    }
+  },
+  "character_context": {
+    "character_menu": "Willow_Chat",
+    "unique_id": "20251204-00-04-15",
+    "name2": "Willow_Chat"
+  }
+}

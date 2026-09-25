@@ -377,3 +377,20 @@ def boot():
     install_shims()
     code_for, handled = install_code_hooks()
     run_app_file_as_main(code_for, handled)
+
+
+_host_booted = False
+
+
+def boot_host():
+    """For a host program that loads AllTalk code into its own process (oobabooga's
+    AllTalk add-on): same redirects and patches, but no chdir and no takeover of the
+    host's own __main__."""
+    global _host_booted
+    if _host_booted:
+        return
+    for d in (LOGS, OUTPUTS, REPO_VOICES, TRANSCRIPTIONS):
+        os.makedirs(d, exist_ok=True)
+    install_shims()
+    install_code_hooks()
+    _host_booted = True

@@ -942,8 +942,9 @@ parser.add_argument(
     choices=["piper", "vits", "xtts", "none"],
     help="Specify the TTS model to set up (piper, vits, xtts, or none).",
 )
-# Parse the arguments
-args = parser.parse_args()
+# Parse the arguments. parse_known_args: inside oobabooga the command line belongs to
+# oobabooga (e.g. --user-data-dir), and parse_args() would exit on those (2026-09-25).
+args, _unknown_args = parser.parse_known_args()
 # Call the function to run the startup script
 run_firsttime_script(tts_model=args.tts_model)
 

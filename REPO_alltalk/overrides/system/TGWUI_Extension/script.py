@@ -63,7 +63,7 @@ def log_simple(message, level="INFO"):
     # Also log to file
     try:
         timestamp = datetime.now().strftime("%H:%M:%S.%f")[:-3]
-        log_file = "F:/Apps/freedom_system/log/alltalk_operations.log"
+        log_file = "F:/Apps/freedom_system/REPO_alltalk/logs/alltalk_operations.log"  # all AllTalk logs live in REPO_alltalk/logs (2026-09-25)
         os.makedirs(os.path.dirname(log_file), exist_ok=True)
         with open(log_file, 'a', encoding='utf-8') as f:
             f.write("[" + timestamp + "] " + full_message + "\n")
@@ -116,7 +116,7 @@ def log_alltalk(message, level="INFO", function_name="", force_print=False):
     
     # Always log to file
     try:
-        log_file = "F:/Apps/freedom_system/log/alltalk_operations.log"
+        log_file = "F:/Apps/freedom_system/REPO_alltalk/logs/alltalk_operations.log"  # all AllTalk logs live in REPO_alltalk/logs (2026-09-25)
         os.makedirs(os.path.dirname(log_file), exist_ok=True)
         with open(log_file, 'a', encoding='utf-8') as f:
             f.write("[" + timestamp + "] " + full_message + "\n")
@@ -1813,7 +1813,8 @@ def ui():
                 tgwui_character_voice_status_gr = gr.HTML(
                     value="<div style='color: gray; font-size: 12px; padding: 8px;'>Select a voice</div>",
                     show_label=False,
-                    scale=1
+                    # no scale=: gr.HTML never accepted it; oobabooga <=3.12's gradio_hijack
+                    # silently dropped it, v4.9 removed the hijack (2026-09-25)
                 )
 
             tgwui_narr_voice_gr = mode_manager.config["tgwui"]["tgwui_narrator_voice"]

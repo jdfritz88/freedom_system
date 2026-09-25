@@ -1,5 +1,19 @@
 import sys
 import os
+
+# Oobabooga v4.9 loads extensions from user_data/extensions as a lone file
+# ("user_ext_boredom_monitor", no package), which breaks this extension's
+# `from .module import ...` lines. Register this folder as the package
+# "boredom_monitor" so those relative imports resolve here (2026-09-25).
+if not __package__:
+    import types as _types
+    _pkg = sys.modules.get("boredom_monitor")
+    if _pkg is None:
+        _pkg = _types.ModuleType("boredom_monitor")
+        _pkg.__path__ = [os.path.dirname(os.path.abspath(__file__))]
+        sys.modules["boredom_monitor"] = _pkg
+    __package__ = "boredom_monitor"
+
 import time
 import threading
 import gradio as gr

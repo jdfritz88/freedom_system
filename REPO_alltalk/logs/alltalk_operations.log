@@ -1,0 +1,1245 @@
+[12:15:37.233] [AllTalk TTS] Voice synchronization module loaded successfully
+[12:15:37.234] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[12:15:37.234] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[12:15:37.234] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[12:15:37.235] [AllTalk TTS] Synchronizing voice files...
+[12:15:37.237] [AllTalk TTS] [voice_sync] [SUCCESS] Voice sync completed successfully
+[12:15:37.237] [AllTalk TTS] TGWUIModeManager instance created successfully
+[12:15:37.238] [AllTalk TTS] TGWUI_Extension loaded successfully
+[12:16:19.196] [AllTalk TTS] [get_alltalk_settings] [INFO] Checking voice config - Local mode: True
+[12:16:19.197] [AllTalk TTS] [get_alltalk_settings] [INFO] Character voice already set and valid: female_01.wav
+[12:16:19.197] [AllTalk TTS] [get_alltalk_settings] [INFO] Narrator voice already set and valid: female_01.wav
+[12:16:19.208] [AllTalk TTS] [auto_refresh_voices] [INFO] Auto-refreshing voice lists after UI load
+[12:16:19.208] [AllTalk TTS] [ui] [INFO] Started auto-refresh thread for voice lists
+[12:16:21.228] [AllTalk TTS] [get_alltalk_settings] [INFO] Checking voice config - Local mode: True
+[12:16:21.228] [AllTalk TTS] [get_alltalk_settings] [INFO] Character voice already set and valid: female_01.wav
+[12:16:21.228] [AllTalk TTS] [get_alltalk_settings] [INFO] Narrator voice already set and valid: female_01.wav
+[12:16:21.228] [AllTalk TTS] [auto_refresh_voices] [SUCCESS] Auto-refresh successful: 21 voices loaded
+[12:16:21.228] [AllTalk TTS] [auto_refresh_voices] [INFO] Config after auto-refresh - Character: female_01.wav, Narrator: female_01.wav
+[12:16:21.228] [AllTalk TTS] [auto_refresh_voices] [INFO] Voice list updated: Arnold.wav, Clint_Eastwood CC3 (enhanced).wav, Clint_Eastwood CC3.wav, Freya.wav, James_Earl_Jones CC3.wav...
+[12:16:21.230] [AllTalk TTS] [save_settings] [SUCCESS] Settings saved to F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[12:16:21.230] [AllTalk TTS] [save_settings] [INFO] Saved character voice: female_01.wav
+[12:16:21.230] [AllTalk TTS] [save_settings] [INFO] Saved narrator voice: female_01.wav
+[12:16:21.230] [AllTalk TTS] [save_settings] [INFO] Performing immediate config refresh after save
+[12:16:21.230] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[12:16:21.231] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[12:16:21.231] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[12:16:21.231] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[12:16:21.231] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[12:16:21.231] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[12:23:18.673] [AllTalk TTS] Standalone AllTalk server detected - using remote configuration
+[12:23:18.673] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[12:23:18.673] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[12:23:18.674] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[12:23:18.674] [AllTalk TTS] TGWUIModeManager instance created successfully
+[12:23:18.674] [AllTalk TTS] TGWUI_Extension loaded successfully
+[12:23:18.682] [AllTalk TTS] 
+[12:23:18.682] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[12:23:18.682] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[12:23:18.682] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[12:23:18.682] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[12:23:18.682] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[12:23:18.683] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[12:23:18.683] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[12:23:18.683] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[12:23:18.683] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[12:23:18.683] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[12:23:18.683] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[12:23:18.683] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[12:23:18.683] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[12:23:18.683] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[12:23:18.683] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[12:30:18.698] [AllTalk TTS] 
+[12:30:18.699] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[12:30:18.699] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[12:30:18.699] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[12:30:18.699] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[12:30:18.699] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[12:30:18.699] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[12:30:18.699] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[12:30:18.700] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[12:30:18.700] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[12:30:18.700] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[12:30:18.700] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[12:30:18.700] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[12:30:18.701] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[12:30:18.701] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[12:30:18.701] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[12:37:18.714] [AllTalk TTS] 
+[12:37:18.715] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[12:37:18.715] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[12:37:18.715] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[12:37:18.715] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[12:37:18.715] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[12:37:18.715] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[12:37:18.715] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[12:37:18.716] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[12:37:18.716] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[12:37:18.716] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[12:37:18.716] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[12:37:18.716] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[12:37:18.716] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[12:37:18.716] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[12:37:18.716] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[12:44:18.730] [AllTalk TTS] 
+[12:44:18.730] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[12:44:18.731] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[12:44:18.731] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[12:44:18.731] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[12:44:18.731] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[12:44:18.731] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[12:44:18.731] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[12:44:18.731] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[12:44:18.731] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[12:44:18.731] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[12:44:18.732] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[12:44:18.732] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[12:44:18.732] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[12:44:18.732] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[12:44:18.732] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[12:51:18.750] [AllTalk TTS] 
+[12:51:18.750] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[12:51:18.750] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[12:51:18.750] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[12:51:18.750] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[12:51:18.751] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[12:51:18.751] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[12:51:18.751] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[12:51:18.751] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[12:51:18.751] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[12:51:18.751] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[12:51:18.751] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[12:51:18.752] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[12:51:18.752] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[12:51:18.752] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[12:51:18.752] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[12:58:18.766] [AllTalk TTS] 
+[12:58:18.766] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[12:58:18.766] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[12:58:18.766] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[12:58:18.767] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[12:58:18.767] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[12:58:18.768] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[12:58:18.768] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[12:58:18.768] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[12:58:18.768] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[12:58:18.768] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[12:58:18.768] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[12:58:18.769] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[12:58:18.769] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[12:58:18.769] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[12:58:18.769] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[13:05:18.782] [AllTalk TTS] 
+[13:05:18.782] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[13:05:18.783] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[13:05:18.783] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[13:05:18.784] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[13:05:18.784] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[13:05:18.784] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[13:05:18.784] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[13:05:18.784] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[13:05:18.784] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[13:05:18.784] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[13:05:18.784] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[13:05:18.785] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[13:05:18.785] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[13:05:18.785] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[13:05:18.785] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[13:12:18.799] [AllTalk TTS] 
+[13:12:18.800] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[13:12:18.800] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[13:12:18.800] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[13:12:18.800] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[13:12:18.800] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[13:12:18.801] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[13:12:18.801] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[13:12:18.801] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[13:12:18.801] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[13:12:18.801] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[13:12:18.801] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[13:12:18.801] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[13:12:18.801] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[13:12:18.801] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[13:12:18.802] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[13:19:18.814] [AllTalk TTS] 
+[13:19:18.814] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[13:19:18.815] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[13:19:18.815] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[13:19:18.815] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[13:19:18.815] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[13:19:18.815] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[13:19:18.815] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[13:19:18.815] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[13:19:18.815] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[13:19:18.815] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[13:19:18.816] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[13:19:18.816] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[13:19:18.816] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[13:19:18.816] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[13:19:18.816] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[13:26:18.830] [AllTalk TTS] 
+[13:26:18.830] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[13:26:18.830] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[13:26:18.831] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[13:26:18.831] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[13:26:18.831] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[13:26:18.831] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[13:26:18.831] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[13:26:18.831] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[13:26:18.831] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[13:26:18.832] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[13:26:18.832] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[13:26:18.832] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[13:26:18.832] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[13:26:18.832] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[13:26:18.832] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[13:33:18.848] [AllTalk TTS] 
+[13:33:18.849] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[13:33:18.849] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[13:33:18.849] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[13:33:18.849] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[13:33:18.849] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[13:33:18.849] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[13:33:18.849] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[13:33:18.849] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[13:33:18.849] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[13:33:18.849] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[13:33:18.849] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[13:33:18.849] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[13:33:18.849] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[13:33:18.849] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[13:33:18.849] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[13:40:18.864] [AllTalk TTS] 
+[13:40:18.864] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[13:40:18.864] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[13:40:18.865] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[13:40:18.865] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[13:40:18.865] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[13:40:18.865] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[13:40:18.865] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[13:40:18.865] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[13:40:18.865] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[13:40:18.865] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[13:40:18.865] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[13:40:18.865] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[13:40:18.865] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[13:40:18.865] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[13:40:18.865] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[13:47:18.881] [AllTalk TTS] 
+[13:47:18.881] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[13:47:18.881] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[13:47:18.882] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[13:47:18.882] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[13:47:18.882] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[13:47:18.882] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[13:47:18.882] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[13:47:18.882] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[13:47:18.882] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[13:47:18.882] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[13:47:18.883] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[13:47:18.883] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[13:47:18.883] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[13:47:18.883] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[13:47:18.883] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[13:54:18.897] [AllTalk TTS] 
+[13:54:18.898] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[13:54:18.898] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[13:54:18.899] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[13:54:18.899] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[13:54:18.899] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[13:54:18.899] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[13:54:18.900] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[13:54:18.900] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[13:54:18.900] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[13:54:18.900] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[13:54:18.900] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[13:54:18.900] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[13:54:18.900] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[13:54:18.900] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[13:54:18.900] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[14:01:18.914] [AllTalk TTS] 
+[14:01:18.915] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[14:01:18.915] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[14:01:18.915] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[14:01:18.915] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[14:01:18.915] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[14:01:18.915] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[14:01:18.915] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[14:01:18.916] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[14:01:18.916] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[14:01:18.916] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[14:01:18.916] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[14:01:18.916] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[14:01:18.916] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[14:01:18.916] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[14:01:18.916] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[14:08:18.929] [AllTalk TTS] 
+[14:08:18.929] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[14:08:18.929] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[14:08:18.930] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[14:08:18.930] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[14:08:18.930] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[14:08:18.930] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[14:08:18.931] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[14:08:18.931] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[14:08:18.931] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[14:08:18.931] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[14:08:18.931] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[14:08:18.931] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[14:08:18.931] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[14:08:18.931] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[14:08:18.931] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[14:15:18.945] [AllTalk TTS] 
+[14:15:18.945] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[14:15:18.945] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[14:15:18.945] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[14:15:18.946] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[14:15:18.946] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[14:15:18.946] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[14:15:18.946] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[14:15:18.946] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[14:15:18.946] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[14:15:18.946] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[14:15:18.946] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[14:15:18.946] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[14:15:18.947] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[14:15:18.947] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[14:15:18.947] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[14:22:18.967] [AllTalk TTS] 
+[14:22:18.968] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[14:22:18.968] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[14:22:18.968] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[14:22:18.968] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[14:22:18.968] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[14:22:18.968] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[14:22:18.968] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[14:22:18.968] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[14:22:18.969] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[14:22:18.969] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[14:22:18.969] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[14:22:18.969] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[14:22:18.969] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[14:22:18.969] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[14:22:18.969] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[14:29:18.983] [AllTalk TTS] 
+[14:29:18.983] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[14:29:18.983] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[14:29:18.983] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[14:29:18.983] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[14:29:18.983] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[14:29:18.983] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[14:29:18.983] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[14:29:18.983] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[14:29:18.983] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[14:29:18.983] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[14:29:18.985] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[14:29:18.985] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[14:29:18.985] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[14:29:18.985] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[14:29:18.985] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[14:36:18.999] [AllTalk TTS] 
+[14:36:18.999] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[14:36:19.000] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[14:36:19.000] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[14:36:19.000] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[14:36:19.001] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[14:36:19.001] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[14:36:19.001] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[14:36:19.001] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[14:36:19.001] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[14:36:19.001] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[14:36:19.001] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[14:36:19.002] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[14:36:19.002] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[14:36:19.002] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[14:36:19.002] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[14:43:19.018] [AllTalk TTS] 
+[14:43:19.018] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[14:43:19.018] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[14:43:19.018] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[14:43:19.018] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[14:43:19.019] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[14:43:19.019] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[14:43:19.019] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[14:43:19.019] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[14:43:19.019] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[14:43:19.019] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[14:43:19.019] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[14:43:19.019] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[14:43:19.020] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[14:43:19.020] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[14:43:19.020] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[14:50:19.037] [AllTalk TTS] 
+[14:50:19.038] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[14:50:19.038] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[14:50:19.038] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[14:50:19.038] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[14:50:19.038] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[14:50:19.038] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[14:50:19.039] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[14:50:19.039] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[14:50:19.039] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[14:50:19.039] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[14:50:19.039] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[14:50:19.039] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[14:50:19.039] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[14:50:19.039] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[14:50:19.039] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[14:57:19.054] [AllTalk TTS] 
+[14:57:19.054] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[14:57:19.054] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[14:57:19.054] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[14:57:19.055] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[14:57:19.055] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[14:57:19.055] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[14:57:19.055] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[14:57:19.055] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[14:57:19.055] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[14:57:19.055] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[14:57:19.055] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[14:57:19.055] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[14:57:19.055] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[14:57:19.055] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[14:57:19.056] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[15:04:19.070] [AllTalk TTS] 
+[15:04:19.071] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[15:04:19.071] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[15:04:19.071] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[15:04:19.071] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[15:04:19.071] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[15:04:19.071] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[15:04:19.071] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[15:04:19.072] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[15:04:19.072] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[15:04:19.072] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[15:04:19.072] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[15:04:19.072] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[15:04:19.072] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[15:04:19.072] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[15:04:19.072] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[15:11:19.088] [AllTalk TTS] 
+[15:11:19.088] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[15:11:19.089] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[15:11:19.089] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[15:11:19.089] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[15:11:19.089] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[15:11:19.089] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[15:11:19.089] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[15:11:19.090] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[15:11:19.090] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[15:11:19.090] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[15:11:19.090] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[15:11:19.090] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[15:11:19.090] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[15:11:19.090] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[15:11:19.090] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[15:18:19.106] [AllTalk TTS] 
+[15:18:19.106] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[15:18:19.106] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[15:18:19.106] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[15:18:19.106] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[15:18:19.107] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[15:18:19.107] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[15:18:19.107] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[15:18:19.107] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[15:18:19.107] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[15:18:19.107] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[15:18:19.107] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[15:18:19.107] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[15:18:19.107] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[15:18:19.107] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[15:18:19.108] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[15:25:19.124] [AllTalk TTS] 
+[15:25:19.124] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[15:25:19.125] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[15:25:19.125] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[15:25:19.125] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[15:25:19.125] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[15:25:19.125] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[15:25:19.125] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[15:25:19.125] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[15:25:19.125] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[15:25:19.125] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[15:25:19.125] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[15:25:19.125] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[15:25:19.125] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[15:25:19.125] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[15:25:19.125] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[15:32:19.143] [AllTalk TTS] 
+[15:32:19.143] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[15:32:19.143] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[15:32:19.144] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[15:32:19.144] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[15:32:19.144] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[15:32:19.144] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[15:32:19.144] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[15:32:19.144] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[15:32:19.144] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[15:32:19.144] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[15:32:19.144] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[15:32:19.144] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[15:32:19.144] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[15:32:19.145] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[15:32:19.145] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[15:39:19.163] [AllTalk TTS] 
+[15:39:19.163] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[15:39:19.163] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[15:39:19.164] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[15:39:19.164] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[15:39:19.164] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[15:39:19.164] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[15:39:19.164] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[15:39:19.164] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[15:39:19.165] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[15:39:19.165] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[15:39:19.165] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[15:39:19.165] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[15:39:19.165] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[15:39:19.165] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[15:39:19.165] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[15:46:19.182] [AllTalk TTS] 
+[15:46:19.182] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[15:46:19.182] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[15:46:19.182] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[15:46:19.183] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[15:46:19.183] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[15:46:19.183] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[15:46:19.183] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[15:46:19.183] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[15:46:19.183] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[15:46:19.183] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[15:46:19.183] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[15:46:19.184] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[15:46:19.184] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[15:46:19.184] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[15:46:19.184] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[15:53:19.200] [AllTalk TTS] 
+[15:53:19.200] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[15:53:19.200] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[15:53:19.200] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[15:53:19.201] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[15:53:19.201] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[15:53:19.201] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[15:53:19.201] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[15:53:19.201] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[15:53:19.201] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[15:53:19.201] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[15:53:19.202] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[15:53:19.202] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[15:53:19.202] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[15:53:19.202] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[15:53:19.202] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[16:00:19.218] [AllTalk TTS] 
+[16:00:19.218] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[16:00:19.218] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[16:00:19.218] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[16:00:19.218] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[16:00:19.218] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[16:00:19.219] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[16:00:19.219] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[16:00:19.219] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[16:00:19.219] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[16:00:19.219] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[16:00:19.219] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[16:00:19.219] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[16:00:19.219] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[16:00:19.219] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[16:00:19.220] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[16:07:19.235] [AllTalk TTS] 
+[16:07:19.235] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[16:07:19.235] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[16:07:19.236] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[16:07:19.236] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[16:07:19.236] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[16:07:19.236] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[16:07:19.236] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[16:07:19.236] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[16:07:19.236] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[16:07:19.236] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[16:07:19.237] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[16:07:19.237] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[16:07:19.237] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[16:07:19.237] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[16:07:19.237] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[16:14:19.252] [AllTalk TTS] 
+[16:14:19.253] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[16:14:19.253] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[16:14:19.253] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[16:14:19.253] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[16:14:19.253] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[16:14:19.254] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[16:14:19.254] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[16:14:19.254] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[16:14:19.254] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[16:14:19.254] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[16:14:19.254] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[16:14:19.254] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[16:14:19.254] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[16:14:19.254] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[16:14:19.254] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[16:21:19.270] [AllTalk TTS] 
+[16:21:19.270] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[16:21:19.270] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[16:21:19.270] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[16:21:19.270] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[16:21:19.271] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[16:21:19.271] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[16:21:19.271] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[16:21:19.271] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[16:21:19.271] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[16:21:19.271] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[16:21:19.271] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[16:21:19.271] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[16:21:19.271] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[16:21:19.272] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[16:21:19.272] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[16:28:19.288] [AllTalk TTS] 
+[16:28:19.288] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[16:28:19.288] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[16:28:19.288] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[16:28:19.289] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[16:28:19.289] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[16:28:19.289] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[16:28:19.289] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[16:28:19.289] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[16:28:19.289] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[16:28:19.289] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[16:28:19.289] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[16:28:19.289] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[16:28:19.289] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[16:28:19.290] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[16:28:19.290] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[16:35:19.305] [AllTalk TTS] 
+[16:35:19.306] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[16:35:19.306] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[16:35:19.306] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[16:35:19.306] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[16:35:19.306] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[16:35:19.306] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[16:35:19.307] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[16:35:19.307] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[16:35:19.307] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[16:35:19.307] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[16:35:19.307] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[16:35:19.307] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[16:35:19.307] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[16:35:19.307] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[16:35:19.307] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[16:42:19.324] [AllTalk TTS] 
+[16:42:19.324] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[16:42:19.324] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[16:42:19.324] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[16:42:19.325] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[16:42:19.325] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[16:42:19.325] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[16:42:19.325] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[16:42:19.325] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[16:42:19.325] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[16:42:19.325] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[16:42:19.325] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[16:42:19.325] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[16:42:19.326] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[16:42:19.326] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[16:42:19.326] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[16:49:19.341] [AllTalk TTS] 
+[16:49:19.341] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[16:49:19.341] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[16:49:19.341] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[16:49:19.342] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[16:49:19.342] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[16:49:19.342] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[16:49:19.342] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[16:49:19.342] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[16:49:19.342] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[16:49:19.342] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[16:49:19.342] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[16:49:19.342] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[16:49:19.342] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[16:49:19.343] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[16:49:19.343] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[16:56:19.358] [AllTalk TTS] 
+[16:56:19.359] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[16:56:19.359] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[16:56:19.359] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[16:56:19.359] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[16:56:19.359] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[16:56:19.359] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[16:56:19.359] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[16:56:19.360] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[16:56:19.360] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[16:56:19.360] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[16:56:19.360] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[16:56:19.360] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[16:56:19.360] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[16:56:19.360] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[16:56:19.360] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[17:03:19.374] [AllTalk TTS] 
+[17:03:19.375] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[17:03:19.375] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[17:03:19.375] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[17:03:19.375] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[17:03:19.375] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[17:03:19.376] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[17:03:19.376] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[17:03:19.376] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[17:03:19.376] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[17:03:19.376] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[17:03:19.376] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[17:03:19.376] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[17:03:19.376] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[17:03:19.376] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[17:03:19.376] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[17:10:19.393] [AllTalk TTS] 
+[17:10:19.393] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[17:10:19.393] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[17:10:19.393] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[17:10:19.393] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[17:10:19.394] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[17:10:19.394] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[17:10:19.394] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[17:10:19.394] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[17:10:19.394] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[17:10:19.394] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[17:10:19.394] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[17:10:19.394] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[17:10:19.394] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[17:10:19.394] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[17:10:19.395] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[17:17:19.410] [AllTalk TTS] 
+[17:17:19.410] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[17:17:19.410] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[17:17:19.410] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[17:17:19.410] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[17:17:19.411] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[17:17:19.411] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[17:17:19.411] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[17:17:19.411] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[17:17:19.411] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[17:17:19.411] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[17:17:19.411] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[17:17:19.411] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[17:17:19.411] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[17:17:19.411] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[17:17:19.411] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[17:24:19.425] [AllTalk TTS] 
+[17:24:19.426] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[17:24:19.426] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[17:24:19.426] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[17:24:19.426] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[17:24:19.426] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[17:24:19.426] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[17:24:19.426] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[17:24:19.426] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[17:24:19.427] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[17:24:19.427] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[17:24:19.427] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[17:24:19.427] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[17:24:19.427] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[17:24:19.427] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[17:24:19.427] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[17:31:19.443] [AllTalk TTS] 
+[17:31:19.443] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[17:31:19.443] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[17:31:19.443] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[17:31:19.444] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[17:31:19.444] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[17:31:19.444] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[17:31:19.444] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[17:31:19.444] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[17:31:19.444] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[17:31:19.444] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[17:31:19.444] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[17:31:19.444] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[17:31:19.445] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[17:31:19.445] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[17:31:19.445] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[17:38:19.461] [AllTalk TTS] 
+[17:38:19.461] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[17:38:19.461] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[17:38:19.461] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[17:38:19.462] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[17:38:19.462] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[17:38:19.462] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[17:38:19.462] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[17:38:19.462] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[17:38:19.462] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[17:38:19.462] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[17:38:19.462] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[17:38:19.462] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[17:38:19.462] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[17:38:19.463] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[17:38:19.463] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[17:45:19.483] [AllTalk TTS] 
+[17:45:19.483] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[17:45:19.483] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[17:45:19.483] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[17:45:19.483] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[17:45:19.484] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[17:45:19.484] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[17:45:19.484] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[17:45:19.484] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[17:45:19.484] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[17:45:19.484] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[17:45:19.484] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[17:45:19.485] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[17:45:19.485] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[17:45:19.485] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[17:45:19.485] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[17:52:19.501] [AllTalk TTS] 
+[17:52:19.501] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[17:52:19.501] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[17:52:19.501] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[17:52:19.501] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[17:52:19.501] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[17:52:19.501] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[17:52:19.501] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[17:52:19.501] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[17:52:19.503] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[17:52:19.503] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[17:52:19.503] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[17:52:19.503] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[17:52:19.503] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[17:52:19.503] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[17:52:19.503] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[17:59:19.519] [AllTalk TTS] 
+[17:59:19.519] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[17:59:19.519] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[17:59:19.519] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[17:59:19.520] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[17:59:19.520] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[17:59:19.520] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[17:59:19.520] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[17:59:19.520] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[17:59:19.520] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[17:59:19.520] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[17:59:19.520] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[17:59:19.520] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[17:59:19.520] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[17:59:19.520] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[17:59:19.521] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[18:06:19.538] [AllTalk TTS] 
+[18:06:19.538] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[18:06:19.538] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[18:06:19.539] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[18:06:19.539] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[18:06:19.539] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[18:06:19.539] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[18:06:19.539] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[18:06:19.539] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[18:06:19.539] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[18:06:19.539] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[18:06:19.539] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[18:06:19.540] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[18:06:19.540] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[18:06:19.540] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[18:06:19.540] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[18:13:19.557] [AllTalk TTS] 
+[18:13:19.557] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[18:13:19.557] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[18:13:19.557] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[18:13:19.557] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[18:13:19.558] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[18:13:19.558] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[18:13:19.558] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[18:13:19.558] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[18:13:19.558] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[18:13:19.558] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[18:13:19.558] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[18:13:19.558] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[18:13:19.558] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[18:13:19.558] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[18:13:19.559] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[18:20:19.574] [AllTalk TTS] 
+[18:20:19.574] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[18:20:19.574] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[18:20:19.574] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[18:20:19.574] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[18:20:19.575] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[18:20:19.575] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[18:20:19.575] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[18:20:19.575] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[18:20:19.575] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[18:20:19.575] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[18:20:19.575] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[18:20:19.575] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[18:20:19.575] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[18:20:19.575] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[18:20:19.575] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[18:27:19.590] [AllTalk TTS] 
+[18:27:19.590] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[18:27:19.590] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[18:27:19.590] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[18:27:19.591] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[18:27:19.591] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[18:27:19.591] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[18:27:19.591] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[18:27:19.591] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[18:27:19.591] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[18:27:19.591] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[18:27:19.591] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[18:27:19.591] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[18:27:19.592] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[18:27:19.592] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[18:27:19.592] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[18:34:19.607] [AllTalk TTS] 
+[18:34:19.608] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[18:34:19.608] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[18:34:19.608] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[18:34:19.608] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[18:34:19.608] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[18:34:19.608] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[18:34:19.608] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[18:34:19.609] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[18:34:19.609] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[18:34:19.609] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[18:34:19.609] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[18:34:19.609] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[18:34:19.609] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[18:34:19.609] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[18:34:19.609] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[18:41:19.625] [AllTalk TTS] 
+[18:41:19.625] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[18:41:19.625] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[18:41:19.625] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[18:41:19.626] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[18:41:19.626] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[18:41:19.626] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[18:41:19.626] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[18:41:19.626] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[18:41:19.626] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[18:41:19.626] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[18:41:19.626] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[18:41:19.627] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[18:41:19.627] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[18:41:19.627] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[18:41:19.627] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[18:48:19.643] [AllTalk TTS] 
+[18:48:19.643] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[18:48:19.643] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[18:48:19.643] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[18:48:19.643] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[18:48:19.643] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[18:48:19.644] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[18:48:19.644] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[18:48:19.644] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[18:48:19.644] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[18:48:19.644] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[18:48:19.644] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[18:48:19.644] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[18:48:19.644] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[18:48:19.644] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[18:48:19.645] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[18:55:19.659] [AllTalk TTS] 
+[18:55:19.659] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[18:55:19.659] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[18:55:19.659] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[18:55:19.660] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[18:55:19.660] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[18:55:19.660] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[18:55:19.660] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[18:55:19.660] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[18:55:19.660] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[18:55:19.660] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[18:55:19.660] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[18:55:19.660] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[18:55:19.661] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[18:55:19.661] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[18:55:19.661] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[19:02:19.678] [AllTalk TTS] 
+[19:02:19.678] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[19:02:19.679] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[19:02:19.679] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[19:02:19.679] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[19:02:19.679] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[19:02:19.679] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[19:02:19.679] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[19:02:19.679] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[19:02:19.679] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[19:02:19.680] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[19:02:19.680] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[19:02:19.680] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[19:02:19.680] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[19:02:19.680] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[19:02:19.680] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[19:09:19.700] [AllTalk TTS] 
+[19:09:19.700] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[19:09:19.700] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[19:09:19.700] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[19:09:19.701] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[19:09:19.701] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[19:09:19.701] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[19:09:19.701] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[19:09:19.701] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[19:09:19.701] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[19:09:19.701] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[19:09:19.701] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[19:09:19.701] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[19:09:19.701] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[19:09:19.701] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[19:09:19.702] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[19:16:19.717] [AllTalk TTS] 
+[19:16:19.717] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[19:16:19.717] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[19:16:19.717] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[19:16:19.718] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[19:16:19.718] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[19:16:19.718] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[19:16:19.718] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[19:16:19.718] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[19:16:19.718] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[19:16:19.718] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[19:16:19.718] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[19:16:19.718] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[19:16:19.718] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[19:16:19.719] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[19:16:19.719] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[19:23:19.732] [AllTalk TTS] 
+[19:23:19.733] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[19:23:19.733] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[19:23:19.733] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[19:23:19.733] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[19:23:19.733] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[19:23:19.733] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[19:23:19.733] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[19:23:19.734] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[19:23:19.734] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[19:23:19.734] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[19:23:19.734] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[19:23:19.734] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[19:23:19.734] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[19:23:19.734] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[19:23:19.734] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[19:30:19.754] [AllTalk TTS] 
+[19:30:19.754] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[19:30:19.755] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[19:30:19.755] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[19:30:19.755] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[19:30:19.755] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[19:30:19.755] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[19:30:19.755] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[19:30:19.755] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[19:30:19.756] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[19:30:19.756] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[19:30:19.756] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[19:30:19.756] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[19:30:19.756] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[19:30:19.756] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[19:30:19.756] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[19:37:19.772] [AllTalk TTS] 
+[19:37:19.772] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[19:37:19.772] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[19:37:19.772] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[19:37:19.772] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[19:37:19.772] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[19:37:19.773] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[19:37:19.773] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[19:37:19.773] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[19:37:19.773] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[19:37:19.773] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[19:37:19.773] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[19:37:19.773] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[19:37:19.773] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[19:37:19.773] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[19:37:19.773] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[19:44:19.796] [AllTalk TTS] 
+[19:44:19.796] [AllTalk TTS] [output_modifier] [INFO] Text length: 0 characters (within API limit)
+[19:44:19.796] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[19:44:19.796] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[19:44:19.796] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\text-generation-webui\extensions\alltalk_tts\confignew.json
+[19:44:19.796] [AllTalk TTS] [config_loader] [INFO] Character voice from config: female_01.wav
+[19:44:19.797] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: female_01.wav
+[19:44:19.797] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: female_01.wav -> female_01.wav
+[19:44:19.797] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: female_01.wav -> female_01.wav
+[19:44:19.797] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[19:44:19.797] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: female_01.wav
+[19:44:19.797] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: female_01.wav
+[19:44:19.797] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: female_01.wav
+[19:44:19.797] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: female_01.wav
+[19:44:19.797] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[19:44:19.797] [AllTalk TTS] [send_and_generate] [ERROR] Empty text input provided
+[16:08:44.277] [AllTalk TTS] Voice synchronization module loaded successfully
+[16:08:44.279] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\alltalk_tts\confignew.json
+[16:08:44.279] [AllTalk TTS] [config_loader] [INFO] Character voice from config: Freya.wav
+[16:08:44.279] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: Arnold.wav
+[16:08:44.279] [AllTalk TTS] Synchronizing voice files...
+[16:08:44.281] [AllTalk TTS] [voice_sync] [SUCCESS] Voice sync completed successfully
+[16:08:44.281] [AllTalk TTS] TGWUIModeManager instance created successfully
+[16:08:44.281] [AllTalk TTS] TGWUI_Extension loaded successfully
+[16:09:47.415] [AllTalk TTS] Standalone AllTalk server detected - using remote configuration
+[16:09:47.415] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\alltalk_tts\confignew.json
+[16:09:47.416] [AllTalk TTS] [config_loader] [INFO] Character voice from config: Arnold.wav
+[16:09:47.416] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: Arnold.wav
+[16:09:47.416] [AllTalk TTS] TGWUIModeManager instance created successfully
+[16:09:47.416] [AllTalk TTS] TGWUI_Extension loaded successfully
+[16:10:26.669] [AllTalk TTS] Standalone AllTalk server detected - using remote configuration
+[16:10:26.670] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\alltalk_tts\confignew.json
+[16:10:26.671] [AllTalk TTS] [config_loader] [INFO] Character voice from config: Arnold.wav
+[16:10:26.671] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: Arnold.wav
+[16:10:26.671] [AllTalk TTS] TGWUIModeManager instance created successfully
+[16:10:26.672] [AllTalk TTS] TGWUI_Extension loaded successfully
+[16:10:45.246] [AllTalk TTS] [get_alltalk_settings] [INFO] Checking voice config - Local mode: True
+[16:10:45.247] [AllTalk TTS] [get_alltalk_settings] [INFO] Character voice already set and valid: Arnold.wav
+[16:10:45.247] [AllTalk TTS] [get_alltalk_settings] [INFO] Narrator voice already set and valid: Arnold.wav
+[16:12:13.199] [AllTalk TTS] Standalone AllTalk server detected - using remote configuration
+[16:12:13.200] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\alltalk_tts\confignew.json
+[16:12:13.200] [AllTalk TTS] [config_loader] [INFO] Character voice from config: Arnold.wav
+[16:12:13.200] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: Arnold.wav
+[16:12:13.200] [AllTalk TTS] TGWUIModeManager instance created successfully
+[16:12:13.200] [AllTalk TTS] TGWUI_Extension loaded successfully
+[16:12:31.434] [AllTalk TTS] [get_alltalk_settings] [INFO] Checking voice config - Local mode: True
+[16:12:31.434] [AllTalk TTS] [get_alltalk_settings] [INFO] Character voice already set and valid: Arnold.wav
+[16:12:31.435] [AllTalk TTS] [get_alltalk_settings] [INFO] Narrator voice already set and valid: Arnold.wav
+[16:12:31.456] [AllTalk TTS] [ui] [INFO] Started auto-refresh thread for voice lists
+[16:12:31.456] [AllTalk TTS] [auto_refresh_voices] [INFO] Auto-refreshing voice lists after UI load
+[16:12:35.163] [AllTalk TTS] [get_alltalk_settings] [INFO] Checking voice config - Local mode: True
+[16:12:35.163] [AllTalk TTS] [get_alltalk_settings] [INFO] Character voice already set and valid: Arnold.wav
+[16:12:35.164] [AllTalk TTS] [get_alltalk_settings] [INFO] Narrator voice already set and valid: Arnold.wav
+[16:12:35.164] [AllTalk TTS] [auto_refresh_voices] [SUCCESS] Auto-refresh successful: 27 voices loaded
+[16:12:35.165] [AllTalk TTS] [auto_refresh_voices] [INFO] Config after auto-refresh - Character: Arnold.wav, Narrator: Arnold.wav
+[16:12:35.165] [AllTalk TTS] [auto_refresh_voices] [INFO] Voice list updated: Arnold.wav, Clint_Eastwood CC3 (enhanced).wav, Clint_Eastwood CC3.wav, David_Attenborough CC3.wav, Dinner.wav...
+[16:12:35.166] [AllTalk TTS] [save_settings] [SUCCESS] Settings saved to F:\Apps\freedom_system\app_cabinet\alltalk_tts\confignew.json
+[16:12:35.166] [AllTalk TTS] [save_settings] [INFO] Saved character voice: Arnold.wav
+[16:12:35.166] [AllTalk TTS] [save_settings] [INFO] Saved narrator voice: Arnold.wav
+[16:12:35.167] [AllTalk TTS] [save_settings] [INFO] Performing immediate config refresh after save
+[16:12:35.167] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[16:12:35.167] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\alltalk_tts\confignew.json
+[16:12:35.168] [AllTalk TTS] [config_loader] [INFO] Character voice from config: Arnold.wav
+[16:12:35.168] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: Arnold.wav
+[16:12:35.168] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: Arnold.wav -> Arnold.wav
+[16:12:35.168] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: Arnold.wav -> Arnold.wav
+[16:13:56.144] [AllTalk TTS] Hello, how are you?
+[16:13:56.145] [AllTalk TTS] [output_modifier] [INFO] Text length: 19 characters (within API limit)
+[16:13:56.146] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[16:13:56.146] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[16:13:56.147] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\alltalk_tts\confignew.json
+[16:13:56.147] [AllTalk TTS] [config_loader] [INFO] Character voice from config: Arnold.wav
+[16:13:56.147] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: Arnold.wav
+[16:13:56.148] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: Arnold.wav -> Arnold.wav
+[16:13:56.148] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: Arnold.wav -> Arnold.wav
+[16:13:56.148] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[16:13:56.149] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: Arnold.wav
+[16:13:56.149] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: Arnold.wav
+[16:13:56.149] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: Arnold.wav
+[16:13:56.150] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: Arnold.wav
+[16:13:56.150] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[16:13:56.150] [AllTalk TTS] [send_and_generate] [INFO] === TTS Generation Request Parameters ===
+[16:13:56.151] [AllTalk TTS] [send_and_generate] [INFO] text_input: Hello, how are you?
+[16:13:56.151] [AllTalk TTS] [send_and_generate] [INFO] text_filtering: html
+[16:13:56.151] [AllTalk TTS] [send_and_generate] [INFO] character_voice_gen: Arnold.wav
+[16:13:56.151] [AllTalk TTS] [send_and_generate] [INFO] rvccharacter_voice_gen: Disabled
+[16:13:56.152] [AllTalk TTS] [send_and_generate] [INFO] rvccharacter_pitch: 0
+[16:13:56.152] [AllTalk TTS] [send_and_generate] [INFO] narrator_enabled: false
+[16:13:56.152] [AllTalk TTS] [send_and_generate] [INFO] narrator_voice_gen: Arnold.wav
+[16:13:56.153] [AllTalk TTS] [send_and_generate] [INFO] rvcnarrator_voice_gen: Disabled
+[16:13:56.153] [AllTalk TTS] [send_and_generate] [INFO] rvcnarrator_pitch: 0
+[16:13:56.153] [AllTalk TTS] [send_and_generate] [INFO] text_not_inside: character
+[16:13:56.154] [AllTalk TTS] [send_and_generate] [INFO] language: None
+[16:13:56.154] [AllTalk TTS] [send_and_generate] [INFO] output_file_name: TTSOUT_
+[16:13:56.154] [AllTalk TTS] [send_and_generate] [INFO] output_file_timestamp: true
+[16:13:56.155] [AllTalk TTS] [send_and_generate] [INFO] autoplay: false
+[16:13:56.155] [AllTalk TTS] [send_and_generate] [INFO] autoplay_volume: 0.8
+[16:13:56.155] [AllTalk TTS] [send_and_generate] [INFO] speed: 1
+[16:13:56.156] [AllTalk TTS] [send_and_generate] [INFO] pitch: 0
+[16:13:56.156] [AllTalk TTS] [send_and_generate] [INFO] temperature: 0.75
+[16:13:56.156] [AllTalk TTS] [send_and_generate] [INFO] repetition_penalty: 10
+[16:13:56.157] [AllTalk TTS] [send_and_generate] [INFO] API URL: http://127.0.0.1:7851/api/tts-generate
+[16:13:56.157] [AllTalk TTS] [send_and_generate] [INFO] Sending TTS request to AllTalk API...
+[16:13:57.120] [AllTalk TTS] [send_and_generate] [INFO] API Response Status: 200
+[16:13:57.120] [AllTalk TTS] [send_and_generate] [SUCCESS] TTS request successful
+[16:15:20.093] [AllTalk TTS] Voice synchronization module loaded successfully
+[16:15:20.095] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\alltalk_tts\confignew.json
+[16:15:20.095] [AllTalk TTS] [config_loader] [INFO] Character voice from config: Arnold.wav
+[16:15:20.095] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: Arnold.wav
+[16:15:20.095] [AllTalk TTS] Synchronizing voice files...
+[16:15:20.099] [AllTalk TTS] [voice_sync] [SUCCESS] Voice sync completed successfully
+[16:15:20.100] [AllTalk TTS] TGWUIModeManager instance created successfully
+[16:15:20.100] [AllTalk TTS] TGWUI_Extension loaded successfully
+[16:16:12.496] [AllTalk TTS] [get_alltalk_settings] [INFO] Checking voice config - Local mode: True
+[16:16:12.496] [AllTalk TTS] [get_alltalk_settings] [INFO] Character voice already set and valid: Arnold.wav
+[16:16:12.497] [AllTalk TTS] [get_alltalk_settings] [INFO] Narrator voice already set and valid: Arnold.wav
+[16:16:12.518] [AllTalk TTS] [auto_refresh_voices] [INFO] Auto-refreshing voice lists after UI load
+[16:16:12.519] [AllTalk TTS] [ui] [INFO] Started auto-refresh thread for voice lists
+[16:16:14.542] [AllTalk TTS] [get_alltalk_settings] [INFO] Checking voice config - Local mode: True
+[16:16:14.542] [AllTalk TTS] [get_alltalk_settings] [INFO] Character voice already set and valid: Arnold.wav
+[16:16:14.542] [AllTalk TTS] [get_alltalk_settings] [INFO] Narrator voice already set and valid: Arnold.wav
+[16:16:14.543] [AllTalk TTS] [auto_refresh_voices] [SUCCESS] Auto-refresh successful: 27 voices loaded
+[16:16:14.543] [AllTalk TTS] [auto_refresh_voices] [INFO] Config after auto-refresh - Character: Arnold.wav, Narrator: Arnold.wav
+[16:16:14.544] [AllTalk TTS] [auto_refresh_voices] [INFO] Voice list updated: Arnold.wav, Clint_Eastwood CC3 (enhanced).wav, Clint_Eastwood CC3.wav, David_Attenborough CC3.wav, Dinner.wav...
+[16:16:14.545] [AllTalk TTS] [save_settings] [SUCCESS] Settings saved to F:\Apps\freedom_system\app_cabinet\alltalk_tts\confignew.json
+[16:16:14.545] [AllTalk TTS] [save_settings] [INFO] Saved character voice: Arnold.wav
+[16:16:14.545] [AllTalk TTS] [save_settings] [INFO] Saved narrator voice: Arnold.wav
+[16:16:14.546] [AllTalk TTS] [save_settings] [INFO] Performing immediate config refresh after save
+[16:16:14.546] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[16:16:14.546] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\alltalk_tts\confignew.json
+[16:16:14.547] [AllTalk TTS] [config_loader] [INFO] Character voice from config: Arnold.wav
+[16:16:14.547] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: Arnold.wav
+[16:16:14.547] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: Arnold.wav -> Arnold.wav
+[16:16:14.547] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: Arnold.wav -> Arnold.wav
+[16:20:54.322] [AllTalk TTS] The ocean is the largest body of water on Earth, covering almost three-quarters of its surface area.
+[16:20:54.323] [AllTalk TTS] [output_modifier] [INFO] Text length: 100 characters (within API limit)
+[16:20:54.324] [AllTalk TTS] [output_modifier] [INFO] Forcing config refresh before reading voice settings
+[16:20:54.324] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[16:20:54.325] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\alltalk_tts\confignew.json
+[16:20:54.325] [AllTalk TTS] [config_loader] [INFO] Character voice from config: Arnold.wav
+[16:20:54.325] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: Arnold.wav
+[16:20:54.326] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: Arnold.wav -> Arnold.wav
+[16:20:54.326] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: Arnold.wav -> Arnold.wav
+[16:20:54.326] [AllTalk TTS] [output_modifier] [INFO] === CHAT VOICE TRACKING ===
+[16:20:54.326] [AllTalk TTS] [output_modifier] [INFO] Config character_voice: Arnold.wav
+[16:20:54.327] [AllTalk TTS] [output_modifier] [INFO] Config narrator_voice: Arnold.wav
+[16:20:54.327] [AllTalk TTS] [output_modifier] [INFO] Actual character_voice used: Arnold.wav
+[16:20:54.327] [AllTalk TTS] [output_modifier] [INFO] Actual narrator_voice used: Arnold.wav
+[16:20:54.328] [AllTalk TTS] [output_modifier] [INFO] === END VOICE TRACKING ===
+[16:20:54.328] [AllTalk TTS] [send_and_generate] [INFO] === TTS Generation Request Parameters ===
+[16:20:54.328] [AllTalk TTS] [send_and_generate] [INFO] text_input: The ocean is the largest body of water on Earth, covering almost three-quarters of its surface area.
+[16:20:54.328] [AllTalk TTS] [send_and_generate] [INFO] text_filtering: html
+[16:20:54.329] [AllTalk TTS] [send_and_generate] [INFO] character_voice_gen: Arnold.wav
+[16:20:54.329] [AllTalk TTS] [send_and_generate] [INFO] rvccharacter_voice_gen: Disabled
+[16:20:54.329] [AllTalk TTS] [send_and_generate] [INFO] rvccharacter_pitch: 0
+[16:20:54.330] [AllTalk TTS] [send_and_generate] [INFO] narrator_enabled: false
+[16:20:54.330] [AllTalk TTS] [send_and_generate] [INFO] narrator_voice_gen: Arnold.wav
+[16:20:54.330] [AllTalk TTS] [send_and_generate] [INFO] rvcnarrator_voice_gen: Disabled
+[16:20:54.330] [AllTalk TTS] [send_and_generate] [INFO] rvcnarrator_pitch: 0
+[16:20:54.331] [AllTalk TTS] [send_and_generate] [INFO] text_not_inside: character
+[16:20:54.331] [AllTalk TTS] [send_and_generate] [INFO] language: None
+[16:20:54.331] [AllTalk TTS] [send_and_generate] [INFO] output_file_name: TTSOUT_
+[16:20:54.331] [AllTalk TTS] [send_and_generate] [INFO] output_file_timestamp: true
+[16:20:54.332] [AllTalk TTS] [send_and_generate] [INFO] autoplay: false
+[16:20:54.332] [AllTalk TTS] [send_and_generate] [INFO] autoplay_volume: 0.8
+[16:20:54.332] [AllTalk TTS] [send_and_generate] [INFO] speed: 1
+[16:20:54.332] [AllTalk TTS] [send_and_generate] [INFO] pitch: 0
+[16:20:54.333] [AllTalk TTS] [send_and_generate] [INFO] temperature: 0.75
+[16:20:54.333] [AllTalk TTS] [send_and_generate] [INFO] repetition_penalty: 10
+[16:20:54.333] [AllTalk TTS] [send_and_generate] [INFO] API URL: http://127.0.0.1:7851/api/tts-generate
+[16:20:54.334] [AllTalk TTS] [send_and_generate] [INFO] Sending TTS request to AllTalk API...
+[16:20:57.322] [AllTalk TTS] [send_and_generate] [INFO] API Response Status: 200
+[16:20:57.323] [AllTalk TTS] [send_and_generate] [SUCCESS] TTS request successful
+[16:22:02.259] [AllTalk TTS] Voice synchronization module loaded successfully
+[16:22:02.260] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\alltalk_tts\confignew.json
+[16:22:02.260] [AllTalk TTS] [config_loader] [INFO] Character voice from config: Arnold.wav
+[16:22:02.260] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: Arnold.wav
+[16:22:02.261] [AllTalk TTS] Synchronizing voice files...
+[16:22:02.262] [AllTalk TTS] [voice_sync] [SUCCESS] Voice sync completed successfully
+[16:22:02.262] [AllTalk TTS] TGWUIModeManager instance created successfully
+[16:22:02.263] [AllTalk TTS] TGWUI_Extension loaded successfully
+[16:22:43.746] [AllTalk TTS] [get_alltalk_settings] [INFO] Checking voice config - Local mode: True
+[16:22:43.746] [AllTalk TTS] [get_alltalk_settings] [INFO] Character voice already set and valid: Arnold.wav
+[16:22:43.746] [AllTalk TTS] [get_alltalk_settings] [INFO] Narrator voice already set and valid: Arnold.wav
+[16:22:43.759] [AllTalk TTS] [ui] [INFO] Started auto-refresh thread for voice lists
+after UI load
+[16:22:45.786] [AllTalk TTS] [get_alltalk_settings] [INFO] Checking voice config - Local mode: True
+[16:22:45.786] [AllTalk TTS] [get_alltalk_settings] [INFO] Character voice already set and valid: Arnold.wav
+[16:22:45.786] [AllTalk TTS] [get_alltalk_settings] [INFO] Narrator voice already set and valid: Arnold.wav
+[16:22:45.787] [AllTalk TTS] [auto_refresh_voices] [SUCCESS] Auto-refresh successful: 27 voices loaded
+[16:22:45.787] [AllTalk TTS] [auto_refresh_voices] [INFO] Config after auto-refresh - Character: Arnold.wav, Narrator: Arnold.wav
+[16:22:45.787] [AllTalk TTS] [auto_refresh_voices] [INFO] Voice list updated: Arnold.wav, Clint_Eastwood CC3 (enhanced).wav, Clint_Eastwood CC3.wav, David_Attenborough CC3.wav, Dinner.wav...
+[16:22:45.788] [AllTalk TTS] [save_settings] [SUCCESS] Settings saved to F:\Apps\freedom_system\app_cabinet\alltalk_tts\confignew.json
+[16:22:45.788] [AllTalk TTS] [save_settings] [INFO] Saved character voice: Arnold.wav
+[16:22:45.788] [AllTalk TTS] [save_settings] [INFO] Saved narrator voice: Arnold.wav
+[16:22:45.788] [AllTalk TTS] [save_settings] [INFO] Performing immediate config refresh after save
+[16:22:45.788] [AllTalk TTS] [refresh_config] [INFO] Refreshing configuration from disk
+[16:22:45.788] [AllTalk TTS] [config_loader] [SUCCESS] Loaded config from F:\Apps\freedom_system\app_cabinet\alltalk_tts\confignew.json
+[16:22:45.788] [AllTalk TTS] [config_loader] [INFO] Character voice from config: Arnold.wav
+[16:22:45.789] [AllTalk TTS] [config_loader] [INFO] Narrator voice from config: Arnold.wav
+[16:22:45.789] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Character voice: Arnold.wav -> Arnold.wav
+[16:22:45.789] [AllTalk TTS] [refresh_config] [INFO] Config refresh - Narrator voice: Arnold.wav -> Arnold.wav

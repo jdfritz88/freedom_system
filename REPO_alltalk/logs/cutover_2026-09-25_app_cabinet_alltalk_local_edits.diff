@@ -1,0 +1,143 @@
+diff --git a/confignew.json b/confignew.json
+index 1d37153..7d71aa1 100644
+--- a/confignew.json
++++ b/confignew.json
+@@ -4,7 +4,7 @@
+     "gradio_interface": true,
+     "output_folder": "outputs",
+     "gradio_port_number": 7852,
+-    "firstrun_model": true,
++    "firstrun_model": false,
+     "firstrun_splash": true,
+     "launch_gradio": true,
+     "transcode_audio_format": "Disabled",
+@@ -13,7 +13,7 @@
+         "class": "gradio/base"
+     },
+     "rvc_settings": {
+-        "rvc_enabled": false,
++        "rvc_enabled": true,
+         "rvc_char_model_file": "Disabled",
+         "rvc_narr_model_file": "Disabled",
+         "split_audio": true,
+@@ -34,16 +34,16 @@
+         "tgwui_autoplay_tts": true,
+         "tgwui_narrator_enabled": "false",
+         "tgwui_non_quoted_text_is": "character",
+-        "tgwui_deepspeed_enabled": false,
+-        "tgwui_language": "English",
++        "tgwui_deepspeed_enabled": true,
++        "tgwui_language": "en",
+         "tgwui_lowvram_enabled": false,
+         "tgwui_pitch_set": 0,
+         "tgwui_temperature_set": 0.75,
+         "tgwui_repetitionpenalty_set": 10,
+         "tgwui_generationspeed_set": 1,
+-        "tgwui_narrator_voice": "female_01.wav",
++        "tgwui_narrator_voice": "Arnold.wav",
+         "tgwui_show_text": true,
+-        "tgwui_character_voice": "female_01.wav",
++        "tgwui_character_voice": "Freya.wav",
+         "tgwui_rvc_char_voice": "Disabled",
+         "tgwui_rvc_char_pitch": 0,
+         "tgwui_rvc_narr_voice": "Disabled",
+diff --git a/system/TGWUI_Extension/tgwui_remote_config.json b/system/TGWUI_Extension/tgwui_remote_config.json
+index ed27875..d7f480e 100644
+--- a/system/TGWUI_Extension/tgwui_remote_config.json
++++ b/system/TGWUI_Extension/tgwui_remote_config.json
+@@ -12,9 +12,9 @@
+         "tgwui_temperature_set": 0.75,
+         "tgwui_repetitionpenalty_set": 10,
+         "tgwui_generationspeed_set": 1,
+-        "tgwui_narrator_voice": "en_US-ljspeech-high.onnx",
++        "tgwui_narrator_voice": "Arnold.wav",
+         "tgwui_show_text": true,
+-        "tgwui_character_voice": "en_US-ljspeech-high.onnx",
++        "tgwui_character_voice": "Arnold.wav",
+         "tgwui_rvc_char_voice": "Disabled",
+         "tgwui_rvc_char_pitch": 0,
+         "tgwui_rvc_narr_voice": "Disabled",
+diff --git a/system/tts_engines/tts_engines.json b/system/tts_engines/tts_engines.json
+index d2151c5..1d2c0f1 100644
+--- a/system/tts_engines/tts_engines.json
++++ b/system/tts_engines/tts_engines.json
+@@ -1,6 +1,4 @@
+ {
+-    "engine_loaded": "piper",
+-    "selected_model": "piper",
+     "engines_available": [
+         {
+             "name": "parler",
+@@ -22,5 +20,7 @@
+             "name": "f5tts",
+             "selected_model": "f5tts - f5tts_v1"
+         }
+-    ]
++    ],
++    "engine_loaded": "xtts",
++    "selected_model": "xtts - xttsv2_2.0.3"
+ }
+\ No newline at end of file
+diff --git a/system/tts_engines/xtts/model_settings.json b/system/tts_engines/xtts/model_settings.json
+index b680cfa..0c665ae 100644
+--- a/system/tts_engines/xtts/model_settings.json
++++ b/system/tts_engines/xtts/model_settings.json
+@@ -21,9 +21,9 @@
+         "mac_capable": true
+     },
+     "settings": {
+-        "def_character_voice": "female_01.wav",
+-        "def_narrator_voice": "male_01.wav",
+-        "deepspeed_enabled": false,
++        "def_character_voice": "Freya.wav",
++        "def_narrator_voice": "Arnold.wav",
++        "deepspeed_enabled": true,
+         "engine_installed": true,
+         "generationspeed_set": 1,
+         "lowvram_enabled": false,
+diff --git a/tts_server.py b/tts_server.py
+index 55fc49c..aa0f257 100644
+--- a/tts_server.py
++++ b/tts_server.py
+@@ -1064,11 +1064,18 @@ class OpenAIInput(BaseModel):
+     @field_validator('voice', mode='before')
+     @classmethod
+     def validate_voice(cls, value):
+-        """Validate that the requested voice is supported by OpenAI TTS."""
++        """Validate that the requested voice is supported.
++        Accepts standard OpenAI voice names (alloy, echo, fable, nova, onyx, shimmer)
++        AND direct .wav filenames that exist in the voices/ directory."""
+         supported_voices = ["alloy", "echo", "fable", "nova", "onyx", "shimmer"]
+-        if value not in supported_voices:
+-            raise ValueError(f"Voice must be one of {supported_voices}")
+-        return value
++        if value in supported_voices:
++            return value
++        # Also accept direct .wav filenames from the voices directory
++        if isinstance(value, str) and value.endswith(".wav"):
++            voice_path = this_dir / "voices" / value
++            if voice_path.exists():
++                return value
++        raise ValueError(f"Voice must be one of {supported_voices} or a .wav filename in the voices/ directory")
+ 
+ class OpenAIGenerator:
+     """
+@@ -1140,10 +1147,16 @@ async def openai_tts_generate(request: Request):
+             "shimmer": model_engine.openai_shimmer
+         }
+ 
++        # Check standard OpenAI voice mapping first, then allow direct .wav filenames
+         mapped_voice = voice_mapping.get(voice)
+         if not mapped_voice:
+-            print_message(f"Unsupported voice: {voice}", "error", "TTS")
+-            raise ValueError("Unsupported voice")
++            # Accept direct .wav filenames that exist in voices/
++            if isinstance(voice, str) and voice.endswith(".wav") and (this_dir / "voices" / voice).exists():
++                mapped_voice = voice
++                print_message(f"Using direct voice file: {voice}", "debug_openai", "TTS")
++            else:
++                print_message(f"Unsupported voice: {voice}", "error", "TTS")
++                raise ValueError("Unsupported voice")
+ 
+         print_message(f"Mapped voice: {mapped_voice}", "debug_openai", "TTS")
+ 

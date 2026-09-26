@@ -255,8 +255,20 @@ def install_shims():
     os.remove = _make_remove(_real_remove)
     os.unlink = _make_remove(_real_unlink)
     os.path.exists = _make_check(lambda st, m: True)
+    os.path.lexists = _make_check(lambda st, m: True)
     os.path.isfile = _make_check(lambda st, m: st.S_ISREG(m))
     os.path.isdir = _make_check(lambda st, m: st.S_ISDIR(m))
+    # Python 3.13's glob (used by Path.glob) keeps its own references to os.scandir /
+    # os.path.lexists, bound when glob is first imported - often before this layer is
+    # installed (oobabooga imports it at startup). Point those at the shims too.
+    import glob as _glob
+    for _cls in ("_StringGlobber",):
+        _g = getattr(_glob, _cls, None)
+        if _g is not None:
+            if "scandir" in vars(_g):
+                _g.scandir = staticmethod(_scandir)
+            if "lexists" in vars(_g):
+                _g.lexists = staticmethod(os.path.lexists)
 
 
 # ------------------------------------------------ patches, overrides, import hook

@@ -130,6 +130,61 @@ def is_developer_update(rel, mtime, window, pulled):
     return False
 
 
+SHOW = 5   # example file names per group in the message box (the log has every file)
+
+
+def grouped(paths, indent="  "):
+    """'N files in <folder>' per folder, with a few example names."""
+    groups = {}
+    for p in paths:
+        groups.setdefault(os.path.dirname(p) or ".", []).append(os.path.basename(p))
+    lines = []
+    for folder in sorted(groups):
+        names = sorted(groups[folder])
+        where = "the main folder" if folder == "." else folder + "\\"
+        if len(names) == 1:
+            lines.append(f"{indent}{os.path.join(folder, names[0]) if folder != '.' else names[0]}")
+            continue
+        more = f" ... and {len(names) - SHOW} more" if len(names) > SHOW else ""
+        lines.append(f"{indent}{len(names)} files in {where}: " + ", ".join(names[:SHOW]) + more)
+    return "\n".join(lines)
+
+
+def grouped_moves(moved):
+    """'N files from <folder> moved to <repo folder>' with a few example names."""
+    groups = {}
+    for src, dest in moved.items():
+        groups.setdefault((os.path.dirname(src) or ".", dest), []).append(os.path.basename(src))
+    lines = []
+    for (folder, dest) in sorted(groups):
+        names = sorted(groups[(folder, dest)])
+        where = "the main folder" if folder == "." else folder + "\\"
+        more = f" ... and {len(names) - SHOW} more" if len(names) > SHOW else ""
+        noun = "file" if len(names) == 1 else "files"
+        lines.append(f"  {len(names)} {noun} from {where} moved to {dest}\\\n    " + ", ".join(names[:SHOW]) + more)
+    return "\n".join(lines)
+
+
+def find_moves(missing, known):
+    """{missing file: REPO_alltalk folder it now sits in} for files found in REPO_alltalk with
+    the same name and the same timestamp (a move keeps the timestamp)."""
+    index = {}
+    for root, dirs, names in os.walk(REPO):
+        dirs[:] = [d for d in dirs if d not in (".git", "__pycache__")]
+        for n in names:
+            index.setdefault(n.lower(), []).append(os.path.join(root, n))
+    moved = {}
+    for r in missing:
+        for cand in index.get(os.path.basename(r).lower(), []):
+            try:
+                if abs(os.stat(cand).st_mtime - known[r]) < 2:
+                    moved[r] = os.path.dirname(cand)
+                    break
+            except OSError:
+                pass
+    return moved
+
+
 def rvc_training_processes():
     try:
         import psutil
@@ -159,30 +214,44 @@ def check(known):
     dev_mod = [r for r in modified if is_developer_update(r, current[r], window, pulled)]
     new = [r for r in new if r not in dev_new]
     modified = [r for r in modified if r not in dev_mod]
-    if window or pulled:
-        # A file the developer's update removed is no longer part of AllTalk's code (git);
-        # a file that is still part of it but missing from disk is still a problem.
-        deleted = [r for r in deleted if git("ls-files", "--", r.replace(os.sep, "/")).strip()]
+    if pulled:
+        # Only files the developer's update itself removed from AllTalk's code are not
+        # alerted; any other missing file (the user's included) is always reported.
+        removed_by_update = {p.strip() for p in
+                             git("diff", "--name-only", "--diff-filter=D", "ORIG_HEAD", "HEAD").splitlines()}
+        deleted = [r for r in deleted if r.replace(os.sep, "/") not in removed_by_update]
     if dev_new or dev_mod:
         log(f"developer update recognised: {len(dev_new)} new, {len(dev_mod)} changed files - not alerted")
 
+    # Files gone from AllTalk's folder: moved into REPO_alltalk (same name and timestamp
+    # found there), or deleted (found nowhere in REPO_alltalk).
+    moved = find_moves(deleted, known) if deleted else {}
+    deleted = [r for r in deleted if r not in moved]
+
     rvc = rvc_training_processes()
-    problems = []
+    problems, full = [], []
     if new:
-        problems.append("NEW FILES in AllTalk's app folder (these belong in REPO_alltalk):\n  " + "\n  ".join(new))
+        problems.append("NEW FILES in AllTalk's app folder (these belong in REPO_alltalk):\n" + grouped(new))
+        full.append("NEW:\n  " + "\n  ".join(new))
     if modified:
-        problems.append("MODIFIED in the last 60 minutes (AllTalk's own files):\n  " + "\n  ".join(modified))
+        problems.append("MODIFIED in the last 60 minutes (AllTalk's own files):\n" + grouped(modified))
+        full.append("MODIFIED:\n  " + "\n  ".join(modified))
+    if moved:
+        problems.append("MOVED out of AllTalk's app folder into REPO_alltalk:\n" + grouped_moves(moved))
+        full.append("MOVED:\n  " + "\n  ".join(f"{r} -> {moved[r]}" for r in sorted(moved)))
     if deleted:
-        problems.append("DELETED from AllTalk's app folder:\n  " + "\n  ".join(deleted))
+        problems.append("DELETED from AllTalk's app folder (not found anywhere in REPO_alltalk):\n" + grouped(deleted))
+        full.append("DELETED:\n  " + "\n  ".join(deleted))
     if rvc:
         rvc_files = sorted(r for r in new if "logs" in r.split(os.sep))
         problems.append("RVC TRAINING is running:\n  " + "\n  ".join(rvc) +
-                        ("\n  Files it produced in AllTalk's folder:\n    " + "\n    ".join(rvc_files) if rvc_files else ""))
+                        ("\n  Files it produced in AllTalk's folder:\n" + grouped(rvc_files, indent="    ") if rvc_files else ""))
     if problems:
+        log("full list of changes found:\n" + "\n".join(full))
         alert("AllTalk app folder watcher",
-              "Something was saved or changed inside app_cabinet\\alltalk_tts.\n"
-              "Nothing has been changed or moved - check why this happened.\n\n" + "\n\n".join(problems) +
-              f"\n\nFull record: {LOG_FILE}")
+              "Changes were found inside app_cabinet\\alltalk_tts since the last check.\n"
+              "The watcher only reports: it has not changed, moved or deleted anything itself.\n\n" +
+              "\n\n".join(problems) + f"\n\nFull list of every file: {LOG_FILE}")
     else:
         log(f"check OK: {len(current)} files, nothing new, nothing modified in the last 60 minutes")
 

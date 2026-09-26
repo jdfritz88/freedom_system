@@ -67,9 +67,14 @@ $report = "$count update(s) available.`r`n$commits`r`nFiles your patches change 
 
 if ($reply -ne "Yes") { Write-Report "$report`r`nNot installed."; exit 0 }
 
+# Tell the app-folder watcher a developer update is being installed (not alerted).
+$WindowFile = Join-Path $Logs "watcher_update_window.json"
+$windowStart = (Get-Date).ToString("s")
+@{ start = $windowStart; end = $null } | ConvertTo-Json | Set-Content -Encoding UTF8 $WindowFile
 $before = git -C $App rev-parse --short HEAD
 $pull = git -C $App pull --ff-only origin $Branch 2>&1
 if ($LASTEXITCODE -ne 0) {
+    @{ start = $windowStart; end = (Get-Date).ToString("s") } | ConvertTo-Json | Set-Content -Encoding UTF8 $WindowFile
     Write-Report "$report`r`nUPDATE FAILED - git pull: $($pull -join ' ')`r`nAllTalk left at $before."
     exit 0
 }
@@ -82,4 +87,5 @@ if ($reqChanged.Count) {
     $pip = cmd /c "call `"$env_dir\conda\condabin\conda.bat`" activate `"$env_dir\env`" && python -m pip install -r `"$req`"" 2>&1
     $report += "`r`nRequirements reinstalled from requirements_standalone.txt (exit $LASTEXITCODE):`r`n" + (($pip | Select-Object -Last 5) -join "`r`n")
 }
+@{ start = $windowStart; end = (Get-Date).ToString("s") } | ConvertTo-Json | Set-Content -Encoding UTF8 $WindowFile
 Write-Report $report

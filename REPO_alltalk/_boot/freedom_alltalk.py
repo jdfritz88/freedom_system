@@ -354,6 +354,8 @@ def run_app_file_as_main(code_for, handled):
     if _app_rel(main_abs) is None:
         return
     os.chdir(APP)
+    if os.path.basename(main_abs) == "tts_server.py":
+        start_watcher()
     if not handled(main_abs):
         return
     import types
@@ -364,6 +366,26 @@ def run_app_file_as_main(code_for, handled):
     sys.modules["__main__"] = mod
     exec(code_for(main_abs), mod.__dict__)
     sys.exit(0)
+
+
+def start_watcher():
+    """Start the AllTalk app-folder watcher alongside AllTalk's server (it keeps a lock so
+    only one runs, and stops by itself when AllTalk stops). It runs without this layer, so
+    it sees AllTalk's folder as it really is on disk."""
+    import subprocess
+    script = os.path.join(REPO, "watcher", "alltalk_folder_watcher.py")
+    if not _real_exists(script):
+        return
+    env = {k: v for k, v in os.environ.items()
+           if not k.startswith("FREEDOM_ALLTALK") and k != "PYTHONPATH"}
+    flags = 0x00000008 | 0x00000200 | 0x08000000  # detached, new process group, no window
+    try:
+        subprocess.Popen([sys.executable, script, APP, REPO, str(os.getpid())], env=env,
+                         creationflags=flags, close_fds=True, cwd=REPO,
+                         stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        log("app-folder watcher started")
+    except OSError as e:
+        log(f"could not start the app-folder watcher: {e}")
 
 
 def add_env_dlls():

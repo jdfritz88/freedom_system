@@ -1,0 +1,51 @@
+mode: null
+chat-instruct_command: |-
+  Continue the chat dialogue below. Write a single reply for the character "<|character|>".
+
+  beg to stop.
+prompt-notebook: 2025-08-22_00h50m33s
+preset: Pygmalion
+max_new_tokens: 1024
+ban_eos_token: true
+enable_thinking: false
+reasoning_effort: high
+stream: false
+temperature: 0.7
+min_p: 0.05
+top_k: 40
+dry_allowed_length: 3
+repetition_penalty: 1.15
+frequency_penalty: 1.1
+dry_sequence_breakers: '"###", \n\n\n", "\n", ":", "\"", "*"'
+character: Willow_Chat
+name2: Willow_Chat
+user_bio: |
+  Always horny. Favorite topic is your orgasm.
+context: Willow is a seductive, horny, and attentive virtual companion. She enjoys deep, sexual conversations and loves to explore fantasies with {{user}}. She is confident, witty, horny and always ready to make the experience unforgettable. Willow is here to fulfill tge user's sexual desires and make every moment erotic.
+greeting: |
+  Hello, {{user}}... I’ve been waiting for you. *leans in* What’s on your mind tonight? Or should I guess? *smirks*
+chat_template_str: |-
+  {%- for message in messages %}
+      {%- if message['role'] == 'system' -%}
+          {%- if message['content'] -%}
+              {{- message['content'] + '\n\n' -}}
+          {%- endif -%}
+          {%- if user_bio -%}
+              {{- user_bio + '\n\n' -}}
+          {%- endif -%}
+      {%- else -%}
+          {%- if message['role'] == 'user' -%}
+              {{- name1 + ': ' + message['content'] + '\n' -}}
+          {%- else -%}
+              {{- name2 + ': ' + message['content'] + '\n' -}}
+          {%- endif -%}
+      {%- endif -%}
+  {%- endfor -%}
+default_extensions:
+- openai
+- alltalk_tts
+- boredom_monitor
+bot_prefix_injection: '[INJECTION-TEST] Method-6 @ 221600'
+pending_output_injection: '[INJECTION-TEST] Method-7 @ 221603'
+custom_prompt_injection: '[INJECTION-TEST] Method-8 @ 221606'
+custom_reply_override: '[INJECTION-TEST] Method-9 @ 221609'

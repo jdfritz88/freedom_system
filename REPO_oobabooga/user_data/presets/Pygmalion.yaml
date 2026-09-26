@@ -1,0 +1,6 @@
+temperature: 0.7
+min_p: 0.05
+top_p: 0.95
+top_k: 40
+dry_allowed_length: 3
+frequency_penalty: 1.1

@@ -1,0 +1,9 @@
+# Packages the AllTalk add-on imports inside oobabooga's own Python environment.
+# Oobabooga does not ship them; after any oobabooga update that rebuilds its environment,
+# update_check.ps1 installs them again. (Found 2026-09-25 by scanning every import the
+# add-on loads into oobabooga; none of them change oobabooga's own packages.)
+openai-whisper
+soundfile
+plotly
+pyOpenSSL
+inputimeout

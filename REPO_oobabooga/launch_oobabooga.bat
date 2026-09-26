@@ -16,4 +16,9 @@ set "PHONEMIZER_ESPEAK_LIBRARY=%FREEDOM_ESPEAK%\libespeak-ng.dll"
 set "PHONEMIZER_ESPEAK_PATH=%FREEDOM_ESPEAK%\espeak-ng.exe"
 set "ESPEAK_DATA_PATH=%FREEDOM_ESPEAK%\espeak-ng-data"
 
-call "%OOBABOOGA_APP%\start_windows.bat" --user-data-dir "%REPO_OOBABOOGA%\user_data" %*
+rem Weekly update check (asks before installing; reports go to REPO_oobabooga\logs\update_checks.log)
+powershell -NoProfile -ExecutionPolicy Bypass -File "%REPO_OOBABOOGA%\update_check.ps1" -App "%OOBABOOGA_APP%"
+
+rem GPU_CHOICE only matters if oobabooga ever has to build a fresh environment (NVIDIA, CUDA 12.8).
+set "GPU_CHOICE=A"
+call "%OOBABOOGA_APP%\start_windows.bat" --user-data-dir "%REPO_OOBABOOGA%\user_data" --model-dir "%REPO_OOBABOOGA%\user_data\models" %*

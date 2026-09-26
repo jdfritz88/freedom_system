@@ -17,6 +17,9 @@ set "PHONEMIZER_ESPEAK_LIBRARY=%FREEDOM_ESPEAK%\libespeak-ng.dll"
 set "PHONEMIZER_ESPEAK_PATH=%FREEDOM_ESPEAK%\espeak-ng.exe"
 set "ESPEAK_DATA_PATH=%FREEDOM_ESPEAK%\espeak-ng-data"
 
+rem Weekly update check (asks before installing; reports go to REPO_alltalk\logs\update_checks.log)
+powershell -NoProfile -ExecutionPolicy Bypass -File "%FREEDOM_ALLTALK_REPO%\update_check.ps1" -App "%FREEDOM_ALLTALK_APP%"
+
 cd /D "%FREEDOM_ALLTALK_APP%" || exit /b 1
 call "%FREEDOM_ALLTALK_ENV%\conda\condabin\conda.bat" activate "%FREEDOM_ALLTALK_ENV%\env" || exit /b 1
 python script.py %*

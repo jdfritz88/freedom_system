@@ -26,7 +26,9 @@ LOGS = os.path.join(REPO, "logs")
 OUTPUTS = os.path.join(REPO, "outputs")
 TRANSCRIPTIONS = os.path.join(REPO, "transcriptions")
 APP_VOICES = os.path.join(APP, "voices")
-REPO_VOICES = os.path.join(REPO, "voices")
+# User voice files for every app live in one folder (user decision 2026-09-27);
+# stock voices stay in AllTalk's own voices folder.
+REPO_VOICES = os.environ.get("FREEDOM_USER_VOICES", r"F:\Apps\freedom_system\user_voice_files")
 
 _nc = os.path.normcase
 _APP_NC = _nc(APP) + os.sep
@@ -169,8 +171,8 @@ def _listdir(path="."):
     if p is not None and _in_app_voices(p):
         twin = _repo_voice_twin(p)
         if _real_exists(twin):
-            have = set(names)
-            names = names + [n for n in _real_listdir(twin) if n not in have]
+            have = {n.lower() for n in names}   # Windows file names are case-insensitive
+            names = names + [n for n in _real_listdir(twin) if n.lower() not in have]
     return names
 
 
@@ -184,8 +186,8 @@ class _UnionScandir:
             if it is None:
                 continue
             for entry in it:
-                if entry.name not in seen:
-                    seen.add(entry.name)
+                if entry.name.lower() not in seen:
+                    seen.add(entry.name.lower())
                     yield entry
 
     def __enter__(self):

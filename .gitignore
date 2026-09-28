@@ -43,3 +43,6 @@ app_cabinet/resource_monitor/venv/
 # Windows artifacts
 nul
 app_cabinet/text-generation-webui/nul
+
+# User voice files for every app (user decision 2026-09-27); kept out of git like the voices before
+user_voice_files/

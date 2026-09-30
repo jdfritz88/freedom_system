@@ -16,6 +16,9 @@ so there is a chance to see why something happened:
 Not alerted: Python cache (__pycache__, *.pyc), AllTalk's Python environment
 (alltalk_environment), .git, *.tmp, system/config/at_github_sha.json.
 
+Files REPO_alltalk places in the folder on purpose (PLACED_FILES, e.g. start_alltalk.bat) are
+not alerted while they exactly match their source in REPO_alltalk; they are logged instead.
+
 Developer updates are not alerted:
   * the REPO_alltalk update check marks its update window in logs/watcher_update_window.json;
   * and a changed file that exactly matches the developer's code after a recent `git pull`
@@ -53,6 +56,13 @@ SKIP_DIRS = {"__pycache__", "alltalk_environment", ".git"}
 SKIP_SUFFIXES = (".pyc", ".tmp")
 SKIP_FILES = {os.path.normcase(os.path.join("system", "config", "at_github_sha.json"))}
 
+# Files REPO_alltalk deliberately places in AllTalk's folder (user decision 2026-09-29):
+# {path in AllTalk's folder: its source of truth in REPO_alltalk}. A new or changed file that
+# exactly matches its source is logged, not alerted; any other content is still alerted.
+PLACED_FILES = {
+    "start_alltalk.bat": os.path.join("app_files", "start_alltalk.bat"),
+}
+
 
 def log(msg):
     os.makedirs(LOGS, exist_ok=True)
@@ -85,6 +95,18 @@ def scan():
             except OSError:
                 pass
     return files
+
+
+def is_placed_by_repo(rel):
+    """True if `rel` is a file REPO_alltalk places and it exactly matches its source."""
+    src = PLACED_FILES.get(rel)
+    if src is None:
+        return False
+    try:
+        with open(os.path.join(APP, rel), "rb") as a, open(os.path.join(REPO, src), "rb") as b:
+            return a.read() == b.read()
+    except OSError:
+        return False
 
 
 def git(*args):
@@ -222,6 +244,11 @@ def check(known):
         deleted = [r for r in deleted if r.replace(os.sep, "/") not in removed_by_update]
     if dev_new or dev_mod:
         log(f"developer update recognised: {len(dev_new)} new, {len(dev_mod)} changed files - not alerted")
+    placed = [r for r in new + modified if is_placed_by_repo(r)]
+    new = [r for r in new if r not in placed]
+    modified = [r for r in modified if r not in placed]
+    if placed:
+        log("placed by REPO_alltalk, matches its source - not alerted: " + ", ".join(placed))
 
     # Files gone from AllTalk's folder: moved into REPO_alltalk (same name and timestamp
     # found there), or deleted (found nowhere in REPO_alltalk).

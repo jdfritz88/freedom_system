@@ -16,8 +16,9 @@ so there is a chance to see why something happened:
 Not alerted: Python cache (__pycache__, *.pyc), AllTalk's Python environment
 (alltalk_environment), .git, *.tmp, system/config/at_github_sha.json.
 
-Files REPO_alltalk places in the folder on purpose (PLACED_FILES, e.g. start_alltalk.bat) are
-not alerted while they exactly match their source in REPO_alltalk; they are logged instead.
+Files REPO_alltalk places in the folder on purpose (PLACED_FILES, e.g. start_alltalk.bat, and
+every settings file the settings mirror copies from REPO_alltalk/settings) are not alerted
+while they exactly match their source in REPO_alltalk; they are logged instead.
 
 Developer updates are not alerted:
   * the REPO_alltalk update check marks its update window in logs/watcher_update_window.json;
@@ -98,10 +99,14 @@ def scan():
 
 
 def is_placed_by_repo(rel):
-    """True if `rel` is a file REPO_alltalk places and it exactly matches its source."""
+    """True if `rel` is a file REPO_alltalk places and it exactly matches its source: a
+    PLACED_FILES entry, or a settings file copied from REPO_alltalk/settings by the
+    settings mirror in _boot/freedom_alltalk.py."""
     src = PLACED_FILES.get(rel)
     if src is None:
-        return False
+        src = os.path.join("settings", rel)
+        if not os.path.isfile(os.path.join(REPO, src)):
+            return False
     try:
         with open(os.path.join(APP, rel), "rb") as a, open(os.path.join(REPO, src), "rb") as b:
             return a.read() == b.read()

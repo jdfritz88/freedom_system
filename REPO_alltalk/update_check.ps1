@@ -72,6 +72,21 @@ $WindowFile = Join-Path $Logs "watcher_update_window.json"
 $windowStart = (Get-Date).ToString("s")
 @{ start = $windowStart; end = $null } | ConvertTo-Json | Set-Content -Encoding UTF8 $WindowFile
 $before = git -C $App rev-parse --short HEAD
+# AllTalk's own copies of the settings files hold the REPO settings (the settings mirror in
+# _boot\freedom_alltalk.py). Put the developer's versions back first so git can update them;
+# the mirror copies the REPO settings over them again when AllTalk starts.
+$SettingsDir = Join-Path $Repo "settings"
+$restored = @()
+foreach ($f in Get-ChildItem -Path $SettingsDir -Recurse -File -Filter *.json) {
+    $rel = $f.FullName.Substring($SettingsDir.Length + 1).Replace("\", "/")
+    git -C $App ls-files --error-unmatch -- $rel 2>&1 | Out-Null
+    if ($LASTEXITCODE -ne 0) { continue }          # not one of the developer's files
+    git -C $App diff --quiet -- $rel
+    if ($LASTEXITCODE -eq 0) { continue }          # already the developer's version
+    git -C $App checkout -- $rel
+    if ($LASTEXITCODE -eq 0) { $restored += $rel }
+}
+if ($restored.Count) { $report += "`r`nDeveloper's versions put back before updating (REPO settings are copied over them at start): " + ($restored -join ", ") }
 $pull = git -C $App pull --ff-only origin $Branch 2>&1
 if ($LASTEXITCODE -ne 0) {
     @{ start = $windowStart; end = (Get-Date).ToString("s") } | ConvertTo-Json | Set-Content -Encoding UTF8 $WindowFile

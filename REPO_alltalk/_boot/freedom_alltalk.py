@@ -2,9 +2,11 @@
 
 Loaded by sitecustomize.py in every AllTalk process started through REPO_alltalk.
 AllTalk's own folder (app_cabinet/alltalk_tts) is never written to by the code paths
-handled here:
+handled here, with one exception (user decision 2026-09-29):
 
 - Settings files AllTalk reads/writes by path are served from REPO_alltalk/settings.
+  Each REPO settings file is also copied onto AllTalk's own copy, at start and after
+  every save (see "settings mirror" below).
 - voices/ is a union: stock voices stay in the app folder, user voices live in
   REPO_alltalk/voices. Listings show both; anything written goes to the repo.
 - Stock code is patched in memory (patches/alltalk_patches.py) and user-owned
@@ -155,12 +157,95 @@ def _redirect_write(abs_path):
     return None
 
 
+# ------------------------------------------------ settings mirror (user decision 2026-09-29)
+# The REPO settings are the real ones. Every REPO settings file is also copied onto AllTalk's
+# own copy in the app folder: once at start (so an update that overwrote them is put back),
+# and again each time AllTalk saves a setting (so a voice picked in AllTalk's page or by any
+# app shows in both places at once, without a restart). The app-folder watcher recognises a
+# file that matches its REPO copy and does not alert on it.
+
+MIRROR_LOG = os.path.join(LOGS, "settings_mirror.log")
+
+
+def mirror_log(msg):
+    # stderr, not stdout: the layer also loads inside conda.exe during `conda activate`,
+    # whose stdout is captured and read back as the activation script's path.
+    print(f"[REPO_alltalk] {msg}", file=sys.stderr, flush=True)
+    try:
+        import datetime
+        os.makedirs(LOGS, exist_ok=True)
+        with _real_open(MIRROR_LOG, "a", encoding="utf-8") as f:
+            f.write(f"[{datetime.datetime.now():%Y-%m-%d %H:%M:%S}] pid {os.getpid()}: {msg}\n")
+    except OSError:
+        pass
+
+
+def _app_twin(repo_settings_path):
+    return os.path.join(APP, os.path.relpath(repo_settings_path, SETTINGS))
+
+
+def mirror_to_app(repo_settings_path):
+    """Copy one REPO settings file onto AllTalk's own copy, if they differ."""
+    dest = _app_twin(repo_settings_path)
+    try:
+        with _real_open(repo_settings_path, "rb") as f:
+            data = f.read()
+        try:
+            with _real_open(dest, "rb") as f:
+                if f.read() == data:
+                    return
+        except FileNotFoundError:
+            pass
+        os.makedirs(os.path.dirname(dest), exist_ok=True)
+        with _real_open(dest, "wb") as f:
+            f.write(data)
+        mirror_log(f"settings copied to AllTalk's own copy: {os.path.relpath(dest, APP)}")
+    except OSError as e:
+        # AllTalk keeps running on the REPO settings; only the app-folder copy is behind.
+        mirror_log(f"could not copy settings to AllTalk's own copy {dest}: {e!r}")
+
+
+def mirror_all_settings():
+    for root, _dirs, names in os.walk(SETTINGS):
+        for n in names:
+            if n.lower().endswith(".json"):
+                mirror_to_app(os.path.join(root, n))
+
+
+class _MirrorOnClose:
+    """A settings file opened for writing: once AllTalk closes it, copy it to the app folder."""
+
+    def __init__(self, f, repo_path):
+        self._f = f
+        self._repo_path = repo_path
+
+    def close(self):
+        already = self._f.closed
+        self._f.close()
+        if not already:
+            mirror_to_app(self._repo_path)
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        self.close()
+
+    def __iter__(self):
+        return iter(self._f)
+
+    def __getattr__(self, name):
+        return getattr(self._f, name)
+
+
 def _open(file, mode="r", *args, **kwargs):
     p = _abs(file)
     if p is not None and _nc(p).startswith(_APP_NC):
         writing = any(c in mode for c in "wax+")
         t = _redirect_write(p) if writing else _redirect_read(p)
         if t:
+            if writing and _nc(t).startswith(_nc(SETTINGS) + os.sep):
+                return _MirrorOnClose(_real_open(t, mode, *args, **kwargs), t)
             file = t
     return _real_open(file, mode, *args, **kwargs)
 
@@ -410,6 +495,7 @@ def boot():
     for d in (LOGS, OUTPUTS, REPO_VOICES, TRANSCRIPTIONS):
         os.makedirs(d, exist_ok=True)
     add_env_dlls()
+    mirror_all_settings()
     install_shims()
     code_for, handled = install_code_hooks()
     run_app_file_as_main(code_for, handled)
@@ -427,6 +513,7 @@ def boot_host():
         return
     for d in (LOGS, OUTPUTS, REPO_VOICES, TRANSCRIPTIONS):
         os.makedirs(d, exist_ok=True)
+    mirror_all_settings()
     install_shims()
     install_code_hooks()
     _host_booted = True

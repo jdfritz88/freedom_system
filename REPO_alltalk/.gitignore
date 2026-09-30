@@ -1,2 +1,4 @@
 # User voice files stay on disk, out of git (user decision 2026-09-25)
 voices/
+# Live state of the running AllTalk (launch_alltalk.bat), not settings
+runtime/

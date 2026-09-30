@@ -6,6 +6,14 @@ It tells stock AllTalk to use REPO_alltalk, the way ComfyUI is launched with
 """
 import os
 
+if os.name == "nt" and os.environ.get("FREEDOM_ALLTALK_APP"):
+    # launch_alltalk.bat starts AllTalk with `start /b` so its mode menu can keep
+    # running in the same window; Windows starts such a process with Ctrl+C ignored.
+    # Turn normal Ctrl+C handling back on, so Ctrl+C in that window (and the mic
+    # panel's Ctrl+C shutdown) still stops AllTalk. Child processes inherit this.
+    import ctypes
+    ctypes.windll.kernel32.SetConsoleCtrlHandler(None, False)
+
 if os.environ.get("FREEDOM_ALLTALK_APP") and os.environ.get("FREEDOM_ALLTALK_REPO"):
     try:
         import freedom_alltalk

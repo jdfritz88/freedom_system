@@ -116,6 +116,14 @@ _FREEDOM_SETTINGS = ''' + _FA + '''.SETTINGS
         ),
     ],
     "system/tts_engines/xtts/model_engine.py": [
+        (   # main processor mode (launch_alltalk.bat hides the graphics card): DeepSpeed only
+            # runs on a graphics card, so it is off for that run. The saved setting is untouched.
+            '''        self.lowvram_enabled = False if not torch.cuda.is_available() else self.lowvram_enabled
+''',
+            '''        self.lowvram_enabled = False if not torch.cuda.is_available() else self.lowvram_enabled
+        self.deepspeed_enabled = False if not torch.cuda.is_available() else self.deepspeed_enabled
+''',
+        ),
         (   # voices can be stock (app) or the user's (REPO_alltalk/voices)
             '''voice_set_path = os.path.join(self.main_dir, "voices", "xtts_multi_voice_sets", voice_set)''',
             '''voice_set_path = ''' + _FA + '''.voice_path("xtts_multi_voice_sets", voice_set)''',

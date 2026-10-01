@@ -14,8 +14,8 @@ rem   runtime\running_mode.txt   the mode the running AllTalk was started in
 rem   runtime\alltalk.pid        the running AllTalk's process id (its script.py)
 rem   runtime\request.txt        another app writes "restart" or "stop" here
 rem
-rem   launch_alltalk.bat                 5-second mode menu, then AllTalk with a key menu
-rem   launch_alltalk.bat --choose-mode   only the 5-second mode menu: saves the pick, exits
+rem   launch_alltalk.bat                 10-second mode menu, then AllTalk with a key menu
+rem   launch_alltalk.bat --choose-mode   only the 10-second mode menu: saves the pick, exits
 rem   FREEDOM_ALLTALK_HEADLESS=1         set by a caller whose window takes no keys (the
 rem                                      KoboldCpp launcher runs AllTalk in the background):
 rem                                      no countdown and no key menu; switches still work
@@ -162,7 +162,7 @@ exit /b 1
 
 rem ------------------------------------------------------------------ subroutines
 :choose_mode
-rem The 5-second startup menu. No key = the saved mode. A picked mode is saved.
+rem The 10-second startup menu. No key = the saved mode. A picked mode is saved.
 call :read_saved_mode
 if defined FREEDOM_ALLTALK_HEADLESS exit /b 0
 call :mode_label %SAVED_MODE%
@@ -172,9 +172,9 @@ echo    Saved mode: %LABEL%
 echo      C = graphics card ^(CUDA^)
 echo      P = main processor ^(CPU^) - leaves the graphics card free
 echo      S = start now with the saved mode
-echo    No key within 5 seconds = start with the saved mode.
+echo    No key within 10 seconds = start with the saved mode.
 echo  =============================================================
-set /a LEFT=5
+set /a LEFT=10
 :cd_tick
 <nul set /p "=   %LEFT%... "
 choice /c CPSX /n /t 1 /d X >nul

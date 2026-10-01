@@ -190,6 +190,9 @@ echo      P = main processor ^(CPU^) without streaming ^(current default^)
 echo      R = main processor ^(CPU^) with streaming
 echo      S = start now with the saved mode
 echo    Both main processor modes leave the graphics card free.
+echo    WARNING: P and R need a faster processor than this PC's Intel Core i9-13900HK.
+echo      Measured here 2026-09-30: P speaks after about 37 s for 20 s of speech;
+echo      R starts after about 8 s but cuts in and out.
 echo    No key within 10 seconds = start with the saved mode.
 echo  =============================================================
 set /a LEFT=10
@@ -247,6 +250,9 @@ echo    Running on the %LABEL%
 echo      C = switch to graphics card ^(CUDA^)
 echo      P = switch to main processor ^(CPU^) without streaming ^(current default^)
 echo      R = switch to main processor ^(CPU^) with streaming
+echo      WARNING: P and R need a faster processor than this PC's Intel Core i9-13900HK.
+echo        Measured here 2026-09-30: P speaks after about 37 s for 20 s of speech;
+echo        R starts after about 8 s but cuts in and out.
 echo      T = restart AllTalk     Q = stop AllTalk
 echo      M = show this menu again
 echo    Switching restarts AllTalk; speech pauses until it is back.

@@ -305,3 +305,21 @@ The AllTalk folder watcher showed a message box: files modified inside `app_cabi
 `choice_test.bat` (key-code test), `sendkeys_safe.ps1` / `click_safe.ps1` (send keys / clicks only
 to a named window), `conread.ps1` (read another console's screen, from
 `REPO_koboldccp_sst_tts_media/docs/console_attach_and_read.md`).
+
+## 13. Decision on R, and the processor warning (22:30)
+
+- User asked where AllTalk's web page has settings for this. Checked in the page code: none.
+  "Generation Mode" (Standard / Streaming) on the TTS Generator tab only affects that page's own
+  generator; Xtts "Default Settings" are Low VRAM, DeepSpeed, Temperature, Repetition Penalty,
+  Pitch, Speed and voices; "Engine Information" shows "Streaming Capable: Yes" (display only). The
+  chunk size is fixed in AllTalk's XTTS code (now settable for mode R by the bat); voice mode's stall
+  limit and whole-clip wait are in voice mode's code.
+- **User decision: keep R as it is** (AllTalk's own chunk 20; voice mode's 10 s stall limit unchanged),
+  **plus a warning in the menu** that both main processor options need a faster processor than this PC's.
+- This PC's processor (Win32_Processor): 13th Gen Intel(R) Core(TM) i9-13900HK, 14 cores, 20 threads.
+- Added to both `launch_alltalk.bat` menus (countdown and running menu):
+  "WARNING: P and R need a faster processor than this PC's Intel Core i9-13900HK.
+   Measured here 2026-09-30: P speaks after about 37 s for 20 s of speech;
+   R starts after about 8 s but cuts in and out."
+- Checked on screen: countdown (`--choose-mode`) and running menu (AllTalk started in a window, menu
+  read from the console, then Q: stopped, nothing left).

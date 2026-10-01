@@ -3,11 +3,16 @@ rem REPO_alltalk launcher: starts stock AllTalk (app_cabinet\alltalk_tts) and te
 rem to use REPO_alltalk for your changes, settings, voices, outputs and logs - the way
 rem ComfyUI is started with --base-directory. AllTalk's own folder is never changed.
 rem
-rem Graphics card (CUDA) or main processor (CPU) mode - added 2026-09-30.
-rem Main processor mode hides the graphics card from AllTalk, so it uses none of its
-rem memory (DeepSpeed is switched off for that run by patches\alltalk_patches.py).
+rem Three modes - added 2026-09-30:
+rem   cuda         graphics card (CUDA)
+rem   cpu          main processor (CPU) without streaming: AllTalk refuses streaming
+rem                requests, so every app gets whole clips (patches\alltalk_patches.py)
+rem   cpu_stream   main processor (CPU) with streaming, using a larger XTTS streaming
+rem                chunk (CPU_STREAM_CHUNK below) so it does less repeated work
+rem Both main processor modes hide the graphics card from AllTalk, so it uses none of
+rem its memory (DeepSpeed is switched off for those runs by patches\alltalk_patches.py).
 rem Switching modes restarts AllTalk. Files every app can read:
-rem   settings\device_mode.txt   the saved mode: cuda or cpu (missing = cuda). Any app
+rem   settings\device_mode.txt   the saved mode: cuda, cpu or cpu_stream (missing = cuda). Any app
 rem                              switches modes by writing it; the launcher that is running
 rem                              AllTalk sees the change and restarts it in the new mode.
 rem   runtime\running_mode.txt   the mode the running AllTalk was started in
@@ -33,6 +38,9 @@ set "RUNNING_FILE=%RUNTIME%\running_mode.txt"
 set "REQUEST_FILE=%RUNTIME%\request.txt"
 set "ALLTALK_PORT=7851"
 set "ORIG_CUDA_VISIBLE_DEVICES=%CUDA_VISIBLE_DEVICES%"
+rem XTTS streaming chunk (sound tokens per streamed piece) for cpu_stream mode; graphics
+rem card mode keeps AllTalk's own 20. Chosen by measurement on this PC (see logs).
+if not defined FREEDOM_ALLTALK_CPU_STREAM_CHUNK set "FREEDOM_ALLTALK_CPU_STREAM_CHUNK=20"
 
 set "CHOOSE_ONLY="
 set "PASS_ARGS="
@@ -77,7 +85,14 @@ rem ------------------------------------------------------------------ run AllTa
 call :read_saved_mode
 set "RUN_MODE=%SAVED_MODE%"
 call :mode_label %RUN_MODE%
-if /I "%RUN_MODE%"=="cpu" (set "CUDA_VISIBLE_DEVICES=-1") else (set "CUDA_VISIBLE_DEVICES=%ORIG_CUDA_VISIBLE_DEVICES%")
+rem For patches\alltalk_patches.py: which mode, and the streaming chunk for cpu_stream.
+set "FREEDOM_ALLTALK_DEVICE=%RUN_MODE%"
+set "FREEDOM_ALLTALK_STREAM_CHUNK="
+set "CUDA_VISIBLE_DEVICES=%ORIG_CUDA_VISIBLE_DEVICES%"
+if /I "%RUN_MODE%"=="cuda" goto run_env_done
+set "CUDA_VISIBLE_DEVICES=-1"
+if /I "%RUN_MODE%"=="cpu_stream" set "FREEDOM_ALLTALK_STREAM_CHUNK=%FREEDOM_ALLTALK_CPU_STREAM_CHUNK%"
+:run_env_done
 if exist "%REQUEST_FILE%" del "%REQUEST_FILE%" >nul 2>&1
 echo.
 echo   Starting AllTalk on the %LABEL% ...
@@ -96,9 +111,9 @@ rem ------------------------------------------------------------------ watch loo
 rem Every ~2 seconds: take a menu key (if this window takes keys), check AllTalk is
 rem still running, and act on a request or a mode switch made by another app.
 :watch
-set "K=6"
+set "K=7"
 if defined FREEDOM_ALLTALK_HEADLESS goto watch_sleep
-choice /c CPRQMX /n /t 2 /d X >nul
+choice /c CPRTQMX /n /t 2 /d X >nul
 set "K=%errorlevel%"
 if "%K%"=="255" goto watch_sleep
 goto watch_check
@@ -109,9 +124,10 @@ tasklist /fi "PID eq %AT_PID%" /nh 2>nul | find " %AT_PID% " >nul || goto ended
 if not defined READY call :check_ready
 if "%K%"=="1" (set "WANT=cuda" & goto switch)
 if "%K%"=="2" (set "WANT=cpu" & goto switch)
-if "%K%"=="3" (set "WHY=R was pressed" & goto restart)
-if "%K%"=="4" goto stop
-if "%K%"=="5" call :show_menu
+if "%K%"=="3" (set "WANT=cpu_stream" & goto switch)
+if "%K%"=="4" (set "WHY=T was pressed" & goto restart)
+if "%K%"=="5" goto stop
+if "%K%"=="6" call :show_menu
 set "REQ="
 if exist "%REQUEST_FILE%" for /f "usebackq tokens=1" %%r in ("%REQUEST_FILE%") do set "REQ=%%r"
 if exist "%REQUEST_FILE%" del "%REQUEST_FILE%" >nul 2>&1
@@ -170,18 +186,21 @@ echo.
 echo  ======================= AllTalk mode =======================
 echo    Saved mode: %LABEL%
 echo      C = graphics card ^(CUDA^)
-echo      P = main processor ^(CPU^) - leaves the graphics card free
+echo      P = main processor ^(CPU^) without streaming ^(current default^)
+echo      R = main processor ^(CPU^) with streaming
 echo      S = start now with the saved mode
+echo    Both main processor modes leave the graphics card free.
 echo    No key within 10 seconds = start with the saved mode.
 echo  =============================================================
 set /a LEFT=10
 :cd_tick
 <nul set /p "=   %LEFT%... "
-choice /c CPSX /n /t 1 /d X >nul
+choice /c CPRSX /n /t 1 /d X >nul
 set "K=%errorlevel%"
 if "%K%"=="1" (set "PICK=cuda" & goto cd_picked)
 if "%K%"=="2" (set "PICK=cpu" & goto cd_picked)
-if "%K%"=="3" goto cd_saved
+if "%K%"=="3" (set "PICK=cpu_stream" & goto cd_picked)
+if "%K%"=="4" goto cd_saved
 if "%K%"=="255" goto cd_saved
 set /a LEFT-=1
 if %LEFT% GTR 0 goto cd_tick
@@ -200,11 +219,15 @@ exit /b 0
 :read_saved_mode
 set "SAVED_MODE=cuda"
 if exist "%MODE_FILE%" for /f "usebackq tokens=1" %%m in ("%MODE_FILE%") do set "SAVED_MODE=%%m"
-if /I not "%SAVED_MODE%"=="cpu" set "SAVED_MODE=cuda"
+if /I "%SAVED_MODE%"=="cpu" exit /b 0
+if /I "%SAVED_MODE%"=="cpu_stream" exit /b 0
+set "SAVED_MODE=cuda"
 exit /b 0
 
 :mode_label
-if /I "%~1"=="cpu" (set "LABEL=main processor (CPU)") else (set "LABEL=graphics card (CUDA)")
+set "LABEL=graphics card (CUDA)"
+if /I "%~1"=="cpu" set "LABEL=main processor (CPU) without streaming"
+if /I "%~1"=="cpu_stream" set "LABEL=main processor (CPU) with streaming"
 exit /b 0
 
 :echo_label_line
@@ -222,8 +245,9 @@ echo.
 echo  =================== AllTalk mode menu ===================
 echo    Running on the %LABEL%
 echo      C = switch to graphics card ^(CUDA^)
-echo      P = switch to main processor ^(CPU^)
-echo      R = restart AllTalk     Q = stop AllTalk
+echo      P = switch to main processor ^(CPU^) without streaming ^(current default^)
+echo      R = switch to main processor ^(CPU^) with streaming
+echo      T = restart AllTalk     Q = stop AllTalk
 echo      M = show this menu again
 echo    Switching restarts AllTalk; speech pauses until it is back.
 echo  =========================================================

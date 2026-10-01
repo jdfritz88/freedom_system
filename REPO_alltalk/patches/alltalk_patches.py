@@ -122,7 +122,18 @@ _FREEDOM_SETTINGS = ''' + _FA + '''.SETTINGS
 ''',
             '''        self.lowvram_enabled = False if not torch.cuda.is_available() else self.lowvram_enabled
         self.deepspeed_enabled = False if not torch.cuda.is_available() else self.deepspeed_enabled
+        # launch_alltalk.bat mode "cpu" = main processor WITHOUT streaming: AllTalk then
+        # refuses streaming requests (tts_server checks streaming_capable), so every app
+        # gets whole clips. On the main processor XTTS streams slower than it plays.
+        if os.environ.get("FREEDOM_ALLTALK_DEVICE") == "cpu":
+            self.streaming_capable = False
 ''',
+        ),
+        (   # launch_alltalk.bat mode "cpu_stream": a larger streaming chunk. XTTS re-converts
+            # everything made so far in a sentence for every chunk, so bigger chunks mean
+            # less repeated work on the main processor. Unset = AllTalk's own 20.
+            '''output = self.model.inference_stream(**common_args, stream_chunk_size=20)''',
+            '''output = self.model.inference_stream(**common_args, stream_chunk_size=int(os.environ.get("FREEDOM_ALLTALK_STREAM_CHUNK") or 20))''',
         ),
         (   # voices can be stock (app) or the user's (REPO_alltalk/voices)
             '''voice_set_path = os.path.join(self.main_dir, "voices", "xtts_multi_voice_sets", voice_set)''',

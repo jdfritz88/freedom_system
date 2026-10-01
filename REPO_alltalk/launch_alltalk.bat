@@ -140,6 +140,11 @@ goto run
 echo.
 echo   Stopping AllTalk ...
 call :kill_alltalk
+if errorlevel 1 (
+    call :clear_runtime
+    echo   Port %ALLTALK_PORT% is STILL held - AllTalk did not fully stop. Check Task Manager.
+    exit /b 1
+)
 call :clear_runtime
 echo   AllTalk stopped.
 exit /b 0
@@ -254,10 +259,20 @@ set /a WAITED=0
 :ka_wait
 call :port_in_use
 if errorlevel 1 exit /b 0
+rem When AllTalk switches engine it restarts its server as a NEW process (os.execv), which
+rem is outside the process tree stopped above. Stop whichever AllTalk python holds the port
+rem (only AllTalk's own environment's python - never anything else on that port).
+if %WAITED% GEQ 2 call :kill_port_owner
 set /a WAITED+=1
 if %WAITED% GEQ 30 exit /b 1
 ping -n 2 127.0.0.1 >nul
 goto ka_wait
+
+:kill_port_owner
+for /f "tokens=5" %%p in ('netstat -ano -p tcp ^| findstr /r /c:":%ALLTALK_PORT% .*LISTENING"') do (
+    powershell -NoProfile -Command "$p = Get-Process -Id %%p -ErrorAction SilentlyContinue; if ($p -and $p.Path -like '*\alltalk_environment\*') { exit 0 } else { exit 1 }" && taskkill /T /F /PID %%p >nul 2>&1
+)
+exit /b 0
 
 :clear_runtime
 if exist "%PID_FILE%" del "%PID_FILE%" >nul 2>&1

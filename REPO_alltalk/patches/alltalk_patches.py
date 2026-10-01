@@ -39,6 +39,14 @@ PATCHES = {
                 print_message(f"Unsupported voice: {voice}", "error", "TTS")
                 raise ValueError("Unsupported voice")''',
         ),
+        (   # /api/enginereload crashed: change_engine() runs on the inner settings model and
+            # returns it, and that model has no save() ('AlltalkTTSEnginesConfigModel' object
+            # has no attribute 'save'). Change, then save the settings file itself - the way
+            # AllTalk's own web page does it (script.py).
+            '''        tts_engines_config.change_engine(requested_engine).save()''',
+            '''        tts_engines_config.change_engine(requested_engine)
+        tts_engines_config.save()''',
+        ),
         (   # narrator combine() wrote to a hardcoded outputs/ instead of the output setting
             '''output_file_path = os.path.join(this_dir / "outputs" / filename)''',
             '''output_file_path = os.path.join(this_dir / config.get_output_directory() / filename)''',

@@ -14,7 +14,8 @@ so there is a chance to see why something happened:
   * RVC TRAINING  - an RVC voice-training process is running; its files are listed.
 
 Not alerted: Python cache (__pycache__, *.pyc), AllTalk's Python environment
-(alltalk_environment), .git, *.tmp, system/config/at_github_sha.json.
+(alltalk_environment), .git, *.tmp, system/config/at_github_sha.json, and the six RVC files
+AllTalk rewrites when it starts without a graphics card (see SKIP_FILES).
 
 Files REPO_alltalk places in the folder on purpose (PLACED_FILES, e.g. start_alltalk.bat, and
 every settings file the settings mirror copies from REPO_alltalk/settings) are not alerted
@@ -56,6 +57,15 @@ UPDATE_WINDOW_FILE = os.path.join(LOGS, "watcher_update_window.json")
 SKIP_DIRS = {"__pycache__", "alltalk_environment", ".git"}
 SKIP_SUFFIXES = (".pyc", ".tmp")
 SKIP_FILES = {os.path.normcase(os.path.join("system", "config", "at_github_sha.json"))}
+# AllTalk's RVC add-on rewrites these whenever AllTalk starts without a graphics card
+# (launch_alltalk.bat modes P and R): rvc/configs/config.py use_fp32_config() sets
+# "fp16_run" to false in the five configs and rewrites preprocess.py. Not alerted
+# (user decision 2026-09-30).
+SKIP_FILES |= {os.path.normcase(os.path.join("system", "tts_engines", "rvc", *parts)) for parts in (
+    ("configs", "v1", "32000.json"), ("configs", "v1", "40000.json"), ("configs", "v1", "48000.json"),
+    ("configs", "v2", "32000.json"), ("configs", "v2", "48000.json"),
+    ("train", "preprocess", "preprocess.py"),
+)}
 
 # Files REPO_alltalk deliberately places in AllTalk's folder (user decision 2026-09-29):
 # {path in AllTalk's folder: its source of truth in REPO_alltalk}. A new or changed file that

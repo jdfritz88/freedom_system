@@ -323,3 +323,21 @@ to a named window), `conread.ps1` (read another console's screen, from
    R starts after about 8 s but cuts in and out."
 - Checked on screen: countdown (`--choose-mode`) and running menu (AllTalk started in a window, menu
   read from the console, then Q: stopped, nothing left).
+
+## 14. RVC files: the watcher ignores them (22:45)
+
+- The user did not know what RVC is. Checked and explained: AllTalk's own text calls it
+  "Retrieval-based Voice Conversion" - an add-on that reshapes AllTalk's speech into another voice,
+  after training a voice model for it ("RVC training"). On this PC it is not used: AllTalk's RVC
+  character voice is "Disabled" (`REPO_alltalk/settings/confignew.json`), `models/rvc_voices` and
+  `REPO_alltalk/rvc_training` are empty.
+- Why it was raised: P and R make AllTalk start without a graphics card, and AllTalk's RVC code then
+  edits files in AllTalk's own folder - against the "AllTalk's folder stays untouched" rule - and the
+  folder watcher shows a warning box about it.
+- Correction: the question first said "five files"; AllTalk rewrites **six** (five RVC configs +
+  `preprocess.py`, same content but a new file date).
+- **User decision: the watcher ignores all six.** `watcher/alltalk_folder_watcher.py`: added to
+  `SKIP_FILES` with the reason; docstring updated. AllTalk is still allowed to edit them.
+- Tested with the watcher's own `scan()` in AllTalk's Python: all six exist and are no longer
+  watched; `rvc/configs/config.py` still watched; 641 files watched in total. No watcher process was
+  running at the time, so the next one (started with AllTalk) uses the new list.

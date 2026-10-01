@@ -134,6 +134,43 @@ _FREEDOM_SETTINGS = ''' + _FA + '''.SETTINGS
         ),
     ],
     "system/tts_engines/f5tts/model_engine.py": [
+        (   # Never auto-install. Stock AllTalk runs `pip install` of the newest F5-TTS from
+            # GitHub when an import fails; on 2026-09-30 that replaced 66 packages in AllTalk's
+            # environment (CUDA PyTorch -> CPU, Gradio 4 -> 6) and AllTalk stopped starting.
+            # The working versions are in REPO_alltalk/logs/repair_alltalk_constraints_2026-09-30.txt.
+            '''except ImportError:
+    install_and_restart()
+''',
+            '''except ImportError as _freedom_e:
+    raise ImportError(
+        f"F5-TTS packages missing or broken ({_freedom_e}). REPO_alltalk blocks AllTalk's "
+        "automatic pip install (it broke the environment on 2026-09-30). Install the pinned "
+        "versions: REPO_alltalk/logs/repair_alltalk_constraints_2026-09-30.txt"
+    ) from _freedom_e
+''',
+        ),
+        (   # F5-TTS models live in REPO_alltalk/models/f5tts (scan, then load twice)
+            '''        models_dir = self.main_dir / "models" / "f5tts"
+''',
+            '''        models_dir = Path(''' + _FA + '''.F5_MODELS)
+''',
+        ),
+        (
+            '''
+        model_dir = self.main_dir / "models" / "f5tts" / model_folder
+''',
+            '''
+        model_dir = Path(''' + _FA + '''.F5_MODELS) / model_folder
+''',
+        ),
+        (
+            '''
+            model_dir = self.main_dir / "models" / "f5tts" / model_folder
+''',
+            '''
+            model_dir = Path(''' + _FA + '''.F5_MODELS) / model_folder
+''',
+        ),
         (
             '''voice_dir = self.main_dir / "voices" / voice.rstrip('/')''',
             '''voice_dir = Path(''' + _FA + '''.voice_path(voice.rstrip('/')))''',
@@ -141,6 +178,16 @@ _FREEDOM_SETTINGS = ''' + _FA + '''.SETTINGS
         (
             '''ref_audio_path = self.main_dir / "voices" / voice''',
             '''ref_audio_path = Path(''' + _FA + '''.voice_path(voice))''',
+        ),
+    ],
+    "system/tts_engines/f5tts/f5tts_settings_page.py": [
+        (   # the F5-TTS page's "Download Model" button saves into REPO_alltalk/models/f5tts
+            '''base_folder_path = os.path.join(main_dir, "models", "f5tts")''',
+            '''base_folder_path = ''' + _FA + '''.F5_MODELS''',
+        ),
+        (
+            '''os.path.exists(os.path.join(main_dir, "models", "f5tts", os.path.basename(file.split('?')[0])))''',
+            '''os.path.exists(os.path.join(''' + _FA + '''.F5_MODELS, os.path.basename(file.split('?')[0])))''',
         ),
     ],
     "system/proxy_module/proxy_manager.py": [

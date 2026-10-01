@@ -27,6 +27,9 @@ SETTINGS = os.path.join(REPO, "settings")
 LOGS = os.path.join(REPO, "logs")
 OUTPUTS = os.path.join(REPO, "outputs")
 TRANSCRIPTIONS = os.path.join(REPO, "transcriptions")
+# F5-TTS models are downloaded to and loaded from the repo (user decision 2026-09-30:
+# new files the app writes go to the repo). Patched in patches/alltalk_patches.py.
+F5_MODELS = os.path.join(REPO, "models", "f5tts")
 APP_VOICES = os.path.join(APP, "voices")
 # User voice files for every app live in one folder (user decision 2026-09-27);
 # stock voices stay in AllTalk's own voices folder.

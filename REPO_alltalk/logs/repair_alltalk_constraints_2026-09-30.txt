@@ -1,0 +1,9 @@
+torch==2.2.1
+torchaudio==2.2.1
+torchvision==0.17.1
+gradio==4.44.1
+fastapi==0.112.2
+pydantic==2.10.6
+transformers==4.46.1
+protobuf<5
+f5-tts==1.1.7

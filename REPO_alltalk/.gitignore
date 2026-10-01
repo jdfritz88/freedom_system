@@ -2,3 +2,5 @@
 voices/
 # Live state of the running AllTalk (launch_alltalk.bat), not settings
 runtime/
+# Downloaded TTS models (F5-TTS) - large files, kept on disk only
+models/

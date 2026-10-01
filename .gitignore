@@ -28,6 +28,7 @@ REPO_waiver/
 REPO_koboldccp_sst_tts_media/
 REPO_punithVT/
 REPO_avatarAI/
+REPO_boredom/
 
 # Duplicate embedded Waiver clone (has its own git repo)
 app_cabinet/Waiver/

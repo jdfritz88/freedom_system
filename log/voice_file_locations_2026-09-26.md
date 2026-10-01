@@ -3,6 +3,9 @@
 > **Update 2026-09-27:** backups #6 and #7 — and then the whole backup folder
 > `F:\Apps\freedom_system_BACKUP_ooba_v3.12\` — were **deleted** on the user's instruction.
 > Six folders with voice files remain. See "2026-09-27: backups deleted" below.
+>
+> **Update 2026-10-01:** the folder `REPO_oobabooga` is now `REPO_boredom` (its own repo,
+> jdfritz88/REPO_boredom). Paths below that name `REPO_oobabooga` record where things were then.
 
 Where every voice `.wav` file lives after the oobabooga + AllTalk update of 2026-09-24/25
 (see `conversation_2026-09-24_ooba_alltalk_update.md`), and why there are extra copies.

@@ -181,7 +181,7 @@ It is kept out of git. `REPO_waiver` is always ignored for this.
 - Both redirects live outside the apps' own code, so app updates can't undo them; if an update
   rewrites the patched code, the app stops and names the patch.
 - **Always start AllTalk through `REPO_alltalk\launch_alltalk.bat`** (or oobabooga's
-  `REPO_oobabooga\launch_oobabooga.bat`). AllTalk's own `start_alltalk.bat` runs it without this
+  `REPO_boredom\launch_oobabooga.bat`). AllTalk's own `start_alltalk.bat` runs it without this
   folder, so Freya and the other user voices are missing and voice mode goes silent.
 - To add a voice for any app: put the file in `user_voice_files`.
 
@@ -196,7 +196,8 @@ here is turning written text into **phonemes**: the individual speech sounds of 
   `libespeak-ng.dll`, and its data folder `espeak-ng-data`.
 - **Not installed system-wide, on purpose.** It is not on the global PATH (a stale global entry
   `C:\Program Files\eSpeak NG\` points at nothing). Any program that needs it must be given it,
-  like the REPO_alltalk and REPO_oobabooga launchers do:
+  like the REPO_alltalk launcher and the oobabooga launcher do (the oobabooga launcher,
+  `REPO_boredom\launch_oobabooga.bat`, gets them from `REPO_alltalk\oobabooga_extension\espeak_env.bat`):
   - `PATH` gets the folder above prepended;
   - `ESPEAK_DATA_PATH` = `...\eSpeak NG\espeak-ng-data` (**required** — without it eSpeak looks for
     its data in the wrong place and fails);
@@ -204,7 +205,7 @@ here is turning written text into **phonemes**: the individual speech sounds of 
     `PHONEMIZER_ESPEAK_PATH` = `...\eSpeak NG\espeak-ng.exe` (for the Python `phonemizer` package).
 - **Quick use:** `espeak-ng -q -x "text"` prints phonemes without speaking; `espeak-ng "text"` speaks.
 - **Who uses it now:** AllTalk TTS (started via `REPO_alltalk\launch_alltalk.bat`, or by
-  oobabooga via `REPO_oobabooga\launch_oobabooga.bat`) — its voice engines need phonemes.
+  oobabooga via `REPO_boredom\launch_oobabooga.bat`) — its voice engines need phonemes.
 
 # ComfyUI Workflow Caching
 
